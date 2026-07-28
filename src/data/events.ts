@@ -8,6 +8,7 @@ export const events: Event[] = [
       "David captures the stronghold of Zion and establishes Jerusalem as the political centre of the united kingdom.",
     placeId: "jerusalem",
     periodId: "united-monarchy",
+    personIds: ["david"],
     approximateDate: "c. 1000 BC",
     references: [
       {
@@ -25,6 +26,7 @@ export const events: Event[] = [
       "Solomon constructs the first Temple in Jerusalem as the central place of worship for Israel.",
     placeId: "jerusalem",
     periodId: "united-monarchy",
+    personIds: ["solomon"],
     approximateDate: "10th century BC",
     references: [
       {
@@ -40,6 +42,7 @@ export const events: Event[] = [
       "Jesus is born in Bethlehem during the reign of Herod the Great.",
     placeId: "bethlehem",
     periodId: "life-of-jesus",
+    personIds: ["jesus"],
     approximateDate: "c. 6–4 BC",
     references: [
       {
@@ -63,6 +66,7 @@ export const events: Event[] = [
       "After returning from Egypt, Jesus is raised in Nazareth in Galilee.",
     placeId: "nazareth",
     periodId: "life-of-jesus",
+    personIds: ["jesus"],
     references: [
       {
         book: "Matthew",

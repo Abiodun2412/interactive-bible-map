@@ -6,6 +6,7 @@ export type Event = {
   description: string;
   placeId: string;
   periodId: string;
+  personIds: string[];
   approximateDate?: string;
   references: BibleReference[];
 };

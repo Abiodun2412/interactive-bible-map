@@ -1,4 +1,5 @@
 import { events } from "@/data/events";
+import { people } from "@/data/people";
 import { periods } from "@/data/periods";
 import type { BibleReference } from "@/types/bibleReference";
 import type { Place } from "@/types/place";
@@ -81,6 +82,10 @@ export default function LocationPanel({
                 (period) => period.id === event.periodId
               );
 
+              const eventPeople = people.filter((person) =>
+                event.personIds.includes(person.id)
+              );
+
               return (
                 <article
                   key={event.id}
@@ -107,6 +112,25 @@ export default function LocationPanel({
                   <p className="mt-3 text-sm leading-6 text-gray-700">
                     {event.description}
                   </p>
+
+                  {eventPeople.length > 0 && (
+                    <div className="mt-3">
+                      <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-gray-500">
+                        People
+                      </p>
+
+                      <div className="flex flex-wrap gap-2">
+                        {eventPeople.map((person) => (
+                          <span
+                            key={person.id}
+                            className="rounded-full bg-gray-900 px-2 py-1 text-xs text-white"
+                          >
+                            {person.name}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
 
                   <div className="mt-3 flex flex-wrap gap-2">
                     {event.references.map((reference, index) => (
