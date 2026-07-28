@@ -1,11 +1,18 @@
 "use client";
 
+import { useState } from "react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+
+import LocationPanel from "@/components/LocationPanel";
 import { places } from "@/data/places";
+import type { Place } from "@/types/place";
+
 import "leaflet/dist/leaflet.css";
 
 export default function BibleMap() {
   const jerusalem = places[0];
+
+  const [selectedPlace, setSelectedPlace] = useState<Place | null>(null);
 
   return (
     <MapContainer
@@ -22,6 +29,9 @@ export default function BibleMap() {
         <Marker
           key={place.id}
           position={[place.latitude, place.longitude]}
+          eventHandlers={{
+            click: () => setSelectedPlace(place),
+          }}
         >
           <Popup>
             <strong>{place.name}</strong>
@@ -30,6 +40,13 @@ export default function BibleMap() {
           </Popup>
         </Marker>
       ))}
+
+      {selectedPlace && (
+        <LocationPanel
+          place={selectedPlace}
+          onClose={() => setSelectedPlace(null)}
+        />
+      )}
     </MapContainer>
   );
 }
