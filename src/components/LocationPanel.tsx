@@ -1,4 +1,6 @@
 import { events } from "@/data/events";
+import { journeys } from "@/data/journeys";
+import { journeyStops } from "@/data/journeyStops";
 import { people } from "@/data/people";
 import { periods } from "@/data/periods";
 import type { BibleReference } from "@/types/bibleReference";
@@ -29,6 +31,10 @@ export default function LocationPanel({
 }: LocationPanelProps) {
   const placeEvents = events.filter((event) => event.placeId === place.id);
 
+  const placeJourneyStops = journeyStops
+    .filter((stop) => stop.placeId === place.id)
+    .sort((a, b) => a.order - b.order);
+
   return (
     <aside className="absolute right-4 top-4 z-[1000] max-h-[calc(100vh-2rem)] w-96 overflow-y-auto rounded-xl bg-white p-6 shadow-xl">
       <div className="mb-4 flex items-start justify-between gap-4">
@@ -52,7 +58,7 @@ export default function LocationPanel({
         </button>
       </div>
 
-      <div className="mb-4 flex gap-2">
+      <div className="mb-4 flex flex-wrap gap-2">
         <span className="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">
           {place.type}
         </span>
@@ -148,6 +154,58 @@ export default function LocationPanel({
           </div>
         )}
       </section>
+
+      {placeJourneyStops.length > 0 && (
+        <section className="mt-6 border-t border-gray-200 pt-6">
+          <h3 className="mb-3 text-lg font-semibold text-gray-900">
+            Journeys
+          </h3>
+
+          <div className="space-y-4">
+            {placeJourneyStops.map((stop) => {
+              const journey = journeys.find(
+                (journey) => journey.id === stop.journeyId
+              );
+
+              if (!journey) {
+                return null;
+              }
+
+              return (
+                <article
+                  key={stop.id}
+                  className="rounded-lg border border-gray-200 p-4"
+                >
+                  <div className="flex items-center justify-between gap-3">
+                    <h4 className="font-semibold text-gray-900">
+                      {journey.name}
+                    </h4>
+
+                    <span className="whitespace-nowrap rounded-full bg-gray-900 px-2 py-1 text-xs text-white">
+                      Stop {stop.order}
+                    </span>
+                  </div>
+
+                  <p className="mt-3 text-sm leading-6 text-gray-700">
+                    {stop.description}
+                  </p>
+
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {stop.references.map((reference, index) => (
+                      <span
+                        key={`${stop.id}-${index}`}
+                        className="rounded bg-gray-100 px-2 py-1 text-xs text-gray-700"
+                      >
+                        {formatReference(reference)}
+                      </span>
+                    ))}
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+      )}
     </aside>
   );
 }

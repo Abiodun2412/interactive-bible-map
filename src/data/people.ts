@@ -2,6 +2,12 @@ import type { Person } from "@/types/person";
 
 export const people: Person[] = [
   {
+    id: "abraham",
+    name: "Abraham",
+    description:
+      "Patriarch whose journey from Mesopotamia into Canaan forms a central part of Genesis.",
+  },
+  {
     id: "david",
     name: "David",
     description:
