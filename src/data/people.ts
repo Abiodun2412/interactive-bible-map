@@ -8,6 +8,24 @@ export const people: Person[] = [
       "Patriarch whose journey from Mesopotamia into Canaan forms a central part of Genesis.",
   },
   {
+    id: "isaac",
+    name: "Isaac",
+    description:
+      "Son of Abraham and Sarah, and one of the patriarchs of Israel.",
+  },
+  {
+    id: "jacob",
+    name: "Jacob",
+    description:
+      "Son of Isaac, later named Israel, and father of the twelve sons associated with the tribes of Israel.",
+  },
+  {
+    id: "joseph",
+    name: "Joseph",
+    description:
+      "Son of Jacob who was taken to Egypt and later rose to authority there.",
+  },
+  {
     id: "david",
     name: "David",
     description:

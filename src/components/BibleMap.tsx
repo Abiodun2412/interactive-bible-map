@@ -55,7 +55,10 @@ function MapFocus({
         );
 
       if (positions.length > 0) {
-        map.fitBounds(positions, { padding: [50, 50] });
+        map.fitBounds(positions, {
+          paddingTopLeft: [50, 50],
+          paddingBottomRight: [50, 240],
+        });
       }
 
       return;
@@ -64,14 +67,19 @@ function MapFocus({
     if (selectedPersonId) {
       const personEventPlaceIds = events
         .filter((event) => event.personIds.includes(selectedPersonId))
-        .map((event) => event.placeId);
+        .map((event) => event.placeId)
+        .filter((placeId): placeId is string => placeId !== undefined);
 
       const personJourneyIds = journeys
-        .filter((journey) => journey.personIds.includes(selectedPersonId))
+        .filter((journey) =>
+          journey.personIds.includes(selectedPersonId)
+        )
         .map((journey) => journey.id);
 
       const personJourneyPlaceIds = journeyStops
-        .filter((stop) => personJourneyIds.includes(stop.journeyId))
+        .filter((stop) =>
+          personJourneyIds.includes(stop.journeyId)
+        )
         .map((stop) => stop.placeId);
 
       const personPlaceIds = new Set([
@@ -89,7 +97,10 @@ function MapFocus({
       if (positions.length === 1) {
         map.flyTo(positions[0], 9);
       } else if (positions.length > 1) {
-        map.fitBounds(positions, { padding: [50, 50] });
+        map.fitBounds(positions, {
+          paddingTopLeft: [50, 50],
+          paddingBottomRight: [50, 240],
+        });
       }
 
       return;
@@ -162,6 +173,7 @@ export default function BibleMap() {
             event.personIds.includes(selectedPersonId)
           )
           .map((event) => event.placeId)
+          .filter((placeId): placeId is string => placeId !== undefined)
       : []
   );
 

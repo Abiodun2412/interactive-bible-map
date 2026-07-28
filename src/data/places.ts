@@ -64,6 +64,18 @@ export const places: Place[] = [
     identificationStatus: "well-established",
   },
   {
+    id: "canaan",
+    name: "Canaan",
+    modernName: "Levant region",
+    latitude: 31.9,
+    longitude: 35.2,
+    type: "region",
+    region: "Canaan",
+    description:
+      "The land central to the patriarchal narratives and later the inheritance of Israel.",
+    identificationStatus: "well-established",
+  },
+  {
     id: "shechem",
     name: "Shechem",
     modernName: "Tell Balata",
@@ -88,6 +100,32 @@ export const places: Place[] = [
     identificationStatus: "probable",
     identificationNote:
       "Beitin is a common identification for biblical Bethel, though the precise identification is debated.",
+  },
+  {
+    id: "beersheba",
+    name: "Beersheba",
+    modernName: "Beersheba",
+    latitude: 31.2518,
+    longitude: 34.7913,
+    type: "city",
+    region: "Negev",
+    description:
+      "A major patriarchal location associated with Abraham, Isaac, and Jacob.",
+    identificationStatus: "well-established",
+  },
+  {
+    id: "peniel",
+    name: "Peniel",
+    modernName: "Penuel region",
+    latitude: 32.2,
+    longitude: 35.7,
+    type: "site",
+    region: "Transjordan",
+    description:
+      "The place associated with Jacob wrestling through the night and receiving the name Israel.",
+    identificationStatus: "disputed",
+    identificationNote:
+      "The general Transjordan setting is clear from the biblical narrative, but the precise modern identification of Peniel is debated.",
   },
   {
     id: "egypt",

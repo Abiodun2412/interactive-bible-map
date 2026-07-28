@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+
 import { events } from "@/data/events";
 import { journeys } from "@/data/journeys";
 import { journeyStops } from "@/data/journeyStops";
@@ -67,6 +71,28 @@ export default function LocationPanel({
   place,
   onClose,
 }: LocationPanelProps) {
+  const panelRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    const panel = panelRef.current;
+
+    if (!panel) {
+      return;
+    }
+
+    const stopPropagation = (event: Event) => {
+      event.stopPropagation();
+    };
+
+    panel.addEventListener("wheel", stopPropagation);
+    panel.addEventListener("touchmove", stopPropagation);
+
+    return () => {
+      panel.removeEventListener("wheel", stopPropagation);
+      panel.removeEventListener("touchmove", stopPropagation);
+    };
+  }, []);
+
   const placeEvents = events.filter((event) => event.placeId === place.id);
 
   const placeJourneyStops = journeyStops
@@ -74,11 +100,13 @@ export default function LocationPanel({
     .sort((a, b) => a.order - b.order);
 
   return (
-    <aside className="absolute right-4 top-4 z-[1000] max-h-[calc(100vh-2rem)] w-96 overflow-y-auto rounded-xl bg-white p-6 shadow-xl">
+    <aside
+      ref={panelRef}
+      className="absolute right-4 top-4 z-[1000] max-h-[calc(100vh-2rem)] w-96 overflow-y-auto overscroll-contain rounded-xl bg-white p-6 shadow-xl"
+    >
       <div className="mb-4 flex items-start justify-between gap-4">
         <div>
           <h2 className="text-2xl font-bold text-gray-900">{place.name}</h2>
-
           <p className="text-sm text-gray-500">{place.modernName}</p>
         </div>
 

@@ -11,7 +11,9 @@ export type Event = {
   id: string;
   title: string;
   description: string;
-  placeId: string;
+
+  placeId?: string;
+
   periodId: string;
   personIds: string[];
 
