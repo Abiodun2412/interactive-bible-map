@@ -13,44 +13,94 @@ import {
 import JourneyFilter from "@/components/JourneyFilter";
 import LocationPanel from "@/components/LocationPanel";
 import PeriodFilter from "@/components/PeriodFilter";
+import SearchPanel from "@/components/SearchPanel";
+
 import { events } from "@/data/events";
 import { journeys } from "@/data/journeys";
 import { journeyStops } from "@/data/journeyStops";
 import { places } from "@/data/places";
+
 import type { Place } from "@/types/place";
 
 import "leaflet/dist/leaflet.css";
 
 type MapFocusProps = {
   selectedJourneyId: string | null;
+  selectedPlace: Place | null;
+  selectedPersonId: string | null;
 };
 
-function MapFocus({ selectedJourneyId }: MapFocusProps) {
+function MapFocus({
+  selectedJourneyId,
+  selectedPlace,
+  selectedPersonId,
+}: MapFocusProps) {
   const map = useMap();
 
   useEffect(() => {
-    if (!selectedJourneyId) {
+    if (selectedJourneyId) {
+      const selectedStops = journeyStops
+        .filter((stop) => stop.journeyId === selectedJourneyId)
+        .sort((a, b) => a.order - b.order);
+
+      const positions = selectedStops
+        .map((stop) =>
+          places.find((place) => place.id === stop.placeId)
+        )
+        .filter((place): place is Place => place !== undefined)
+        .map(
+          (place) =>
+            [place.latitude, place.longitude] as [number, number]
+        );
+
+      if (positions.length > 0) {
+        map.fitBounds(positions, { padding: [50, 50] });
+      }
+
       return;
     }
 
-    const selectedStops = journeyStops
-      .filter((stop) => stop.journeyId === selectedJourneyId)
-      .sort((a, b) => a.order - b.order);
+    if (selectedPersonId) {
+      const personEventPlaceIds = events
+        .filter((event) => event.personIds.includes(selectedPersonId))
+        .map((event) => event.placeId);
 
-    const positions = selectedStops
-      .map((stop) => places.find((place) => place.id === stop.placeId))
-      .filter((place): place is Place => place !== undefined)
-      .map(
-        (place) =>
-          [place.latitude, place.longitude] as [number, number]
-      );
+      const personJourneyIds = journeys
+        .filter((journey) => journey.personIds.includes(selectedPersonId))
+        .map((journey) => journey.id);
 
-    if (positions.length > 0) {
-      map.fitBounds(positions, {
-        padding: [50, 50],
-      });
+      const personJourneyPlaceIds = journeyStops
+        .filter((stop) => personJourneyIds.includes(stop.journeyId))
+        .map((stop) => stop.placeId);
+
+      const personPlaceIds = new Set([
+        ...personEventPlaceIds,
+        ...personJourneyPlaceIds,
+      ]);
+
+      const positions = places
+        .filter((place) => personPlaceIds.has(place.id))
+        .map(
+          (place) =>
+            [place.latitude, place.longitude] as [number, number]
+        );
+
+      if (positions.length === 1) {
+        map.flyTo(positions[0], 9);
+      } else if (positions.length > 1) {
+        map.fitBounds(positions, { padding: [50, 50] });
+      }
+
+      return;
     }
-  }, [map, selectedJourneyId]);
+
+    if (selectedPlace) {
+      map.flyTo(
+        [selectedPlace.latitude, selectedPlace.longitude],
+        9
+      );
+    }
+  }, [map, selectedJourneyId, selectedPersonId, selectedPlace]);
 
   return null;
 }
@@ -58,9 +108,27 @@ function MapFocus({ selectedJourneyId }: MapFocusProps) {
 export default function BibleMap() {
   const jerusalem = places[0];
 
-  const [selectedPlace, setSelectedPlace] = useState<Place | null>(null);
-  const [selectedPeriodId, setSelectedPeriodId] = useState<string | null>(null);
-  const [selectedJourneyId, setSelectedJourneyId] = useState<string | null>(null);
+  const [selectedPlace, setSelectedPlace] =
+    useState<Place | null>(null);
+
+  const [selectedPeriodId, setSelectedPeriodId] =
+    useState<string | null>(null);
+
+  const [selectedJourneyId, setSelectedJourneyId] =
+    useState<string | null>(null);
+
+  const [selectedPersonId, setSelectedPersonId] =
+    useState<string | null>(null);
+
+  const personJourneyIds = new Set(
+    selectedPersonId
+      ? journeys
+          .filter((journey) =>
+            journey.personIds.includes(selectedPersonId)
+          )
+          .map((journey) => journey.id)
+      : []
+  );
 
   const visibleJourneys = journeys.filter((journey) => {
     const matchesPeriod =
@@ -71,7 +139,11 @@ export default function BibleMap() {
       selectedJourneyId === null ||
       journey.id === selectedJourneyId;
 
-    return matchesPeriod && matchesJourney;
+    const matchesPerson =
+      selectedPersonId === null ||
+      journey.personIds.includes(selectedPersonId);
+
+    return matchesPeriod && matchesJourney && matchesPerson;
   });
 
   const journeyPlaceIds = new Set(
@@ -82,8 +154,30 @@ export default function BibleMap() {
     )
   );
 
+  const personEventPlaceIds = new Set(
+    selectedPersonId
+      ? events
+          .filter((event) =>
+            event.personIds.includes(selectedPersonId)
+          )
+          .map((event) => event.placeId)
+      : []
+  );
+
+  const personJourneyPlaceIds = new Set(
+    selectedPersonId
+      ? journeyStops
+          .filter((stop) =>
+            personJourneyIds.has(stop.journeyId)
+          )
+          .map((stop) => stop.placeId)
+      : []
+  );
+
   const visiblePlaces =
-    selectedPeriodId === null && selectedJourneyId === null
+    selectedPeriodId === null &&
+    selectedJourneyId === null &&
+    selectedPersonId === null
       ? places
       : places.filter((place) => {
           const matchesEvent =
@@ -96,19 +190,53 @@ export default function BibleMap() {
 
           const matchesJourney = journeyPlaceIds.has(place.id);
 
-          return matchesEvent || matchesJourney;
+          const matchesPerson =
+            selectedPersonId !== null &&
+            (personEventPlaceIds.has(place.id) ||
+              personJourneyPlaceIds.has(place.id));
+
+          return matchesEvent || matchesJourney || matchesPerson;
         });
 
   const getJourneyPositions = (journeyId: string) => {
     return journeyStops
       .filter((stop) => stop.journeyId === journeyId)
       .sort((a, b) => a.order - b.order)
-      .map((stop) => places.find((place) => place.id === stop.placeId))
+      .map((stop) =>
+        places.find((place) => place.id === stop.placeId)
+      )
       .filter((place): place is Place => place !== undefined)
       .map(
         (place) =>
           [place.latitude, place.longitude] as [number, number]
       );
+  };
+
+  const handleSearchPlace = (placeId: string) => {
+    const place = places.find((place) => place.id === placeId);
+
+    if (!place) {
+      return;
+    }
+
+    setSelectedPeriodId(null);
+    setSelectedJourneyId(null);
+    setSelectedPersonId(null);
+    setSelectedPlace(place);
+  };
+
+  const handleSearchJourney = (journeyId: string) => {
+    setSelectedPeriodId(null);
+    setSelectedPersonId(null);
+    setSelectedPlace(null);
+    setSelectedJourneyId(journeyId);
+  };
+
+  const handleSearchPerson = (personId: string) => {
+    setSelectedPeriodId(null);
+    setSelectedJourneyId(null);
+    setSelectedPlace(null);
+    setSelectedPersonId(personId);
   };
 
   return (
@@ -129,6 +257,8 @@ export default function BibleMap() {
         selectedPeriodId={selectedPeriodId}
         onChange={(periodId) => {
           setSelectedPeriodId(periodId);
+          setSelectedJourneyId(null);
+          setSelectedPersonId(null);
           setSelectedPlace(null);
         }}
       />
@@ -137,11 +267,22 @@ export default function BibleMap() {
         selectedJourneyId={selectedJourneyId}
         onChange={(journeyId) => {
           setSelectedJourneyId(journeyId);
+          setSelectedPersonId(null);
           setSelectedPlace(null);
         }}
       />
 
-      <MapFocus selectedJourneyId={selectedJourneyId} />
+      <SearchPanel
+        onSelectPlace={handleSearchPlace}
+        onSelectJourney={handleSearchJourney}
+        onSelectPerson={handleSearchPerson}
+      />
+
+      <MapFocus
+        selectedJourneyId={selectedJourneyId}
+        selectedPlace={selectedPlace}
+        selectedPersonId={selectedPersonId}
+      />
 
       {visibleJourneys.map((journey) => (
         <Polyline
