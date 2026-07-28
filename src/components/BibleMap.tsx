@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import { MapContainer, Marker, TileLayer } from "react-leaflet";
 
 import LocationPanel from "@/components/LocationPanel";
 import { places } from "@/data/places";
@@ -32,13 +32,7 @@ export default function BibleMap() {
           eventHandlers={{
             click: () => setSelectedPlace(place),
           }}
-        >
-          <Popup>
-            <strong>{place.name}</strong>
-            <br />
-            {place.description}
-          </Popup>
-        </Marker>
+        />
       ))}
 
       {selectedPlace && (
