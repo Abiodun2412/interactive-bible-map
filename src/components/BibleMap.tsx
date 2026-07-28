@@ -14,6 +14,7 @@ import JourneyFilter from "@/components/JourneyFilter";
 import LocationPanel from "@/components/LocationPanel";
 import PeriodFilter from "@/components/PeriodFilter";
 import SearchPanel from "@/components/SearchPanel";
+import Timeline from "@/components/Timeline";
 
 import { events } from "@/data/events";
 import { journeys } from "@/data/journeys";
@@ -239,6 +240,13 @@ export default function BibleMap() {
     setSelectedPersonId(personId);
   };
 
+  const handlePeriodChange = (periodId: string | null) => {
+    setSelectedPeriodId(periodId);
+    setSelectedJourneyId(null);
+    setSelectedPersonId(null);
+    setSelectedPlace(null);
+  };
+
   return (
     <MapContainer
       center={[jerusalem.latitude, jerusalem.longitude]}
@@ -255,12 +263,7 @@ export default function BibleMap() {
 
       <PeriodFilter
         selectedPeriodId={selectedPeriodId}
-        onChange={(periodId) => {
-          setSelectedPeriodId(periodId);
-          setSelectedJourneyId(null);
-          setSelectedPersonId(null);
-          setSelectedPlace(null);
-        }}
+        onChange={handlePeriodChange}
       />
 
       <JourneyFilter
@@ -276,6 +279,11 @@ export default function BibleMap() {
         onSelectPlace={handleSearchPlace}
         onSelectJourney={handleSearchJourney}
         onSelectPerson={handleSearchPerson}
+      />
+
+      <Timeline
+        selectedPeriodId={selectedPeriodId}
+        onSelectPeriod={handlePeriodChange}
       />
 
       <MapFocus
