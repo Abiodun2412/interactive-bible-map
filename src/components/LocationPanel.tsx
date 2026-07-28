@@ -3,6 +3,7 @@ import { journeys } from "@/data/journeys";
 import { journeyStops } from "@/data/journeyStops";
 import { people } from "@/data/people";
 import { periods } from "@/data/periods";
+
 import type { BibleReference } from "@/types/bibleReference";
 import type { Place } from "@/types/place";
 
@@ -25,6 +26,43 @@ function formatReference(reference: BibleReference) {
   return `${book} ${chapter}:${startVerse}-${endVerse}`;
 }
 
+function formatIdentificationStatus(status: Place["identificationStatus"]) {
+  switch (status) {
+    case "well-established":
+      return "Well established";
+    case "probable":
+      return "Probable identification";
+    case "traditional":
+      return "Traditional identification";
+    case "disputed":
+      return "Disputed identification";
+    case "unknown":
+      return "Identification unknown";
+  }
+}
+
+function formatDatePrecision(
+  precision:
+    | "exact"
+    | "approximate"
+    | "range"
+    | "traditional"
+    | "unknown"
+) {
+  switch (precision) {
+    case "exact":
+      return "Exact date";
+    case "approximate":
+      return "Approximate date";
+    case "range":
+      return "Date range";
+    case "traditional":
+      return "Traditional date";
+    case "unknown":
+      return "Date uncertain";
+  }
+}
+
 export default function LocationPanel({
   place,
   onClose,
@@ -39,13 +77,9 @@ export default function LocationPanel({
     <aside className="absolute right-4 top-4 z-[1000] max-h-[calc(100vh-2rem)] w-96 overflow-y-auto rounded-xl bg-white p-6 shadow-xl">
       <div className="mb-4 flex items-start justify-between gap-4">
         <div>
-          <h2 className="text-2xl font-bold text-gray-900">
-            {place.name}
-          </h2>
+          <h2 className="text-2xl font-bold text-gray-900">{place.name}</h2>
 
-          <p className="text-sm text-gray-500">
-            {place.modernName}
-          </p>
+          <p className="text-sm text-gray-500">{place.modernName}</p>
         </div>
 
         <button
@@ -66,11 +100,25 @@ export default function LocationPanel({
         <span className="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">
           {place.region}
         </span>
+
+        <span className="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">
+          {formatIdentificationStatus(place.identificationStatus)}
+        </span>
       </div>
 
-      <p className="mb-6 leading-7 text-gray-700">
-        {place.description}
-      </p>
+      <p className="mb-4 leading-7 text-gray-700">{place.description}</p>
+
+      {place.identificationNote && (
+        <div className="mb-6 rounded-lg border border-gray-200 bg-gray-50 p-3">
+          <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">
+            Modern identification
+          </p>
+
+          <p className="mt-1 text-sm leading-6 text-gray-700">
+            {place.identificationNote}
+          </p>
+        </div>
+      )}
 
       <section>
         <h3 className="mb-3 text-lg font-semibold text-gray-900">
@@ -78,9 +126,7 @@ export default function LocationPanel({
         </h3>
 
         {placeEvents.length === 0 ? (
-          <p className="text-sm text-gray-500">
-            No events added yet.
-          </p>
+          <p className="text-sm text-gray-500">No events added yet.</p>
         ) : (
           <div className="space-y-4">
             {placeEvents.map((event) => {
@@ -111,6 +157,12 @@ export default function LocationPanel({
                     {event.approximateDate && (
                       <span className="rounded-full bg-gray-100 px-2 py-1 text-xs text-gray-700">
                         {event.approximateDate}
+                      </span>
+                    )}
+
+                    {event.datePrecision && (
+                      <span className="rounded-full bg-gray-100 px-2 py-1 text-xs text-gray-700">
+                        {formatDatePrecision(event.datePrecision)}
                       </span>
                     )}
                   </div>

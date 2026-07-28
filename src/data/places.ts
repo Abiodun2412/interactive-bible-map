@@ -11,6 +11,7 @@ export const places: Place[] = [
     region: "Judea",
     description:
       "A major biblical city associated with the monarchy, the Temple, the ministry of Jesus, and the early Church.",
+    identificationStatus: "well-established",
   },
   {
     id: "bethlehem",
@@ -22,6 +23,7 @@ export const places: Place[] = [
     region: "Judea",
     description:
       "A biblical town associated with Ruth and Boaz, King David, and the birth of Jesus.",
+    identificationStatus: "well-established",
   },
   {
     id: "nazareth",
@@ -33,6 +35,7 @@ export const places: Place[] = [
     region: "Galilee",
     description:
       "The town where Jesus grew up and where much of his early life is traditionally associated.",
+    identificationStatus: "well-established",
   },
   {
     id: "ur",
@@ -43,7 +46,10 @@ export const places: Place[] = [
     type: "city",
     region: "Mesopotamia",
     description:
-      "Ancient Mesopotamian city traditionally associated with Abram's place of origin.",
+      "Ancient Mesopotamian city associated with Abram's place of origin.",
+    identificationStatus: "probable",
+    identificationNote:
+      "Tell el-Muqayyar in southern Iraq is a widely proposed identification of biblical Ur.",
   },
   {
     id: "haran",
@@ -55,6 +61,7 @@ export const places: Place[] = [
     region: "Upper Mesopotamia",
     description:
       "A major stop in Abram's migration before his journey into Canaan.",
+    identificationStatus: "well-established",
   },
   {
     id: "shechem",
@@ -66,6 +73,7 @@ export const places: Place[] = [
     region: "Canaan",
     description:
       "An important biblical location associated with the patriarchs and later Israelite history.",
+    identificationStatus: "well-established",
   },
   {
     id: "bethel",
@@ -77,6 +85,9 @@ export const places: Place[] = [
     region: "Canaan",
     description:
       "A significant biblical site associated with Abraham, Jacob, and later Israelite worship.",
+    identificationStatus: "probable",
+    identificationNote:
+      "Beitin is a common identification for biblical Bethel, though the precise identification is debated.",
   },
   {
     id: "egypt",
@@ -88,6 +99,7 @@ export const places: Place[] = [
     region: "Egypt",
     description:
       "A major setting in biblical history, including the patriarchal narratives and the Exodus.",
+    identificationStatus: "well-established",
   },
   {
     id: "hebron",
@@ -99,5 +111,6 @@ export const places: Place[] = [
     region: "Canaan",
     description:
       "A major patriarchal location associated especially with Abraham and his family.",
+    identificationStatus: "well-established",
   },
 ];

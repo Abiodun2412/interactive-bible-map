@@ -1,3 +1,10 @@
+export type IdentificationStatus =
+  | "well-established"
+  | "probable"
+  | "traditional"
+  | "disputed"
+  | "unknown";
+
 export type Place = {
   id: string;
   name: string;
@@ -7,4 +14,7 @@ export type Place = {
   type: string;
   region: string;
   description: string;
+
+  identificationStatus: IdentificationStatus;
+  identificationNote?: string;
 };

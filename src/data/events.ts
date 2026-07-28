@@ -10,6 +10,7 @@ export const events: Event[] = [
     periodId: "united-monarchy",
     personIds: ["david"],
     approximateDate: "c. 1000 BC",
+    datePrecision: "approximate",
     references: [
       {
         book: "2 Samuel",
@@ -28,6 +29,7 @@ export const events: Event[] = [
     periodId: "united-monarchy",
     personIds: ["solomon"],
     approximateDate: "10th century BC",
+    datePrecision: "range",
     references: [
       {
         book: "1 Kings",
@@ -44,6 +46,7 @@ export const events: Event[] = [
     periodId: "life-of-jesus",
     personIds: ["jesus"],
     approximateDate: "c. 6–4 BC",
+    datePrecision: "range",
     references: [
       {
         book: "Matthew",
@@ -67,6 +70,7 @@ export const events: Event[] = [
     placeId: "nazareth",
     periodId: "life-of-jesus",
     personIds: ["jesus"],
+    datePrecision: "unknown",
     references: [
       {
         book: "Matthew",
