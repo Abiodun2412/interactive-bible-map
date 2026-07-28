@@ -298,4 +298,68 @@ export const journeyStops: JourneyStop[] = [
             },
         ],
     },
+    {
+        id: "exodus-stop-1",
+        journeyId: "exodus-to-sinai",
+        placeId: "goshen",
+        order: 1,
+        description:
+            "Israel prepares to leave the region of Egypt where they had been living.",
+        references: [
+            {
+                book: "Exodus",
+                chapter: 12,
+                startVerse: 1,
+                endVerse: 32,
+            },
+        ],
+    },
+    {
+        id: "exodus-stop-2",
+        journeyId: "exodus-to-sinai",
+        placeId: "egypt",
+        order: 2,
+        description:
+            "Israel departs from Egypt after the Passover.",
+        references: [
+            {
+                book: "Exodus",
+                chapter: 12,
+                startVerse: 31,
+                endVerse: 42,
+            },
+        ],
+    },
+    {
+        id: "exodus-stop-3",
+        journeyId: "exodus-to-sinai",
+        placeId: "red-sea-crossing",
+        order: 3,
+        description:
+            "God brings Israel through the sea and delivers them from Pharaoh's pursuing army.",
+        references: [
+            {
+                book: "Exodus",
+                chapter: 14,
+            },
+        ],
+    },
+    {
+        id: "exodus-stop-4",
+        journeyId: "exodus-to-sinai",
+        placeId: "mount-sinai",
+        order: 4,
+        description:
+            "Israel arrives at Mount Sinai, where God meets with the nation and gives His covenant commands.",
+        references: [
+            {
+                book: "Exodus",
+                chapter: 19,
+            },
+            {
+                book: "Exodus",
+                chapter: 20,
+            },
+        ],
+    },
 ];

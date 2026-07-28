@@ -140,6 +140,48 @@ export const places: Place[] = [
     identificationStatus: "well-established",
   },
   {
+    id: "goshen",
+    name: "Goshen",
+    modernName: "Eastern Nile Delta",
+    latitude: 30.6,
+    longitude: 31.8,
+    type: "region",
+    region: "Egypt",
+    description:
+      "The region of Egypt in which the Israelites lived before the Exodus.",
+    identificationStatus: "probable",
+    identificationNote:
+      "Goshen is generally associated with the eastern Nile Delta, although its precise boundaries cannot be identified with certainty.",
+  },
+  {
+    id: "red-sea-crossing",
+    name: "Crossing of the Sea",
+    modernName: "Northern Red Sea / eastern Egyptian region",
+    latitude: 29.9,
+    longitude: 32.5,
+    type: "site",
+    region: "Egypt",
+    description:
+      "The location where God delivered Israel by bringing them through the sea and overthrowing Pharaoh's pursuing forces.",
+    identificationStatus: "disputed",
+    identificationNote:
+      "Scripture records Israel crossing the sea during the Exodus, but the precise modern location of the crossing is debated.",
+  },
+  {
+    id: "mount-sinai",
+    name: "Mount Sinai",
+    modernName: "Sinai Peninsula region",
+    latitude: 28.54,
+    longitude: 33.97,
+    type: "mountain",
+    region: "Sinai",
+    description:
+      "The mountain where God met with Israel and gave His covenant commands through Moses.",
+    identificationStatus: "traditional",
+    identificationNote:
+      "The biblical Mount Sinai is certain within the Exodus narrative, while several modern locations have been proposed for the mountain.",
+  },
+  {
     id: "hebron",
     name: "Hebron",
     modernName: "Hebron",

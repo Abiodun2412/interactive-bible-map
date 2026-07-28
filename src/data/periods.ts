@@ -7,7 +7,15 @@ export const periods: Period[] = [
     startYear: -2000,
     endYear: -1700,
     description:
-      "The period associated with Abraham, Isaac, Jacob, and the early family history of Israel.",
+      "The period associated with Abraham, Isaac, Jacob, Joseph, and the early family history of Israel.",
+  },
+  {
+    id: "exodus-wilderness",
+    name: "Exodus & Wilderness",
+    startYear: -1500,
+    endYear: -1200,
+    description:
+      "The period associated with Moses, the Exodus from Egypt, Mount Sinai, and Israel's wilderness journey toward the Promised Land.",
   },
   {
     id: "united-monarchy",

@@ -26,6 +26,18 @@ export const people: Person[] = [
       "Son of Jacob who was taken to Egypt and later rose to authority there.",
   },
   {
+    id: "moses",
+    name: "Moses",
+    description:
+      "Servant of God who led Israel out of Egypt, received God's law at Sinai, and led the people through the wilderness.",
+  },
+  {
+    id: "aaron",
+    name: "Aaron",
+    description:
+      "Brother of Moses who served alongside him during the Exodus and became Israel's first high priest.",
+  },
+  {
     id: "david",
     name: "David",
     description:
