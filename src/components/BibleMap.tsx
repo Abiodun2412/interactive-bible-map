@@ -1,9 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import { MapContainer, Marker, TileLayer } from "react-leaflet";
+import {
+  MapContainer,
+  Marker,
+  TileLayer,
+  ZoomControl,
+} from "react-leaflet";
 
 import LocationPanel from "@/components/LocationPanel";
+import PeriodFilter from "@/components/PeriodFilter";
+import { events } from "@/data/events";
 import { places } from "@/data/places";
 import type { Place } from "@/types/place";
 
@@ -13,11 +20,24 @@ export default function BibleMap() {
   const jerusalem = places[0];
 
   const [selectedPlace, setSelectedPlace] = useState<Place | null>(null);
+  const [selectedPeriodId, setSelectedPeriodId] = useState<string | null>(null);
+
+  const visiblePlaces =
+    selectedPeriodId === null
+      ? places
+      : places.filter((place) =>
+          events.some(
+            (event) =>
+              event.placeId === place.id &&
+              event.periodId === selectedPeriodId
+          )
+        );
 
   return (
     <MapContainer
       center={[jerusalem.latitude, jerusalem.longitude]}
       zoom={7}
+      zoomControl={false}
       style={{ height: "100vh", width: "100%" }}
     >
       <TileLayer
@@ -25,7 +45,17 @@ export default function BibleMap() {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
 
-      {places.map((place) => (
+      <ZoomControl position="bottomright" />
+
+      <PeriodFilter
+        selectedPeriodId={selectedPeriodId}
+        onChange={(periodId) => {
+          setSelectedPeriodId(periodId);
+          setSelectedPlace(null);
+        }}
+      />
+
+      {visiblePlaces.map((place) => (
         <Marker
           key={place.id}
           position={[place.latitude, place.longitude]}

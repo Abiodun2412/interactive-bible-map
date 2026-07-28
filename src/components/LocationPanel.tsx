@@ -1,6 +1,7 @@
 import { events } from "@/data/events";
-import type { Place } from "@/types/place";
+import { periods } from "@/data/periods";
 import type { BibleReference } from "@/types/bibleReference";
+import type { Place } from "@/types/place";
 
 type LocationPanelProps = {
   place: Place;
@@ -75,37 +76,51 @@ export default function LocationPanel({
           </p>
         ) : (
           <div className="space-y-4">
-            {placeEvents.map((event) => (
-              <article
-                key={event.id}
-                className="rounded-lg border border-gray-200 p-4"
-              >
-                <h4 className="font-semibold text-gray-900">
-                  {event.title}
-                </h4>
+            {placeEvents.map((event) => {
+              const period = periods.find(
+                (period) => period.id === event.periodId
+              );
 
-                {event.approximateDate && (
-                  <p className="mt-1 text-sm text-gray-500">
-                    {event.approximateDate}
+              return (
+                <article
+                  key={event.id}
+                  className="rounded-lg border border-gray-200 p-4"
+                >
+                  <h4 className="font-semibold text-gray-900">
+                    {event.title}
+                  </h4>
+
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    {period && (
+                      <span className="rounded-full bg-gray-100 px-2 py-1 text-xs text-gray-700">
+                        {period.name}
+                      </span>
+                    )}
+
+                    {event.approximateDate && (
+                      <span className="rounded-full bg-gray-100 px-2 py-1 text-xs text-gray-700">
+                        {event.approximateDate}
+                      </span>
+                    )}
+                  </div>
+
+                  <p className="mt-3 text-sm leading-6 text-gray-700">
+                    {event.description}
                   </p>
-                )}
 
-                <p className="mt-2 text-sm leading-6 text-gray-700">
-                  {event.description}
-                </p>
-
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {event.references.map((reference, index) => (
-                    <span
-                      key={`${event.id}-${index}`}
-                      className="rounded bg-gray-100 px-2 py-1 text-xs text-gray-700"
-                    >
-                      {formatReference(reference)}
-                    </span>
-                  ))}
-                </div>
-              </article>
-            ))}
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    {event.references.map((reference, index) => (
+                      <span
+                        key={`${event.id}-${index}`}
+                        className="rounded bg-gray-100 px-2 py-1 text-xs text-gray-700"
+                      >
+                        {formatReference(reference)}
+                      </span>
+                    ))}
+                  </div>
+                </article>
+              );
+            })}
           </div>
         )}
       </section>
