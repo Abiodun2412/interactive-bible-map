@@ -18,13 +18,18 @@ export default function BibleMap() {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
 
-      <Marker position={[jerusalem.latitude, jerusalem.longitude]}>
-        <Popup>
-          <strong>{jerusalem.name}</strong>
-          <br />
-          {jerusalem.description}
-        </Popup>
-      </Marker>
+      {places.map((place) => (
+        <Marker
+          key={place.id}
+          position={[place.latitude, place.longitude]}
+        >
+          <Popup>
+            <strong>{place.name}</strong>
+            <br />
+            {place.description}
+          </Popup>
+        </Marker>
+      ))}
     </MapContainer>
   );
 }
