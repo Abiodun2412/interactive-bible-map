@@ -362,4 +362,51 @@ export const journeyStops: JourneyStop[] = [
             },
         ],
     },
+    {
+        id: "wilderness-stop-1",
+        journeyId: "wilderness-to-moab",
+        placeId: "mount-sinai",
+        order: 1,
+        description:
+            "Israel departs from the region of Mount Sinai after receiving God's commands and preparing to continue toward the Promised Land.",
+        references: [
+            {
+                book: "Numbers",
+                chapter: 10,
+                startVerse: 11,
+                endVerse: 13,
+            },
+        ],
+    },
+    {
+        id: "wilderness-stop-2",
+        journeyId: "wilderness-to-moab",
+        placeId: "kadesh-barnea",
+        order: 2,
+        description:
+            "Israel reaches the region of Kadesh-barnea, from which the twelve spies are sent to explore the land of Canaan.",
+        references: [
+            {
+                book: "Numbers",
+                chapter: 13,
+                startVerse: 1,
+                endVerse: 26,
+            },
+        ],
+    },
+    {
+        id: "wilderness-stop-3",
+        journeyId: "wilderness-to-moab",
+        placeId: "plains-of-moab",
+        order: 3,
+        description:
+            "After the wilderness years and later journeys, Israel camps on the plains of Moab beside the Jordan, opposite Jericho.",
+        references: [
+            {
+                book: "Numbers",
+                chapter: 22,
+                startVerse: 1,
+            },
+        ],
+    },
 ];

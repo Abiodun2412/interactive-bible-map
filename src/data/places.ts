@@ -179,7 +179,47 @@ export const places: Place[] = [
       "The mountain where God met with Israel and gave His covenant commands through Moses.",
     identificationStatus: "traditional",
     identificationNote:
-      "The biblical Mount Sinai is certain within the Exodus narrative, while several modern locations have been proposed for the mountain.",
+      "Several modern locations have been proposed for biblical Mount Sinai. This marker represents the traditional southern Sinai identification.",
+  },
+  {
+    id: "kadesh-barnea",
+    name: "Kadesh-barnea",
+    modernName: "Ein Qudeirat region",
+    latitude: 30.64,
+    longitude: 34.42,
+    type: "site",
+    region: "Wilderness of Paran",
+    description:
+      "A major encampment during Israel's wilderness years and the location associated with the mission of the twelve spies into Canaan.",
+    identificationStatus: "probable",
+    identificationNote:
+      "Ein Qudeirat is commonly identified with biblical Kadesh-barnea, though details of the identification and surrounding route remain debated.",
+  },
+  {
+    id: "plains-of-moab",
+    name: "Plains of Moab",
+    modernName: "Jordan Valley east of Jericho",
+    latitude: 31.86,
+    longitude: 35.65,
+    type: "region",
+    region: "Moab",
+    description:
+      "The region east of the Jordan where Israel camped before entering the Promised Land.",
+    identificationStatus: "well-established",
+  },
+  {
+    id: "mount-nebo",
+    name: "Mount Nebo",
+    modernName: "Mount Nebo, Jordan",
+    latitude: 31.768,
+    longitude: 35.725,
+    type: "mountain",
+    region: "Moab",
+    description:
+      "The mountain from which Moses viewed the Promised Land before his death.",
+    identificationStatus: "traditional",
+    identificationNote:
+      "The modern Mount Nebo is traditionally identified with the mountain described in Deuteronomy.",
   },
   {
     id: "hebron",

@@ -229,6 +229,79 @@ export const events: Event[] = [
         ],
     },
     {
+        id: "twelve-spies",
+        title: "The twelve spies explore Canaan",
+        description:
+            "At God's command, Moses sends twelve men to explore the land of Canaan. Joshua and Caleb trust that God will give Israel the land, while the other spies bring a report that causes the people to fear.",
+        placeId: "kadesh-barnea",
+        periodId: "exodus-wilderness",
+        personIds: ["moses"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Numbers",
+                chapter: 13,
+            },
+            {
+                book: "Numbers",
+                chapter: 14,
+            },
+        ],
+    },
+    {
+        id: "moses-strikes-rock",
+        title: "Moses strikes the rock at Meribah",
+        description:
+            "When the congregation has no water, God commands Moses to speak to the rock. Moses strikes it, and water comes out, but God tells Moses and Aaron that they will not bring the assembly into the land.",
+        placeId: "kadesh-barnea",
+        periodId: "exodus-wilderness",
+        personIds: ["moses", "aaron"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Numbers",
+                chapter: 20,
+                startVerse: 1,
+                endVerse: 13,
+            },
+        ],
+    },
+    {
+        id: "israel-camps-moab",
+        title: "Israel camps on the plains of Moab",
+        description:
+            "Israel reaches the plains of Moab beside the Jordan, opposite Jericho, as the nation prepares for entry into the Promised Land.",
+        placeId: "plains-of-moab",
+        periodId: "exodus-wilderness",
+        personIds: ["moses"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Numbers",
+                chapter: 22,
+                startVerse: 1,
+            },
+        ],
+    },
+    {
+        id: "moses-views-promised-land",
+        title: "Moses views the Promised Land",
+        description:
+            "Moses goes up from the plains of Moab to Mount Nebo, where God shows him the land promised to Abraham, Isaac, and Jacob before Moses dies.",
+        placeId: "mount-nebo",
+        periodId: "exodus-wilderness",
+        personIds: ["moses"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Deuteronomy",
+                chapter: 34,
+                startVerse: 1,
+                endVerse: 8,
+            },
+        ],
+    },
+    {
         id: "david-captures-jerusalem",
         title: "David establishes Jerusalem as his capital",
         description:
