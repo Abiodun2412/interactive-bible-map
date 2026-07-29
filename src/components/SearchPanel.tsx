@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 import { events } from "@/data/events";
 import { journeys } from "@/data/journeys";
@@ -46,6 +46,27 @@ export default function SearchPanel({
   onSelectPerson,
 }: SearchPanelProps) {
   const [query, setQuery] = useState("");
+  const panelRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const panel = panelRef.current;
+
+    if (!panel) {
+      return;
+    }
+
+    const stopPropagation = (event: Event) => {
+      event.stopPropagation();
+    };
+
+    panel.addEventListener("wheel", stopPropagation);
+    panel.addEventListener("touchmove", stopPropagation);
+
+    return () => {
+      panel.removeEventListener("wheel", stopPropagation);
+      panel.removeEventListener("touchmove", stopPropagation);
+    };
+  }, []);
 
   const results = useMemo<SearchResult[]>(() => {
     const trimmedQuery = query.trim().toLowerCase();
@@ -107,6 +128,10 @@ export default function SearchPanel({
           referenceText.includes(trimmedQuery)
         );
       })
+      .filter(
+        (event): event is typeof event & { placeId: string } =>
+          event.placeId !== undefined
+      )
       .map((event) => {
         const place = places.find((place) => place.id === event.placeId);
 
@@ -148,7 +173,10 @@ export default function SearchPanel({
   };
 
   return (
-    <div className="absolute left-4 top-52 z-[1000] w-72 rounded-xl bg-white p-4 shadow-xl">
+    <div
+      ref={panelRef}
+      className="absolute left-4 top-52 z-[1000] w-72 overscroll-contain rounded-xl bg-white p-4 shadow-xl"
+    >
       <label
         htmlFor="bible-search"
         className="mb-2 block text-sm font-semibold text-gray-900"
@@ -166,7 +194,7 @@ export default function SearchPanel({
       />
 
       {query.trim() && (
-        <div className="mt-3 max-h-80 overflow-y-auto">
+        <div className="mt-3 max-h-80 overflow-y-auto overscroll-contain">
           {results.length === 0 ? (
             <p className="py-2 text-sm text-gray-500">
               No results found.
