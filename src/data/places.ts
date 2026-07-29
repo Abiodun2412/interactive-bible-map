@@ -627,4 +627,132 @@ export const places: Place[] = [
     identificationNote:
       "Several ancient sites named Ramah appear in Scripture. The precise identification of Samuel's Ramah remains debated.",
   },
+  {
+    id: "mizpah-benjamin",
+    name: "Mizpah",
+    modernName: "Tell en-Nasbeh region",
+    latitude: 31.885,
+    longitude: 35.216,
+    type: "city",
+    region: "Benjamin",
+    description:
+      "A major gathering place in Benjamin associated with Samuel and the public selection of Saul as king.",
+    identificationStatus: "probable",
+    identificationNote:
+      "Tell en-Nasbeh is commonly identified with Mizpah of Benjamin, though other proposals exist.",
+  },
+  {
+    id: "gibeah",
+    name: "Gibeah",
+    modernName: "Tell el-Ful",
+    latitude: 31.823,
+    longitude: 35.236,
+    type: "city",
+    region: "Benjamin",
+    description:
+      "Saul's home city and an important centre during his reign.",
+    identificationStatus: "probable",
+    identificationNote:
+      "Tell el-Ful is commonly identified with biblical Gibeah of Saul.",
+  },
+  {
+    id: "gilgal-saul",
+    name: "Gilgal",
+    modernName: "Jericho region",
+    latitude: 31.87,
+    longitude: 35.46,
+    type: "site",
+    region: "Jordan Valley",
+    description:
+      "A major gathering place associated with Samuel and Saul during the beginning of the monarchy.",
+    identificationStatus: "disputed",
+    identificationNote:
+      "Several biblical events are associated with Gilgal. The exact location of the site remains uncertain.",
+  },
+  {
+    id: "valley-of-elah",
+    name: "Valley of Elah",
+    modernName: "Elah Valley",
+    latitude: 31.69,
+    longitude: 34.96,
+    type: "valley",
+    region: "Judah",
+    description:
+      "The valley where Israel and the Philistines faced one another and where David defeated Goliath.",
+    identificationStatus: "well-established",
+  },
+  {
+    id: "gath",
+    name: "Gath",
+    modernName: "Tell es-Safi",
+    latitude: 31.70,
+    longitude: 34.85,
+    type: "city",
+    region: "Philistia",
+    description:
+      "A major Philistine city associated with Goliath and later with David's flight from Saul.",
+    identificationStatus: "well-established",
+  },
+  {
+    id: "nob",
+    name: "Nob",
+    modernName: "Jerusalem region",
+    latitude: 31.81,
+    longitude: 35.24,
+    type: "city",
+    region: "Benjamin",
+    description:
+      "A priestly city visited by David while fleeing from Saul.",
+    identificationStatus: "disputed",
+    identificationNote:
+      "The biblical setting is near Jerusalem, but the exact modern location of Nob is uncertain.",
+  },
+  {
+    id: "adullam",
+    name: "Adullam",
+    modernName: "Adullam region",
+    latitude: 31.65,
+    longitude: 34.95,
+    type: "site",
+    region: "Judah",
+    description:
+      "The region associated with the cave where David gathered followers while fleeing from Saul.",
+    identificationStatus: "probable",
+  },
+  {
+    id: "en-gedi",
+    name: "En Gedi",
+    modernName: "Ein Gedi",
+    latitude: 31.46,
+    longitude: 35.39,
+    type: "site",
+    region: "Wilderness of Judah",
+    description:
+      "An oasis region where David hid from Saul.",
+    identificationStatus: "well-established",
+  },
+  {
+    id: "mount-gilboa",
+    name: "Mount Gilboa",
+    modernName: "Mount Gilboa",
+    latitude: 32.52,
+    longitude: 35.42,
+    type: "mountain",
+    region: "Jezreel Valley",
+    description:
+      "The mountain where Saul and his sons died in battle against the Philistines.",
+    identificationStatus: "well-established",
+  },
+  {
+    id: "jabesh-gilead",
+    name: "Jabesh-gilead",
+    modernName: "Wadi Yabis region",
+    latitude: 32.38,
+    longitude: 35.68,
+    type: "city",
+    region: "Gilead",
+    description:
+      "A city whose men recovered the bodies of Saul and his sons after the battle at Mount Gilboa.",
+    identificationStatus: "probable",
+  },
 ];

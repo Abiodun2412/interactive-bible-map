@@ -127,4 +127,22 @@ export const people: Person[] = [
     description:
       "Prophet and judge of Israel who served the Lord from his youth and played a central role in Israel's transition to monarchy.",
   },
+  {
+    id: "saul",
+    name: "Saul",
+    description:
+      "The first king of Israel, chosen during the ministry of Samuel and anointed to lead the nation.",
+  },
+  {
+    id: "goliath",
+    name: "Goliath",
+    description:
+      "Philistine warrior from Gath defeated by David in the Valley of Elah.",
+  },
+  {
+    id: "jonathan",
+    name: "Jonathan",
+    description:
+      "Son of Saul and close friend of David who remained loyal to him despite Saul's hostility.",
+  },
 ];

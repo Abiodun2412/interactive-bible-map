@@ -96,4 +96,12 @@ export const journeys: Journey[] = [
         periodId: "judges",
         personIds: ["ruth", "naomi"],
     },
+    {
+        id: "david-flees-saul",
+        name: "David Flees from Saul",
+        description:
+            "Key locations from David's flight from Saul, including Nob, Gath, Adullam, and En Gedi.",
+        periodId: "judges",
+        personIds: ["david", "saul"],
+    },
 ];

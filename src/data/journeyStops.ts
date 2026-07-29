@@ -831,4 +831,80 @@ export const journeyStops: JourneyStop[] = [
             },
         ],
     },
+    {
+        id: "david-flees-stop-1",
+        journeyId: "david-flees-saul",
+        placeId: "gibeah",
+        order: 1,
+        description:
+            "David departs from Saul's court as Saul's hostility toward him grows.",
+        references: [
+            {
+                book: "1 Samuel",
+                chapter: 19,
+            },
+        ],
+    },
+    {
+        id: "david-flees-stop-2",
+        journeyId: "david-flees-saul",
+        placeId: "nob",
+        order: 2,
+        description:
+            "David comes to Nob and receives provisions from Ahimelech the priest.",
+        references: [
+            {
+                book: "1 Samuel",
+                chapter: 21,
+                startVerse: 1,
+                endVerse: 9,
+            },
+        ],
+    },
+    {
+        id: "david-flees-stop-3",
+        journeyId: "david-flees-saul",
+        placeId: "gath",
+        order: 3,
+        description:
+            "David flees to Gath and comes before Achish, king of the Philistine city.",
+        references: [
+            {
+                book: "1 Samuel",
+                chapter: 21,
+                startVerse: 10,
+                endVerse: 15,
+            },
+        ],
+    },
+    {
+        id: "david-flees-stop-4",
+        journeyId: "david-flees-saul",
+        placeId: "adullam",
+        order: 4,
+        description:
+            "David escapes to the cave of Adullam and begins gathering followers.",
+        references: [
+            {
+                book: "1 Samuel",
+                chapter: 22,
+                startVerse: 1,
+                endVerse: 2,
+            },
+        ],
+    },
+    {
+        id: "david-flees-stop-5",
+        journeyId: "david-flees-saul",
+        placeId: "en-gedi",
+        order: 5,
+        description:
+            "David hides in the wilderness around En Gedi and later spares Saul's life.",
+        references: [
+            {
+                book: "1 Samuel",
+                chapter: 24,
+            },
+        ],
+    },
 ];

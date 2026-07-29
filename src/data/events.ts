@@ -915,6 +915,286 @@ export const events: Event[] = [
         ],
     },
     {
+        id: "israel-asks-for-king",
+        title: "Israel asks for a king",
+        description:
+            "The elders of Israel come to Samuel and ask for a king to judge them like the surrounding nations.",
+        placeId: "ramah",
+        periodId: "judges",
+        personIds: ["samuel"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Samuel",
+                chapter: 8,
+            },
+        ],
+    },
+    {
+        id: "saul-anointed",
+        title: "Samuel anoints Saul",
+        description:
+            "Samuel privately anoints Saul, declaring that the Lord has appointed him to lead His people.",
+        placeId: "ramah",
+        periodId: "judges",
+        personIds: ["samuel", "saul"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Samuel",
+                chapter: 10,
+                startVerse: 1,
+            },
+        ],
+    },
+    {
+        id: "saul-chosen-at-mizpah",
+        title: "Saul is publicly chosen as king",
+        description:
+            "Samuel gathers Israel at Mizpah, where Saul is publicly identified before the people as the man chosen to be king.",
+        placeId: "mizpah-benjamin",
+        periodId: "judges",
+        personIds: ["samuel", "saul"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Samuel",
+                chapter: 10,
+                startVerse: 17,
+                endVerse: 24,
+            },
+        ],
+    },
+    {
+        id: "saul-confirmed-king",
+        title: "Saul's kingship is renewed at Gilgal",
+        description:
+            "After Saul leads Israel to victory, Samuel gathers the people at Gilgal, where Saul's kingship is renewed before the Lord.",
+        placeId: "gilgal-saul",
+        periodId: "judges",
+        personIds: ["samuel", "saul"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Samuel",
+                chapter: 11,
+                startVerse: 14,
+                endVerse: 15,
+            },
+        ],
+    },
+    {
+        id: "saul-at-gibeah",
+        title: "Saul establishes his leadership from Gibeah",
+        description:
+            "Saul's reign is closely associated with Gibeah, which becomes a major centre of his rule.",
+        placeId: "gibeah",
+        periodId: "judges",
+        personIds: ["saul"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Samuel",
+                chapter: 13,
+                startVerse: 2,
+            },
+        ],
+    },
+    {
+        id: "david-anointed",
+        title: "Samuel anoints David",
+        description:
+            "God sends Samuel to Bethlehem, where David is chosen and anointed in the presence of his brothers.",
+        placeId: "bethlehem",
+        periodId: "judges",
+        personIds: ["samuel", "david"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Samuel",
+                chapter: 16,
+                startVerse: 1,
+                endVerse: 13,
+            },
+        ],
+    },
+    {
+        id: "david-defeats-goliath",
+        title: "David defeats Goliath",
+        description:
+            "David confronts Goliath in the Valley of Elah and defeats him, declaring that the battle belongs to the Lord.",
+        placeId: "valley-of-elah",
+        periodId: "judges",
+        personIds: ["david", "goliath"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Samuel",
+                chapter: 17,
+            },
+        ],
+    },
+    {
+        id: "david-jonathan-covenant",
+        title: "David and Jonathan form a covenant",
+        description:
+            "Jonathan forms a covenant with David and remains loyal to him despite Saul's growing hostility.",
+        placeId: "gibeah",
+        periodId: "judges",
+        personIds: ["david", "jonathan", "saul"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Samuel",
+                chapter: 18,
+                startVerse: 1,
+                endVerse: 4,
+            },
+        ],
+    },
+    {
+        id: "saul-seeks-david",
+        title: "Saul turns against David",
+        description:
+            "Saul becomes fearful and jealous of David and increasingly seeks to kill him.",
+        placeId: "gibeah",
+        periodId: "judges",
+        personIds: ["saul", "david"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Samuel",
+                chapter: 18,
+                startVerse: 6,
+                endVerse: 30,
+            },
+        ],
+    },
+    {
+        id: "david-visits-nob",
+        title: "David visits Nob",
+        description:
+            "While fleeing from Saul, David comes to Ahimelech the priest at Nob and receives provisions and Goliath's sword.",
+        placeId: "nob",
+        periodId: "judges",
+        personIds: ["david"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Samuel",
+                chapter: 21,
+                startVerse: 1,
+                endVerse: 9,
+            },
+        ],
+    },
+    {
+        id: "david-at-adullam",
+        title: "David gathers followers at Adullam",
+        description:
+            "David escapes to the cave of Adullam, where his family and many others join him.",
+        placeId: "adullam",
+        periodId: "judges",
+        personIds: ["david"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Samuel",
+                chapter: 22,
+                startVerse: 1,
+                endVerse: 2,
+            },
+        ],
+    },
+    {
+        id: "david-spares-saul",
+        title: "David spares Saul at En Gedi",
+        description:
+            "David has an opportunity to kill Saul but refuses to harm the Lord's anointed.",
+        placeId: "en-gedi",
+        periodId: "judges",
+        personIds: ["david", "saul"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Samuel",
+                chapter: 24,
+            },
+        ],
+    },
+    {
+        id: "saul-dies-gilboa",
+        title: "Saul dies on Mount Gilboa",
+        description:
+            "Saul and his sons fall in battle against the Philistines on Mount Gilboa, bringing Saul's reign to an end.",
+        placeId: "mount-gilboa",
+        periodId: "judges",
+        personIds: ["saul", "jonathan"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Samuel",
+                chapter: 31,
+            },
+        ],
+    },
+    {
+        id: "jabesh-retrieves-saul",
+        title: "The men of Jabesh-gilead recover Saul's body",
+        description:
+            "The valiant men of Jabesh-gilead recover the bodies of Saul and his sons and give them burial.",
+        placeId: "jabesh-gilead",
+        periodId: "judges",
+        personIds: ["saul", "jonathan"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Samuel",
+                chapter: 31,
+                startVerse: 11,
+                endVerse: 13,
+            },
+        ],
+    },
+    {
+        id: "david-becomes-king-hebron",
+        title: "David becomes king over Judah",
+        description:
+            "David goes up to Hebron, where the men of Judah anoint him king over the house of Judah.",
+        placeId: "hebron",
+        periodId: "united-monarchy",
+        personIds: ["david"],
+        approximateDate: "c. 1010 BC",
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Samuel",
+                chapter: 2,
+                startVerse: 1,
+                endVerse: 4,
+            },
+        ],
+    },
+    {
+        id: "david-king-all-israel",
+        title: "David becomes king over all Israel",
+        description:
+            "The elders of Israel come to David at Hebron and anoint him king over Israel.",
+        placeId: "hebron",
+        periodId: "united-monarchy",
+        personIds: ["david"],
+        approximateDate: "c. 1003 BC",
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Samuel",
+                chapter: 5,
+                startVerse: 1,
+                endVerse: 5,
+            },
+        ],
+    },
+    {
         id: "david-captures-jerusalem",
         title: "David establishes Jerusalem as his capital",
         description:
