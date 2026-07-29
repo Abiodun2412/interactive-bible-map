@@ -14,6 +14,7 @@ import type { Place } from "@/types/place";
 type LocationPanelProps = {
   place: Place;
   onClose: () => void;
+  onBack?: () => void;
   onSelectJourney: (journeyId: string) => void;
   onSelectEvent: (eventId: string) => void;
   onSelectPerson: (personId: string) => void;
@@ -73,6 +74,7 @@ function formatDatePrecision(
 export default function LocationPanel({
   place,
   onClose,
+  onBack,
   onSelectJourney,
   onSelectEvent,
   onSelectPerson,
@@ -199,14 +201,31 @@ export default function LocationPanel({
       className="absolute right-4 top-4 z-[1000] max-h-[calc(100vh-2rem)] w-96 overflow-y-auto overscroll-contain rounded-xl bg-white p-6 shadow-xl"
     >
       <div className="mb-4 flex items-start justify-between gap-4">
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900">
-            {place.name}
-          </h2>
+        <div className="flex items-start gap-3">
+          {onBack && (
+            <button
+              type="button"
+              onClick={onBack}
+              className="mt-1 text-lg text-gray-500 hover:text-gray-900"
+              aria-label="Go back"
+            >
+              ←
+            </button>
+          )}
 
-          <p className="text-sm text-gray-500">
-            {place.modernName}
-          </p>
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-wide text-gray-400">
+              Biblical Place
+            </p>
+
+            <h2 className="mt-1 text-2xl font-bold text-gray-900">
+              {place.name}
+            </h2>
+
+            <p className="text-sm text-gray-500">
+              {place.modernName}
+            </p>
+          </div>
         </div>
 
         <button

@@ -14,6 +14,7 @@ type Person = (typeof people)[number];
 type PersonPanelProps = {
     person: Person;
     onClose: () => void;
+    onBack?: () => void;
     onSelectEvent: (eventId: string) => void;
     onSelectJourney: (journeyId: string) => void;
     onSelectPlace: (placeId: string) => void;
@@ -22,6 +23,7 @@ type PersonPanelProps = {
 export default function PersonPanel({
     person,
     onClose,
+    onBack,
     onSelectEvent,
     onSelectJourney,
     onSelectPlace,
@@ -114,21 +116,34 @@ export default function PersonPanel({
             className="absolute right-4 top-4 z-[1300] max-h-[calc(100vh-2rem)] w-96 overflow-y-auto overscroll-contain rounded-xl bg-white p-6 shadow-2xl"
         >
             <div className="flex items-start justify-between gap-4">
-                <div>
-                    <p className="text-xs font-semibold uppercase tracking-wide text-gray-400">
-                        Biblical Person
-                    </p>
+                <div className="flex items-start gap-3">
+                    {onBack && (
+                        <button
+                            type="button"
+                            onClick={onBack}
+                            className="mt-1 text-lg text-gray-500 hover:text-gray-900"
+                            aria-label="Go back"
+                        >
+                            ←
+                        </button>
+                    )}
 
-                    <h2 className="mt-1 text-2xl font-bold text-gray-900">
-                        {person.name}
-                    </h2>
+                    <div>
+                        <p className="text-xs font-semibold uppercase tracking-wide text-gray-400">
+                            Biblical Person
+                        </p>
+
+                        <h2 className="mt-1 text-2xl font-bold text-gray-900">
+                            {person.name}
+                        </h2>
+                    </div>
                 </div>
 
                 <button
                     type="button"
                     onClick={onClose}
                     className="text-xl text-gray-500 hover:text-gray-900"
-                    aria-label="Close person panel"
+                    aria-label="Close event panel"
                 >
                     ×
                 </button>

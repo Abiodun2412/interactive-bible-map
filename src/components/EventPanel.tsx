@@ -16,6 +16,7 @@ type EventPanelProps = {
     event: BibleEvent;
     place: Place | null;
     onClose: () => void;
+    onBack?: () => void;
     onSelectPerson: (personId: string) => void;
     onSelectPlace: (placeId: string) => void;
     onSelectJourney: (journeyId: string) => void;
@@ -61,6 +62,7 @@ export default function EventPanel({
     event,
     place,
     onClose,
+    onBack,
     onSelectPerson,
     onSelectPlace,
     onSelectJourney,
@@ -116,14 +118,27 @@ export default function EventPanel({
             className="absolute right-4 top-4 z-[1300] max-h-[calc(100vh-2rem)] w-96 overflow-y-auto overscroll-contain rounded-xl bg-white p-6 shadow-2xl"
         >
             <div className="flex items-start justify-between gap-4">
-                <div>
-                    <p className="text-xs font-semibold uppercase tracking-wide text-gray-400">
-                        Biblical Event
-                    </p>
+                <div className="flex items-start gap-3">
+                    {onBack && (
+                        <button
+                            type="button"
+                            onClick={onBack}
+                            className="mt-1 text-lg text-gray-500 hover:text-gray-900"
+                            aria-label="Go back"
+                        >
+                            ←
+                        </button>
+                    )}
 
-                    <h2 className="mt-1 text-2xl font-bold text-gray-900">
-                        {event.title}
-                    </h2>
+                    <div>
+                        <p className="text-xs font-semibold uppercase tracking-wide text-gray-400">
+                            Biblical Event
+                        </p>
+
+                        <h2 className="mt-1 text-2xl font-bold text-gray-900">
+                            {event.title}
+                        </h2>
+                    </div>
                 </div>
 
                 <button
