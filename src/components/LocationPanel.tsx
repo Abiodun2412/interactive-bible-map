@@ -15,6 +15,8 @@ type LocationPanelProps = {
   place: Place;
   onClose: () => void;
   onSelectJourney: (journeyId: string) => void;
+  onSelectEvent: (eventId: string) => void;
+  onSelectPerson: (personId: string) => void;
 };
 
 function formatReference(reference: BibleReference) {
@@ -72,6 +74,8 @@ export default function LocationPanel({
   place,
   onClose,
   onSelectJourney,
+  onSelectEvent,
+  onSelectPerson,
 }: LocationPanelProps) {
   const panelRef = useRef<HTMLElement | null>(null);
 
@@ -303,10 +307,11 @@ export default function LocationPanel({
                         );
 
                         return (
-                          <article
+                          <div
                             key={event.id}
-                            className="rounded-lg border border-gray-200 p-4"
+                            className="w-full rounded-lg border border-gray-200 p-4 text-left transition hover:border-gray-400 hover:bg-gray-50"
                           >
+
                             <h4 className="font-semibold text-gray-900">
                               {event.title}
                             </h4>
@@ -339,12 +344,16 @@ export default function LocationPanel({
 
                                 <div className="flex flex-wrap gap-2">
                                   {eventPeople.map((person) => (
-                                    <span
+                                    <button
                                       key={person.id}
-                                      className="rounded-full bg-gray-900 px-2 py-1 text-xs text-white"
+                                      type="button"
+                                      onClick={(clickEvent) => {
+                                        onSelectPerson(person.id);
+                                      }}
+                                      className="rounded-full bg-gray-900 px-2 py-1 text-xs text-white transition hover:bg-gray-700"
                                     >
                                       {person.name}
-                                    </span>
+                                    </button>
                                   ))}
                                 </div>
                               </div>
@@ -362,7 +371,14 @@ export default function LocationPanel({
                                 )
                               )}
                             </div>
-                          </article>
+                            <button
+                              type="button"
+                              onClick={() => onSelectEvent(event.id)}
+                              className="mt-3 text-xs font-semibold text-gray-500 transition hover:text-gray-900"
+                            >
+                              Explore event →
+                            </button>
+                          </div>
                         );
                       })}
                     </div>

@@ -16,6 +16,8 @@ import LocationPanel from "@/components/LocationPanel";
 import Timeline from "@/components/Timeline";
 import ActiveContext from "@/components/ActiveContext";
 import MapLegend from "@/components/MapLegend";
+import EventPanel from "@/components/EventPanel";
+import PersonPanel from "@/components/PersonPanel";
 import { people } from "@/data/people";
 import { periods } from "@/data/periods";
 
@@ -229,6 +231,11 @@ export default function BibleMap() {
     const [selectedPersonId, setSelectedPersonId] =
         useState<string | null>(null);
 
+    const [selectedEventId, setSelectedEventId] =
+        useState<string | null>(null);
+
+    const [selectedPersonPanelId, setSelectedPersonPanelId] =
+        useState<string | null>(null);
     const [focusRequest, setFocusRequest] =
         useState(0);
 
@@ -255,16 +262,59 @@ export default function BibleMap() {
             .sort((a, b) => a.order - b.order)
         : [];
 
-    const activeContextLabel =
-        selectedPersonId
-            ? people.find((person) => person.id === selectedPersonId)?.name ?? null
-            : selectedJourneyId
-                ? journeys.find((journey) => journey.id === selectedJourneyId)?.name ?? null
-                : selectedPeriodId
-                    ? periods.find((period) => period.id === selectedPeriodId)?.name ?? null
-                    : selectedPlace
-                        ? selectedPlace.name
-                        : null;
+    const selectedEvent =
+        selectedEventId
+            ? events.find((event) => event.id === selectedEventId) ?? null
+            : null;
+
+    const selectedEventPlace =
+        selectedEvent
+            ? places.find((place) => place.id === selectedEvent.placeId) ?? null
+            : null;
+
+    const selectedPersonPanel =
+        selectedPersonPanelId
+            ? people.find(
+                (person) => person.id === selectedPersonPanelId
+            ) ?? null
+            : null;
+
+    const activeContext =
+        selectedEvent
+            ? {
+                type: "Event" as const,
+                label: selectedEvent.title,
+            }
+            : selectedPersonId
+                ? {
+                    type: "Person" as const,
+                    label:
+                        people.find((person) => person.id === selectedPersonId)?.name ??
+                        null,
+                }
+                : selectedJourneyId
+                    ? {
+                        type: "Journey" as const,
+                        label:
+                            journeys.find((journey) => journey.id === selectedJourneyId)
+                                ?.name ?? null,
+                    }
+                    : selectedPeriodId
+                        ? {
+                            type: "Period" as const,
+                            label:
+                                periods.find((period) => period.id === selectedPeriodId)
+                                    ?.name ?? null,
+                        }
+                        : selectedPlace
+                            ? {
+                                type: "Place" as const,
+                                label: selectedPlace.name,
+                            }
+                            : {
+                                type: null,
+                                label: null,
+                            };
 
     const hasActiveJourneyContext =
         selectedJourneyId !== null ||
@@ -427,13 +477,78 @@ export default function BibleMap() {
         setSelectedJourneyId(journeyId);
     };
 
-    const handleSearchPerson = (
-        personId: string
-    ) => {
+    const handleLocationPersonSelect = (personId: string) => {
+        setSelectedPlace(null);
+        setSelectedEventId(null);
+        setSelectedPersonId(personId);
+        setSelectedPersonPanelId(personId);
+    };
+
+    const handleEventPersonSelect = (personId: string) => {
+        setSelectedEventId(null);
+        setSelectedPersonPanelId(personId);
+    };
+
+    const handleEventPlaceSelect = (placeId: string) => {
+        const place = places.find((place) => place.id === placeId);
+
+        if (!place) {
+            return;
+        }
+
+        setSelectedEventId(null);
+        setSelectedPersonPanelId(null);
+        setSelectedPlace(place);
+    };
+
+    const handleEventJourneySelect = (journeyId: string) => {
+        setSelectedEventId(null);
+        setSelectedPersonPanelId(null);
+        setSelectedPlace(null);
+
+        setSelectedPeriodId(null);
+        setSelectedPersonId(null);
+
+        setSelectedJourneyId(journeyId);
+    };
+
+    const handlePersonPanelEventSelect = (eventId: string) => {
+        setSelectedPersonPanelId(null);
+        setSelectedEventId(eventId);
+    };
+
+    const handlePersonPanelJourneySelect = (journeyId: string) => {
+        setSelectedPersonPanelId(null);
+        setSelectedEventId(null);
+        setSelectedPlace(null);
+        setSelectedJourneyId(journeyId);
+    };
+
+    const handlePersonPanelPlaceSelect = (placeId: string) => {
+        const place = places.find((place) => place.id === placeId);
+
+        if (!place) {
+            return;
+        }
+
+        setSelectedPersonPanelId(null);
+        setSelectedEventId(null);
+        setSelectedPlace(place);
+    };
+
+    const handleLocationEventSelect = (eventId: string) => {
+        setSelectedPlace(null);
+        setSelectedEventId(eventId);
+    };
+
+    const handleSearchPerson = (personId: string) => {
         setSelectedPeriodId(null);
         setSelectedJourneyId(null);
         setSelectedPlace(null);
+        setSelectedEventId(null);
+
         setSelectedPersonId(personId);
+        setSelectedPersonPanelId(personId);
     };
 
     const handlePeriodChange = (
@@ -494,12 +609,15 @@ export default function BibleMap() {
             />
 
             <ActiveContext
-                label={activeContextLabel}
+                label={activeContext.label}
+                type={activeContext.type}
                 onClear={() => {
                     setSelectedPlace(null);
                     setSelectedPersonId(null);
                     setSelectedJourneyId(null);
                     setSelectedPeriodId(null);
+                    setSelectedEventId(null);
+                    setSelectedPersonPanelId(null);
                 }}
             />
 
@@ -578,12 +696,34 @@ export default function BibleMap() {
             {selectedPlace && (
                 <LocationPanel
                     place={selectedPlace}
-                    onClose={() =>
-                        setSelectedPlace(null)
-                    }
+                    onClose={() => setSelectedPlace(null)}
                     onSelectJourney={handleLocationJourneySelect}
+                    onSelectEvent={handleLocationEventSelect}
+                    onSelectPerson={handleLocationPersonSelect}
                 />
             )}
+
+            {selectedEvent && (
+                <EventPanel
+                    event={selectedEvent}
+                    place={selectedEventPlace}
+                    onClose={() => setSelectedEventId(null)}
+                    onSelectPerson={handleEventPersonSelect}
+                    onSelectPlace={handleEventPlaceSelect}
+                    onSelectJourney={handleEventJourneySelect}
+                />
+            )}
+
+            {selectedPersonPanel && (
+                <PersonPanel
+                    person={selectedPersonPanel}
+                    onClose={() => setSelectedPersonPanelId(null)}
+                    onSelectEvent={handlePersonPanelEventSelect}
+                    onSelectJourney={handlePersonPanelJourneySelect}
+                    onSelectPlace={handlePersonPanelPlaceSelect}
+                />
+            )}
+
         </MapContainer>
     );
 }
