@@ -14,6 +14,9 @@ import {
 import MapControls from "@/components/MapControls";
 import LocationPanel from "@/components/LocationPanel";
 import Timeline from "@/components/Timeline";
+import ActiveContext from "@/components/ActiveContext";
+import { people } from "@/data/people";
+import { periods } from "@/data/periods";
 
 import { events } from "@/data/events";
 import { journeys } from "@/data/journeys";
@@ -239,6 +242,17 @@ export default function BibleMap() {
             : []
     );
 
+    const activeContextLabel =
+        selectedPersonId
+            ? people.find((person) => person.id === selectedPersonId)?.name ?? null
+            : selectedJourneyId
+                ? journeys.find((journey) => journey.id === selectedJourneyId)?.name ?? null
+                : selectedPeriodId
+                    ? periods.find((period) => period.id === selectedPeriodId)?.name ?? null
+                    : selectedPlace
+                        ? selectedPlace.name
+                        : null;
+
     const visibleJourneys = journeys.filter((journey) => {
         const matchesPeriod =
             selectedPeriodId === null ||
@@ -442,6 +456,16 @@ export default function BibleMap() {
                 onSelectPlace={handleSearchPlace}
                 onSelectJourney={handleSearchJourney}
                 onSelectPerson={handleSearchPerson}
+            />
+
+            <ActiveContext
+                label={activeContextLabel}
+                onClear={() => {
+                    setSelectedPlace(null);
+                    setSelectedPersonId(null);
+                    setSelectedJourneyId(null);
+                    setSelectedPeriodId(null);
+                }}
             />
 
             <Timeline

@@ -145,4 +145,34 @@ export const people: Person[] = [
     description:
       "Son of Saul and close friend of David who remained loyal to him despite Saul's hostility.",
   },
+  {
+    id: "nathan",
+    name: "Nathan",
+    description:
+      "Prophet during the reign of David who delivered God's covenant message to David and later supported Solomon's succession.",
+  },
+  {
+    id: "bathsheba",
+    name: "Bathsheba",
+    description:
+      "Mother of Solomon who played an important role in securing Solomon's succession to David's throne.",
+  },
+  {
+    id: "queen-of-sheba",
+    name: "Queen of Sheba",
+    description:
+      "A queen who came to Jerusalem to test Solomon with difficult questions and saw the wisdom and prosperity God had given him.",
+  },
+  {
+    id: "rehoboam",
+    name: "Rehoboam",
+    description:
+      "Son of Solomon who succeeded him as king and whose harsh response to Israel contributed to the division of the kingdom.",
+  },
+  {
+    id: "jeroboam",
+    name: "Jeroboam",
+    description:
+      "Former servant of Solomon who became the first king of the northern kingdom of Israel after the kingdom divided.",
+  },
 ];

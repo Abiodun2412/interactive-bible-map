@@ -104,4 +104,20 @@ export const journeys: Journey[] = [
         periodId: "judges",
         personIds: ["david", "saul"],
     },
+    {
+        id: "david-establishes-jerusalem",
+        name: "David Establishes Jerusalem",
+        description:
+            "David moves from Hebron to Jerusalem, captures Zion, and establishes Jerusalem as the centre of the kingdom.",
+        periodId: "united-monarchy",
+        personIds: ["david"],
+    },
+    {
+        id: "solomon-rise-and-temple",
+        name: "Solomon's Rise & the Temple",
+        description:
+            "Key locations associated with Solomon's accession, his request for wisdom at Gibeon, and the building and dedication of the Temple in Jerusalem.",
+        periodId: "united-monarchy",
+        personIds: ["solomon"],
+    },
 ];

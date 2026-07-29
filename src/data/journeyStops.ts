@@ -907,4 +907,100 @@ export const journeyStops: JourneyStop[] = [
             },
         ],
     },
+    {
+        id: "david-jerusalem-stop-1",
+        journeyId: "david-establishes-jerusalem",
+        placeId: "hebron",
+        order: 1,
+        description:
+            "David reigns from Hebron before becoming king over all Israel.",
+        references: [
+            {
+                book: "2 Samuel",
+                chapter: 5,
+                startVerse: 1,
+                endVerse: 5,
+            },
+        ],
+    },
+    {
+        id: "david-jerusalem-stop-2",
+        journeyId: "david-establishes-jerusalem",
+        placeId: "zion",
+        order: 2,
+        description:
+            "David captures the stronghold of Zion and establishes the City of David.",
+        references: [
+            {
+                book: "2 Samuel",
+                chapter: 5,
+                startVerse: 6,
+                endVerse: 10,
+            },
+        ],
+    },
+    {
+        id: "david-jerusalem-stop-3",
+        journeyId: "david-establishes-jerusalem",
+        placeId: "jerusalem",
+        order: 3,
+        description:
+            "Jerusalem becomes the centre of David's kingdom and the ark is brought into the city.",
+        references: [
+            {
+                book: "2 Samuel",
+                chapter: 6,
+            },
+        ],
+    },
+    {
+        id: "solomon-temple-stop-1",
+        journeyId: "solomon-rise-and-temple",
+        placeId: "jerusalem",
+        order: 1,
+        description:
+            "Solomon is proclaimed king in Jerusalem and succeeds David.",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 1,
+                startVerse: 28,
+                endVerse: 40,
+            },
+        ],
+    },
+    {
+        id: "solomon-temple-stop-2",
+        journeyId: "solomon-rise-and-temple",
+        placeId: "gibeon",
+        order: 2,
+        description:
+            "Solomon goes to Gibeon, where God appears to him and Solomon asks for wisdom.",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 3,
+                startVerse: 4,
+                endVerse: 15,
+            },
+        ],
+    },
+    {
+        id: "solomon-temple-stop-3",
+        journeyId: "solomon-rise-and-temple",
+        placeId: "temple-mount",
+        order: 3,
+        description:
+            "Solomon builds and later dedicates the Temple in Jerusalem.",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 6,
+            },
+            {
+                book: "1 Kings",
+                chapter: 8,
+            },
+        ],
+    },
 ];

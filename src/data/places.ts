@@ -755,4 +755,42 @@ export const places: Place[] = [
       "A city whose men recovered the bodies of Saul and his sons after the battle at Mount Gilboa.",
     identificationStatus: "probable",
   },
+  {
+    id: "zion",
+    name: "Zion / City of David",
+    modernName: "City of David, Jerusalem",
+    latitude: 31.773,
+    longitude: 35.236,
+    type: "district",
+    region: "Jerusalem",
+    description:
+      "The stronghold captured by David that became known as the City of David and formed the core of his capital in Jerusalem.",
+    identificationStatus: "well-established",
+  },
+  {
+    id: "temple-mount",
+    name: "Temple Mount",
+    modernName: "Temple Mount, Jerusalem",
+    latitude: 31.778,
+    longitude: 35.2354,
+    type: "site",
+    region: "Jerusalem",
+    description:
+      "The Jerusalem site associated with the Temple built by Solomon and the centre of Israel's worship.",
+    identificationStatus: "well-established",
+  },
+  {
+    id: "sheba",
+    name: "Sheba",
+    modernName: "Southern Arabia region",
+    latitude: 15.35,
+    longitude: 44.2,
+    type: "region",
+    region: "Arabia",
+    description:
+      "The kingdom associated with the Queen of Sheba, who travelled to Jerusalem during Solomon's reign.",
+    identificationStatus: "probable",
+    identificationNote:
+      "Sheba is generally associated with the ancient Sabaean kingdom in southern Arabia, centred in the region of modern Yemen.",
+  },
 ];

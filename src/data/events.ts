@@ -1214,11 +1214,118 @@ export const events: Event[] = [
         ],
     },
     {
+        id: "david-captures-zion",
+        title: "David captures the stronghold of Zion",
+        description:
+            "David captures the stronghold of Zion from the Jebusites and establishes the City of David.",
+        placeId: "zion",
+        periodId: "united-monarchy",
+        personIds: ["david"],
+        approximateDate: "c. 1000 BC",
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Samuel",
+                chapter: 5,
+                startVerse: 6,
+                endVerse: 10,
+            },
+        ],
+    },
+    {
+        id: "ark-brought-jerusalem",
+        title: "The ark is brought to Jerusalem",
+        description:
+            "David brings the ark of the covenant to Jerusalem with celebration and worship.",
+        placeId: "jerusalem",
+        periodId: "united-monarchy",
+        personIds: ["david"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Samuel",
+                chapter: 6,
+            },
+        ],
+    },
+    {
+        id: "davidic-covenant",
+        title: "God makes covenant promises to David",
+        description:
+            "God promises David that his house and kingdom will endure, establishing the covenant associated with David's royal line.",
+        placeId: "jerusalem",
+        periodId: "united-monarchy",
+        personIds: ["david"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Samuel",
+                chapter: 7,
+            },
+        ],
+    },
+    {
+        id: "solomon-made-king",
+        title: "Solomon is proclaimed king",
+        description:
+            "David commands that Solomon be anointed king, and Solomon is publicly proclaimed as David's successor.",
+        placeId: "jerusalem",
+        periodId: "united-monarchy",
+        personIds: ["david", "solomon", "nathan", "bathsheba"],
+        approximateDate: "c. 970 BC",
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 1,
+                startVerse: 28,
+                endVerse: 40,
+            },
+        ],
+    },
+    {
+        id: "david-dies",
+        title: "David dies and Solomon's kingdom is established",
+        description:
+            "After instructing Solomon, David dies following forty years of kingship, and Solomon's rule is firmly established.",
+        placeId: "jerusalem",
+        periodId: "united-monarchy",
+        personIds: ["david", "solomon"],
+        approximateDate: "c. 970 BC",
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 2,
+                startVerse: 1,
+                endVerse: 12,
+            },
+        ],
+    },
+    {
+        id: "solomon-asks-wisdom",
+        title: "Solomon asks God for wisdom",
+        description:
+            "God appears to Solomon and invites him to ask for what he desires. Solomon asks for wisdom to govern God's people.",
+        placeId: "gibeon",
+        periodId: "united-monarchy",
+        personIds: ["solomon"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 3,
+                startVerse: 4,
+                endVerse: 15,
+            },
+        ],
+    },
+    {
         id: "solomon-builds-temple",
         title: "Solomon builds the Temple",
         description:
-            "Solomon constructs the first Temple in Jerusalem as the central place of worship for Israel.",
-        placeId: "jerusalem",
+            "Solomon begins building the Temple of the Lord in Jerusalem, establishing the permanent house associated with Israel's worship.",
+        placeId: "temple-mount",
         periodId: "united-monarchy",
         personIds: ["solomon"],
         approximateDate: "10th century BC",
@@ -1227,6 +1334,112 @@ export const events: Event[] = [
             {
                 book: "1 Kings",
                 chapter: 6,
+            },
+        ],
+    },
+    {
+        id: "temple-dedicated",
+        title: "Solomon dedicates the Temple",
+        description:
+            "The ark is brought into the Temple, the glory of the Lord fills the house, and Solomon leads Israel in prayer and dedication before God.",
+        placeId: "temple-mount",
+        periodId: "united-monarchy",
+        personIds: ["solomon"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 8,
+            },
+        ],
+    },
+    {
+        id: "solomon-kingdom-prospers",
+        title: "Solomon's kingdom prospers",
+        description:
+            "Israel experiences a period of peace, prosperity, administration, and international influence during Solomon's reign.",
+        placeId: "jerusalem",
+        periodId: "united-monarchy",
+        personIds: ["solomon"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 4,
+            },
+        ],
+    },
+    {
+        id: "queen-sheba-visits-solomon",
+        title: "The Queen of Sheba visits Solomon",
+        description:
+            "The Queen of Sheba comes to Jerusalem after hearing of Solomon's fame and wisdom, and she recognises the greatness of what God has given him.",
+        placeId: "jerusalem",
+        periodId: "united-monarchy",
+        personIds: ["solomon", "queen-of-sheba"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 10,
+                startVerse: 1,
+                endVerse: 13,
+            },
+        ],
+    },
+    {
+        id: "solomon-turns-away",
+        title: "Solomon turns away from the Lord",
+        description:
+            "In Solomon's later years, his foreign wives turn his heart after other gods, and the Lord declares that the kingdom will be torn from his house after his reign.",
+        placeId: "jerusalem",
+        periodId: "united-monarchy",
+        personIds: ["solomon"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 11,
+                startVerse: 1,
+                endVerse: 13,
+            },
+        ],
+    },
+    {
+        id: "solomon-dies",
+        title: "Solomon dies",
+        description:
+            "Solomon dies after forty years of reign, and his son Rehoboam succeeds him.",
+        placeId: "jerusalem",
+        periodId: "united-monarchy",
+        personIds: ["solomon"],
+        approximateDate: "c. 930 BC",
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 11,
+                startVerse: 41,
+                endVerse: 43,
+            },
+        ],
+    },
+    {
+        id: "kingdom-divides",
+        title: "The kingdom divides",
+        description:
+            "After Rehoboam refuses the request of the northern tribes to lighten their burden, the kingdom divides. Rehoboam rules Judah while Jeroboam becomes king over the northern tribes.",
+        placeId: "shechem",
+        periodId: "united-monarchy",
+        personIds: ["rehoboam", "jeroboam"],
+        approximateDate: "c. 930 BC",
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 12,
+                startVerse: 1,
+                endVerse: 20,
             },
         ],
     },
