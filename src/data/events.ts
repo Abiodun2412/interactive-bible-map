@@ -2140,6 +2140,455 @@ export const events: Event[] = [
         ],
     },
     {
+        id: "daniel-taken-babylon",
+        title: "Daniel is taken to Babylon",
+        description:
+            "Daniel and other young men from Judah are taken to Babylon and selected for service in the royal court.",
+        placeId: "babylon",
+        periodId: "exile",
+        personIds: ["daniel", "nebuchadnezzar"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Daniel",
+                chapter: 1,
+                startVerse: 1,
+                endVerse: 7,
+            },
+        ],
+    },
+    {
+        id: "daniel-faithful-diet",
+        title: "Daniel and his companions remain faithful",
+        description:
+            "Daniel and his companions choose not to defile themselves with the royal food and are found healthy and wise.",
+        placeId: "babylon",
+        periodId: "exile",
+        personIds: ["daniel", "shadrach", "meshach", "abednego"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Daniel",
+                chapter: 1,
+                startVerse: 8,
+                endVerse: 21,
+            },
+        ],
+    },
+    {
+        id: "nebuchadnezzar-dream",
+        title: "Daniel interprets Nebuchadnezzar's dream",
+        description:
+            "God reveals Nebuchadnezzar's dream and its meaning to Daniel, who explains the vision before the king.",
+        placeId: "babylon",
+        periodId: "exile",
+        personIds: ["daniel", "nebuchadnezzar"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Daniel",
+                chapter: 2,
+            },
+        ],
+    },
+    {
+        id: "fiery-furnace",
+        title: "Shadrach, Meshach and Abednego are delivered from the furnace",
+        description:
+            "Shadrach, Meshach, and Abednego refuse to worship the golden image and are thrown into a fiery furnace, but God delivers them.",
+        placeId: "babylon",
+        periodId: "exile",
+        personIds: ["shadrach", "meshach", "abednego", "nebuchadnezzar"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Daniel",
+                chapter: 3,
+            },
+        ],
+    },
+    {
+        id: "ezekiel-among-exiles",
+        title: "Ezekiel lives among the exiles",
+        description:
+            "Ezekiel is among the Judean exiles by the Kebar River in Babylonia.",
+        placeId: "kebar-river",
+        periodId: "exile",
+        personIds: ["ezekiel"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Ezekiel",
+                chapter: 1,
+                startVerse: 1,
+                endVerse: 3,
+            },
+        ],
+    },
+    {
+        id: "ezekiel-vision-glory",
+        title: "Ezekiel sees the glory of the Lord",
+        description:
+            "Ezekiel receives a powerful vision of the glory of God while among the exiles by the Kebar River.",
+        placeId: "kebar-river",
+        periodId: "exile",
+        personIds: ["ezekiel"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Ezekiel",
+                chapter: 1,
+            },
+        ],
+    },
+    {
+        id: "ezekiel-called-watchman",
+        title: "Ezekiel is appointed as a watchman",
+        description:
+            "God commissions Ezekiel to speak His words to the house of Israel and appoints him as a watchman for the people.",
+        placeId: "kebar-river",
+        periodId: "exile",
+        personIds: ["ezekiel"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Ezekiel",
+                chapter: 2,
+            },
+            {
+                book: "Ezekiel",
+                chapter: 3,
+                startVerse: 1,
+                endVerse: 21,
+            },
+        ],
+    },
+    {
+        id: "ezekiel-dry-bones",
+        title: "The vision of the valley of dry bones",
+        description:
+            "Ezekiel sees a vision of dry bones restored to life, revealing God's promise to restore His people.",
+        placeId: "kebar-river",
+        periodId: "exile",
+        personIds: ["ezekiel"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Ezekiel",
+                chapter: 37,
+                startVerse: 1,
+                endVerse: 14,
+            },
+        ],
+    },
+    {
+        id: "belshazzar-feast",
+        title: "Belshazzar's feast and the writing on the wall",
+        description:
+            "During Belshazzar's feast, a mysterious hand writes on the wall. Daniel interprets the message as God's judgment that the kingdom has been weighed and given to the Medes and Persians.",
+        placeId: "babylon",
+        periodId: "exile",
+        personIds: ["daniel", "belshazzar"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Daniel",
+                chapter: 5,
+                startVerse: 1,
+                endVerse: 28,
+            },
+        ],
+    },
+    {
+        id: "babylon-falls",
+        title: "Babylon falls",
+        description:
+            "Belshazzar is killed and Babylonian rule comes to an end as power passes to the Medo-Persian realm.",
+        placeId: "babylon",
+        periodId: "exile",
+        personIds: ["belshazzar"],
+        approximateDate: "539 BC",
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Daniel",
+                chapter: 5,
+                startVerse: 30,
+                endVerse: 31,
+            },
+        ],
+    },
+    {
+        id: "cyrus-decree",
+        title: "Cyrus permits the return to Jerusalem",
+        description:
+            "Cyrus king of Persia proclaims that the Lord has charged him to build His house in Jerusalem and permits God's people to return and rebuild it.",
+        placeId: "persia",
+        periodId: "exile",
+        personIds: ["cyrus"],
+        approximateDate: "538 BC",
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Ezra",
+                chapter: 1,
+                startVerse: 1,
+                endVerse: 4,
+            },
+            {
+                book: "2 Chronicles",
+                chapter: 36,
+                startVerse: 22,
+                endVerse: 23,
+            },
+        ],
+    },
+    {
+        id: "first-return-from-exile",
+        title: "The exiles return to Jerusalem",
+        description:
+            "A group of exiles returns from Babylonian territory to Judah under Persian rule and begins resettling in the land.",
+        placeId: "jerusalem",
+        periodId: "return-restoration",
+        personIds: ["zerubbabel", "jeshua-high-priest", "cyrus"],
+        approximateDate: "late 6th century BC",
+        datePrecision: "range",
+        references: [
+            {
+                book: "Ezra",
+                chapter: 1,
+            },
+            {
+                book: "Ezra",
+                chapter: 2,
+            },
+        ],
+    },
+    {
+        id: "altar-rebuilt",
+        title: "The altar is rebuilt",
+        description:
+            "Jeshua, Zerubbabel, and the returned community rebuild the altar and resume burnt offerings to the Lord.",
+        placeId: "temple-mount",
+        periodId: "return-restoration",
+        personIds: ["zerubbabel", "jeshua-high-priest"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Ezra",
+                chapter: 3,
+                startVerse: 1,
+                endVerse: 6,
+            },
+        ],
+    },
+    {
+        id: "second-temple-foundation",
+        title: "The foundation of the Temple is laid",
+        description:
+            "The returned exiles lay the foundation of the house of the Lord, producing both celebration and weeping among the people.",
+        placeId: "temple-mount",
+        periodId: "return-restoration",
+        personIds: ["zerubbabel", "jeshua-high-priest"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Ezra",
+                chapter: 3,
+                startVerse: 8,
+                endVerse: 13,
+            },
+        ],
+    },
+    {
+        id: "temple-work-resumes",
+        title: "The rebuilding of the Temple resumes",
+        description:
+            "Encouraged by the prophetic ministries of Haggai and Zechariah, Zerubbabel and Jeshua resume rebuilding the house of God.",
+        placeId: "temple-mount",
+        periodId: "return-restoration",
+        personIds: [
+            "zerubbabel",
+            "jeshua-high-priest",
+            "haggai",
+            "zechariah",
+        ],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Ezra",
+                chapter: 5,
+                startVerse: 1,
+                endVerse: 2,
+            },
+            {
+                book: "Haggai",
+                chapter: 1,
+            },
+        ],
+    },
+    {
+        id: "second-temple-completed",
+        title: "The rebuilt Temple is completed",
+        description:
+            "The returned community completes the house of God and dedicates it with joy.",
+        placeId: "temple-mount",
+        periodId: "return-restoration",
+        personIds: ["zerubbabel", "jeshua-high-priest"],
+        approximateDate: "516 BC",
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Ezra",
+                chapter: 6,
+                startVerse: 13,
+                endVerse: 22,
+            },
+        ],
+    },
+    {
+        id: "ezra-prepares-return",
+        title: "Ezra prepares to return to Jerusalem",
+        description:
+            "Ezra prepares to travel from Babylon to Jerusalem with a group of returning exiles under Persian authority.",
+        placeId: "babylon",
+        periodId: "return-restoration",
+        personIds: ["ezra"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Ezra",
+                chapter: 7,
+                startVerse: 1,
+                endVerse: 10,
+            },
+        ],
+    },
+    {
+        id: "ezra-arrives-jerusalem",
+        title: "Ezra arrives in Jerusalem",
+        description:
+            "Ezra reaches Jerusalem after the journey from Babylon and begins his ministry among the returned community.",
+        placeId: "jerusalem",
+        periodId: "return-restoration",
+        personIds: ["ezra"],
+        approximateDate: "5th century BC",
+        datePrecision: "range",
+        references: [
+            {
+                book: "Ezra",
+                chapter: 7,
+                startVerse: 8,
+                endVerse: 10,
+            },
+        ],
+    },
+    {
+        id: "ezra-teaches-law",
+        title: "Ezra teaches the law",
+        description:
+            "Ezra devotes himself to studying, practising, and teaching the law of the Lord among the people.",
+        placeId: "jerusalem",
+        periodId: "return-restoration",
+        personIds: ["ezra"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Ezra",
+                chapter: 7,
+                startVerse: 10,
+            },
+        ],
+    },
+    {
+        id: "nehemiah-hears-jerusalem",
+        title: "Nehemiah hears of Jerusalem's condition",
+        description:
+            "Nehemiah learns that Jerusalem's walls are broken down and its gates have been burned, and he mourns and prays before God.",
+        placeId: "persia",
+        periodId: "return-restoration",
+        personIds: ["nehemiah"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Nehemiah",
+                chapter: 1,
+            },
+        ],
+    },
+    {
+        id: "nehemiah-arrives-jerusalem",
+        title: "Nehemiah arrives in Jerusalem",
+        description:
+            "Nehemiah comes to Jerusalem with the king's permission and begins assessing the condition of the city.",
+        placeId: "jerusalem",
+        periodId: "return-restoration",
+        personIds: ["nehemiah"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Nehemiah",
+                chapter: 2,
+                startVerse: 1,
+                endVerse: 16,
+            },
+        ],
+    },
+    {
+        id: "jerusalem-walls-rebuilt",
+        title: "Jerusalem's walls are rebuilt",
+        description:
+            "Under Nehemiah's leadership, the people rebuild Jerusalem's walls despite opposition.",
+        placeId: "jerusalem",
+        periodId: "return-restoration",
+        personIds: ["nehemiah"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Nehemiah",
+                chapter: 3,
+            },
+            {
+                book: "Nehemiah",
+                chapter: 4,
+            },
+        ],
+    },
+    {
+        id: "walls-completed",
+        title: "The wall is completed",
+        description:
+            "The wall of Jerusalem is completed after fifty-two days of rebuilding.",
+        placeId: "jerusalem",
+        periodId: "return-restoration",
+        personIds: ["nehemiah"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Nehemiah",
+                chapter: 6,
+                startVerse: 15,
+                endVerse: 16,
+            },
+        ],
+    },
+    {
+        id: "law-read-publicly",
+        title: "Ezra reads the law before the people",
+        description:
+            "The people gather in Jerusalem, where Ezra reads from the Book of the Law and the Levites help the people understand it.",
+        placeId: "jerusalem",
+        periodId: "return-restoration",
+        personIds: ["ezra", "nehemiah"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Nehemiah",
+                chapter: 8,
+            },
+        ],
+    },
+    {
         id: "birth-of-jesus",
         title: "Birth of Jesus",
         description:

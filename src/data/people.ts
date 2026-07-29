@@ -271,4 +271,82 @@ export const people: Person[] = [
     description:
       "The final king of Judah before Jerusalem fell to Babylon and the kingdom came to an end.",
   },
+  {
+    id: "daniel",
+    name: "Daniel",
+    description:
+      "A Judean exile who served in the Babylonian and later Persian courts while remaining faithful to God.",
+  },
+  {
+    id: "shadrach",
+    name: "Shadrach",
+    description:
+      "One of Daniel's companions in Babylon who remained faithful to God during the reign of Nebuchadnezzar.",
+  },
+  {
+    id: "meshach",
+    name: "Meshach",
+    description:
+      "One of Daniel's companions in Babylon who remained faithful to God during the reign of Nebuchadnezzar.",
+  },
+  {
+    id: "abednego",
+    name: "Abednego",
+    description:
+      "One of Daniel's companions in Babylon who remained faithful to God during the reign of Nebuchadnezzar.",
+  },
+  {
+    id: "ezekiel",
+    name: "Ezekiel",
+    description:
+      "Priest and prophet among the Judean exiles in Babylonia who received visions and messages from God concerning judgment, restoration, and hope.",
+  },
+  {
+    id: "belshazzar",
+    name: "Belshazzar",
+    description:
+      "Babylonian ruler during the events of Daniel 5, when Babylon fell and his kingdom came to an end.",
+  },
+  {
+    id: "cyrus",
+    name: "Cyrus the Great",
+    description:
+      "King of Persia who conquered Babylon and later issued a decree permitting the Jewish exiles to return and rebuild the house of the Lord in Jerusalem.",
+  },
+  {
+    id: "zerubbabel",
+    name: "Zerubbabel",
+    description:
+      "Leader associated with the first major return from exile and the rebuilding of the Temple in Jerusalem.",
+  },
+  {
+    id: "jeshua-high-priest",
+    name: "Jeshua",
+    description:
+      "High priest who served alongside Zerubbabel during the return from exile and the rebuilding of the altar and Temple.",
+  },
+  {
+    id: "haggai",
+    name: "Haggai",
+    description:
+      "Prophet who encouraged the returned exiles to resume and complete the rebuilding of the Temple.",
+  },
+  {
+    id: "zechariah",
+    name: "Zechariah",
+    description:
+      "Prophet who ministered during the restoration period and encouraged the returned community in Jerusalem.",
+  },
+  {
+    id: "ezra",
+    name: "Ezra",
+    description:
+      "Priest and scribe who returned from Babylon to Jerusalem and taught the law of God to the restored community.",
+  },
+  {
+    id: "nehemiah",
+    name: "Nehemiah",
+    description:
+      "Jewish official in Persian service who returned to Jerusalem and led the rebuilding of the city's walls.",
+  },
 ];

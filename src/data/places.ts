@@ -939,4 +939,30 @@ export const places: Place[] = [
       "The major Mesopotamian city that became the centre of the Babylonian Empire and the destination of many Judean exiles.",
     identificationStatus: "well-established",
   },
+  {
+    id: "kebar-river",
+    name: "Kebar River",
+    modernName: "Babylonian canal region",
+    latitude: 32.7,
+    longitude: 44.5,
+    type: "region",
+    region: "Babylonia",
+    description:
+      "The area in Babylonia where Ezekiel lived among the exiles and received major prophetic visions.",
+    identificationStatus: "probable",
+    identificationNote:
+      "The biblical Kebar is generally understood as a canal or waterway in Babylonia rather than a major natural river. Its precise course is uncertain.",
+  },
+  {
+    id: "persia",
+    name: "Persia",
+    modernName: "Iran",
+    latitude: 32.0,
+    longitude: 53.0,
+    type: "region",
+    region: "Persia",
+    description:
+      "The empire that succeeded Babylon and under whose rule the Jewish exiles were permitted to return to Jerusalem.",
+    identificationStatus: "well-established",
+  },
 ];

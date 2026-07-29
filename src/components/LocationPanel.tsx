@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 import { events } from "@/data/events";
 import { journeys } from "@/data/journeys";
@@ -75,6 +75,10 @@ export default function LocationPanel({
 }: LocationPanelProps) {
   const panelRef = useRef<HTMLElement | null>(null);
 
+  const [openPeriods, setOpenPeriods] = useState<Set<string>>(
+    new Set()
+  );
+
   useEffect(() => {
     const panel = panelRef.current;
 
@@ -95,11 +99,42 @@ export default function LocationPanel({
     };
   }, []);
 
-  const placeEvents = events.filter((event) => event.placeId === place.id);
+  const placeEvents = events.filter(
+    (event) => event.placeId === place.id
+  );
 
   const placeJourneyStops = journeyStops
     .filter((stop) => stop.placeId === place.id)
     .sort((a, b) => a.order - b.order);
+
+  const groupedEvents = useMemo(() => {
+    return periods
+      .map((period) => {
+        const periodEvents = placeEvents.filter(
+          (event) => event.periodId === period.id
+        );
+
+        return {
+          period,
+          events: periodEvents,
+        };
+      })
+      .filter((group) => group.events.length > 0);
+  }, [placeEvents]);
+
+  const togglePeriod = (periodId: string) => {
+    setOpenPeriods((current) => {
+      const next = new Set(current);
+
+      if (next.has(periodId)) {
+        next.delete(periodId);
+      } else {
+        next.add(periodId);
+      }
+
+      return next;
+    });
+  };
 
   return (
     <aside
@@ -108,8 +143,13 @@ export default function LocationPanel({
     >
       <div className="mb-4 flex items-start justify-between gap-4">
         <div>
-          <h2 className="text-2xl font-bold text-gray-900">{place.name}</h2>
-          <p className="text-sm text-gray-500">{place.modernName}</p>
+          <h2 className="text-2xl font-bold text-gray-900">
+            {place.name}
+          </h2>
+
+          <p className="text-sm text-gray-500">
+            {place.modernName}
+          </p>
         </div>
 
         <button
@@ -136,7 +176,9 @@ export default function LocationPanel({
         </span>
       </div>
 
-      <p className="mb-4 leading-7 text-gray-700">{place.description}</p>
+      <p className="mb-4 leading-7 text-gray-700">
+        {place.description}
+      </p>
 
       {place.identificationNote && (
         <div className="mb-6 rounded-lg border border-gray-200 bg-gray-50 p-3">
@@ -151,86 +193,129 @@ export default function LocationPanel({
       )}
 
       <section>
-        <h3 className="mb-3 text-lg font-semibold text-gray-900">
-          Key Events
-        </h3>
+        <div className="mb-3 flex items-center justify-between gap-3">
+          <h3 className="text-lg font-semibold text-gray-900">
+            Key Events
+          </h3>
 
-        {placeEvents.length === 0 ? (
-          <p className="text-sm text-gray-500">No events added yet.</p>
+          <span className="text-xs text-gray-500">
+            {placeEvents.length} event
+            {placeEvents.length === 1 ? "" : "s"}
+          </span>
+        </div>
+
+        {groupedEvents.length === 0 ? (
+          <p className="text-sm text-gray-500">
+            No events added yet.
+          </p>
         ) : (
-          <div className="space-y-4">
-            {placeEvents.map((event) => {
-              const period = periods.find(
-                (period) => period.id === event.periodId
-              );
-
-              const eventPeople = people.filter((person) =>
-                event.personIds.includes(person.id)
-              );
+          <div className="space-y-3">
+            {groupedEvents.map(({ period, events: periodEvents }) => {
+              const isOpen = openPeriods.has(period.id);
 
               return (
-                <article
-                  key={event.id}
-                  className="rounded-lg border border-gray-200 p-4"
+                <div
+                  key={period.id}
+                  className="overflow-hidden rounded-lg border border-gray-200"
                 >
-                  <h4 className="font-semibold text-gray-900">
-                    {event.title}
-                  </h4>
-
-                  <div className="mt-2 flex flex-wrap gap-2">
-                    {period && (
-                      <span className="rounded-full bg-gray-100 px-2 py-1 text-xs text-gray-700">
+                  <button
+                    type="button"
+                    onClick={() => togglePeriod(period.id)}
+                    className="flex w-full items-center justify-between gap-4 bg-gray-50 px-4 py-3 text-left hover:bg-gray-100"
+                  >
+                    <div>
+                      <p className="text-sm font-semibold text-gray-900">
                         {period.name}
-                      </span>
-                    )}
-
-                    {event.approximateDate && (
-                      <span className="rounded-full bg-gray-100 px-2 py-1 text-xs text-gray-700">
-                        {event.approximateDate}
-                      </span>
-                    )}
-
-                    {event.datePrecision && (
-                      <span className="rounded-full bg-gray-100 px-2 py-1 text-xs text-gray-700">
-                        {formatDatePrecision(event.datePrecision)}
-                      </span>
-                    )}
-                  </div>
-
-                  <p className="mt-3 text-sm leading-6 text-gray-700">
-                    {event.description}
-                  </p>
-
-                  {eventPeople.length > 0 && (
-                    <div className="mt-3">
-                      <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-gray-500">
-                        People
                       </p>
 
-                      <div className="flex flex-wrap gap-2">
-                        {eventPeople.map((person) => (
-                          <span
-                            key={person.id}
-                            className="rounded-full bg-gray-900 px-2 py-1 text-xs text-white"
+                      <p className="mt-1 text-xs text-gray-500">
+                        {periodEvents.length} event
+                        {periodEvents.length === 1 ? "" : "s"}
+                      </p>
+                    </div>
+
+                    <span
+                      className={`text-sm text-gray-500 transition-transform ${
+                        isOpen ? "rotate-180" : ""
+                      }`}
+                    >
+                      ▼
+                    </span>
+                  </button>
+
+                  {isOpen && (
+                    <div className="space-y-3 p-3">
+                      {periodEvents.map((event) => {
+                        const eventPeople = people.filter((person) =>
+                          event.personIds.includes(person.id)
+                        );
+
+                        return (
+                          <article
+                            key={event.id}
+                            className="rounded-lg border border-gray-200 p-4"
                           >
-                            {person.name}
-                          </span>
-                        ))}
-                      </div>
+                            <h4 className="font-semibold text-gray-900">
+                              {event.title}
+                            </h4>
+
+                            <div className="mt-2 flex flex-wrap gap-2">
+                              {event.approximateDate && (
+                                <span className="rounded-full bg-gray-100 px-2 py-1 text-xs text-gray-700">
+                                  {event.approximateDate}
+                                </span>
+                              )}
+
+                              {event.datePrecision && (
+                                <span className="rounded-full bg-gray-100 px-2 py-1 text-xs text-gray-700">
+                                  {formatDatePrecision(
+                                    event.datePrecision
+                                  )}
+                                </span>
+                              )}
+                            </div>
+
+                            <p className="mt-3 text-sm leading-6 text-gray-700">
+                              {event.description}
+                            </p>
+
+                            {eventPeople.length > 0 && (
+                              <div className="mt-3">
+                                <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-gray-500">
+                                  People
+                                </p>
+
+                                <div className="flex flex-wrap gap-2">
+                                  {eventPeople.map((person) => (
+                                    <span
+                                      key={person.id}
+                                      className="rounded-full bg-gray-900 px-2 py-1 text-xs text-white"
+                                    >
+                                      {person.name}
+                                    </span>
+                                  ))}
+                                </div>
+                              </div>
+                            )}
+
+                            <div className="mt-3 flex flex-wrap gap-2">
+                              {event.references.map(
+                                (reference, index) => (
+                                  <span
+                                    key={`${event.id}-${index}`}
+                                    className="rounded bg-gray-100 px-2 py-1 text-xs text-gray-700"
+                                  >
+                                    {formatReference(reference)}
+                                  </span>
+                                )
+                              )}
+                            </div>
+                          </article>
+                        );
+                      })}
                     </div>
                   )}
-
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    {event.references.map((reference, index) => (
-                      <span
-                        key={`${event.id}-${index}`}
-                        className="rounded bg-gray-100 px-2 py-1 text-xs text-gray-700"
-                      >
-                        {formatReference(reference)}
-                      </span>
-                    ))}
-                  </div>
-                </article>
+                </div>
               );
             })}
           </div>

@@ -184,4 +184,28 @@ export const journeys: Journey[] = [
         periodId: "exile",
         personIds: ["jehoiachin", "zedekiah", "nebuchadnezzar"],
     },
+    {
+        id: "first-return-to-jerusalem",
+        name: "The First Return to Jerusalem",
+        description:
+            "The return of Judean exiles from Babylonian territory to Jerusalem following Cyrus's decree.",
+        periodId: "return-restoration",
+        personIds: ["zerubbabel", "jeshua-high-priest"],
+    },
+    {
+        id: "ezra-return",
+        name: "Ezra's Return to Jerusalem",
+        description:
+            "Ezra travels from Babylon to Jerusalem with a group of returning exiles and begins his ministry of teaching and reform.",
+        periodId: "return-restoration",
+        personIds: ["ezra"],
+    },
+    {
+        id: "nehemiah-return",
+        name: "Nehemiah's Journey to Jerusalem",
+        description:
+            "Nehemiah travels from the Persian court to Jerusalem and leads the restoration of the city's walls.",
+        periodId: "return-restoration",
+        personIds: ["nehemiah"],
+    },
 ];

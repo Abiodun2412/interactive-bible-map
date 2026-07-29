@@ -58,6 +58,14 @@ export const periods: Period[] = [
       "The period after the fall of Jerusalem when many Judeans lived in Babylonian exile, continuing until the rise of Persia and the decree permitting return.",
   },
   {
+    id: "return-restoration",
+    name: "Return & Restoration",
+    startYear: -538,
+    endYear: -400,
+    description:
+      "The period in which Jewish exiles returned from Persian territory, rebuilt the Temple, restored Jerusalem, and re-established community life in the land.",
+  },
+  {
     id: "life-of-jesus",
     name: "Life of Jesus",
     startYear: -6,

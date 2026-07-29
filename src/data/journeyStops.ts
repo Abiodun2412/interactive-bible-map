@@ -1381,4 +1381,110 @@ export const journeyStops: JourneyStop[] = [
             },
         ],
     },
+    {
+        id: "first-return-stop-1",
+        journeyId: "first-return-to-jerusalem",
+        placeId: "babylon",
+        order: 1,
+        description:
+            "The returning community leaves the Babylonian exile region after the decree permitting the return.",
+        references: [
+            {
+                book: "Ezra",
+                chapter: 1,
+            },
+        ],
+    },
+    {
+        id: "first-return-stop-2",
+        journeyId: "first-return-to-jerusalem",
+        placeId: "jerusalem",
+        order: 2,
+        description:
+            "The returned exiles arrive in Judah and begin re-establishing the community around Jerusalem.",
+        references: [
+            {
+                book: "Ezra",
+                chapter: 2,
+                startVerse: 64,
+                endVerse: 70,
+            },
+        ],
+    },
+    {
+        id: "first-return-stop-3",
+        journeyId: "first-return-to-jerusalem",
+        placeId: "temple-mount",
+        order: 3,
+        description:
+            "The altar is rebuilt and work begins on restoring the Temple.",
+        references: [
+            {
+                book: "Ezra",
+                chapter: 3,
+            },
+        ],
+    },
+    {
+        id: "ezra-return-stop-1",
+        journeyId: "ezra-return",
+        placeId: "babylon",
+        order: 1,
+        description:
+            "Ezra prepares to leave Babylon with those returning to Jerusalem.",
+        references: [
+            {
+                book: "Ezra",
+                chapter: 7,
+                startVerse: 1,
+                endVerse: 10,
+            },
+        ],
+    },
+    {
+        id: "ezra-return-stop-2",
+        journeyId: "ezra-return",
+        placeId: "jerusalem",
+        order: 2,
+        description:
+            "Ezra arrives in Jerusalem and begins his ministry among the restored community.",
+        references: [
+            {
+                book: "Ezra",
+                chapter: 7,
+                startVerse: 8,
+                endVerse: 10,
+            },
+        ],
+    },
+    {
+        id: "nehemiah-return-stop-1",
+        journeyId: "nehemiah-return",
+        placeId: "persia",
+        order: 1,
+        description:
+            "Nehemiah serves in the Persian court when he learns of Jerusalem's condition.",
+        references: [
+            {
+                book: "Nehemiah",
+                chapter: 1,
+            },
+        ],
+    },
+    {
+        id: "nehemiah-return-stop-2",
+        journeyId: "nehemiah-return",
+        placeId: "jerusalem",
+        order: 2,
+        description:
+            "Nehemiah arrives in Jerusalem and begins the work of restoring the city.",
+        references: [
+            {
+                book: "Nehemiah",
+                chapter: 2,
+                startVerse: 1,
+                endVerse: 16,
+            },
+        ],
+    },
 ];

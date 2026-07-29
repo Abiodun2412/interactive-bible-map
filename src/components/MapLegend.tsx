@@ -88,6 +88,11 @@ export default function MapLegend() {
                             <span className="w-8 border-t-2 border-dashed border-[#4b5563]" />
                             <span>Exile</span>
                         </div>
+
+                        <div className="flex items-center gap-3">
+                            <span className="h-1 w-8 bg-[#0f766e]" />
+                            <span>Return & Restoration</span>
+                        </div>
                     </div>
                 </div>
             </div>

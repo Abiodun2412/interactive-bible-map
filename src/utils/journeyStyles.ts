@@ -58,6 +58,13 @@ export function getJourneyStyle(periodId: string): JourneyStyle {
                 dashArray: "4 7",
             };
 
+        case "return-restoration":
+            return {
+                color: "#0f766e",
+                weight: 4,
+                opacity: 0.85,
+            };
+            
         default:
             return {
                 color: "#374151",
