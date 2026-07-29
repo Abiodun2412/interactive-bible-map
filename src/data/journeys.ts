@@ -120,4 +120,36 @@ export const journeys: Journey[] = [
         periodId: "united-monarchy",
         personIds: ["solomon"],
     },
+    {
+        id: "jeroboam-northern-kingdom",
+        name: "Jeroboam Establishes the Northern Kingdom",
+        description:
+            "Key locations associated with Jeroboam's establishment of the northern kingdom after Israel divided from Judah.",
+        periodId: "divided-kingdom",
+        personIds: ["jeroboam"],
+    },
+    {
+        id: "elijah-drought-carmel",
+        name: "Elijah During the Drought",
+        description:
+            "Key locations from Elijah's ministry during the drought, from the Brook Cherith and Zarephath to the confrontation at Mount Carmel.",
+        periodId: "divided-kingdom",
+        personIds: ["elijah"],
+    },
+    {
+        id: "elijah-to-horeb",
+        name: "Elijah's Journey to Horeb",
+        description:
+            "After the events at Mount Carmel and Jezreel, Elijah flees south through Beersheba and travels to Horeb, the mountain of God.",
+        periodId: "divided-kingdom",
+        personIds: ["elijah"],
+    },
+    {
+        id: "elisha-early-ministry",
+        name: "Elisha's Early Ministry",
+        description:
+            "Key locations from Elisha's early prophetic ministry after succeeding Elijah.",
+        periodId: "divided-kingdom",
+        personIds: ["elisha"],
+    },
 ];

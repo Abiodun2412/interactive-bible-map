@@ -175,4 +175,28 @@ export const people: Person[] = [
     description:
       "Former servant of Solomon who became the first king of the northern kingdom of Israel after the kingdom divided.",
   },
+  {
+    id: "elijah",
+    name: "Elijah",
+    description:
+      "Prophet of the Lord during the reign of Ahab who confronted idolatry in Israel and called the nation back to faithfulness.",
+  },
+  {
+    id: "ahab",
+    name: "Ahab",
+    description:
+      "King of the northern kingdom of Israel whose reign was marked by conflict with the prophet Elijah and the promotion of Baal worship.",
+  },
+  {
+    id: "jezebel",
+    name: "Jezebel",
+    description:
+      "Wife of Ahab who strongly promoted Baal worship in Israel and opposed the prophets of the Lord.",
+  },
+  {
+    id: "elisha",
+    name: "Elisha",
+    description:
+      "Prophet who succeeded Elijah and carried on a major prophetic ministry in the northern kingdom of Israel.",
+  },
 ];

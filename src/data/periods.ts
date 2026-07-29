@@ -42,6 +42,14 @@ export const periods: Period[] = [
       "The period associated with Saul, David, and Solomon before the kingdom divided.",
   },
   {
+    id: "divided-kingdom",
+    name: "Divided Kingdom",
+    startYear: -930,
+    endYear: -722,
+    description:
+      "The period after Solomon when the kingdom divided into Israel in the north and Judah in the south, continuing until the fall of the northern kingdom to Assyria.",
+  },
+  {
     id: "life-of-jesus",
     name: "Life of Jesus",
     startYear: -6,

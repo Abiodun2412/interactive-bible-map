@@ -15,6 +15,7 @@ import MapControls from "@/components/MapControls";
 import LocationPanel from "@/components/LocationPanel";
 import Timeline from "@/components/Timeline";
 import ActiveContext from "@/components/ActiveContext";
+import MapLegend from "@/components/MapLegend";
 import { people } from "@/data/people";
 import { periods } from "@/data/periods";
 
@@ -34,6 +35,8 @@ import {
 
 import "@/utils/leafletIcons";
 import "leaflet/dist/leaflet.css";
+
+import { getJourneyStyle } from "@/utils/journeyStyles";
 
 type MapFocusProps = {
     selectedJourneyId: string | null;
@@ -468,6 +471,8 @@ export default function BibleMap() {
                 }}
             />
 
+            <MapLegend />
+
             <Timeline
                 selectedPeriodId={
                     selectedPeriodId
@@ -499,9 +504,8 @@ export default function BibleMap() {
                 (journey) => (
                     <Polyline
                         key={journey.id}
-                        positions={getJourneyPositions(
-                            journey.id
-                        )}
+                        positions={getJourneyPositions(journey.id)}
+                        pathOptions={getJourneyStyle(journey.periodId)}
                     />
                 )
             )}

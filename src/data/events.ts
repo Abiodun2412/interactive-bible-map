@@ -1444,6 +1444,310 @@ export const events: Event[] = [
         ],
     },
     {
+        id: "jeroboam-king-israel",
+        title: "Jeroboam becomes king over Israel",
+        description:
+            "The northern tribes make Jeroboam king after rejecting the rule of Rehoboam.",
+        placeId: "shechem",
+        periodId: "divided-kingdom",
+        personIds: ["jeroboam"],
+        approximateDate: "c. 930 BC",
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 12,
+                startVerse: 20,
+            },
+        ],
+    },
+    {
+        id: "rehoboam-rules-judah",
+        title: "Rehoboam rules Judah",
+        description:
+            "Rehoboam continues as king in Jerusalem over Judah after the northern tribes separate from David's royal house.",
+        placeId: "jerusalem",
+        periodId: "divided-kingdom",
+        personIds: ["rehoboam"],
+        approximateDate: "c. 930 BC",
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 12,
+                startVerse: 21,
+                endVerse: 24,
+            },
+        ],
+    },
+    {
+        id: "jeroboam-bethel",
+        title: "Jeroboam establishes worship at Bethel",
+        description:
+            "Jeroboam sets up a golden calf at Bethel as part of an alternative system of worship for the northern kingdom.",
+        placeId: "bethel",
+        periodId: "divided-kingdom",
+        personIds: ["jeroboam"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 12,
+                startVerse: 25,
+                endVerse: 33,
+            },
+        ],
+    },
+    {
+        id: "jeroboam-dan",
+        title: "Jeroboam establishes worship at Dan",
+        description:
+            "Jeroboam places another golden calf at Dan as a northern worship centre.",
+        placeId: "dan",
+        periodId: "divided-kingdom",
+        personIds: ["jeroboam"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 12,
+                startVerse: 28,
+                endVerse: 30,
+            },
+        ],
+    },
+    {
+        id: "elijah-announces-drought",
+        title: "Elijah announces a drought",
+        description:
+            "Elijah tells Ahab that there will be neither dew nor rain except at his word.",
+        placeId: "samaria",
+        periodId: "divided-kingdom",
+        personIds: ["elijah", "ahab"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 17,
+                startVerse: 1,
+            },
+        ],
+    },
+    {
+        id: "elijah-cherith",
+        title: "Elijah stays by the Brook Cherith",
+        description:
+            "God directs Elijah to the Brook Cherith, where he is sustained during the drought.",
+        placeId: "brook-cherith",
+        periodId: "divided-kingdom",
+        personIds: ["elijah"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 17,
+                startVerse: 2,
+                endVerse: 7,
+            },
+        ],
+    },
+    {
+        id: "elijah-zarephath",
+        title: "Elijah stays with the widow of Zarephath",
+        description:
+            "Elijah goes to Zarephath, where God provides for him and a widow during the famine.",
+        placeId: "zarephath",
+        periodId: "divided-kingdom",
+        personIds: ["elijah"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 17,
+                startVerse: 8,
+                endVerse: 24,
+            },
+        ],
+    },
+    {
+        id: "carmel-confrontation",
+        title: "Elijah confronts the prophets of Baal",
+        description:
+            "Elijah gathers Israel at Mount Carmel and calls the people to choose whom they will serve. The Lord answers by fire.",
+        placeId: "mount-carmel",
+        periodId: "divided-kingdom",
+        personIds: ["elijah", "ahab"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 18,
+                startVerse: 20,
+                endVerse: 40,
+            },
+        ],
+    },
+    {
+        id: "rain-returns",
+        title: "The drought ends",
+        description:
+            "After Elijah prays, rain returns to the land following the confrontation at Mount Carmel.",
+        placeId: "mount-carmel",
+        periodId: "divided-kingdom",
+        personIds: ["elijah", "ahab"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 18,
+                startVerse: 41,
+                endVerse: 46,
+            },
+        ],
+    },
+    {
+        id: "naboth-vineyard",
+        title: "Naboth's vineyard",
+        description:
+            "Ahab desires Naboth's vineyard in Jezreel, and Jezebel arranges Naboth's death. Elijah confronts Ahab over the injustice.",
+        placeId: "jezreel",
+        periodId: "divided-kingdom",
+        personIds: ["ahab", "jezebel", "elijah"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 21,
+            },
+        ],
+    },
+    {
+        id: "elijah-flees-jezebel",
+        title: "Elijah flees from Jezebel",
+        description:
+            "After Jezebel threatens his life, Elijah leaves the northern kingdom and travels south into the wilderness.",
+        placeId: "beersheba",
+        periodId: "divided-kingdom",
+        personIds: ["elijah", "jezebel"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 19,
+                startVerse: 1,
+                endVerse: 8,
+            },
+        ],
+    },
+    {
+        id: "elijah-at-horeb",
+        title: "Elijah encounters the Lord at Horeb",
+        description:
+            "Elijah reaches Horeb, the mountain of God, where the Lord speaks to him and gives him further instructions for his prophetic ministry.",
+        placeId: "mount-horeb",
+        periodId: "divided-kingdom",
+        personIds: ["elijah"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 19,
+                startVerse: 9,
+                endVerse: 18,
+            },
+        ],
+    },
+    {
+        id: "elijah-calls-elisha",
+        title: "Elijah calls Elisha",
+        description:
+            "Elijah finds Elisha ploughing and throws his cloak over him, calling him to follow and serve alongside him.",
+        placeId: "jezreel",
+        periodId: "divided-kingdom",
+        personIds: ["elijah", "elisha"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 19,
+                startVerse: 19,
+                endVerse: 21,
+            },
+        ],
+    },
+    {
+        id: "elijah-taken-up",
+        title: "Elijah is taken up",
+        description:
+            "Elijah is taken up, and Elisha receives Elijah's mantle and continues the prophetic ministry.",
+        placeId: "jericho-elisha",
+        periodId: "divided-kingdom",
+        personIds: ["elijah", "elisha"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 2,
+                startVerse: 1,
+                endVerse: 18,
+            },
+        ],
+    },
+    {
+        id: "elisha-heals-jericho-water",
+        title: "Elisha heals the water at Jericho",
+        description:
+            "Elisha throws salt into the spring at Jericho, and the Lord heals the water.",
+        placeId: "jericho-elisha",
+        periodId: "divided-kingdom",
+        personIds: ["elisha"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 2,
+                startVerse: 19,
+                endVerse: 22,
+            },
+        ],
+    },
+    {
+        id: "shunammite-son",
+        title: "Elisha restores the Shunammite woman's son",
+        description:
+            "Elisha prays to the Lord, and the son of the Shunammite woman is restored to life.",
+        placeId: "shunem",
+        periodId: "divided-kingdom",
+        personIds: ["elisha"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 4,
+                startVerse: 8,
+                endVerse: 37,
+            },
+        ],
+    },
+    {
+        id: "elisha-dothan",
+        title: "Elisha is surrounded at Dothan",
+        description:
+            "The army of Aram surrounds Dothan to capture Elisha, but God reveals the heavenly host surrounding the prophet.",
+        placeId: "dothan",
+        periodId: "divided-kingdom",
+        personIds: ["elisha"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 6,
+                startVerse: 8,
+                endVerse: 23,
+            },
+        ],
+    },
+    {
         id: "birth-of-jesus",
         title: "Birth of Jesus",
         description:

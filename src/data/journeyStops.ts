@@ -1003,4 +1003,225 @@ export const journeyStops: JourneyStop[] = [
             },
         ],
     },
+    {
+        id: "jeroboam-kingdom-stop-1",
+        journeyId: "jeroboam-northern-kingdom",
+        placeId: "shechem",
+        order: 1,
+        description:
+            "Jeroboam becomes king over the northern tribes and strengthens Shechem.",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 12,
+                startVerse: 20,
+                endVerse: 25,
+            },
+        ],
+    },
+    {
+        id: "jeroboam-kingdom-stop-2",
+        journeyId: "jeroboam-northern-kingdom",
+        placeId: "bethel",
+        order: 2,
+        description:
+            "Jeroboam establishes a worship centre at Bethel.",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 12,
+                startVerse: 28,
+                endVerse: 33,
+            },
+        ],
+    },
+    {
+        id: "jeroboam-kingdom-stop-3",
+        journeyId: "jeroboam-northern-kingdom",
+        placeId: "dan",
+        order: 3,
+        description:
+            "Jeroboam also establishes a worship centre at Dan in the far north.",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 12,
+                startVerse: 28,
+                endVerse: 30,
+            },
+        ],
+    },
+    {
+        id: "elijah-drought-stop-1",
+        journeyId: "elijah-drought-carmel",
+        placeId: "samaria",
+        order: 1,
+        description:
+            "Elijah announces the coming drought during the reign of Ahab.",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 17,
+                startVerse: 1,
+            },
+        ],
+    },
+    {
+        id: "elijah-drought-stop-2",
+        journeyId: "elijah-drought-carmel",
+        placeId: "brook-cherith",
+        order: 2,
+        description:
+            "Elijah stays by the Brook Cherith as God sustains him.",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 17,
+                startVerse: 2,
+                endVerse: 7,
+            },
+        ],
+    },
+    {
+        id: "elijah-drought-stop-3",
+        journeyId: "elijah-drought-carmel",
+        placeId: "zarephath",
+        order: 3,
+        description:
+            "Elijah goes to Zarephath and stays with the widow there.",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 17,
+                startVerse: 8,
+                endVerse: 24,
+            },
+        ],
+    },
+    {
+        id: "elijah-drought-stop-4",
+        journeyId: "elijah-drought-carmel",
+        placeId: "mount-carmel",
+        order: 4,
+        description:
+            "Elijah confronts the prophets of Baal and calls Israel back to the Lord.",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 18,
+                startVerse: 20,
+                endVerse: 40,
+            },
+        ],
+    },
+    {
+        id: "elijah-drought-stop-5",
+        journeyId: "elijah-drought-carmel",
+        placeId: "jezreel",
+        order: 5,
+        description:
+            "After the rain returns, Elijah runs ahead of Ahab to Jezreel.",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 18,
+                startVerse: 41,
+                endVerse: 46,
+            },
+        ],
+    },
+    {
+        id: "elijah-horeb-stop-1",
+        journeyId: "elijah-to-horeb",
+        placeId: "jezreel",
+        order: 1,
+        description:
+            "Elijah is at Jezreel after the return of rain, where Jezebel threatens his life.",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 19,
+                startVerse: 1,
+                endVerse: 2,
+            },
+        ],
+    },
+    {
+        id: "elijah-horeb-stop-2",
+        journeyId: "elijah-to-horeb",
+        placeId: "beersheba",
+        order: 2,
+        description:
+            "Elijah travels to Beersheba and leaves his servant there before continuing into the wilderness.",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 19,
+                startVerse: 3,
+                endVerse: 4,
+            },
+        ],
+    },
+    {
+        id: "elijah-horeb-stop-3",
+        journeyId: "elijah-to-horeb",
+        placeId: "mount-horeb",
+        order: 3,
+        description:
+            "Elijah reaches Horeb, where the Lord speaks to him and directs the next stage of his ministry.",
+        references: [
+            {
+                book: "1 Kings",
+                chapter: 19,
+                startVerse: 8,
+                endVerse: 18,
+            },
+        ],
+    },
+    {
+        id: "elisha-stop-1",
+        journeyId: "elisha-early-ministry",
+        placeId: "jericho-elisha",
+        order: 1,
+        description:
+            "Elisha continues the prophetic ministry after Elijah is taken up and ministers at Jericho.",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 2,
+            },
+        ],
+    },
+    {
+        id: "elisha-stop-2",
+        journeyId: "elisha-early-ministry",
+        placeId: "shunem",
+        order: 2,
+        description:
+            "Elisha regularly passes through Shunem and ministers to the household of the Shunammite woman.",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 4,
+                startVerse: 8,
+                endVerse: 37,
+            },
+        ],
+    },
+    {
+        id: "elisha-stop-3",
+        journeyId: "elisha-early-ministry",
+        placeId: "dothan",
+        order: 3,
+        description:
+            "Elisha is at Dothan when the forces of Aram come to capture him.",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 6,
+                startVerse: 8,
+                endVerse: 23,
+            },
+        ],
+    },
 ];

@@ -256,21 +256,21 @@ export const places: Place[] = [
     type: "site",
     region: "Jordan Valley",
     description:
-      "Israel's first major camp after crossing the Jordan, where twelve memorial stones were set up.",
+      "A major biblical gathering place near Jericho associated with Israel's first camp after crossing the Jordan, the twelve memorial stones, and later events involving Samuel and Saul.",
     identificationStatus: "disputed",
     identificationNote:
-      "Biblical Gilgal was near Jericho, but its precise modern location remains uncertain.",
+      "Several biblical events are associated with Gilgal. The exact location of the site remains uncertain.",
   },
   {
     id: "jericho",
     name: "Jericho",
-    modernName: "Tell es-Sultan",
+    modernName: "Tell es-Sultan / Jericho",
     latitude: 31.8711,
     longitude: 35.4444,
     type: "city",
     region: "Jordan Valley",
     description:
-      "The first major city confronted by Israel after crossing the Jordan under Joshua.",
+      "A major biblical city associated with Israel's entry into the Promised Land under Joshua and later events in the ministry of Elisha.",
     identificationStatus: "well-established",
   },
   {
@@ -656,20 +656,6 @@ export const places: Place[] = [
       "Tell el-Ful is commonly identified with biblical Gibeah of Saul.",
   },
   {
-    id: "gilgal-saul",
-    name: "Gilgal",
-    modernName: "Jericho region",
-    latitude: 31.87,
-    longitude: 35.46,
-    type: "site",
-    region: "Jordan Valley",
-    description:
-      "A major gathering place associated with Samuel and Saul during the beginning of the monarchy.",
-    identificationStatus: "disputed",
-    identificationNote:
-      "Several biblical events are associated with Gilgal. The exact location of the site remains uncertain.",
-  },
-  {
     id: "valley-of-elah",
     name: "Valley of Elah",
     modernName: "Elah Valley",
@@ -792,5 +778,117 @@ export const places: Place[] = [
     identificationStatus: "probable",
     identificationNote:
       "Sheba is generally associated with the ancient Sabaean kingdom in southern Arabia, centred in the region of modern Yemen.",
+  },
+  {
+    id: "samaria",
+    name: "Samaria",
+    modernName: "Sebastia / Shomron",
+    latitude: 32.276,
+    longitude: 35.189,
+    type: "city",
+    region: "Israel",
+    description:
+      "The city established as the capital of the northern kingdom of Israel and later associated especially with the dynasty of Omri and Ahab.",
+    identificationStatus: "well-established",
+  },
+  {
+    id: "dan",
+    name: "Dan",
+    modernName: "Tel Dan",
+    latitude: 33.249,
+    longitude: 35.652,
+    type: "city",
+    region: "Northern Israel",
+    description:
+      "A northern city of Israel where Jeroboam established one of the golden calves after the kingdom divided.",
+    identificationStatus: "well-established",
+  },
+  {
+    id: "mount-carmel",
+    name: "Mount Carmel",
+    modernName: "Mount Carmel",
+    latitude: 32.73,
+    longitude: 35.05,
+    type: "mountain",
+    region: "Northern Israel",
+    description:
+      "The mountain associated with Elijah's confrontation with the prophets of Baal.",
+    identificationStatus: "well-established",
+  },
+  {
+    id: "brook-cherith",
+    name: "Brook Cherith",
+    modernName: "Jordan region",
+    latitude: 32.1,
+    longitude: 35.55,
+    type: "site",
+    region: "Transjordan",
+    description:
+      "The brook where Elijah stayed during the drought and was sustained by God.",
+    identificationStatus: "disputed",
+    identificationNote:
+      "The biblical location is described as east of the Jordan, but its precise modern identification is uncertain.",
+  },
+  {
+    id: "zarephath",
+    name: "Zarephath",
+    modernName: "Sarepta, Lebanon",
+    latitude: 33.45,
+    longitude: 35.3,
+    type: "city",
+    region: "Phoenicia",
+    description:
+      "The Phoenician town where Elijah stayed with a widow during the drought.",
+    identificationStatus: "well-established",
+  },
+  {
+    id: "jezreel",
+    name: "Jezreel",
+    modernName: "Tel Jezreel",
+    latitude: 32.56,
+    longitude: 35.33,
+    type: "city",
+    region: "Jezreel Valley",
+    description:
+      "A royal centre associated with Ahab and Jezebel and several major events involving Elijah.",
+    identificationStatus: "well-established",
+  },
+  {
+    id: "mount-horeb",
+    name: "Mount Horeb",
+    modernName: "Sinai region",
+    latitude: 28.54,
+    longitude: 33.97,
+    type: "mountain",
+    region: "Sinai",
+    description:
+      "The mountain of God where Elijah encountered the Lord after fleeing from Jezebel.",
+    identificationStatus: "traditional",
+    identificationNote:
+      "Horeb is closely associated with Sinai in the biblical narrative. This marker uses the traditional southern Sinai region rather than asserting a precise modern summit.",
+  },
+  {
+    id: "shunem",
+    name: "Shunem",
+    modernName: "Sulam",
+    latitude: 32.61,
+    longitude: 35.33,
+    type: "city",
+    region: "Jezreel Valley",
+    description:
+      "The town associated with the Shunammite woman who welcomed Elisha.",
+    identificationStatus: "well-established",
+  },
+  {
+    id: "dothan",
+    name: "Dothan",
+    modernName: "Tell Dothan",
+    latitude: 32.42,
+    longitude: 35.24,
+    type: "city",
+    region: "Northern Israel",
+    description:
+      "A city associated with Elisha during the conflict between Israel and Aram.",
+    identificationStatus: "well-established",
   },
 ];
