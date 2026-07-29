@@ -1534,4 +1534,492 @@ export const journeyStops: JourneyStop[] = [
             },
         ],
     },
+    {
+        id: "jesus-baptism-stop-1",
+        journeyId: "jesus-to-baptism",
+        placeId: "nazareth",
+        order: 1,
+        description:
+            "Jesus comes from Nazareth in Galilee before beginning His public ministry.",
+        references: [
+            {
+                book: "Mark",
+                chapter: 1,
+                startVerse: 9,
+            },
+        ],
+    },
+    {
+        id: "jesus-baptism-stop-2",
+        journeyId: "jesus-to-baptism",
+        placeId: "jordan-river-baptism",
+        order: 2,
+        description:
+            "Jesus comes to John at the Jordan and is baptised.",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 3,
+                startVerse: 13,
+                endVerse: 17,
+            },
+        ],
+    },
+    {
+        id: "jesus-early-stop-1",
+        journeyId: "jesus-early-ministry",
+        placeId: "jordan-river-baptism",
+        order: 1,
+        description:
+            "Jesus is baptised by John in the Jordan region.",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 3,
+                startVerse: 13,
+                endVerse: 17,
+            },
+        ],
+    },
+    {
+        id: "jesus-early-stop-2",
+        journeyId: "jesus-early-ministry",
+        placeId: "judean-wilderness",
+        order: 2,
+        description:
+            "Jesus is led into the wilderness following His baptism.",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 4,
+                startVerse: 1,
+                endVerse: 11,
+            },
+        ],
+    },
+    {
+        id: "jesus-early-stop-3",
+        journeyId: "jesus-early-ministry",
+        placeId: "cana",
+        order: 3,
+        description:
+            "Jesus performs the sign of turning water into wine at Cana.",
+        references: [
+            {
+                book: "John",
+                chapter: 2,
+                startVerse: 1,
+                endVerse: 11,
+            },
+        ],
+    },
+    {
+        id: "jesus-early-stop-4",
+        journeyId: "jesus-early-ministry",
+        placeId: "capernaum",
+        order: 4,
+        description:
+            "Capernaum becomes one of the main centres of Jesus' ministry in Galilee.",
+        references: [
+            {
+                book: "Mark",
+                chapter: 1,
+                startVerse: 21,
+                endVerse: 39,
+            },
+        ],
+    },
+    {
+        id: "galilean-ministry-stop-1",
+        journeyId: "jesus-galilean-ministry",
+        placeId: "capernaum",
+        order: 1,
+        description:
+            "Capernaum serves as a major centre of Jesus' ministry in Galilee.",
+        references: [
+            {
+                book: "Mark",
+                chapter: 1,
+                startVerse: 21,
+                endVerse: 39,
+            },
+        ],
+    },
+    {
+        id: "galilean-ministry-stop-2",
+        journeyId: "jesus-galilean-ministry",
+        placeId: "mount-beatitudes-region",
+        order: 2,
+        description:
+            "Jesus teaches His disciples and the crowds on a mountain in Galilee.",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 5,
+            },
+            {
+                book: "Matthew",
+                chapter: 6,
+            },
+            {
+                book: "Matthew",
+                chapter: 7,
+            },
+        ],
+    },
+    {
+        id: "galilean-ministry-stop-3",
+        journeyId: "jesus-galilean-ministry",
+        placeId: "sea-of-galilee",
+        order: 3,
+        description:
+            "Jesus and His disciples travel around and across the Sea of Galilee during His ministry.",
+        references: [
+            {
+                book: "Mark",
+                chapter: 4,
+                startVerse: 35,
+                endVerse: 41,
+            },
+        ],
+    },
+    {
+        id: "galilean-ministry-stop-4",
+        journeyId: "jesus-galilean-ministry",
+        placeId: "bethsaida",
+        order: 4,
+        description:
+            "Jesus ministers in the region around Bethsaida and feeds a large crowd.",
+        references: [
+            {
+                book: "Luke",
+                chapter: 9,
+                startVerse: 10,
+                endVerse: 17,
+            },
+        ],
+    },
+    {
+        id: "galilean-ministry-stop-5",
+        journeyId: "jesus-galilean-ministry",
+        placeId: "caesarea-philippi",
+        order: 5,
+        description:
+            "Near Caesarea Philippi, Peter confesses that Jesus is the Messiah.",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 16,
+                startVerse: 13,
+                endVerse: 20,
+            },
+        ],
+    },
+    {
+        id: "toward-jerusalem-stop-1",
+        journeyId: "jesus-toward-jerusalem",
+        placeId: "caesarea-philippi",
+        order: 1,
+        description:
+            "Jesus ministers in the northern region where Peter confesses Him as the Messiah.",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 16,
+                startVerse: 13,
+                endVerse: 20,
+            },
+        ],
+    },
+    {
+        id: "toward-jerusalem-stop-2",
+        journeyId: "jesus-toward-jerusalem",
+        placeId: "mount-transfiguration-region",
+        order: 2,
+        description:
+            "Jesus is transfigured before Peter, James, and John on a high mountain.",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 17,
+                startVerse: 1,
+                endVerse: 8,
+            },
+        ],
+    },
+    {
+        id: "toward-jerusalem-stop-3",
+        journeyId: "jesus-toward-jerusalem",
+        placeId: "bethany",
+        order: 3,
+        description:
+            "Bethany becomes a key setting in the final stage of Jesus' ministry, including the raising of Lazarus.",
+        references: [
+            {
+                book: "John",
+                chapter: 11,
+            },
+        ],
+    },
+    {
+        id: "toward-jerusalem-stop-4",
+        journeyId: "jesus-toward-jerusalem",
+        placeId: "jerusalem",
+        order: 4,
+        description:
+            "Jesus approaches Jerusalem as the final stage of His earthly ministry begins.",
+        references: [
+            {
+                book: "Luke",
+                chapter: 19,
+                startVerse: 28,
+            },
+        ],
+    },
+    {
+        id: "jerusalem-entry-stop-1",
+        journeyId: "jesus-entry-jerusalem",
+        placeId: "bethany",
+        order: 1,
+        description:
+            "Jesus stays near Bethany before His entry into Jerusalem.",
+        references: [
+            {
+                book: "John",
+                chapter: 12,
+                startVerse: 1,
+                endVerse: 11,
+            },
+        ],
+    },
+    {
+        id: "jerusalem-entry-stop-2",
+        journeyId: "jesus-entry-jerusalem",
+        placeId: "mount-of-olives",
+        order: 2,
+        description:
+            "Jesus approaches Jerusalem through the Mount of Olives region.",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 21,
+                startVerse: 1,
+                endVerse: 9,
+            },
+        ],
+    },
+    {
+        id: "jerusalem-entry-stop-3",
+        journeyId: "jesus-entry-jerusalem",
+        placeId: "jerusalem",
+        order: 3,
+        description:
+            "Jesus enters Jerusalem as the crowds welcome Him.",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 21,
+                startVerse: 10,
+                endVerse: 11,
+            },
+        ],
+    },
+    {
+        id: "jerusalem-entry-stop-4",
+        journeyId: "jesus-entry-jerusalem",
+        placeId: "temple-mount",
+        order: 4,
+        description:
+            "Jesus enters the Temple during His final week in Jerusalem.",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 21,
+                startVerse: 12,
+                endVerse: 17,
+            },
+        ],
+    },
+    {
+        id: "arrest-trial-stop-1",
+        journeyId: "jesus-arrest-and-trial",
+        placeId: "upper-room-jerusalem",
+        order: 1,
+        description:
+            "Jesus shares the Passover meal with His disciples before leaving the city.",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 26,
+                startVerse: 17,
+                endVerse: 30,
+            },
+        ],
+    },
+    {
+        id: "arrest-trial-stop-2",
+        journeyId: "jesus-arrest-and-trial",
+        placeId: "gethsemane",
+        order: 2,
+        description:
+            "Jesus prays in Gethsemane and is arrested there.",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 26,
+                startVerse: 36,
+                endVerse: 56,
+            },
+        ],
+    },
+    {
+        id: "arrest-trial-stop-3",
+        journeyId: "jesus-arrest-and-trial",
+        placeId: "high-priest-residence",
+        order: 3,
+        description:
+            "Jesus is taken before the high priest and Jewish leadership.",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 26,
+                startVerse: 57,
+                endVerse: 68,
+            },
+        ],
+    },
+    {
+        id: "arrest-trial-stop-4",
+        journeyId: "jesus-arrest-and-trial",
+        placeId: "praetorium-jerusalem",
+        order: 4,
+        description:
+            "Jesus is brought before Pontius Pilate as the Roman trial begins.",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 27,
+                startVerse: 1,
+                endVerse: 26,
+            },
+        ],
+    },
+    {
+        id: "crucifixion-stop-1",
+        journeyId: "jesus-crucifixion-resurrection",
+        placeId: "praetorium-jerusalem",
+        order: 1,
+        description:
+            "Jesus is condemned under Roman authority before being led away for crucifixion.",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 27,
+                startVerse: 11,
+                endVerse: 26,
+            },
+        ],
+    },
+    {
+        id: "crucifixion-stop-2",
+        journeyId: "jesus-crucifixion-resurrection",
+        placeId: "golgotha",
+        order: 2,
+        description:
+            "Jesus is taken to Golgotha and crucified.",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 27,
+                startVerse: 27,
+                endVerse: 56,
+            },
+        ],
+    },
+    {
+        id: "crucifixion-stop-3",
+        journeyId: "jesus-crucifixion-resurrection",
+        placeId: "jesus-tomb",
+        order: 3,
+        description:
+            "Jesus is buried in a tomb, which is later found empty on the first day of the week.",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 27,
+                startVerse: 57,
+                endVerse: 61,
+            },
+            {
+                book: "Matthew",
+                chapter: 28,
+                startVerse: 1,
+                endVerse: 10,
+            },
+        ],
+    },
+    {
+        id: "crucifixion-stop-4",
+        journeyId: "jesus-crucifixion-resurrection",
+        placeId: "jerusalem",
+        order: 4,
+        description:
+            "The risen Jesus appears to His disciples in Jerusalem.",
+        references: [
+            {
+                book: "Luke",
+                chapter: 24,
+                startVerse: 36,
+                endVerse: 49,
+            },
+        ],
+    },
+    {
+        id: "resurrection-ascension-stop-1",
+        journeyId: "resurrection-to-ascension",
+        placeId: "jesus-tomb",
+        order: 1,
+        description:
+            "The tomb is found empty on the first day of the week.",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 28,
+                startVerse: 1,
+                endVerse: 10,
+            },
+        ],
+    },
+    {
+        id: "resurrection-ascension-stop-2",
+        journeyId: "resurrection-to-ascension",
+        placeId: "jerusalem",
+        order: 2,
+        description:
+            "The risen Jesus appears to His disciples in Jerusalem.",
+        references: [
+            {
+                book: "Luke",
+                chapter: 24,
+                startVerse: 36,
+                endVerse: 49,
+            },
+        ],
+    },
+    {
+        id: "resurrection-ascension-stop-3",
+        journeyId: "resurrection-to-ascension",
+        placeId: "mount-of-olives",
+        order: 3,
+        description:
+            "Jesus leads His disciples out toward the Mount of Olives region and ascends into heaven.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 1,
+                startVerse: 6,
+                endVerse: 12,
+            },
+        ],
+    },
 ];

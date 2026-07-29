@@ -391,4 +391,76 @@ export const people: Person[] = [
     description:
       "King of Judea under Roman authority during the period surrounding the birth of Jesus.",
   },
+  {
+    id: "peter",
+    name: "Peter",
+    description:
+      "One of Jesus' twelve apostles and a leading disciple whose ministry later became central in the early Church.",
+  },
+  {
+    id: "andrew",
+    name: "Andrew",
+    description:
+      "Brother of Peter and one of the first disciples associated with Jesus' ministry.",
+  },
+  {
+    id: "james-son-of-zebedee",
+    name: "James - Son of Zebedee",
+    description:
+      "One of Jesus' twelve apostles and brother of John.",
+  },
+  {
+    id: "john-apostle",
+    name: "John - Apostle",
+    description:
+      "One of Jesus' twelve apostles, brother of James, and a prominent disciple in the Gospel narratives.",
+  },
+  {
+    id: "martha",
+    name: "Martha",
+    description:
+      "Follower of Jesus from Bethany and sister of Mary and Lazarus.",
+  },
+  {
+    id: "mary-of-bethany",
+    name: "Mary - Of Bethany",
+    description:
+      "Follower of Jesus from Bethany and sister of Martha and Lazarus.",
+  },
+  {
+    id: "lazarus",
+    name: "Lazarus",
+    description:
+      "Brother of Martha and Mary whom Jesus raised from the dead at Bethany.",
+  },
+  {
+    id: "judas-iscariot",
+    name: "Judas Iscariot",
+    description:
+      "One of Jesus' twelve apostles who betrayed Him and led those who arrested Him.",
+  },
+  {
+    id: "caiaphas",
+    name: "Caiaphas",
+    description:
+      "High priest associated with the proceedings against Jesus before His crucifixion.",
+  },
+  {
+    id: "pontius-pilate",
+    name: "Pontius Pilate",
+    description:
+      "Roman governor of Judea who presided over Jesus' Roman trial and authorised His crucifixion.",
+  },
+  {
+    id: "joseph-of-arimathea",
+    name: "Joseph - Of Arimathea",
+    description:
+      "A member of the council and follower of Jesus who requested His body from Pilate and placed Him in a tomb.",
+  },
+  {
+    id: "mary-magdalene",
+    name: "Mary Magdalene",
+    description:
+      "Follower of Jesus who witnessed His crucifixion and burial and was among the first to encounter the empty tomb and risen Jesus.",
+  },
 ];

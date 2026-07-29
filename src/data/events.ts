@@ -2851,4 +2851,667 @@ export const events: Event[] = [
             },
         ],
     },
+    {
+        id: "john-preaches-jordan",
+        title: "John the Baptist preaches in the wilderness",
+        description:
+            "John the Baptist begins preaching repentance and preparing the way for the coming of the Lord.",
+        placeId: "bethany-beyond-jordan",
+        periodId: "life-of-jesus",
+        personIds: ["john-baptist"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 3,
+                startVerse: 1,
+                endVerse: 12,
+            },
+            {
+                book: "John",
+                chapter: 1,
+                startVerse: 19,
+                endVerse: 28,
+            },
+        ],
+    },
+    {
+        id: "jesus-baptised",
+        title: "Jesus is baptised by John",
+        description:
+            "Jesus comes to John at the Jordan and is baptised. The Spirit of God descends upon Him, and a voice from heaven declares Him to be God's beloved Son.",
+        placeId: "jordan-river-baptism",
+        periodId: "life-of-jesus",
+        personIds: ["jesus", "john-baptist"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 3,
+                startVerse: 13,
+                endVerse: 17,
+            },
+            {
+                book: "Mark",
+                chapter: 1,
+                startVerse: 9,
+                endVerse: 11,
+            },
+            {
+                book: "Luke",
+                chapter: 3,
+                startVerse: 21,
+                endVerse: 22,
+            },
+        ],
+    },
+    {
+        id: "jesus-tempted-wilderness",
+        title: "Jesus is tempted in the wilderness",
+        description:
+            "After His baptism, Jesus is led into the wilderness, where He fasts and is tempted by the devil.",
+        placeId: "judean-wilderness",
+        periodId: "life-of-jesus",
+        personIds: ["jesus"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 4,
+                startVerse: 1,
+                endVerse: 11,
+            },
+            {
+                book: "Luke",
+                chapter: 4,
+                startVerse: 1,
+                endVerse: 13,
+            },
+        ],
+    },
+    {
+        id: "first-disciples-called",
+        title: "Jesus calls His first disciples",
+        description:
+            "Jesus calls disciples including Peter, Andrew, James, and John to follow Him.",
+        placeId: "sea-of-galilee",
+        periodId: "life-of-jesus",
+        personIds: [
+            "jesus",
+            "peter",
+            "andrew",
+            "james-son-of-zebedee",
+            "john-apostle",
+        ],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 4,
+                startVerse: 18,
+                endVerse: 22,
+            },
+        ],
+    },
+    {
+        id: "water-into-wine",
+        title: "Jesus turns water into wine",
+        description:
+            "At a wedding in Cana, Jesus turns water into wine, the first sign recorded in John's Gospel.",
+        placeId: "cana",
+        periodId: "life-of-jesus",
+        personIds: ["jesus", "mary"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "John",
+                chapter: 2,
+                startVerse: 1,
+                endVerse: 11,
+            },
+        ],
+    },
+    {
+        id: "jesus-ministers-capernaum",
+        title: "Jesus ministers in Capernaum",
+        description:
+            "Jesus teaches and performs signs in Capernaum, which becomes an important centre of His Galilean ministry.",
+        placeId: "capernaum",
+        periodId: "life-of-jesus",
+        personIds: ["jesus"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Mark",
+                chapter: 1,
+                startVerse: 21,
+                endVerse: 39,
+            },
+        ],
+    },
+    {
+        id: "sermon-on-mount",
+        title: "Jesus teaches the Sermon on the Mount",
+        description:
+            "Jesus teaches His disciples and the crowds about the kingdom of heaven, righteousness, prayer, love, faith, and obedience to God.",
+        placeId: "mount-beatitudes-region",
+        periodId: "life-of-jesus",
+        personIds: ["jesus"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 5,
+            },
+            {
+                book: "Matthew",
+                chapter: 6,
+            },
+            {
+                book: "Matthew",
+                chapter: 7,
+            },
+        ],
+    },
+    {
+        id: "jesus-calms-storm",
+        title: "Jesus calms the storm",
+        description:
+            "While crossing the Sea of Galilee with His disciples, Jesus rebukes the wind and waves and the storm becomes calm.",
+        placeId: "sea-of-galilee",
+        periodId: "life-of-jesus",
+        personIds: [
+            "jesus",
+            "peter",
+            "andrew",
+            "james-son-of-zebedee",
+            "john-apostle",
+        ],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Mark",
+                chapter: 4,
+                startVerse: 35,
+                endVerse: 41,
+            },
+        ],
+    },
+    {
+        id: "feeding-five-thousand",
+        title: "Jesus feeds the five thousand",
+        description:
+            "Jesus feeds a large crowd with five loaves and two fish, and the disciples gather twelve baskets of leftovers.",
+        placeId: "bethsaida",
+        periodId: "life-of-jesus",
+        personIds: ["jesus"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Luke",
+                chapter: 9,
+                startVerse: 10,
+                endVerse: 17,
+            },
+            {
+                book: "John",
+                chapter: 6,
+                startVerse: 1,
+                endVerse: 14,
+            },
+        ],
+    },
+    {
+        id: "peter-confesses-christ",
+        title: "Peter confesses Jesus as the Messiah",
+        description:
+            "Near Caesarea Philippi, Peter declares that Jesus is the Messiah, the Son of the living God.",
+        placeId: "caesarea-philippi",
+        periodId: "life-of-jesus",
+        personIds: ["jesus", "peter"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 16,
+                startVerse: 13,
+                endVerse: 20,
+            },
+        ],
+    },
+    {
+        id: "transfiguration",
+        title: "Jesus is transfigured",
+        description:
+            "Jesus takes Peter, James, and John up a high mountain, where His appearance is transformed before them and Moses and Elijah appear with Him.",
+        placeId: "mount-transfiguration-region",
+        periodId: "life-of-jesus",
+        personIds: [
+            "jesus",
+            "peter",
+            "james-son-of-zebedee",
+            "john-apostle",
+            "moses",
+            "elijah",
+        ],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 17,
+                startVerse: 1,
+                endVerse: 8,
+            },
+        ],
+    },
+    {
+        id: "jesus-visits-martha-mary",
+        title: "Jesus visits Martha and Mary",
+        description:
+            "Jesus is welcomed into the home of Martha, while Mary sits at His feet and listens to His teaching.",
+        placeId: "bethany",
+        periodId: "life-of-jesus",
+        personIds: ["jesus", "martha", "mary-of-bethany"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Luke",
+                chapter: 10,
+                startVerse: 38,
+                endVerse: 42,
+            },
+        ],
+    },
+    {
+        id: "lazarus-raised",
+        title: "Jesus raises Lazarus from the dead",
+        description:
+            "Jesus comes to Bethany after Lazarus has died and calls him out of the tomb, revealing His power over death.",
+        placeId: "bethany",
+        periodId: "life-of-jesus",
+        personIds: ["jesus", "martha", "mary-of-bethany", "lazarus"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "John",
+                chapter: 11,
+                startVerse: 1,
+                endVerse: 44,
+            },
+        ],
+    },
+    {
+        id: "mary-anoints-jesus",
+        title: "Mary anoints Jesus at Bethany",
+        description:
+            "Mary anoints Jesus with expensive perfume shortly before His final entry into Jerusalem.",
+        placeId: "bethany",
+        periodId: "life-of-jesus",
+        personIds: ["jesus", "mary-of-bethany", "martha", "lazarus"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "John",
+                chapter: 12,
+                startVerse: 1,
+                endVerse: 8,
+            },
+        ],
+    },
+    {
+        id: "triumphal-entry",
+        title: "Jesus enters Jerusalem",
+        description:
+            "Jesus enters Jerusalem riding on a donkey as crowds welcome Him and spread branches and cloaks along the road.",
+        placeId: "jerusalem",
+        periodId: "life-of-jesus",
+        personIds: ["jesus"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 21,
+                startVerse: 1,
+                endVerse: 11,
+            },
+            {
+                book: "John",
+                chapter: 12,
+                startVerse: 12,
+                endVerse: 19,
+            },
+        ],
+    },
+    {
+        id: "jesus-cleanses-temple",
+        title: "Jesus clears the Temple",
+        description:
+            "Jesus enters the Temple courts and drives out those buying and selling there, declaring that God's house is to be a house of prayer.",
+        placeId: "temple-mount",
+        periodId: "life-of-jesus",
+        personIds: ["jesus"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 21,
+                startVerse: 12,
+                endVerse: 17,
+            },
+        ],
+    },
+    {
+        id: "jesus-teaches-final-week",
+        title: "Jesus teaches during His final week",
+        description:
+            "Jesus teaches publicly in Jerusalem during the days leading to His arrest and crucifixion.",
+        placeId: "temple-mount",
+        periodId: "life-of-jesus",
+        personIds: ["jesus"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 21,
+                startVerse: 23,
+            },
+            {
+                book: "Matthew",
+                chapter: 22,
+            },
+            {
+                book: "Matthew",
+                chapter: 23,
+            },
+        ],
+    },
+    {
+        id: "olivet-discourse",
+        title: "Jesus teaches on the Mount of Olives",
+        description:
+            "Jesus speaks with His disciples on the Mount of Olives about the Temple, coming tribulation, watchfulness, and His future coming.",
+        placeId: "mount-of-olives",
+        periodId: "life-of-jesus",
+        personIds: [
+            "jesus",
+            "peter",
+            "james-son-of-zebedee",
+            "john-apostle",
+            "andrew",
+        ],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 24,
+            },
+            {
+                book: "Matthew",
+                chapter: 25,
+            },
+            {
+                book: "Mark",
+                chapter: 13,
+                startVerse: 1,
+                endVerse: 37,
+            },
+        ],
+    },
+    {
+        id: "last-supper",
+        title: "Jesus shares the Last Supper with His disciples",
+        description:
+            "Jesus eats the Passover meal with His disciples, speaks of His coming betrayal, and gives them bread and the cup in connection with His body and blood.",
+        placeId: "upper-room-jerusalem",
+        periodId: "life-of-jesus",
+        personIds: [
+            "jesus",
+            "peter",
+            "andrew",
+            "james-son-of-zebedee",
+            "john-apostle",
+            "judas-iscariot",
+        ],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 26,
+                startVerse: 17,
+                endVerse: 30,
+            },
+            {
+                book: "Luke",
+                chapter: 22,
+                startVerse: 7,
+                endVerse: 23,
+            },
+        ],
+    },
+    {
+        id: "jesus-prays-gethsemane",
+        title: "Jesus prays in Gethsemane",
+        description:
+            "Jesus goes with His disciples to Gethsemane and prays before His arrest.",
+        placeId: "gethsemane",
+        periodId: "life-of-jesus",
+        personIds: [
+            "jesus",
+            "peter",
+            "james-son-of-zebedee",
+            "john-apostle",
+        ],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 26,
+                startVerse: 36,
+                endVerse: 46,
+            },
+        ],
+    },
+    {
+        id: "jesus-arrested",
+        title: "Jesus is arrested",
+        description:
+            "Judas arrives with an armed crowd, identifies Jesus, and Jesus is arrested in Gethsemane.",
+        placeId: "gethsemane",
+        periodId: "life-of-jesus",
+        personIds: ["jesus", "judas-iscariot", "peter"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 26,
+                startVerse: 47,
+                endVerse: 56,
+            },
+        ],
+    },
+    {
+        id: "jesus-before-high-priest",
+        title: "Jesus is brought before the high priest",
+        description:
+            "Jesus is taken before the high priest and Jewish leaders, where testimony is brought against Him.",
+        placeId: "high-priest-residence",
+        periodId: "life-of-jesus",
+        personIds: ["jesus", "caiaphas", "peter"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 26,
+                startVerse: 57,
+                endVerse: 75,
+            },
+        ],
+    },
+    {
+        id: "peter-denies-jesus",
+        title: "Peter denies Jesus",
+        description:
+            "While Jesus is being questioned, Peter denies three times that he knows Him, and the rooster crows.",
+        placeId: "high-priest-residence",
+        periodId: "life-of-jesus",
+        personIds: ["jesus", "peter"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 26,
+                startVerse: 69,
+                endVerse: 75,
+            },
+        ],
+    },
+    {
+        id: "jesus-before-pilate",
+        title: "Jesus is brought before Pontius Pilate",
+        description:
+            "Jesus is brought before the Roman governor Pontius Pilate as the proceedings move toward crucifixion.",
+        placeId: "praetorium-jerusalem",
+        periodId: "life-of-jesus",
+        personIds: ["jesus", "pontius-pilate"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 27,
+                startVerse: 1,
+                endVerse: 26,
+            },
+        ],
+    },
+    {
+        id: "jesus-crucified",
+        title: "Jesus is crucified",
+        description:
+            "Jesus is taken to Golgotha and crucified between two others.",
+        placeId: "golgotha",
+        periodId: "life-of-jesus",
+        personIds: ["jesus", "pontius-pilate", "mary-magdalene"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 27,
+                startVerse: 27,
+                endVerse: 56,
+            },
+            {
+                book: "John",
+                chapter: 19,
+                startVerse: 16,
+                endVerse: 37,
+            },
+        ],
+    },
+    {
+        id: "jesus-buried",
+        title: "Jesus is buried",
+        description:
+            "Joseph of Arimathea receives Jesus' body and places Him in a tomb.",
+        placeId: "jesus-tomb",
+        periodId: "life-of-jesus",
+        personIds: ["jesus", "joseph-of-arimathea", "mary-magdalene"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 27,
+                startVerse: 57,
+                endVerse: 61,
+            },
+            {
+                book: "John",
+                chapter: 19,
+                startVerse: 38,
+                endVerse: 42,
+            },
+        ],
+    },
+    {
+        id: "empty-tomb",
+        title: "The tomb is found empty",
+        description:
+            "On the first day of the week, the women come to the tomb and find that Jesus is not there.",
+        placeId: "jesus-tomb",
+        periodId: "life-of-jesus",
+        personIds: ["jesus", "mary-magdalene"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 28,
+                startVerse: 1,
+                endVerse: 10,
+            },
+            {
+                book: "John",
+                chapter: 20,
+                startVerse: 1,
+                endVerse: 18,
+            },
+        ],
+    },
+    {
+        id: "jesus-appears-disciples",
+        title: "Jesus appears to His disciples",
+        description:
+            "The risen Jesus appears to His disciples and shows them that He is alive.",
+        placeId: "jerusalem",
+        periodId: "life-of-jesus",
+        personIds: [
+            "jesus",
+            "peter",
+            "john-apostle",
+            "mary-magdalene",
+        ],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Luke",
+                chapter: 24,
+                startVerse: 36,
+                endVerse: 49,
+            },
+            {
+                book: "John",
+                chapter: 20,
+                startVerse: 19,
+                endVerse: 29,
+            },
+        ],
+    },
+    {
+        id: "jesus-ascends",
+        title: "Jesus ascends into heaven",
+        description:
+            "After appearing to His disciples following the resurrection, Jesus is taken up from them near the Mount of Olives.",
+        placeId: "mount-of-olives",
+        periodId: "life-of-jesus",
+        personIds: [
+            "jesus",
+            "peter",
+            "john-apostle",
+            "james-son-of-zebedee",
+            "andrew",
+        ],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Luke",
+                chapter: 24,
+                startVerse: 50,
+                endVerse: 53,
+            },
+            {
+                book: "Acts",
+                chapter: 1,
+                startVerse: 6,
+                endVerse: 12,
+            },
+        ],
+    },
 ];

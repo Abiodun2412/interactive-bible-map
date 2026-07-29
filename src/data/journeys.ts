@@ -216,4 +216,68 @@ export const journeys: Journey[] = [
         periodId: "life-of-jesus",
         personIds: ["jesus", "mary", "joseph-husband-of-mary"],
     },
+    {
+        id: "jesus-to-baptism",
+        name: "Jesus Travels to the Jordan",
+        description:
+            "Jesus leaves Nazareth and comes to the Jordan region, where He is baptised by John before beginning His public ministry.",
+        periodId: "life-of-jesus",
+        personIds: ["jesus", "john-baptist"],
+    },
+    {
+        id: "jesus-early-ministry",
+        name: "Jesus' Early Ministry",
+        description:
+            "A journey from the Jordan and wilderness into the opening stages of Jesus' ministry in Galilee.",
+        periodId: "life-of-jesus",
+        personIds: ["jesus"],
+    },
+    {
+        id: "jesus-galilean-ministry",
+        name: "Jesus' Galilean Ministry",
+        description:
+            "Key locations from Jesus' teaching and ministry around Galilee and the northern regions.",
+        periodId: "life-of-jesus",
+        personIds: ["jesus"],
+    },
+    {
+        id: "jesus-toward-jerusalem",
+        name: "Jesus Travels Toward Jerusalem",
+        description:
+            "Key locations from the later phase of Jesus' ministry as He moves from the northern regions toward Bethany and Jerusalem.",
+        periodId: "life-of-jesus",
+        personIds: ["jesus"],
+    },
+    {
+        id: "jesus-entry-jerusalem",
+        name: "Jesus' Entry into Jerusalem",
+        description:
+            "Jesus approaches Jerusalem from Bethany and the Mount of Olives before entering the city and Temple during His final week.",
+        periodId: "life-of-jesus",
+        personIds: ["jesus"],
+    },
+    {
+        id: "jesus-arrest-and-trial",
+        name: "Jesus' Arrest & Trial",
+        description:
+            "The final evening before the crucifixion, from the Last Supper in Jerusalem through Gethsemane, Jesus' arrest, and His hearings before Jewish and Roman authorities.",
+        periodId: "life-of-jesus",
+        personIds: ["jesus"],
+    },
+    {
+        id: "jesus-crucifixion-resurrection",
+        name: "Crucifixion & Resurrection",
+        description:
+            "The final movement from Jesus' Roman trial to Golgotha, His burial, and the empty tomb.",
+        periodId: "life-of-jesus",
+        personIds: ["jesus"],
+    },
+    {
+        id: "resurrection-to-ascension",
+        name: "Resurrection to Ascension",
+        description:
+            "The final phase of Jesus' earthly ministry after the resurrection, culminating in His ascension near the Mount of Olives.",
+        periodId: "life-of-jesus",
+        personIds: ["jesus"],
+    },
 ];

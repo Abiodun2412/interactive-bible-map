@@ -977,4 +977,244 @@ export const places: Place[] = [
       "A major Persian royal city and the principal setting of the book of Esther.",
     identificationStatus: "well-established",
   },
+  {
+    id: "bethany-beyond-jordan",
+    name: "Bethany Beyond the Jordan",
+    modernName: "Jordan River region east of Jericho",
+    latitude: 31.84,
+    longitude: 35.55,
+    type: "site",
+    region: "Jordan Valley",
+    description:
+      "A location associated with John the Baptist's ministry and with baptisms in the Jordan region.",
+    identificationStatus: "disputed",
+    identificationNote:
+      "The exact identification of Bethany Beyond the Jordan remains debated, though the Jordan Valley setting is clear.",
+  },
+  {
+    id: "jordan-river-baptism",
+    name: "Jordan River Baptism Region",
+    modernName: "Jordan River",
+    latitude: 31.84,
+    longitude: 35.55,
+    type: "site",
+    region: "Jordan Valley",
+    description:
+      "The Jordan River region associated with John the Baptist's ministry and the baptism of Jesus.",
+    identificationStatus: "probable",
+    identificationNote:
+      "The Gospel accounts place Jesus' baptism in the Jordan region, but the precise point cannot be identified with certainty.",
+  },
+  {
+    id: "judean-wilderness",
+    name: "Judean Wilderness",
+    modernName: "Judean Desert",
+    latitude: 31.7,
+    longitude: 35.35,
+    type: "region",
+    region: "Judea",
+    description:
+      "The wilderness region associated with Jesus' temptation after His baptism.",
+    identificationStatus: "well-established",
+  },
+  {
+    id: "cana",
+    name: "Cana",
+    modernName: "Galilee region",
+    latitude: 32.75,
+    longitude: 35.34,
+    type: "city",
+    region: "Galilee",
+    description:
+      "The Galilean town associated with the wedding where Jesus turned water into wine.",
+    identificationStatus: "disputed",
+    identificationNote:
+      "Several locations have been proposed for biblical Cana. The precise identification remains debated.",
+  },
+  {
+    id: "capernaum",
+    name: "Capernaum",
+    modernName: "Kfar Nahum",
+    latitude: 32.88,
+    longitude: 35.575,
+    type: "city",
+    region: "Galilee",
+    description:
+      "A major centre of Jesus' ministry in Galilee, associated with teaching, healing, and the calling of disciples.",
+    identificationStatus: "well-established",
+  },
+  {
+    id: "sea-of-galilee",
+    name: "Sea of Galilee",
+    modernName: "Sea of Galilee / Lake Kinneret",
+    latitude: 32.82,
+    longitude: 35.59,
+    type: "region",
+    region: "Galilee",
+    description:
+      "The lake around which much of Jesus' Galilean ministry took place.",
+    identificationStatus: "well-established",
+  },
+  {
+    id: "mount-beatitudes-region",
+    name: "Sermon on the Mount Region",
+    modernName: "Northwestern Sea of Galilee region",
+    latitude: 32.88,
+    longitude: 35.55,
+    type: "site",
+    region: "Galilee",
+    description:
+      "The Galilean setting associated with Jesus' teaching commonly known as the Sermon on the Mount.",
+    identificationStatus: "traditional",
+    identificationNote:
+      "The Gospel places the teaching on a mountain in Galilee, but the precise location is not identified in the text.",
+  },
+  {
+    id: "bethsaida",
+    name: "Bethsaida",
+    modernName: "Northeastern Sea of Galilee region",
+    latitude: 32.91,
+    longitude: 35.63,
+    type: "city",
+    region: "Galilee",
+    description:
+      "A town near the Sea of Galilee associated with several of Jesus' disciples and events in His ministry.",
+    identificationStatus: "disputed",
+    identificationNote:
+      "Multiple archaeological sites have been proposed for biblical Bethsaida.",
+  },
+  {
+    id: "caesarea-philippi",
+    name: "Caesarea Philippi",
+    modernName: "Banias",
+    latitude: 33.248,
+    longitude: 35.694,
+    type: "city",
+    region: "Northern Galilee",
+    description:
+      "A northern location where Peter confessed that Jesus is the Messiah.",
+    identificationStatus: "well-established",
+  },
+  {
+    id: "mount-transfiguration-region",
+    name: "Transfiguration Region",
+    modernName: "Northern Israel region",
+    latitude: 33.2,
+    longitude: 35.7,
+    type: "site",
+    region: "Northern Israel",
+    description:
+      "The mountain region associated with the Transfiguration of Jesus.",
+    identificationStatus: "disputed",
+    identificationNote:
+      "The Gospel accounts do not identify the mountain by name. Mount Tabor and locations near Mount Hermon have both been proposed.",
+  },
+  {
+    id: "bethany",
+    name: "Bethany",
+    modernName: "Al-Eizariya",
+    latitude: 31.771,
+    longitude: 35.264,
+    type: "village",
+    region: "Judea",
+    description:
+      "Village near Jerusalem associated with Martha, Mary, Lazarus, and several events during Jesus' final ministry.",
+    identificationStatus: "well-established",
+  },
+  {
+    id: "mount-of-olives",
+    name: "Mount of Olives",
+    modernName: "Mount of Olives",
+    latitude: 31.778,
+    longitude: 35.245,
+    type: "mountain",
+    region: "Judea",
+    description:
+      "Ridge east of Jerusalem associated with several events during Jesus' ministry, especially His final days and ascension.",
+    identificationStatus: "well-established",
+  },
+  {
+    id: "gethsemane",
+    name: "Gethsemane",
+    modernName: "Mount of Olives area",
+    latitude: 31.779,
+    longitude: 35.239,
+    type: "site",
+    region: "Judea",
+    description:
+      "Place near the Mount of Olives where Jesus prayed before His arrest.",
+    identificationStatus: "traditional",
+    identificationNote:
+      "The Gospel accounts locate Gethsemane at the Mount of Olives, though the exact boundaries of the ancient site are uncertain.",
+  },
+  {
+    id: "upper-room-jerusalem",
+    name: "Upper Room",
+    modernName: "Jerusalem",
+    latitude: 31.771,
+    longitude: 35.229,
+    type: "site",
+    region: "Jerusalem",
+    description:
+      "A Jerusalem setting associated with Jesus sharing the Passover meal with His disciples before His arrest.",
+    identificationStatus: "traditional",
+    identificationNote:
+      "The Gospel accounts describe a furnished upper room in Jerusalem, but its precise location is not identified.",
+  },
+  {
+    id: "high-priest-residence",
+    name: "High Priest's Residence",
+    modernName: "Jerusalem",
+    latitude: 31.772,
+    longitude: 35.229,
+    type: "site",
+    region: "Jerusalem",
+    description:
+      "A Jerusalem location representing the setting of Jesus' hearing before the high priest and Jewish leadership.",
+    identificationStatus: "disputed",
+    identificationNote:
+      "The Gospel accounts describe Jesus being taken to the high priest, but the precise archaeological identification of the residence is uncertain.",
+  },
+  {
+    id: "praetorium-jerusalem",
+    name: "Praetorium",
+    modernName: "Jerusalem",
+    latitude: 31.776,
+    longitude: 35.233,
+    type: "site",
+    region: "Jerusalem",
+    description:
+      "The Roman governmental setting associated with Jesus' trial before Pontius Pilate.",
+    identificationStatus: "disputed",
+    identificationNote:
+      "Scholars debate the exact location of Pilate's Jerusalem praetorium during Jesus' trial.",
+  },
+  {
+    id: "golgotha",
+    name: "Golgotha",
+    modernName: "Jerusalem",
+    latitude: 31.7785,
+    longitude: 35.2295,
+    type: "site",
+    region: "Jerusalem",
+    description:
+      "The place outside Jerusalem where Jesus was crucified.",
+    identificationStatus: "traditional",
+    identificationNote:
+      "The Gospel accounts identify Golgotha as the place of crucifixion, but the exact modern location is debated.",
+  },
+  {
+    id: "jesus-tomb",
+    name: "Tomb of Jesus",
+    modernName: "Jerusalem",
+    latitude: 31.7784,
+    longitude: 35.2292,
+    type: "site",
+    region: "Jerusalem",
+    description:
+      "The tomb where Jesus was laid after His crucifixion and which was found empty on the first day of the week.",
+    identificationStatus: "traditional",
+    identificationNote:
+      "Christian tradition identifies sites in Jerusalem associated with Jesus' burial and resurrection, while the precise archaeological identification remains debated.",
+  },
 ];
