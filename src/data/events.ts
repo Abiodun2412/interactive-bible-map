@@ -970,7 +970,7 @@ export const events: Event[] = [
         title: "Saul's kingship is renewed at Gilgal",
         description:
             "After Saul leads Israel to victory, Samuel gathers the people at Gilgal, where Saul's kingship is renewed before the Lord.",
-        placeId: "gilgal-saul",
+        placeId: "gilgal",
         periodId: "judges",
         personIds: ["samuel", "saul"],
         datePrecision: "approximate",
@@ -1680,7 +1680,7 @@ export const events: Event[] = [
         title: "Elijah is taken up",
         description:
             "Elijah is taken up, and Elisha receives Elijah's mantle and continues the prophetic ministry.",
-        placeId: "jericho-elisha",
+        placeId: "jericho",
         periodId: "divided-kingdom",
         personIds: ["elijah", "elisha"],
         datePrecision: "approximate",
@@ -1698,7 +1698,7 @@ export const events: Event[] = [
         title: "Elisha heals the water at Jericho",
         description:
             "Elisha throws salt into the spring at Jericho, and the Lord heals the water.",
-        placeId: "jericho-elisha",
+        placeId: "jericho",
         periodId: "divided-kingdom",
         personIds: ["elisha"],
         datePrecision: "approximate",
@@ -1744,6 +1744,173 @@ export const events: Event[] = [
                 chapter: 6,
                 startVerse: 8,
                 endVerse: 23,
+            },
+        ],
+    },
+    {
+        id: "hoshea-rules-israel",
+        title: "Hoshea becomes king of Israel",
+        description:
+            "Hoshea becomes king over the northern kingdom during its final years before Assyria's conquest.",
+        placeId: "samaria",
+        periodId: "divided-kingdom",
+        personIds: ["hoshea"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 17,
+                startVerse: 1,
+                endVerse: 2,
+            },
+        ],
+    },
+    {
+        id: "assyria-besieges-samaria",
+        title: "Assyria besieges Samaria",
+        description:
+            "The king of Assyria comes against Hoshea, and Samaria is besieged for three years.",
+        placeId: "samaria",
+        periodId: "divided-kingdom",
+        personIds: ["hoshea", "shalmaneser"],
+        approximateDate: "c. 724–722 BC",
+        datePrecision: "range",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 17,
+                startVerse: 3,
+                endVerse: 5,
+            },
+        ],
+    },
+    {
+        id: "samaria-falls",
+        title: "Samaria falls to Assyria",
+        description:
+            "Samaria is captured, bringing the northern kingdom of Israel to an end.",
+        placeId: "samaria",
+        periodId: "divided-kingdom",
+        personIds: ["hoshea", "shalmaneser", "sargon"],
+        approximateDate: "722 BC",
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 17,
+                startVerse: 6,
+            },
+        ],
+    },
+    {
+        id: "israel-deported-assyria",
+        title: "Israel is deported into Assyria",
+        description:
+            "After the fall of Samaria, many Israelites are carried away into Assyrian territory.",
+        placeId: "assyria",
+        periodId: "divided-kingdom",
+        personIds: ["sargon"],
+        approximateDate: "late 8th century BC",
+        datePrecision: "range",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 17,
+                startVerse: 6,
+                endVerse: 23,
+            },
+        ],
+    },
+    {
+        id: "hezekiah-reforms-judah",
+        title: "Hezekiah leads reform in Judah",
+        description:
+            "Hezekiah restores worship of the Lord and leads religious reforms throughout Judah.",
+        placeId: "jerusalem",
+        periodId: "divided-kingdom",
+        personIds: ["hezekiah"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 18,
+                startVerse: 1,
+                endVerse: 8,
+            },
+        ],
+    },
+    {
+        id: "sennacherib-captures-lachish",
+        title: "Sennacherib captures Lachish",
+        description:
+            "During his campaign against Judah, Sennacherib attacks and captures Lachish before threatening Jerusalem.",
+        placeId: "lachish",
+        periodId: "divided-kingdom",
+        personIds: ["sennacherib", "hezekiah"],
+        approximateDate: "701 BC",
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 18,
+                startVerse: 13,
+                endVerse: 17,
+            },
+        ],
+    },
+    {
+        id: "assyria-threatens-jerusalem",
+        title: "Assyria threatens Jerusalem",
+        description:
+            "Assyrian officials come against Jerusalem and attempt to intimidate Hezekiah and the people of Judah.",
+        placeId: "jerusalem",
+        periodId: "divided-kingdom",
+        personIds: ["hezekiah", "sennacherib", "isaiah"],
+        approximateDate: "701 BC",
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 18,
+                startVerse: 17,
+                endVerse: 37,
+            },
+        ],
+    },
+    {
+        id: "hezekiah-seeks-lord",
+        title: "Hezekiah seeks the Lord",
+        description:
+            "Hezekiah responds to Assyria's threat by seeking the Lord and sending messengers to the prophet Isaiah.",
+        placeId: "jerusalem",
+        periodId: "divided-kingdom",
+        personIds: ["hezekiah", "isaiah"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 19,
+                startVerse: 1,
+                endVerse: 7,
+            },
+        ],
+    },
+    {
+        id: "jerusalem-delivered-assyria",
+        title: "Jerusalem is delivered from Assyria",
+        description:
+            "The Lord delivers Jerusalem from the Assyrian army after Hezekiah prays and Isaiah declares God's word concerning the city.",
+        placeId: "jerusalem",
+        periodId: "divided-kingdom",
+        personIds: ["hezekiah", "isaiah", "sennacherib"],
+        approximateDate: "701 BC",
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 19,
+                startVerse: 14,
+                endVerse: 37,
             },
         ],
     },

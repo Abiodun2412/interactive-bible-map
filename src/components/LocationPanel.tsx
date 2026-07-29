@@ -14,6 +14,7 @@ import type { Place } from "@/types/place";
 type LocationPanelProps = {
   place: Place;
   onClose: () => void;
+  onSelectJourney: (journeyId: string) => void;
 };
 
 function formatReference(reference: BibleReference) {
@@ -70,6 +71,7 @@ function formatDatePrecision(
 export default function LocationPanel({
   place,
   onClose,
+  onSelectJourney,
 }: LocationPanelProps) {
   const panelRef = useRef<HTMLElement | null>(null);
 
@@ -252,9 +254,11 @@ export default function LocationPanel({
               }
 
               return (
-                <article
+                <button
                   key={stop.id}
-                  className="rounded-lg border border-gray-200 p-4"
+                  type="button"
+                  onClick={() => onSelectJourney(journey.id)}
+                  className="w-full rounded-lg border border-gray-200 p-4 text-left transition hover:border-gray-400 hover:bg-gray-50"
                 >
                   <div className="flex items-center justify-between gap-3">
                     <h4 className="font-semibold text-gray-900">
@@ -280,7 +284,11 @@ export default function LocationPanel({
                       </span>
                     ))}
                   </div>
-                </article>
+
+                  <p className="mt-3 text-xs font-semibold text-gray-500">
+                    Explore journey →
+                  </p>
+                </button>
               );
             })}
           </div>

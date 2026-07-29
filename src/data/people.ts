@@ -199,4 +199,40 @@ export const people: Person[] = [
     description:
       "Prophet who succeeded Elijah and carried on a major prophetic ministry in the northern kingdom of Israel.",
   },
+  {
+    id: "hoshea",
+    name: "Hoshea",
+    description:
+      "The last king of the northern kingdom of Israel before Samaria fell to Assyria.",
+  },
+  {
+    id: "shalmaneser",
+    name: "Shalmaneser V",
+    description:
+      "Assyrian king who came against Hoshea and began the final siege of Samaria.",
+  },
+  {
+    id: "sargon",
+    name: "Sargon II",
+    description:
+      "Assyrian king associated with the final conquest and deportation following the fall of Samaria.",
+  },
+  {
+    id: "hezekiah",
+    name: "Hezekiah",
+    description:
+      "King of Judah who trusted the Lord during the Assyrian crisis and led significant religious reform.",
+  },
+  {
+    id: "isaiah",
+    name: "Isaiah",
+    description:
+      "Prophet in Judah whose ministry included warnings, promises, and counsel during the Assyrian threat.",
+  },
+  {
+    id: "sennacherib",
+    name: "Sennacherib",
+    description:
+      "King of Assyria who invaded Judah and threatened Jerusalem during the reign of Hezekiah.",
+  },
 ];

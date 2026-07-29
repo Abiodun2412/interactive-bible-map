@@ -891,4 +891,28 @@ export const places: Place[] = [
       "A city associated with Elisha during the conflict between Israel and Aram.",
     identificationStatus: "well-established",
   },
+  {
+    id: "assyria",
+    name: "Assyria",
+    modernName: "Northern Mesopotamia",
+    latitude: 36.35,
+    longitude: 43.15,
+    type: "region",
+    region: "Mesopotamia",
+    description:
+      "The powerful empire that conquered the northern kingdom of Israel and deported many of its inhabitants.",
+    identificationStatus: "well-established",
+  },
+  {
+    id: "nineveh",
+    name: "Nineveh",
+    modernName: "Mosul region, Iraq",
+    latitude: 36.359,
+    longitude: 43.152,
+    type: "city",
+    region: "Assyria",
+    description:
+      "A major Assyrian city that later became the imperial capital and appears prominently in the prophetic books.",
+    identificationStatus: "well-established",
+  },
 ];

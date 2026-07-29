@@ -1181,7 +1181,7 @@ export const journeyStops: JourneyStop[] = [
     {
         id: "elisha-stop-1",
         journeyId: "elisha-early-ministry",
-        placeId: "jericho-elisha",
+        placeId: "jericho",
         order: 1,
         description:
             "Elisha continues the prophetic ministry after Elijah is taken up and ministers at Jericho.",
@@ -1221,6 +1221,73 @@ export const journeyStops: JourneyStop[] = [
                 chapter: 6,
                 startVerse: 8,
                 endVerse: 23,
+            },
+        ],
+    },
+    {
+        id: "fall-israel-stop-1",
+        journeyId: "fall-of-northern-kingdom",
+        placeId: "samaria",
+        order: 1,
+        description:
+            "Samaria is besieged and captured by Assyria.",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 17,
+                startVerse: 3,
+                endVerse: 6,
+            },
+        ],
+    },
+    {
+        id: "fall-israel-stop-2",
+        journeyId: "fall-of-northern-kingdom",
+        placeId: "assyria",
+        order: 2,
+        description:
+            "Many Israelites are deported into Assyrian territory after the fall of Samaria.",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 17,
+                startVerse: 6,
+            },
+        ],
+    },
+    {
+        id: "assyria-judah-stop-1",
+        journeyId: "assyrian-campaign-judah",
+        placeId: "lachish",
+        order: 1,
+        description:
+            "Sennacherib's campaign reaches Lachish, one of Judah's major fortified cities.",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 18,
+                startVerse: 13,
+                endVerse: 17,
+            },
+        ],
+    },
+    {
+        id: "assyria-judah-stop-2",
+        journeyId: "assyrian-campaign-judah",
+        placeId: "jerusalem",
+        order: 2,
+        description:
+            "The Assyrian threat reaches Jerusalem, where Hezekiah seeks the Lord and receives Isaiah's message.",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 18,
+                startVerse: 17,
+                endVerse: 37,
+            },
+            {
+                book: "2 Kings",
+                chapter: 19,
             },
         ],
     },

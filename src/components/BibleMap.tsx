@@ -29,6 +29,7 @@ import type { Place } from "@/types/place";
 import { validateData } from "@/utils/validateData";
 
 import {
+    createJourneyStopIcon,
     defaultMarkerIcon,
     selectedMarkerIcon,
 } from "@/utils/mapIcons";
@@ -245,6 +246,15 @@ export default function BibleMap() {
             : []
     );
 
+    const selectedJourneyStops = selectedJourneyId
+        ? journeyStops
+            .filter(
+                (stop) =>
+                    stop.journeyId === selectedJourneyId
+            )
+            .sort((a, b) => a.order - b.order)
+        : [];
+
     const activeContextLabel =
         selectedPersonId
             ? people.find((person) => person.id === selectedPersonId)?.name ?? null
@@ -256,25 +266,32 @@ export default function BibleMap() {
                         ? selectedPlace.name
                         : null;
 
-    const visibleJourneys = journeys.filter((journey) => {
-        const matchesPeriod =
-            selectedPeriodId === null ||
-            journey.periodId === selectedPeriodId;
+    const hasActiveJourneyContext =
+        selectedJourneyId !== null ||
+        selectedPersonId !== null ||
+        selectedPeriodId !== null;
 
-        const matchesJourney =
-            selectedJourneyId === null ||
-            journey.id === selectedJourneyId;
+    const visibleJourneys = hasActiveJourneyContext
+        ? journeys.filter((journey) => {
+            const matchesPeriod =
+                selectedPeriodId === null ||
+                journey.periodId === selectedPeriodId;
 
-        const matchesPerson =
-            selectedPersonId === null ||
-            journey.personIds.includes(selectedPersonId);
+            const matchesJourney =
+                selectedJourneyId === null ||
+                journey.id === selectedJourneyId;
 
-        return (
-            matchesPeriod &&
-            matchesJourney &&
-            matchesPerson
-        );
-    });
+            const matchesPerson =
+                selectedPersonId === null ||
+                journey.personIds.includes(selectedPersonId);
+
+            return (
+                matchesPeriod &&
+                matchesJourney &&
+                matchesPerson
+            );
+        })
+        : [];
 
     const journeyPlaceIds = new Set(
         visibleJourneys.flatMap((journey) =>
@@ -403,6 +420,13 @@ export default function BibleMap() {
         setSelectedJourneyId(journeyId);
     };
 
+    const handleLocationJourneySelect = (journeyId: string) => {
+        setSelectedPeriodId(null);
+        setSelectedPersonId(null);
+        setSelectedPlace(null);
+        setSelectedJourneyId(journeyId);
+    };
+
     const handleSearchPerson = (
         personId: string
     ) => {
@@ -510,23 +534,37 @@ export default function BibleMap() {
                 )
             )}
 
-            {visiblePlaces.map((place) => (
-                <Marker
-                    key={place.id}
-                    position={[
-                        place.latitude,
-                        place.longitude,
-                    ]}
-                    icon={
-                        selectedPlace?.id === place.id
-                            ? selectedMarkerIcon
-                            : defaultMarkerIcon
-                    }
-                    eventHandlers={{
-                        click: () => setSelectedPlace(place),
-                    }}
-                />
-            ))}
+            {visiblePlaces.map((place) => {
+                const journeyStop = selectedJourneyStops.find(
+                    (stop) => stop.placeId === place.id
+                );
+
+                const isSelected =
+                    selectedPlace?.id === place.id;
+
+                const icon = journeyStop
+                    ? createJourneyStopIcon(
+                        journeyStop.order,
+                        isSelected
+                    )
+                    : isSelected
+                        ? selectedMarkerIcon
+                        : defaultMarkerIcon;
+
+                return (
+                    <Marker
+                        key={place.id}
+                        position={[
+                            place.latitude,
+                            place.longitude,
+                        ]}
+                        icon={icon}
+                        eventHandlers={{
+                            click: () => setSelectedPlace(place),
+                        }}
+                    />
+                );
+            })}
 
             {selectedPlace && (
                 <LocationPanel
@@ -534,6 +572,7 @@ export default function BibleMap() {
                     onClose={() =>
                         setSelectedPlace(null)
                     }
+                    onSelectJourney={handleLocationJourneySelect}
                 />
             )}
         </MapContainer>

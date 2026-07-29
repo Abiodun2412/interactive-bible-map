@@ -152,4 +152,20 @@ export const journeys: Journey[] = [
         periodId: "divided-kingdom",
         personIds: ["elisha"],
     },
+    {
+        id: "fall-of-northern-kingdom",
+        name: "Fall of the Northern Kingdom",
+        description:
+            "The final collapse of the northern kingdom as Samaria falls to Assyria and Israelites are deported eastward.",
+        periodId: "divided-kingdom",
+        personIds: ["hoshea", "shalmaneser", "sargon"],
+    },
+    {
+        id: "assyrian-campaign-judah",
+        name: "Assyria's Campaign against Judah",
+        description:
+            "The Assyrian campaign through Judah culminating in the threat against Jerusalem during Hezekiah's reign.",
+        periodId: "divided-kingdom",
+        personIds: ["hezekiah", "sennacherib", "isaiah"],
+    },
 ];

@@ -27,3 +27,34 @@ export const selectedMarkerIcon = L.divIcon({
   iconSize: [24, 24],
   iconAnchor: [12, 12],
 });
+
+export function createJourneyStopIcon(
+  order: number,
+  isSelected = false
+) {
+  return L.divIcon({
+    className: "",
+    html: `
+      <div
+        style="
+          width: 30px;
+          height: 30px;
+          border-radius: 9999px;
+          background: ${isSelected ? "#111827" : "#ffffff"};
+          color: ${isSelected ? "#ffffff" : "#111827"};
+          border: 3px solid #111827;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 13px;
+          font-weight: 700;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        "
+      >
+        ${order}
+      </div>
+    `,
+    iconSize: [30, 30],
+    iconAnchor: [15, 15],
+  });
+}
