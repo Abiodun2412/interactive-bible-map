@@ -409,4 +409,394 @@ export const journeyStops: JourneyStop[] = [
             },
         ],
     },
+    {
+        id: "entry-canaan-stop-1",
+        journeyId: "entry-into-canaan",
+        placeId: "plains-of-moab",
+        order: 1,
+        description:
+            "Israel prepares east of the Jordan for entry into the land under Joshua's leadership.",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 1,
+            },
+        ],
+    },
+    {
+        id: "entry-canaan-stop-2",
+        journeyId: "entry-into-canaan",
+        placeId: "jordan-crossing",
+        order: 2,
+        description:
+            "Israel crosses the Jordan on dry ground as God stops the river before the ark of the covenant.",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 3,
+            },
+        ],
+    },
+    {
+        id: "entry-canaan-stop-3",
+        journeyId: "entry-into-canaan",
+        placeId: "gilgal",
+        order: 3,
+        description:
+            "Israel camps at Gilgal, where twelve stones from the Jordan are set up as a memorial.",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 4,
+                startVerse: 19,
+                endVerse: 24,
+            },
+        ],
+    },
+    {
+        id: "entry-canaan-stop-4",
+        journeyId: "entry-into-canaan",
+        placeId: "jericho",
+        order: 4,
+        description:
+            "Israel comes to Jericho, the first major city confronted after crossing the Jordan.",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 6,
+            },
+        ],
+    },
+    {
+        id: "southern-campaign-stop-1",
+        journeyId: "southern-campaign",
+        placeId: "gibeon",
+        order: 1,
+        description:
+            "Joshua marches to defend Gibeon from the Amorite coalition.",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 10,
+                startVerse: 1,
+                endVerse: 11,
+            },
+        ],
+    },
+    {
+        id: "southern-campaign-stop-2",
+        journeyId: "southern-campaign",
+        placeId: "beth-horon",
+        order: 2,
+        description:
+            "Israel pursues the retreating armies along the ascent and descent of Beth-horon.",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 10,
+                startVerse: 10,
+                endVerse: 11,
+            },
+        ],
+    },
+    {
+        id: "southern-campaign-stop-3",
+        journeyId: "southern-campaign",
+        placeId: "azekah",
+        order: 3,
+        description:
+            "The pursuit continues toward Azekah during the defeat of the Amorite coalition.",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 10,
+                startVerse: 10,
+                endVerse: 11,
+            },
+        ],
+    },
+    {
+        id: "southern-campaign-stop-4",
+        journeyId: "southern-campaign",
+        placeId: "makkedah",
+        order: 4,
+        description:
+            "Joshua deals with the five kings at Makkedah and captures the city.",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 10,
+                startVerse: 16,
+                endVerse: 28,
+            },
+        ],
+    },
+    {
+        id: "southern-campaign-stop-5",
+        journeyId: "southern-campaign",
+        placeId: "libnah",
+        order: 5,
+        description:
+            "Israel moves from Makkedah to Libnah and captures the city.",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 10,
+                startVerse: 29,
+                endVerse: 30,
+            },
+        ],
+    },
+    {
+        id: "southern-campaign-stop-6",
+        journeyId: "southern-campaign",
+        placeId: "lachish",
+        order: 6,
+        description:
+            "Joshua moves against Lachish and the city is taken.",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 10,
+                startVerse: 31,
+                endVerse: 33,
+            },
+        ],
+    },
+    {
+        id: "southern-campaign-stop-7",
+        journeyId: "southern-campaign",
+        placeId: "eglon",
+        order: 7,
+        description:
+            "Israel attacks Eglon during the continuing southern campaign.",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 10,
+                startVerse: 34,
+                endVerse: 35,
+            },
+        ],
+    },
+    {
+        id: "southern-campaign-stop-8",
+        journeyId: "southern-campaign",
+        placeId: "hebron",
+        order: 8,
+        description:
+            "Joshua turns against Hebron and defeats the forces there.",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 10,
+                startVerse: 36,
+                endVerse: 37,
+            },
+        ],
+    },
+    {
+        id: "southern-campaign-stop-9",
+        journeyId: "southern-campaign",
+        placeId: "debir",
+        order: 9,
+        description:
+            "The southern campaign continues to Debir.",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 10,
+                startVerse: 38,
+                endVerse: 39,
+            },
+        ],
+    },
+    {
+        id: "northern-campaign-stop-1",
+        journeyId: "northern-campaign",
+        placeId: "hazor",
+        order: 1,
+        description:
+            "Hazor leads the coalition of northern kings gathered against Israel.",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 11,
+                startVerse: 1,
+                endVerse: 5,
+            },
+        ],
+    },
+    {
+        id: "northern-campaign-stop-2",
+        journeyId: "northern-campaign",
+        placeId: "waters-of-merom",
+        order: 2,
+        description:
+            "Joshua attacks the northern coalition near the Waters of Merom.",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 11,
+                startVerse: 6,
+                endVerse: 9,
+            },
+        ],
+    },
+    {
+        id: "northern-campaign-stop-3",
+        journeyId: "northern-campaign",
+        placeId: "sidon",
+        order: 3,
+        description:
+            "Israel pursues the defeated armies toward Great Sidon.",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 11,
+                startVerse: 8,
+            },
+        ],
+    },
+    {
+        id: "northern-campaign-stop-4",
+        journeyId: "northern-campaign",
+        placeId: "mizpah-north",
+        order: 4,
+        description:
+            "The pursuit extends into the northern region described as the Valley of Mizpah.",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 11,
+                startVerse: 8,
+            },
+        ],
+    },
+    {
+        id: "northern-campaign-stop-5",
+        journeyId: "northern-campaign",
+        placeId: "hazor",
+        order: 5,
+        description:
+            "Joshua returns to Hazor and captures the city.",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 11,
+                startVerse: 10,
+                endVerse: 15,
+            },
+        ],
+    },
+    {
+        id: "joshua-final-stop-1",
+        journeyId: "joshua-final-years",
+        placeId: "shiloh",
+        order: 1,
+        description:
+            "Israel gathers at Shiloh, where the tent of meeting is established and the remaining tribal inheritances are distributed.",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 18,
+                startVerse: 1,
+                endVerse: 10,
+            },
+        ],
+    },
+    {
+        id: "joshua-final-stop-2",
+        journeyId: "joshua-final-years",
+        placeId: "timnath-serah",
+        order: 2,
+        description:
+            "Joshua receives Timnath-serah as his inheritance and builds up the city.",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 19,
+                startVerse: 49,
+                endVerse: 50,
+            },
+        ],
+    },
+    {
+        id: "joshua-final-stop-3",
+        journeyId: "joshua-final-years",
+        placeId: "shechem",
+        order: 3,
+        description:
+            "Joshua gathers Israel at Shechem for his final covenant address, calling the nation to serve the Lord faithfully.",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 24,
+                startVerse: 1,
+                endVerse: 28,
+            },
+        ],
+    },
+    {
+        id: "joshua-final-stop-4",
+        journeyId: "joshua-final-years",
+        placeId: "timnath-serah",
+        order: 4,
+        description:
+            "Joshua dies at the age of 110 and is buried in the territory of his inheritance.",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 24,
+                startVerse: 29,
+                endVerse: 31,
+            },
+        ],
+    },
+    {
+        id: "samson-stop-1",
+        journeyId: "samson-journey",
+        placeId: "zorah",
+        order: 1,
+        description:
+            "Samson grows up in the region of Zorah, where the Spirit of the Lord begins to stir him.",
+        references: [
+            {
+                book: "Judges",
+                chapter: 13,
+                startVerse: 24,
+                endVerse: 25,
+            },
+        ],
+    },
+    {
+        id: "samson-stop-2",
+        journeyId: "samson-journey",
+        placeId: "timnah",
+        order: 2,
+        description:
+            "Samson goes down to Timnah, where his marriage and early conflict with the Philistines unfold.",
+        references: [
+            {
+                book: "Judges",
+                chapter: 14,
+            },
+        ],
+    },
+    {
+        id: "samson-stop-3",
+        journeyId: "samson-journey",
+        placeId: "gaza",
+        order: 3,
+        description:
+            "Samson later comes to Gaza, one of the major Philistine cities associated with the final events of his life.",
+        references: [
+            {
+                book: "Judges",
+                chapter: 16,
+                startVerse: 1,
+                endVerse: 31,
+            },
+        ],
+    },
 ];

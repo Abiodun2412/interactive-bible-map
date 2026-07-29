@@ -18,6 +18,22 @@ export const periods: Period[] = [
       "The period associated with Moses, the Exodus from Egypt, Mount Sinai, and Israel's wilderness journey toward the Promised Land.",
   },
   {
+    id: "conquest",
+    name: "Joshua & Conquest",
+    startYear: -1400,
+    endYear: -1200,
+    description:
+      "The period associated with Joshua, Israel's crossing of the Jordan, and the conquest and settlement of the Promised Land.",
+  },
+  {
+    id: "judges",
+    name: "Judges",
+    startYear: -1200,
+    endYear: -1050,
+    description:
+      "The period after Joshua and before the monarchy, marked by repeated cycles of Israel's unfaithfulness, oppression, repentance, and deliverance through judges raised up by God.",
+  },
+  {
     id: "united-monarchy",
     name: "United Monarchy",
     startYear: -1050,

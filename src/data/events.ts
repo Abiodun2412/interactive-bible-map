@@ -235,7 +235,7 @@ export const events: Event[] = [
             "At God's command, Moses sends twelve men to explore the land of Canaan. Joshua and Caleb trust that God will give Israel the land, while the other spies bring a report that causes the people to fear.",
         placeId: "kadesh-barnea",
         periodId: "exodus-wilderness",
-        personIds: ["moses"],
+        personIds: ["moses", "joshua", "caleb"],
         datePrecision: "approximate",
         references: [
             {
@@ -298,6 +298,533 @@ export const events: Event[] = [
                 chapter: 34,
                 startVerse: 1,
                 endVerse: 8,
+            },
+        ],
+    },
+    {
+        id: "joshua-succeeds-moses",
+        title: "Joshua succeeds Moses",
+        description:
+            "After the death of Moses, God commissions Joshua to lead Israel across the Jordan and into the land He promised.",
+        placeId: "plains-of-moab",
+        periodId: "conquest",
+        personIds: ["joshua"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 1,
+                startVerse: 1,
+                endVerse: 9,
+            },
+        ],
+    },
+    {
+        id: "crossing-jordan",
+        title: "Israel crosses the Jordan",
+        description:
+            "God stops the waters of the Jordan as Israel crosses on dry ground under Joshua's leadership.",
+        placeId: "jordan-crossing",
+        periodId: "conquest",
+        personIds: ["joshua"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 3,
+            },
+        ],
+    },
+    {
+        id: "gilgal-memorial",
+        title: "Twelve stones set up at Gilgal",
+        description:
+            "Joshua sets up twelve stones taken from the Jordan as a memorial of God's bringing Israel across the river.",
+        placeId: "gilgal",
+        periodId: "conquest",
+        personIds: ["joshua"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 4,
+                startVerse: 19,
+                endVerse: 24,
+            },
+        ],
+    },
+    {
+        id: "fall-of-jericho",
+        title: "The fall of Jericho",
+        description:
+            "Israel marches around Jericho according to God's command, and the walls fall as the people enter the city.",
+        placeId: "jericho",
+        periodId: "conquest",
+        personIds: ["joshua"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 6,
+            },
+        ],
+    },
+    {
+        id: "defeat-at-ai",
+        title: "Israel is defeated at Ai",
+        description:
+            "Israel attacks Ai after Jericho but is defeated because of Achan's sin concerning the devoted things.",
+        placeId: "ai",
+        periodId: "conquest",
+        personIds: ["joshua"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 7,
+            },
+        ],
+    },
+    {
+        id: "victory-at-ai",
+        title: "Israel defeats Ai",
+        description:
+            "After dealing with the sin in the camp, Joshua leads Israel against Ai again and the city is taken.",
+        placeId: "ai",
+        periodId: "conquest",
+        personIds: ["joshua"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 8,
+                startVerse: 1,
+                endVerse: 29,
+            },
+        ],
+    },
+    {
+        id: "covenant-renewal-ebal",
+        title: "Joshua renews the covenant at Mount Ebal",
+        description:
+            "Joshua builds an altar to the Lord and reads the law before Israel between Mount Ebal and Mount Gerizim.",
+        placeId: "mount-ebal",
+        periodId: "conquest",
+        personIds: ["joshua"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 8,
+                startVerse: 30,
+                endVerse: 35,
+            },
+        ],
+    },
+    {
+        id: "gibeonite-treaty",
+        title: "Israel makes a treaty with the Gibeonites",
+        description:
+            "The Gibeonites deceive Israel into making a covenant with them by claiming to have come from a distant land.",
+        placeId: "gibeon",
+        periodId: "conquest",
+        personIds: ["joshua"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 9,
+            },
+        ],
+    },
+    {
+        id: "battle-of-gibeon",
+        title: "Israel defends Gibeon",
+        description:
+            "When a coalition of Amorite kings attacks Gibeon, Joshua leads Israel to defend the city and the Lord gives the enemy into Israel's hands.",
+        placeId: "gibeon",
+        periodId: "conquest",
+        personIds: ["joshua"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 10,
+                startVerse: 1,
+                endVerse: 11,
+            },
+        ],
+    },
+    {
+        id: "sun-stands-still",
+        title: "The sun stands still",
+        description:
+            "During the battle, Joshua speaks before the Lord and the day is prolonged while Israel continues the victory over its enemies.",
+        placeId: "gibeon",
+        periodId: "conquest",
+        personIds: ["joshua"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 10,
+                startVerse: 12,
+                endVerse: 14,
+            },
+        ],
+    },
+    {
+        id: "five-kings-defeated",
+        title: "The five Amorite kings are defeated",
+        description:
+            "The five kings flee and hide in a cave at Makkedah, where they are later brought out following Israel's victory.",
+        placeId: "makkedah",
+        periodId: "conquest",
+        personIds: ["joshua"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 10,
+                startVerse: 16,
+                endVerse: 27,
+            },
+        ],
+    },
+    {
+        id: "southern-campaign",
+        title: "Joshua's southern campaign",
+        description:
+            "Joshua leads Israel through a series of victories across southern Canaan, including Libnah, Lachish, Eglon, Hebron, and Debir.",
+        placeId: "lachish",
+        periodId: "conquest",
+        personIds: ["joshua"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 10,
+                startVerse: 28,
+                endVerse: 43,
+            },
+        ],
+    },
+    {
+        id: "northern-coalition-gathers",
+        title: "The northern kings gather against Israel",
+        description:
+            "Jabin king of Hazor gathers a large coalition of northern kings and their armies against Israel.",
+        placeId: "hazor",
+        periodId: "conquest",
+        personIds: ["joshua"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 11,
+                startVerse: 1,
+                endVerse: 5,
+            },
+        ],
+    },
+    {
+        id: "battle-waters-merom",
+        title: "Joshua defeats the northern coalition",
+        description:
+            "Joshua and Israel come suddenly against the gathered northern armies near the Waters of Merom, and the Lord gives them into Israel's hand.",
+        placeId: "waters-of-merom",
+        periodId: "conquest",
+        personIds: ["joshua"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 11,
+                startVerse: 6,
+                endVerse: 9,
+            },
+        ],
+    },
+    {
+        id: "hazor-captured",
+        title: "Hazor is captured",
+        description:
+            "Joshua turns back and captures Hazor, the leading city of the northern coalition.",
+        placeId: "hazor",
+        periodId: "conquest",
+        personIds: ["joshua"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 11,
+                startVerse: 10,
+                endVerse: 15,
+            },
+        ],
+    },
+    {
+        id: "caleb-receives-hebron",
+        title: "Caleb receives Hebron",
+        description:
+            "Caleb reminds Joshua that he faithfully followed the Lord when he was sent to explore the land. Joshua blesses him and Hebron is given to Caleb as his inheritance.",
+        placeId: "hebron",
+        periodId: "conquest",
+        personIds: ["joshua", "caleb"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 14,
+                startVerse: 6,
+                endVerse: 15,
+            },
+        ],
+    },
+    {
+        id: "tabernacle-at-shiloh",
+        title: "The tabernacle is established at Shiloh",
+        description:
+            "The whole congregation of Israel assembles at Shiloh and sets up the tent of meeting there as the land is brought under Israel's control.",
+        placeId: "shiloh",
+        periodId: "conquest",
+        personIds: ["joshua"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 18,
+                startVerse: 1,
+            },
+        ],
+    },
+    {
+        id: "land-distributed-shiloh",
+        title: "The remaining land is distributed",
+        description:
+            "Joshua casts lots before the Lord at Shiloh to distribute the remaining inheritance among the tribes of Israel.",
+        placeId: "shiloh",
+        periodId: "conquest",
+        personIds: ["joshua"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 18,
+                startVerse: 2,
+                endVerse: 10,
+            },
+        ],
+    },
+    {
+        id: "joshua-receives-inheritance",
+        title: "Joshua receives Timnath-serah",
+        description:
+            "After the tribal inheritances are distributed, Israel gives Joshua the city of Timnath-serah in the hill country of Ephraim.",
+        placeId: "timnath-serah",
+        periodId: "conquest",
+        personIds: ["joshua"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 19,
+                startVerse: 49,
+                endVerse: 50,
+            },
+        ],
+    },
+    {
+        id: "covenant-renewal-shechem",
+        title: "Joshua renews the covenant at Shechem",
+        description:
+            "Joshua gathers the tribes of Israel at Shechem, recounts God's faithfulness, calls the people to serve the Lord, and renews the covenant with them.",
+        placeId: "shechem",
+        periodId: "conquest",
+        personIds: ["joshua"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 24,
+                startVerse: 1,
+                endVerse: 28,
+            },
+        ],
+    },
+    {
+        id: "death-of-joshua",
+        title: "The death of Joshua",
+        description:
+            "Joshua son of Nun dies at the age of 110 and is buried in the territory of his inheritance at Timnath-serah.",
+        placeId: "timnath-serah",
+        periodId: "conquest",
+        personIds: ["joshua"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 24,
+                startVerse: 29,
+                endVerse: 31,
+            },
+        ],
+    },
+    {
+        id: "deborah-calls-barak",
+        title: "Deborah calls Barak",
+        description:
+            "Deborah summons Barak and gives him God's command to gather troops at Mount Tabor against Sisera's army.",
+        placeId: "mount-tabor",
+        periodId: "judges",
+        personIds: ["deborah", "barak"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Judges",
+                chapter: 4,
+                startVerse: 4,
+                endVerse: 10,
+            },
+        ],
+    },
+    {
+        id: "sisera-defeated",
+        title: "Sisera's army is defeated",
+        description:
+            "The Lord throws Sisera's forces into confusion before Barak, and the army is defeated near the Kishon River.",
+        placeId: "kishon-river",
+        periodId: "judges",
+        personIds: ["deborah", "barak"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Judges",
+                chapter: 4,
+                startVerse: 12,
+                endVerse: 16,
+            },
+        ],
+    },
+    {
+        id: "gideon-called",
+        title: "Gideon is called",
+        description:
+            "The angel of the Lord appears to Gideon at Ophrah and calls him to save Israel from Midian.",
+        placeId: "ophrah",
+        periodId: "judges",
+        personIds: ["gideon"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Judges",
+                chapter: 6,
+                startVerse: 11,
+                endVerse: 24,
+            },
+        ],
+    },
+    {
+        id: "gideon-three-hundred",
+        title: "Gideon's army is reduced to three hundred",
+        description:
+            "God reduces Gideon's army so that Israel will know the victory over Midian comes from Him.",
+        placeId: "spring-harod",
+        periodId: "judges",
+        personIds: ["gideon"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Judges",
+                chapter: 7,
+                startVerse: 1,
+                endVerse: 8,
+            },
+        ],
+    },
+    {
+        id: "ehud-delivers-israel",
+        title: "Ehud delivers Israel from Moab",
+        description:
+            "Ehud is raised up as a deliverer for Israel and leads the people in victory over Moab.",
+        placeId: "jericho",
+        periodId: "judges",
+        personIds: ["ehud"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Judges",
+                chapter: 3,
+                startVerse: 12,
+                endVerse: 30,
+            },
+        ],
+    },
+    {
+        id: "jephthah-leads-gilead",
+        title: "Jephthah leads Gilead against Ammon",
+        description:
+            "Jephthah becomes leader of the people of Gilead and leads Israel in battle against the Ammonites.",
+        placeId: "mizpah-gilead",
+        periodId: "judges",
+        personIds: ["jephthah"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Judges",
+                chapter: 11,
+                startVerse: 1,
+                endVerse: 33,
+            },
+        ],
+    },
+    {
+        id: "samson-born",
+        title: "The birth of Samson is announced",
+        description:
+            "The angel of the Lord announces Samson's birth and that he will begin to deliver Israel from the Philistines.",
+        placeId: "zorah",
+        periodId: "judges",
+        personIds: ["samson"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Judges",
+                chapter: 13,
+            },
+        ],
+    },
+    {
+        id: "samson-timnah",
+        title: "Samson goes to Timnah",
+        description:
+            "Samson goes down to Timnah, beginning a series of events that bring him into conflict with the Philistines.",
+        placeId: "timnah",
+        periodId: "judges",
+        personIds: ["samson"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Judges",
+                chapter: 14,
+            },
+        ],
+    },
+    {
+        id: "samson-gaza",
+        title: "Samson's final act at Gaza",
+        description:
+            "After being captured by the Philistines, Samson calls on the Lord and brings down the temple where the Philistine rulers are gathered.",
+        placeId: "gaza",
+        periodId: "judges",
+        personIds: ["samson"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Judges",
+                chapter: 16,
+                startVerse: 21,
+                endVerse: 31,
             },
         ],
     },

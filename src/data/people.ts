@@ -38,6 +38,18 @@ export const people: Person[] = [
       "Brother of Moses who served alongside him during the Exodus and became Israel's first high priest.",
   },
   {
+    id: "joshua",
+    name: "Joshua",
+    description:
+      "Successor to Moses who led Israel across the Jordan and into the Promised Land.",
+  },
+  {
+    id: "caleb",
+    name: "Caleb",
+    description:
+      "One of the twelve spies who trusted God's promise and later received Hebron as an inheritance.",
+  },
+  {
     id: "david",
     name: "David",
     description:
@@ -54,5 +66,41 @@ export const people: Person[] = [
     name: "Jesus",
     description:
       "Central figure of the New Testament, whose life, ministry, death, and resurrection form the foundation of Christianity.",
+  },
+  {
+    id: "deborah",
+    name: "Deborah",
+    description:
+      "Prophetess and judge of Israel who led the nation during the conflict with Jabin and Sisera.",
+  },
+  {
+    id: "barak",
+    name: "Barak",
+    description:
+      "Military leader called to fight Sisera's forces under Deborah's leadership.",
+  },
+  {
+    id: "gideon",
+    name: "Gideon",
+    description:
+      "Judge of Israel whom God used to defeat the Midianites with a small force.",
+  },
+  {
+    id: "samson",
+    name: "Samson",
+    description:
+      "Judge of Israel set apart from birth, known for his extraordinary strength and conflict with the Philistines.",
+  },
+  {
+    id: "ehud",
+    name: "Ehud",
+    description:
+      "Judge of Israel from the tribe of Benjamin whom God used to deliver Israel from Moab.",
+  },
+  {
+    id: "jephthah",
+    name: "Jephthah",
+    description:
+      "Judge of Israel from Gilead who led Israel against the Ammonites.",
   },
 ];

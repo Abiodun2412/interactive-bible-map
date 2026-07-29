@@ -15,30 +15,30 @@ type SearchPanelProps = {
 
 type SearchResult =
   | {
-      type: "place";
-      id: string;
-      title: string;
-      subtitle: string;
-    }
+    type: "place";
+    id: string;
+    title: string;
+    subtitle: string;
+  }
   | {
-      type: "person";
-      id: string;
-      title: string;
-      subtitle: string;
-    }
+    type: "person";
+    id: string;
+    title: string;
+    subtitle: string;
+  }
   | {
-      type: "journey";
-      id: string;
-      title: string;
-      subtitle: string;
-    }
+    type: "journey";
+    id: string;
+    title: string;
+    subtitle: string;
+  }
   | {
-      type: "event";
-      id: string;
-      title: string;
-      subtitle: string;
-      placeId: string;
-    };
+    type: "event";
+    id: string;
+    title: string;
+    subtitle: string;
+    placeId: string;
+  };
 
 export default function SearchPanel({
   onSelectPlace,
@@ -175,7 +175,7 @@ export default function SearchPanel({
   return (
     <div
       ref={panelRef}
-      className="absolute left-4 top-52 z-[1000] w-72 overscroll-contain rounded-xl bg-white p-4 shadow-xl"
+      className="w-full overscroll-contain rounded-xl bg-white p-4 shadow-xl"
     >
       <label
         htmlFor="bible-search"

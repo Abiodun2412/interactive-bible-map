@@ -49,4 +49,43 @@ export const journeys: Journey[] = [
         periodId: "exodus-wilderness",
         personIds: ["moses", "aaron"],
     },
+    {
+        id: "entry-into-canaan",
+        name: "Entry into the Promised Land",
+        description:
+            "Under Joshua's leadership, Israel moves from the plains of Moab, crosses the Jordan, camps at Gilgal, and confronts Jericho.",
+        periodId: "conquest",
+        personIds: ["joshua"],
+    },
+    {
+        id: "southern-campaign",
+        name: "Joshua's Southern Campaign",
+        description:
+            "Joshua leads Israel from the Gibeon region through a sequence of battles across southern Canaan.",
+        periodId: "conquest",
+        personIds: ["joshua"],
+    }, {
+        id: "northern-campaign",
+        name: "Joshua's Northern Campaign",
+        description:
+            "Joshua marches north against the coalition led by Hazor, defeats the gathered armies near the Waters of Merom, and pursues them through northern Canaan.",
+        periodId: "conquest",
+        personIds: ["joshua"],
+    },
+    {
+        id: "joshua-final-years",
+        name: "Joshua's Final Years",
+        description:
+            "Key locations associated with the settlement of the land, Joshua's inheritance, and his final covenant gathering at Shechem.",
+        periodId: "conquest",
+        personIds: ["joshua"],
+    },
+    {
+        id: "samson-journey",
+        name: "Samson's Journey",
+        description:
+            "Key locations from Samson's life and conflicts with the Philistines, from his home region around Zorah to Timnah and Gaza.",
+        periodId: "judges",
+        personIds: ["samson"],
+    },
 ];
