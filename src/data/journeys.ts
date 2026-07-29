@@ -280,4 +280,44 @@ export const journeys: Journey[] = [
         periodId: "life-of-jesus",
         personIds: ["jesus"],
     },
+    {
+        id: "philip-ministry",
+        name: "Philip's Ministry Beyond Jerusalem",
+        description:
+            "Philip leaves the Jerusalem-centred Church, ministers in Samaria, and later encounters the Ethiopian official on the road toward Gaza.",
+        periodId: "early-church",
+        personIds: ["philip-evangelist"],
+    },
+    {
+        id: "saul-road-to-damascus",
+        name: "Saul's Journey to Damascus",
+        description:
+            "Saul travels from Jerusalem toward Damascus intending to arrest believers, but encounters the risen Jesus on the way.",
+        periodId: "early-church",
+        personIds: ["paul"],
+    },
+    {
+        id: "peter-joppa-caesarea",
+        name: "Peter's Journey to Cornelius",
+        description:
+            "Peter ministers in Joppa and then travels north to Caesarea after being summoned to the household of Cornelius.",
+        periodId: "early-church",
+        personIds: ["peter", "cornelius"],
+    },
+    {
+        id: "barnabas-brings-paul-antioch",
+        name: "Barnabas Brings Paul to Antioch",
+        description:
+            "Barnabas travels to Tarsus to find Paul and brings him to Antioch, where they teach the growing church together.",
+        periodId: "early-church",
+        personIds: ["barnabas", "paul"],
+    },
+    {
+        id: "paul-first-missionary-journey",
+        name: "Paul's First Missionary Journey",
+        description:
+            "Paul and Barnabas travel from Antioch through Cyprus and cities of southern Galatia before returning to Antioch.",
+        periodId: "early-church",
+        personIds: ["paul", "barnabas"],
+    },
 ];

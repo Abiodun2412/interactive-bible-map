@@ -463,4 +463,46 @@ export const people: Person[] = [
     description:
       "Follower of Jesus who witnessed His crucifixion and burial and was among the first to encounter the empty tomb and risen Jesus.",
   },
+  {
+    id: "stephen",
+    name: "Stephen",
+    description:
+      "A servant and witness in the early Jerusalem church who was killed after testifying before the council.",
+  },
+  {
+    id: "philip-evangelist",
+    name: "Philip - Evangelist",
+    description:
+      "A servant and evangelist in the early Church whose ministry helped spread the gospel beyond Jerusalem.",
+  },
+  {
+    id: "ethiopian-official",
+    name: "Ethiopian Official",
+    description:
+      "An official from Ethiopia who encountered Philip while returning from worship in Jerusalem and believed the message about Jesus.",
+  },
+  {
+    id: "paul",
+    name: "Paul",
+    description:
+      "Former persecutor of the Church who encountered the risen Jesus and became a major apostle and missionary in the early Church.",
+  },
+  {
+    id: "ananias-damascus",
+    name: "Ananias - Damascus",
+    description:
+      "Disciple in Damascus whom the Lord sent to Saul after his encounter with Jesus.",
+  },
+  {
+    id: "cornelius",
+    name: "Cornelius",
+    description:
+      "Roman centurion in Caesarea who feared God and became central to the early Church's recognition that the gospel was also for Gentiles.",
+  },
+  {
+    id: "barnabas",
+    name: "Barnabas",
+    description:
+      "Leader in the early Church who encouraged believers, supported Paul, and served with him in missionary ministry.",
+  },
 ];

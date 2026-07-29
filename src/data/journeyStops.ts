@@ -2022,4 +2022,367 @@ export const journeyStops: JourneyStop[] = [
             },
         ],
     },
+    {
+        id: "philip-ministry-stop-1",
+        journeyId: "philip-ministry",
+        placeId: "jerusalem",
+        order: 1,
+        description:
+            "Persecution scatters believers from Jerusalem after Stephen's death.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 8,
+                startVerse: 1,
+                endVerse: 4,
+            },
+        ],
+    },
+    {
+        id: "philip-ministry-stop-2",
+        journeyId: "philip-ministry",
+        placeId: "samaria-region",
+        order: 2,
+        description:
+            "Philip proclaims Christ in Samaria and many respond to the message.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 8,
+                startVerse: 5,
+                endVerse: 13,
+            },
+        ],
+    },
+    {
+        id: "philip-ministry-stop-3",
+        journeyId: "philip-ministry",
+        placeId: "jerusalem-gaza-road",
+        order: 3,
+        description:
+            "Philip is directed toward the road from Jerusalem to Gaza, where he meets the Ethiopian official.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 8,
+                startVerse: 26,
+                endVerse: 40,
+            },
+        ],
+    },
+    {
+        id: "saul-damascus-stop-1",
+        journeyId: "saul-road-to-damascus",
+        placeId: "jerusalem",
+        order: 1,
+        description:
+            "Saul leaves Jerusalem with authority to arrest followers of Jesus in Damascus.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 9,
+                startVerse: 1,
+                endVerse: 2,
+            },
+        ],
+    },
+    {
+        id: "saul-damascus-stop-2",
+        journeyId: "saul-road-to-damascus",
+        placeId: "damascus",
+        order: 2,
+        description:
+            "Near Damascus, Saul encounters Jesus and is later brought into the city.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 9,
+                startVerse: 3,
+                endVerse: 9,
+            },
+        ],
+    },
+    {
+        id: "peter-cornelius-stop-1",
+        journeyId: "peter-joppa-caesarea",
+        placeId: "joppa",
+        order: 1,
+        description:
+            "Peter stays in Joppa, where he receives the vision that prepares him to visit Cornelius.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 10,
+                startVerse: 9,
+                endVerse: 23,
+            },
+        ],
+    },
+    {
+        id: "peter-cornelius-stop-2",
+        journeyId: "peter-joppa-caesarea",
+        placeId: "caesarea-maritima",
+        order: 2,
+        description:
+            "Peter comes to Caesarea and enters the household of Cornelius.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 10,
+                startVerse: 24,
+                endVerse: 48,
+            },
+        ],
+    },
+    {
+        id: "barnabas-paul-antioch-stop-1",
+        journeyId: "barnabas-brings-paul-antioch",
+        placeId: "tarsus",
+        order: 1,
+        description:
+            "Barnabas travels to Tarsus to look for Paul.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 11,
+                startVerse: 25,
+            },
+        ],
+    },
+    {
+        id: "barnabas-paul-antioch-stop-2",
+        journeyId: "barnabas-brings-paul-antioch",
+        placeId: "antioch-syria",
+        order: 2,
+        description:
+            "Barnabas brings Paul to Antioch, where they teach the church together for a year.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 11,
+                startVerse: 26,
+            },
+        ],
+    },
+    {
+        id: "paul-first-stop-1",
+        journeyId: "paul-first-missionary-journey",
+        placeId: "antioch-syria",
+        order: 1,
+        description:
+            "The church at Antioch sends Paul and Barnabas out for missionary work.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 13,
+                startVerse: 1,
+                endVerse: 3,
+            },
+        ],
+    },
+    {
+        id: "paul-first-stop-2",
+        journeyId: "paul-first-missionary-journey",
+        placeId: "seleucia",
+        order: 2,
+        description:
+            "Paul and Barnabas travel to Seleucia and sail from there to Cyprus.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 13,
+                startVerse: 4,
+            },
+        ],
+    },
+    {
+        id: "paul-first-stop-3",
+        journeyId: "paul-first-missionary-journey",
+        placeId: "salamis",
+        order: 3,
+        description:
+            "They arrive at Salamis and proclaim the word of God.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 13,
+                startVerse: 5,
+            },
+        ],
+    },
+    {
+        id: "paul-first-stop-4",
+        journeyId: "paul-first-missionary-journey",
+        placeId: "paphos",
+        order: 4,
+        description:
+            "They cross Cyprus and reach Paphos.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 13,
+                startVerse: 6,
+                endVerse: 12,
+            },
+        ],
+    },
+    {
+        id: "paul-first-stop-5",
+        journeyId: "paul-first-missionary-journey",
+        placeId: "perga",
+        order: 5,
+        description:
+            "Paul and his companions sail to the region of Pamphylia and arrive at Perga.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 13,
+                startVerse: 13,
+            },
+        ],
+    },
+    {
+        id: "paul-first-stop-6",
+        journeyId: "paul-first-missionary-journey",
+        placeId: "pisidian-antioch",
+        order: 6,
+        description:
+            "Paul and Barnabas travel inland to Antioch of Pisidia and preach there.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 13,
+                startVerse: 14,
+                endVerse: 52,
+            },
+        ],
+    },
+    {
+        id: "paul-first-stop-7",
+        journeyId: "paul-first-missionary-journey",
+        placeId: "iconium",
+        order: 7,
+        description:
+            "They continue to Iconium and minister there.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 14,
+                startVerse: 1,
+                endVerse: 7,
+            },
+        ],
+    },
+    {
+        id: "paul-first-stop-8",
+        journeyId: "paul-first-missionary-journey",
+        placeId: "lystra",
+        order: 8,
+        description:
+            "Paul and Barnabas reach Lystra, where Paul heals a man and is later stoned.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 14,
+                startVerse: 8,
+                endVerse: 20,
+            },
+        ],
+    },
+    {
+        id: "paul-first-stop-9",
+        journeyId: "paul-first-missionary-journey",
+        placeId: "derbe",
+        order: 9,
+        description:
+            "They continue to Derbe and make many disciples.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 14,
+                startVerse: 20,
+                endVerse: 21,
+            },
+        ],
+    },
+    {
+        id: "paul-first-stop-10",
+        journeyId: "paul-first-missionary-journey",
+        placeId: "lystra",
+        order: 10,
+        description:
+            "Paul and Barnabas begin retracing their route, strengthening the disciples.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 14,
+                startVerse: 21,
+                endVerse: 23,
+            },
+        ],
+    },
+    {
+        id: "paul-first-stop-11",
+        journeyId: "paul-first-missionary-journey",
+        placeId: "iconium",
+        order: 11,
+        description:
+            "They revisit the believers in Iconium.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 14,
+                startVerse: 21,
+                endVerse: 23,
+            },
+        ],
+    },
+    {
+        id: "paul-first-stop-12",
+        journeyId: "paul-first-missionary-journey",
+        placeId: "pisidian-antioch",
+        order: 12,
+        description:
+            "They return through Antioch of Pisidia, strengthening the churches.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 14,
+                startVerse: 21,
+                endVerse: 23,
+            },
+        ],
+    },
+    {
+        id: "paul-first-stop-13",
+        journeyId: "paul-first-missionary-journey",
+        placeId: "perga",
+        order: 13,
+        description:
+            "They return through Perga and proclaim the word there.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 14,
+                startVerse: 24,
+                endVerse: 25,
+            },
+        ],
+    },
+    {
+        id: "paul-first-stop-14",
+        journeyId: "paul-first-missionary-journey",
+        placeId: "antioch-syria",
+        order: 14,
+        description:
+            "Paul and Barnabas return to Antioch and report to the church.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 14,
+                startVerse: 26,
+                endVerse: 28,
+            },
+        ],
+    },
 ];

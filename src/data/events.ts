@@ -3514,4 +3514,565 @@ export const events: Event[] = [
             },
         ],
     },
+    {
+        id: "pentecost",
+        title: "The Holy Spirit comes at Pentecost",
+        description:
+            "The disciples are gathered in Jerusalem when the Holy Spirit comes upon them, and Peter proclaims Jesus to the gathered crowd.",
+        placeId: "jerusalem",
+        periodId: "early-church",
+        personIds: ["peter", "john-apostle"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 2,
+                startVerse: 1,
+                endVerse: 41,
+            },
+        ],
+    },
+    {
+        id: "early-church-jerusalem",
+        title: "The believers form a growing community",
+        description:
+            "The believers devote themselves to the apostles' teaching, fellowship, breaking of bread, and prayer as the Church grows in Jerusalem.",
+        placeId: "jerusalem",
+        periodId: "early-church",
+        personIds: ["peter", "john-apostle"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 2,
+                startVerse: 42,
+                endVerse: 47,
+            },
+        ],
+    },
+    {
+        id: "peter-john-heal-temple",
+        title: "Peter and John heal a man at the Temple",
+        description:
+            "Peter and John encounter a man unable to walk at the Temple, and he is healed in the name of Jesus Christ.",
+        placeId: "temple-mount",
+        periodId: "early-church",
+        personIds: ["peter", "john-apostle"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 3,
+                startVerse: 1,
+                endVerse: 10,
+            },
+        ],
+    },
+    {
+        id: "peter-john-before-council",
+        title: "Peter and John testify before the council",
+        description:
+            "Peter and John are questioned by the Jewish leadership and boldly testify that salvation is found in Jesus.",
+        placeId: "jerusalem",
+        periodId: "early-church",
+        personIds: ["peter", "john-apostle"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 4,
+                startVerse: 1,
+                endVerse: 22,
+            },
+        ],
+    },
+    {
+        id: "stephen-witnesses",
+        title: "Stephen testifies before the council",
+        description:
+            "Stephen gives a lengthy testimony recounting God's dealings with Israel and confronts the resistance of his hearers.",
+        placeId: "jerusalem",
+        periodId: "early-church",
+        personIds: ["stephen"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 7,
+                startVerse: 1,
+                endVerse: 53,
+            },
+        ],
+    },
+    {
+        id: "stephen-killed",
+        title: "Stephen is killed",
+        description:
+            "Stephen is taken outside the city and stoned while calling on Jesus and praying for those killing him.",
+        placeId: "jerusalem",
+        periodId: "early-church",
+        personIds: ["stephen"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 7,
+                startVerse: 54,
+                endVerse: 60,
+            },
+        ],
+    },
+    {
+        id: "church-scattered-after-stephen",
+        title: "Believers are scattered from Jerusalem",
+        description:
+            "Following Stephen's death, severe persecution breaks out against the Church in Jerusalem and believers are scattered through Judea and Samaria.",
+        placeId: "jerusalem",
+        periodId: "early-church",
+        personIds: ["stephen", "philip-evangelist"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 8,
+                startVerse: 1,
+                endVerse: 4,
+            },
+        ],
+    },
+    {
+        id: "philip-preaches-samaria",
+        title: "Philip proclaims Christ in Samaria",
+        description:
+            "Philip goes into Samaria and proclaims Christ there, and many people respond to the message with great joy.",
+        placeId: "samaria-region",
+        periodId: "early-church",
+        personIds: ["philip-evangelist"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 8,
+                startVerse: 5,
+                endVerse: 13,
+            },
+        ],
+    },
+    {
+        id: "peter-john-samaria",
+        title: "Peter and John visit the believers in Samaria",
+        description:
+            "Peter and John travel to Samaria after hearing that the people there have received the word of God.",
+        placeId: "samaria-region",
+        periodId: "early-church",
+        personIds: ["peter", "john-apostle", "philip-evangelist"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 8,
+                startVerse: 14,
+                endVerse: 25,
+            },
+        ],
+    },
+    {
+        id: "philip-ethiopian-official",
+        title: "Philip meets the Ethiopian official",
+        description:
+            "Philip meets an Ethiopian official reading Isaiah, explains the good news about Jesus to him, and the man is baptised.",
+        placeId: "jerusalem-gaza-road",
+        periodId: "early-church",
+        personIds: ["philip-evangelist", "ethiopian-official"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 8,
+                startVerse: 26,
+                endVerse: 40,
+            },
+        ],
+    },
+    {
+        id: "saul-persecutes-church",
+        title: "Saul persecutes the Church",
+        description:
+            "Saul actively opposes the followers of Jesus and seeks authority to arrest believers in Damascus.",
+        placeId: "jerusalem",
+        periodId: "early-church",
+        personIds: ["paul"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 8,
+                startVerse: 3,
+            },
+            {
+                book: "Acts",
+                chapter: 9,
+                startVerse: 1,
+                endVerse: 2,
+            },
+        ],
+    },
+    {
+        id: "saul-encounters-jesus",
+        title: "Saul encounters Jesus on the road to Damascus",
+        description:
+            "While travelling to Damascus, Saul is surrounded by a light from heaven and hears Jesus speak to him.",
+        placeId: "damascus",
+        periodId: "early-church",
+        personIds: ["paul", "jesus"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 9,
+                startVerse: 3,
+                endVerse: 9,
+            },
+        ],
+    },
+    {
+        id: "ananias-visits-saul",
+        title: "Ananias is sent to Saul",
+        description:
+            "The Lord sends Ananias to Saul in Damascus. Saul regains his sight, is filled with the Holy Spirit, and is baptised.",
+        placeId: "damascus",
+        periodId: "early-church",
+        personIds: ["paul", "ananias-damascus"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 9,
+                startVerse: 10,
+                endVerse: 19,
+            },
+        ],
+    },
+    {
+        id: "saul-preaches-damascus",
+        title: "Saul begins preaching in Damascus",
+        description:
+            "Saul begins proclaiming in the synagogues that Jesus is the Son of God.",
+        placeId: "damascus",
+        periodId: "early-church",
+        personIds: ["paul"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 9,
+                startVerse: 19,
+                endVerse: 22,
+            },
+        ],
+    },
+    {
+        id: "peter-ministers-joppa",
+        title: "Peter ministers in Joppa",
+        description:
+            "Peter stays in Joppa after ministry along the coastal region and remains there with Simon the tanner.",
+        placeId: "joppa",
+        periodId: "early-church",
+        personIds: ["peter"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 9,
+                startVerse: 36,
+                endVerse: 43,
+            },
+        ],
+    },
+    {
+        id: "peter-vision-joppa",
+        title: "Peter receives a vision at Joppa",
+        description:
+            "While praying in Joppa, Peter receives a vision that prepares him to understand that God shows no partiality.",
+        placeId: "joppa",
+        periodId: "early-church",
+        personIds: ["peter"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 10,
+                startVerse: 9,
+                endVerse: 23,
+            },
+        ],
+    },
+    {
+        id: "cornelius-vision",
+        title: "Cornelius receives a vision",
+        description:
+            "Cornelius, a Roman centurion in Caesarea, receives a vision instructing him to send for Peter.",
+        placeId: "caesarea-maritima",
+        periodId: "early-church",
+        personIds: ["cornelius"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 10,
+                startVerse: 1,
+                endVerse: 8,
+            },
+        ],
+    },
+    {
+        id: "peter-visits-cornelius",
+        title: "Peter visits Cornelius",
+        description:
+            "Peter travels to Caesarea, enters Cornelius's house, and proclaims the good news about Jesus.",
+        placeId: "caesarea-maritima",
+        periodId: "early-church",
+        personIds: ["peter", "cornelius"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 10,
+                startVerse: 24,
+                endVerse: 43,
+            },
+        ],
+    },
+    {
+        id: "gentiles-receive-spirit",
+        title: "Gentiles receive the Holy Spirit",
+        description:
+            "While Peter is speaking in Cornelius's house, the Holy Spirit comes upon the Gentiles who hear the message.",
+        placeId: "caesarea-maritima",
+        periodId: "early-church",
+        personIds: ["peter", "cornelius"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 10,
+                startVerse: 44,
+                endVerse: 48,
+            },
+        ],
+    },
+    {
+        id: "gospel-reaches-antioch",
+        title: "The gospel reaches Antioch",
+        description:
+            "Believers scattered by persecution proclaim the Lord Jesus in Antioch, and a large number turn to the Lord.",
+        placeId: "antioch-syria",
+        periodId: "early-church",
+        personIds: ["barnabas"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 11,
+                startVerse: 19,
+                endVerse: 24,
+            },
+        ],
+    },
+    {
+        id: "barnabas-finds-paul",
+        title: "Barnabas brings Paul from Tarsus",
+        description:
+            "Barnabas travels to Tarsus to look for Paul and brings him to Antioch to serve with the growing church.",
+        placeId: "tarsus",
+        periodId: "early-church",
+        personIds: ["barnabas", "paul"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 11,
+                startVerse: 25,
+                endVerse: 26,
+            },
+        ],
+    },
+    {
+        id: "disciples-called-christians",
+        title: "The disciples are called Christians at Antioch",
+        description:
+            "Barnabas and Paul teach in Antioch for a year, and the disciples are first called Christians there.",
+        placeId: "antioch-syria",
+        periodId: "early-church",
+        personIds: ["barnabas", "paul"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 11,
+                startVerse: 25,
+                endVerse: 26,
+            },
+        ],
+    },
+    {
+        id: "paul-barnabas-commissioned",
+        title: "Paul and Barnabas are sent out",
+        description:
+            "While the church at Antioch worships and fasts, the Holy Spirit calls Barnabas and Paul for the work to which they have been appointed, and the church sends them out.",
+        placeId: "antioch-syria",
+        periodId: "early-church",
+        personIds: ["paul", "barnabas"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 13,
+                startVerse: 1,
+                endVerse: 3,
+            },
+        ],
+    },
+    {
+        id: "first-journey-begins",
+        title: "Paul and Barnabas begin their first missionary journey",
+        description:
+            "Paul and Barnabas are sent out from Antioch and travel to Seleucia before sailing to Cyprus.",
+        placeId: "seleucia",
+        periodId: "early-church",
+        personIds: ["paul", "barnabas"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 13,
+                startVerse: 4,
+            },
+        ],
+    },
+    {
+        id: "paul-barnabas-salamis",
+        title: "Paul and Barnabas preach in Salamis",
+        description:
+            "Paul and Barnabas arrive on Cyprus and proclaim the word of God in the synagogues at Salamis.",
+        placeId: "salamis",
+        periodId: "early-church",
+        personIds: ["paul", "barnabas"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 13,
+                startVerse: 5,
+            },
+        ],
+    },
+    {
+        id: "paul-barnabas-paphos",
+        title: "Paul and Barnabas reach Paphos",
+        description:
+            "At Paphos, Paul and Barnabas encounter the proconsul and Elymas, and the message about the Lord is received.",
+        placeId: "paphos",
+        periodId: "early-church",
+        personIds: ["paul", "barnabas"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 13,
+                startVerse: 6,
+                endVerse: 12,
+            },
+        ],
+    },
+    {
+        id: "paul-preaches-pisidian-antioch",
+        title: "Paul preaches in Antioch of Pisidia",
+        description:
+            "Paul speaks in the synagogue at Antioch of Pisidia, proclaiming God's work through Israel and the good news about Jesus.",
+        placeId: "pisidian-antioch",
+        periodId: "early-church",
+        personIds: ["paul", "barnabas"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 13,
+                startVerse: 14,
+                endVerse: 52,
+            },
+        ],
+    },
+    {
+        id: "paul-barnabas-iconium",
+        title: "Paul and Barnabas minister in Iconium",
+        description:
+            "Paul and Barnabas preach in Iconium, where many believe and strong opposition also develops.",
+        placeId: "iconium",
+        periodId: "early-church",
+        personIds: ["paul", "barnabas"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 14,
+                startVerse: 1,
+                endVerse: 7,
+            },
+        ],
+    },
+    {
+        id: "paul-lystra",
+        title: "Paul ministers and is stoned at Lystra",
+        description:
+            "Paul heals a man unable to walk at Lystra, and later opponents stone him and drag him outside the city.",
+        placeId: "lystra",
+        periodId: "early-church",
+        personIds: ["paul", "barnabas"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 14,
+                startVerse: 8,
+                endVerse: 20,
+            },
+        ],
+    },
+    {
+        id: "paul-barnabas-derbe",
+        title: "Paul and Barnabas preach in Derbe",
+        description:
+            "Paul and Barnabas preach the gospel in Derbe and make many disciples.",
+        placeId: "derbe",
+        periodId: "early-church",
+        personIds: ["paul", "barnabas"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 14,
+                startVerse: 20,
+                endVerse: 21,
+            },
+        ],
+    },
+    {
+        id: "first-journey-returns-antioch",
+        title: "Paul and Barnabas return to Antioch",
+        description:
+            "After revisiting the churches they had established, Paul and Barnabas return to Antioch and report what God had done.",
+        placeId: "antioch-syria",
+        periodId: "early-church",
+        personIds: ["paul", "barnabas"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 14,
+                startVerse: 21,
+                endVerse: 28,
+            },
+        ],
+    },
 ];

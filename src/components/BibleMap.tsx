@@ -458,7 +458,14 @@ export default function BibleMap() {
                 jerusalem.longitude,
             ]}
             zoom={7}
+            minZoom={3}
             zoomControl={false}
+            worldCopyJump={false}
+            maxBounds={[
+                [-60, -180],
+                [85, 180],
+            ]}
+            maxBoundsViscosity={1}
             style={{
                 height: "100vh",
                 width: "100%",
@@ -467,6 +474,7 @@ export default function BibleMap() {
             <TileLayer
                 attribution='&copy; OpenStreetMap contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                noWrap
             />
 
             <ZoomControl position="bottomright" />
@@ -535,21 +543,22 @@ export default function BibleMap() {
             )}
 
             {visiblePlaces.map((place) => {
-                const journeyStop = selectedJourneyStops.find(
+                const journeyStopsAtPlace = selectedJourneyStops.filter(
                     (stop) => stop.placeId === place.id
                 );
 
                 const isSelected =
                     selectedPlace?.id === place.id;
 
-                const icon = journeyStop
-                    ? createJourneyStopIcon(
-                        journeyStop.order,
-                        isSelected
-                    )
-                    : isSelected
-                        ? selectedMarkerIcon
-                        : defaultMarkerIcon;
+                const icon =
+                    journeyStopsAtPlace.length > 0
+                        ? createJourneyStopIcon(
+                            journeyStopsAtPlace.map((stop) => stop.order),
+                            isSelected
+                        )
+                        : isSelected
+                            ? selectedMarkerIcon
+                            : defaultMarkerIcon;
 
                 return (
                     <Marker
