@@ -320,4 +320,36 @@ export const journeys: Journey[] = [
         periodId: "early-church",
         personIds: ["paul", "barnabas"],
     },
+    {
+        id: "paul-second-missionary-journey",
+        name: "Paul's Second Missionary Journey",
+        description:
+            "Paul travels through Asia Minor into Macedonia and Greece, ministering in cities including Philippi, Thessalonica, Athens, and Corinth.",
+        periodId: "early-church",
+        personIds: ["paul", "silas", "timothy"],
+    },
+    {
+        id: "paul-third-missionary-journey",
+        name: "Paul's Third Missionary Journey",
+        description:
+            "Paul travels from Antioch through Asia Minor, spends an extended period in Ephesus, then travels through Macedonia and Greece before beginning his return toward Jerusalem.",
+        periodId: "early-church",
+        personIds: ["paul", "timothy"],
+    },
+    {
+        id: "paul-jerusalem-caesarea",
+        name: "Paul's Transfer to Caesarea",
+        description:
+            "Paul is taken from Jerusalem under Roman guard to Caesarea after a plot is discovered against his life.",
+        periodId: "early-church",
+        personIds: ["paul"],
+    },
+    {
+        id: "paul-journey-to-rome",
+        name: "Paul's Journey to Rome",
+        description:
+            "Paul travels as a Roman prisoner from Caesarea across the Mediterranean, survives shipwreck on Malta, and eventually reaches Rome.",
+        periodId: "early-church",
+        personIds: ["paul"],
+    },
 ];

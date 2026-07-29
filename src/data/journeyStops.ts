@@ -2385,4 +2385,436 @@ export const journeyStops: JourneyStop[] = [
             },
         ],
     },
+    {
+        id: "paul-second-stop-1",
+        journeyId: "paul-second-missionary-journey",
+        placeId: "antioch-syria",
+        order: 1,
+        description:
+            "Paul begins the second missionary journey from Antioch.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 15,
+                startVerse: 36,
+                endVerse: 41,
+            },
+        ],
+    },
+    {
+        id: "paul-second-stop-2",
+        journeyId: "paul-second-missionary-journey",
+        placeId: "lystra",
+        order: 2,
+        description:
+            "Paul visits Lystra, where Timothy joins the missionary team.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 16,
+                startVerse: 1,
+                endVerse: 5,
+            },
+        ],
+    },
+    {
+        id: "paul-second-stop-3",
+        journeyId: "paul-second-missionary-journey",
+        placeId: "troas",
+        order: 3,
+        description:
+            "At Troas, Paul receives the vision calling him to Macedonia.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 16,
+                startVerse: 6,
+                endVerse: 10,
+            },
+        ],
+    },
+    {
+        id: "paul-second-stop-4",
+        journeyId: "paul-second-missionary-journey",
+        placeId: "philippi",
+        order: 4,
+        description:
+            "Paul and his companions minister in Philippi.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 16,
+                startVerse: 11,
+                endVerse: 40,
+            },
+        ],
+    },
+    {
+        id: "paul-second-stop-5",
+        journeyId: "paul-second-missionary-journey",
+        placeId: "thessalonica",
+        order: 5,
+        description:
+            "Paul preaches in Thessalonica.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 17,
+                startVerse: 1,
+                endVerse: 9,
+            },
+        ],
+    },
+    {
+        id: "paul-second-stop-6",
+        journeyId: "paul-second-missionary-journey",
+        placeId: "berea",
+        order: 6,
+        description:
+            "Paul and Silas minister among the Bereans.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 17,
+                startVerse: 10,
+                endVerse: 15,
+            },
+        ],
+    },
+    {
+        id: "paul-second-stop-7",
+        journeyId: "paul-second-missionary-journey",
+        placeId: "athens",
+        order: 7,
+        description:
+            "Paul speaks in Athens, including his address at the Areopagus.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 17,
+                startVerse: 16,
+                endVerse: 34,
+            },
+        ],
+    },
+    {
+        id: "paul-second-stop-8",
+        journeyId: "paul-second-missionary-journey",
+        placeId: "corinth",
+        order: 8,
+        description:
+            "Paul spends an extended period ministering in Corinth.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 18,
+                startVerse: 1,
+                endVerse: 18,
+            },
+        ],
+    },
+    {
+        id: "paul-second-stop-9",
+        journeyId: "paul-second-missionary-journey",
+        placeId: "antioch-syria",
+        order: 9,
+        description:
+            "Paul eventually returns to Antioch after the journey.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 18,
+                startVerse: 22,
+            },
+        ],
+    },
+    {
+        id: "paul-third-stop-1",
+        journeyId: "paul-third-missionary-journey",
+        placeId: "antioch-syria",
+        order: 1,
+        description:
+            "Paul begins another journey from Antioch and travels through the regions of Asia Minor.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 18,
+                startVerse: 23,
+            },
+        ],
+    },
+    {
+        id: "paul-third-stop-2",
+        journeyId: "paul-third-missionary-journey",
+        placeId: "ephesus",
+        order: 2,
+        description:
+            "Paul spends an extended period teaching and ministering in Ephesus.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 19,
+            },
+        ],
+    },
+    {
+        id: "paul-third-stop-3",
+        journeyId: "paul-third-missionary-journey",
+        placeId: "philippi",
+        order: 3,
+        description:
+            "Paul travels through Macedonia after leaving Ephesus.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 20,
+                startVerse: 1,
+                endVerse: 2,
+            },
+        ],
+    },
+    {
+        id: "paul-third-stop-4",
+        journeyId: "paul-third-missionary-journey",
+        placeId: "corinth",
+        order: 4,
+        description:
+            "Paul spends time in Greece before beginning his return journey.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 20,
+                startVerse: 2,
+                endVerse: 3,
+            },
+        ],
+    },
+    {
+        id: "paul-third-stop-5",
+        journeyId: "paul-third-missionary-journey",
+        placeId: "philippi",
+        order: 5,
+        description:
+            "Paul returns through Macedonia as he begins travelling toward Jerusalem.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 20,
+                startVerse: 3,
+                endVerse: 6,
+            },
+        ],
+    },
+    {
+        id: "paul-third-stop-6",
+        journeyId: "paul-third-missionary-journey",
+        placeId: "troas",
+        order: 6,
+        description:
+            "Paul spends several days at Troas during the return journey.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 20,
+                startVerse: 6,
+                endVerse: 12,
+            },
+        ],
+    },
+    {
+        id: "paul-third-stop-7",
+        journeyId: "paul-third-missionary-journey",
+        placeId: "miletus",
+        order: 7,
+        description:
+            "Paul meets the Ephesian elders at Miletus before continuing toward Jerusalem.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 20,
+                startVerse: 17,
+                endVerse: 38,
+            },
+        ],
+    },
+    {
+        id: "paul-third-stop-8",
+        journeyId: "paul-third-missionary-journey",
+        placeId: "jerusalem",
+        order: 8,
+        description:
+            "Paul eventually reaches Jerusalem at the end of the journey.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 21,
+                startVerse: 15,
+                endVerse: 17,
+            },
+        ],
+    },
+    {
+        id: "paul-caesarea-stop-1",
+        journeyId: "paul-jerusalem-caesarea",
+        placeId: "jerusalem",
+        order: 1,
+        description:
+            "Paul is held in Roman custody in Jerusalem after his arrest.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 23,
+                startVerse: 12,
+                endVerse: 23,
+            },
+        ],
+    },
+    {
+        id: "paul-caesarea-stop-2",
+        journeyId: "paul-jerusalem-caesarea",
+        placeId: "caesarea-maritima",
+        order: 2,
+        description:
+            "Paul is transferred to Caesarea, where his case is heard before Roman governors.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 23,
+                startVerse: 23,
+                endVerse: 35,
+            },
+        ],
+    },
+    {
+        id: "paul-rome-stop-1",
+        journeyId: "paul-journey-to-rome",
+        placeId: "caesarea-maritima",
+        order: 1,
+        description:
+            "Paul departs from Caesarea after appealing to Caesar.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 27,
+                startVerse: 1,
+                endVerse: 2,
+            },
+        ],
+    },
+    {
+        id: "paul-rome-stop-2",
+        journeyId: "paul-journey-to-rome",
+        placeId: "sidon",
+        order: 2,
+        description:
+            "The ship stops at Sidon, where Paul is allowed to visit friends.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 27,
+                startVerse: 3,
+            },
+        ],
+    },
+    {
+        id: "paul-rome-stop-3",
+        journeyId: "paul-journey-to-rome",
+        placeId: "myra",
+        order: 3,
+        description:
+            "At Myra, Paul is transferred to an Alexandrian ship sailing toward Italy.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 27,
+                startVerse: 5,
+                endVerse: 6,
+            },
+        ],
+    },
+    {
+        id: "paul-rome-stop-4",
+        journeyId: "paul-journey-to-rome",
+        placeId: "fair-havens",
+        order: 4,
+        description:
+            "The voyage pauses at Fair Havens on Crete before continuing despite worsening conditions.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 27,
+                startVerse: 7,
+                endVerse: 12,
+            },
+        ],
+    },
+    {
+        id: "paul-rome-stop-5",
+        journeyId: "paul-journey-to-rome",
+        placeId: "malta",
+        order: 5,
+        description:
+            "After the storm and shipwreck, Paul and the others reach Malta safely.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 27,
+                startVerse: 39,
+                endVerse: 44,
+            },
+            {
+                book: "Acts",
+                chapter: 28,
+                startVerse: 1,
+                endVerse: 10,
+            },
+        ],
+    },
+    {
+        id: "paul-rome-stop-6",
+        journeyId: "paul-journey-to-rome",
+        placeId: "syracuse",
+        order: 6,
+        description:
+            "Paul's journey continues through Syracuse in Sicily.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 28,
+                startVerse: 12,
+            },
+        ],
+    },
+    {
+        id: "paul-rome-stop-7",
+        journeyId: "paul-journey-to-rome",
+        placeId: "puteoli",
+        order: 7,
+        description:
+            "Paul reaches Puteoli in Italy and spends time with believers there.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 28,
+                startVerse: 13,
+                endVerse: 14,
+            },
+        ],
+    },
+    {
+        id: "paul-rome-stop-8",
+        journeyId: "paul-journey-to-rome",
+        placeId: "rome",
+        order: 8,
+        description:
+            "Paul reaches Rome and continues proclaiming the gospel while living under guard.",
+        references: [
+            {
+                book: "Acts",
+                chapter: 28,
+                startVerse: 16,
+                endVerse: 31,
+            },
+        ],
+    },
 ];

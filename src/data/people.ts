@@ -505,4 +505,58 @@ export const people: Person[] = [
     description:
       "Leader in the early Church who encouraged believers, supported Paul, and served with him in missionary ministry.",
   },
+  {
+    id: "silas",
+    name: "Silas",
+    description:
+      "Leader in the early Church who travelled with Paul during his second missionary journey.",
+  },
+  {
+    id: "timothy",
+    name: "Timothy",
+    description:
+      "Younger co-worker of Paul who joined him during the second missionary journey and later served in ministry.",
+  },
+  {
+    id: "lydia",
+    name: "Lydia",
+    description:
+      "Woman in Philippi who believed Paul's message and welcomed the missionaries into her home.",
+  },
+  {
+    id: "apollos",
+    name: "Apollos",
+    description:
+      "Jewish believer from Alexandria who was eloquent in the Scriptures and became an influential teacher in the early Church.",
+  },
+  {
+    id: "priscilla",
+    name: "Priscilla",
+    description:
+      "Early Christian worker who served alongside Aquila and helped instruct Apollos more accurately in the way of God.",
+  },
+  {
+    id: "aquila",
+    name: "Aquila",
+    description:
+      "Early Christian worker and husband of Priscilla who served alongside Paul and helped instruct Apollos.",
+  },
+  {
+    id: "felix",
+    name: "Felix",
+    description:
+      "Roman governor before whom Paul was brought after his arrest in Jerusalem.",
+  },
+  {
+    id: "festus",
+    name: "Festus",
+    description:
+      "Roman governor who succeeded Felix and heard Paul's case after his imprisonment in Caesarea.",
+  },
+  {
+    id: "agrippa-ii",
+    name: "Agrippa II",
+    description:
+      "Herodian ruler who heard Paul's defence in Caesarea before Paul was sent to Rome.",
+  },
 ];

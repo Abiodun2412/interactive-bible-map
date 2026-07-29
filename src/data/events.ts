@@ -4075,4 +4075,437 @@ export const events: Event[] = [
             },
         ],
     },
+    {
+        id: "paul-macedonian-vision",
+        title: "Paul receives the Macedonian vision",
+        description:
+            "At Troas, Paul receives a vision of a man of Macedonia asking him to come over and help them.",
+        placeId: "troas",
+        periodId: "early-church",
+        personIds: ["paul", "silas", "timothy"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 16,
+                startVerse: 6,
+                endVerse: 10,
+            },
+        ],
+    },
+    {
+        id: "lydia-believes",
+        title: "Lydia believes in Philippi",
+        description:
+            "At Philippi, Lydia listens to Paul's message, believes, and is baptised with her household.",
+        placeId: "philippi",
+        periodId: "early-church",
+        personIds: ["paul", "silas", "lydia"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 16,
+                startVerse: 11,
+                endVerse: 15,
+            },
+        ],
+    },
+    {
+        id: "paul-silas-imprisoned",
+        title: "Paul and Silas are imprisoned in Philippi",
+        description:
+            "Paul and Silas are beaten and imprisoned, but an earthquake opens the prison doors and the jailer later believes.",
+        placeId: "philippi",
+        periodId: "early-church",
+        personIds: ["paul", "silas"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 16,
+                startVerse: 16,
+                endVerse: 40,
+            },
+        ],
+    },
+    {
+        id: "paul-thessalonica",
+        title: "Paul preaches in Thessalonica",
+        description:
+            "Paul reasons from the Scriptures in Thessalonica, explaining that the Messiah had to suffer and rise from the dead.",
+        placeId: "thessalonica",
+        periodId: "early-church",
+        personIds: ["paul", "silas"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 17,
+                startVerse: 1,
+                endVerse: 9,
+            },
+        ],
+    },
+    {
+        id: "paul-berea",
+        title: "Paul ministers in Berea",
+        description:
+            "The Bereans receive the message eagerly and examine the Scriptures daily.",
+        placeId: "berea",
+        periodId: "early-church",
+        personIds: ["paul", "silas"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 17,
+                startVerse: 10,
+                endVerse: 15,
+            },
+        ],
+    },
+    {
+        id: "paul-areopagus",
+        title: "Paul speaks at the Areopagus",
+        description:
+            "In Athens, Paul speaks about the God who made the world and calls his hearers to repentance.",
+        placeId: "athens",
+        periodId: "early-church",
+        personIds: ["paul"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 17,
+                startVerse: 16,
+                endVerse: 34,
+            },
+        ],
+    },
+    {
+        id: "paul-corinth",
+        title: "Paul ministers in Corinth",
+        description:
+            "Paul stays in Corinth for an extended period, teaching the word of God and helping establish the church there.",
+        placeId: "corinth",
+        periodId: "early-church",
+        personIds: ["paul", "silas", "timothy"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 18,
+                startVerse: 1,
+                endVerse: 18,
+            },
+        ],
+    },
+    {
+        id: "apollos-ephesus",
+        title: "Apollos teaches in Ephesus",
+        description:
+            "Apollos speaks boldly in Ephesus, and Priscilla and Aquila help explain the way of God to him more accurately.",
+        placeId: "ephesus",
+        periodId: "early-church",
+        personIds: ["apollos", "priscilla", "aquila"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 18,
+                startVerse: 24,
+                endVerse: 28,
+            },
+        ],
+    },
+    {
+        id: "paul-ministers-ephesus",
+        title: "Paul ministers extensively in Ephesus",
+        description:
+            "Paul teaches in Ephesus for an extended period, and the word of the Lord spreads widely through the region.",
+        placeId: "ephesus",
+        periodId: "early-church",
+        personIds: ["paul"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 19,
+                startVerse: 1,
+                endVerse: 20,
+            },
+        ],
+    },
+    {
+        id: "ephesus-riot",
+        title: "A riot breaks out in Ephesus",
+        description:
+            "Opposition to Paul's ministry contributes to a major disturbance connected with the worship of Artemis in Ephesus.",
+        placeId: "ephesus",
+        periodId: "early-church",
+        personIds: ["paul"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 19,
+                startVerse: 21,
+                endVerse: 41,
+            },
+        ],
+    },
+    {
+        id: "paul-returns-macedonia-greece",
+        title: "Paul travels through Macedonia and Greece",
+        description:
+            "After leaving Ephesus, Paul travels through Macedonia and spends time in Greece before beginning his return journey.",
+        placeId: "corinth",
+        periodId: "early-church",
+        personIds: ["paul", "timothy"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 20,
+                startVerse: 1,
+                endVerse: 3,
+            },
+        ],
+    },
+    {
+        id: "paul-meets-ephesian-elders",
+        title: "Paul meets the Ephesian elders at Miletus",
+        description:
+            "Paul summons the elders of the church in Ephesus to Miletus and gives them a final charge before continuing toward Jerusalem.",
+        placeId: "miletus",
+        periodId: "early-church",
+        personIds: ["paul"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 20,
+                startVerse: 17,
+                endVerse: 38,
+            },
+        ],
+    },
+    {
+        id: "paul-arrested-jerusalem",
+        title: "Paul is arrested in Jerusalem",
+        description:
+            "After returning to Jerusalem, Paul is seized amid unrest at the Temple and taken into Roman custody.",
+        placeId: "temple-mount",
+        periodId: "early-church",
+        personIds: ["paul"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 21,
+                startVerse: 27,
+                endVerse: 36,
+            },
+        ],
+    },
+    {
+        id: "paul-testifies-jerusalem",
+        title: "Paul testifies in Jerusalem",
+        description:
+            "Paul addresses the crowd and recounts his former persecution of believers and his encounter with Jesus.",
+        placeId: "jerusalem",
+        periodId: "early-church",
+        personIds: ["paul", "jesus"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 22,
+                startVerse: 1,
+                endVerse: 21,
+            },
+        ],
+    },
+    {
+        id: "plot-against-paul",
+        title: "A plot is formed against Paul",
+        description:
+            "A group forms a plot to kill Paul, and the Roman commander arranges for him to be transferred under guard to Caesarea.",
+        placeId: "jerusalem",
+        periodId: "early-church",
+        personIds: ["paul"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 23,
+                startVerse: 12,
+                endVerse: 35,
+            },
+        ],
+    },
+    {
+        id: "paul-before-felix",
+        title: "Paul appears before Felix",
+        description:
+            "Paul is brought before Governor Felix in Caesarea and defends himself against the accusations made against him.",
+        placeId: "caesarea-maritima",
+        periodId: "early-church",
+        personIds: ["paul", "felix"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 24,
+            },
+        ],
+    },
+    {
+        id: "paul-before-festus",
+        title: "Paul appears before Festus",
+        description:
+            "After Festus becomes governor, Paul's case is heard again and Paul appeals to Caesar.",
+        placeId: "caesarea-maritima",
+        periodId: "early-church",
+        personIds: ["paul", "festus"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 25,
+                startVerse: 1,
+                endVerse: 12,
+            },
+        ],
+    },
+    {
+        id: "paul-before-agrippa",
+        title: "Paul gives his defence before Agrippa",
+        description:
+            "Paul speaks before Agrippa and Festus, recounting his encounter with Jesus and the mission he received.",
+        placeId: "caesarea-maritima",
+        periodId: "early-church",
+        personIds: ["paul", "festus", "agrippa-ii", "jesus"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 26,
+            },
+        ],
+    },
+    {
+        id: "paul-sails-for-rome",
+        title: "Paul sails for Rome",
+        description:
+            "After appealing to Caesar, Paul is handed over with other prisoners and begins the voyage toward Rome.",
+        placeId: "caesarea-maritima",
+        periodId: "early-church",
+        personIds: ["paul"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 27,
+                startVerse: 1,
+                endVerse: 2,
+            },
+        ],
+    },
+    {
+        id: "paul-voyage-fair-havens",
+        title: "Paul's ship reaches Fair Havens",
+        description:
+            "After difficult sailing, the ship reaches Fair Havens on Crete, where Paul warns that continuing the voyage will be dangerous.",
+        placeId: "fair-havens",
+        periodId: "early-church",
+        personIds: ["paul"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 27,
+                startVerse: 7,
+                endVerse: 12,
+            },
+        ],
+    },
+    {
+        id: "storm-at-sea",
+        title: "Paul's ship is caught in a violent storm",
+        description:
+            "A powerful storm drives the ship across the Mediterranean, but Paul encourages those aboard with the message that their lives will be spared.",
+        placeId: "malta",
+        periodId: "early-church",
+        personIds: ["paul"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 27,
+                startVerse: 13,
+                endVerse: 44,
+            },
+        ],
+    },
+    {
+        id: "paul-shipwrecked-malta",
+        title: "Paul is shipwrecked on Malta",
+        description:
+            "The ship runs aground, but everyone reaches land safely on the island of Malta.",
+        placeId: "malta",
+        periodId: "early-church",
+        personIds: ["paul"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 27,
+                startVerse: 39,
+                endVerse: 44,
+            },
+            {
+                book: "Acts",
+                chapter: 28,
+                startVerse: 1,
+            },
+        ],
+    },
+    {
+        id: "paul-ministers-malta",
+        title: "Paul ministers on Malta",
+        description:
+            "Paul remains on Malta after the shipwreck and ministers among the island's inhabitants.",
+        placeId: "malta",
+        periodId: "early-church",
+        personIds: ["paul"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 28,
+                startVerse: 1,
+                endVerse: 10,
+            },
+        ],
+    },
+    {
+        id: "paul-arrives-rome",
+        title: "Paul arrives in Rome",
+        description:
+            "Paul reaches Rome, where he is permitted to live under guard and continues proclaiming the kingdom of God and teaching about Jesus Christ.",
+        placeId: "rome",
+        periodId: "early-church",
+        personIds: ["paul"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 28,
+                startVerse: 16,
+                endVerse: 31,
+            },
+        ],
+    },
 ];
