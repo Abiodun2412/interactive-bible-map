@@ -1487,4 +1487,51 @@ export const journeyStops: JourneyStop[] = [
             },
         ],
     },
+    {
+        id: "jesus-childhood-stop-1",
+        journeyId: "jesus-egypt-childhood",
+        placeId: "bethlehem",
+        order: 1,
+        description:
+            "Jesus is in Bethlehem when Joseph is warned to take the family away from Herod.",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 2,
+                startVerse: 13,
+            },
+        ],
+    },
+    {
+        id: "jesus-childhood-stop-2",
+        journeyId: "jesus-egypt-childhood",
+        placeId: "egypt",
+        order: 2,
+        description:
+            "Joseph takes Mary and Jesus into Egypt, where they remain until after Herod's death.",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 2,
+                startVerse: 13,
+                endVerse: 15,
+            },
+        ],
+    },
+    {
+        id: "jesus-childhood-stop-3",
+        journeyId: "jesus-egypt-childhood",
+        placeId: "nazareth",
+        order: 3,
+        description:
+            "After returning from Egypt, the family settles in Nazareth in Galilee.",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 2,
+                startVerse: 19,
+                endVerse: 23,
+            },
+        ],
+    },
 ];

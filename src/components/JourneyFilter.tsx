@@ -16,6 +16,7 @@ export default function JourneyFilter({
 }: JourneyFilterProps) {
   const [query, setQuery] = useState("");
   const [isOpen, setIsOpen] = useState(false);
+  const [openPeriods, setOpenPeriods] = useState<Set<string>>(new Set());
 
   const panelRef = useRef<HTMLDivElement | null>(null);
 
@@ -73,15 +74,28 @@ export default function JourneyFilter({
 
   const handleSelectJourney = (journeyId: string | null) => {
     onChange(journeyId);
-    setQuery("");
     setIsOpen(false);
+    setQuery("");
   };
 
+  const togglePeriod = (periodId: string) => {
+    setOpenPeriods((current) => {
+      const next = new Set(current);
+
+      if (next.has(periodId)) {
+        next.delete(periodId);
+      } else {
+        next.add(periodId);
+      }
+
+      return next;
+    });
+  };
+
+  const isSearching = query.trim().length > 0;
+
   return (
-    <div
-      ref={panelRef}
-      className="relative w-full"
-    >
+    <div ref={panelRef} className="relative w-full">
       <button
         type="button"
         onClick={() => setIsOpen((current) => !current)}
@@ -101,15 +115,16 @@ export default function JourneyFilter({
         </div>
 
         <span
-          className={`ml-4 text-sm text-gray-500 transition-transform ${isOpen ? "rotate-180" : ""
-            }`}
+          className={`ml-4 text-sm text-gray-500 transition-transform ${
+            isOpen ? "rotate-180" : ""
+          }`}
         >
           ▼
         </span>
       </button>
 
       {isOpen && (
-        <div className="absolute left-0 top-full mt-2 w-full overflow-hidden rounded-xl bg-white shadow-2xl">
+        <div className="absolute left-0 top-full z-[1200] mt-2 w-full overflow-hidden rounded-xl bg-white shadow-2xl">
           <div className="border-b border-gray-200 p-3">
             <input
               type="text"
@@ -121,14 +136,15 @@ export default function JourneyFilter({
             />
           </div>
 
-          <div className="max-h-80 overflow-y-auto overscroll-contain p-2">
+          <div className="max-h-96 overflow-y-auto overscroll-contain p-2">
             <button
               type="button"
               onClick={() => handleSelectJourney(null)}
-              className={`mb-2 w-full rounded-lg px-3 py-2 text-left text-sm ${selectedJourneyId === null
-                ? "bg-gray-900 text-white"
-                : "text-gray-900 hover:bg-gray-100"
-                }`}
+              className={`mb-2 w-full rounded-lg px-3 py-2 text-left text-sm ${
+                selectedJourneyId === null
+                  ? "bg-gray-900 text-white"
+                  : "text-gray-900 hover:bg-gray-100"
+              }`}
             >
               All journeys
             </button>
@@ -138,47 +154,80 @@ export default function JourneyFilter({
                 No journeys found.
               </p>
             ) : (
-              groupedJourneys.map(({ period, journeys: periodJourneys }) => (
-                <section key={period.id} className="mb-4">
-                  <p className="px-3 pb-1 pt-2 text-xs font-semibold uppercase tracking-wide text-gray-400">
-                    {period.name}
-                  </p>
+              groupedJourneys.map(({ period, journeys: periodJourneys }) => {
+                const isPeriodOpen =
+                  isSearching || openPeriods.has(period.id);
 
-                  <div className="space-y-1">
-                    {periodJourneys.map((journey) => {
-                      const isSelected =
-                        selectedJourneyId === journey.id;
+                return (
+                  <section
+                    key={period.id}
+                    className="mb-2 overflow-hidden rounded-lg border border-gray-200"
+                  >
+                    <button
+                      type="button"
+                      onClick={() => togglePeriod(period.id)}
+                      className="flex w-full items-center justify-between gap-3 bg-gray-50 px-3 py-3 text-left hover:bg-gray-100"
+                    >
+                      <div>
+                        <p className="text-sm font-semibold text-gray-900">
+                          {period.name}
+                        </p>
 
-                      return (
-                        <button
-                          key={journey.id}
-                          type="button"
-                          onClick={() =>
-                            handleSelectJourney(journey.id)
-                          }
-                          className={`w-full rounded-lg px-3 py-2 text-left ${isSelected
-                            ? "bg-gray-900 text-white"
-                            : "text-gray-900 hover:bg-gray-100"
-                            }`}
-                        >
-                          <p className="text-sm font-medium">
-                            {journey.name}
-                          </p>
+                        <p className="mt-1 text-xs text-gray-500">
+                          {periodJourneys.length} journey
+                          {periodJourneys.length === 1 ? "" : "s"}
+                        </p>
+                      </div>
 
-                          <p
-                            className={`mt-1 line-clamp-2 text-xs ${isSelected
-                              ? "text-gray-300"
-                              : "text-gray-500"
+                      <span
+                        className={`text-xs text-gray-500 transition-transform ${
+                          isPeriodOpen ? "rotate-180" : ""
+                        }`}
+                      >
+                        ▼
+                      </span>
+                    </button>
+
+                    {isPeriodOpen && (
+                      <div className="space-y-1 p-2">
+                        {periodJourneys.map((journey) => {
+                          const isSelected =
+                            selectedJourneyId === journey.id;
+
+                          return (
+                            <button
+                              key={journey.id}
+                              type="button"
+                              onClick={() =>
+                                handleSelectJourney(journey.id)
+                              }
+                              className={`w-full rounded-lg px-3 py-2 text-left ${
+                                isSelected
+                                  ? "bg-gray-900 text-white"
+                                  : "text-gray-900 hover:bg-gray-100"
                               }`}
-                          >
-                            {journey.description}
-                          </p>
-                        </button>
-                      );
-                    })}
-                  </div>
-                </section>
-              ))
+                            >
+                              <p className="text-sm font-medium">
+                                {journey.name}
+                              </p>
+
+                              <p
+                                className={`mt-1 line-clamp-2 text-xs ${
+                                  isSelected
+                                    ? "text-gray-300"
+                                    : "text-gray-500"
+                                }`}
+                              >
+                                {journey.description}
+                              </p>
+                            </button>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </section>
+                );
+              })
             )}
           </div>
         </div>

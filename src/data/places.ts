@@ -965,4 +965,16 @@ export const places: Place[] = [
       "The empire that succeeded Babylon and under whose rule the Jewish exiles were permitted to return to Jerusalem.",
     identificationStatus: "well-established",
   },
+  {
+    id: "susa",
+    name: "Susa",
+    modernName: "Shush, Iran",
+    latitude: 32.189,
+    longitude: 48.257,
+    type: "city",
+    region: "Persia",
+    description:
+      "A major Persian royal city and the principal setting of the book of Esther.",
+    identificationStatus: "well-established",
+  },
 ];

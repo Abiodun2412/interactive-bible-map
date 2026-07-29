@@ -208,4 +208,12 @@ export const journeys: Journey[] = [
         periodId: "return-restoration",
         personIds: ["nehemiah"],
     },
+    {
+        id: "jesus-egypt-childhood",
+        name: "Jesus' Childhood Journey",
+        description:
+            "Joseph takes Mary and Jesus from Bethlehem into Egypt to escape Herod, before the family later returns and settles in Nazareth.",
+        periodId: "life-of-jesus",
+        personIds: ["jesus", "mary", "joseph-husband-of-mary"],
+    },
 ];

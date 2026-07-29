@@ -79,6 +79,10 @@ export default function LocationPanel({
     new Set()
   );
 
+  const [openJourneyPeriods, setOpenJourneyPeriods] = useState<Set<string>>(
+    new Set()
+  );
+
   useEffect(() => {
     const panel = panelRef.current;
 
@@ -121,6 +125,55 @@ export default function LocationPanel({
       })
       .filter((group) => group.events.length > 0);
   }, [placeEvents]);
+
+  const groupedJourneyStops = useMemo(() => {
+    return periods
+      .map((period) => {
+        const periodJourneys = placeJourneyStops
+          .map((stop) => {
+            const journey = journeys.find(
+              (journey) => journey.id === stop.journeyId
+            );
+
+            if (!journey || journey.periodId !== period.id) {
+              return null;
+            }
+
+            return {
+              stop,
+              journey,
+            };
+          })
+          .filter(
+            (
+              item
+            ): item is {
+              stop: (typeof placeJourneyStops)[number];
+              journey: (typeof journeys)[number];
+            } => item !== null
+          );
+
+        return {
+          period,
+          journeys: periodJourneys,
+        };
+      })
+      .filter((group) => group.journeys.length > 0);
+  }, [placeJourneyStops]);
+
+  const toggleJourneyPeriod = (periodId: string) => {
+    setOpenJourneyPeriods((current) => {
+      const next = new Set(current);
+
+      if (next.has(periodId)) {
+        next.delete(periodId);
+      } else {
+        next.add(periodId);
+      }
+
+      return next;
+    });
+  };
 
   const togglePeriod = (periodId: string) => {
     setOpenPeriods((current) => {
@@ -235,9 +288,8 @@ export default function LocationPanel({
                     </div>
 
                     <span
-                      className={`text-sm text-gray-500 transition-transform ${
-                        isOpen ? "rotate-180" : ""
-                      }`}
+                      className={`text-sm text-gray-500 transition-transform ${isOpen ? "rotate-180" : ""
+                        }`}
                     >
                       ▼
                     </span>
@@ -322,58 +374,94 @@ export default function LocationPanel({
         )}
       </section>
 
-      {placeJourneyStops.length > 0 && (
+      {groupedJourneyStops.length > 0 && (
         <section className="mt-6 border-t border-gray-200 pt-6">
-          <h3 className="mb-3 text-lg font-semibold text-gray-900">
-            Journeys
-          </h3>
+          <div className="mb-3 flex items-center justify-between gap-3">
+            <h3 className="text-lg font-semibold text-gray-900">
+              Journeys
+            </h3>
 
-          <div className="space-y-4">
-            {placeJourneyStops.map((stop) => {
-              const journey = journeys.find(
-                (journey) => journey.id === stop.journeyId
-              );
+            <span className="text-xs text-gray-500">
+              {placeJourneyStops.length} stop
+              {placeJourneyStops.length === 1 ? "" : "s"}
+            </span>
+          </div>
 
-              if (!journey) {
-                return null;
-              }
+          <div className="space-y-3">
+            {groupedJourneyStops.map(({ period, journeys: periodJourneys }) => {
+              const isOpen = openJourneyPeriods.has(period.id);
 
               return (
-                <button
-                  key={stop.id}
-                  type="button"
-                  onClick={() => onSelectJourney(journey.id)}
-                  className="w-full rounded-lg border border-gray-200 p-4 text-left transition hover:border-gray-400 hover:bg-gray-50"
+                <div
+                  key={period.id}
+                  className="overflow-hidden rounded-lg border border-gray-200"
                 >
-                  <div className="flex items-center justify-between gap-3">
-                    <h4 className="font-semibold text-gray-900">
-                      {journey.name}
-                    </h4>
+                  <button
+                    type="button"
+                    onClick={() => toggleJourneyPeriod(period.id)}
+                    className="flex w-full items-center justify-between gap-4 bg-gray-50 px-4 py-3 text-left hover:bg-gray-100"
+                  >
+                    <div>
+                      <p className="text-sm font-semibold text-gray-900">
+                        {period.name}
+                      </p>
 
-                    <span className="whitespace-nowrap rounded-full bg-gray-900 px-2 py-1 text-xs text-white">
-                      Stop {stop.order}
+                      <p className="mt-1 text-xs text-gray-500">
+                        {periodJourneys.length} journey
+                        {periodJourneys.length === 1 ? "" : "s"}
+                      </p>
+                    </div>
+
+                    <span
+                      className={`text-sm text-gray-500 transition-transform ${isOpen ? "rotate-180" : ""
+                        }`}
+                    >
+                      ▼
                     </span>
-                  </div>
+                  </button>
 
-                  <p className="mt-3 text-sm leading-6 text-gray-700">
-                    {stop.description}
-                  </p>
+                  {isOpen && (
+                    <div className="space-y-3 p-3">
+                      {periodJourneys.map(({ stop, journey }) => (
+                        <button
+                          key={stop.id}
+                          type="button"
+                          onClick={() => onSelectJourney(journey.id)}
+                          className="w-full rounded-lg border border-gray-200 p-4 text-left transition hover:border-gray-400 hover:bg-gray-50"
+                        >
+                          <div className="flex items-center justify-between gap-3">
+                            <h4 className="font-semibold text-gray-900">
+                              {journey.name}
+                            </h4>
 
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    {stop.references.map((reference, index) => (
-                      <span
-                        key={`${stop.id}-${index}`}
-                        className="rounded bg-gray-100 px-2 py-1 text-xs text-gray-700"
-                      >
-                        {formatReference(reference)}
-                      </span>
-                    ))}
-                  </div>
+                            <span className="whitespace-nowrap rounded-full bg-gray-900 px-2 py-1 text-xs text-white">
+                              Stop {stop.order}
+                            </span>
+                          </div>
 
-                  <p className="mt-3 text-xs font-semibold text-gray-500">
-                    Explore journey →
-                  </p>
-                </button>
+                          <p className="mt-3 text-sm leading-6 text-gray-700">
+                            {stop.description}
+                          </p>
+
+                          <div className="mt-3 flex flex-wrap gap-2">
+                            {stop.references.map((reference, index) => (
+                              <span
+                                key={`${stop.id}-${index}`}
+                                className="rounded bg-gray-100 px-2 py-1 text-xs text-gray-700"
+                              >
+                                {formatReference(reference)}
+                              </span>
+                            ))}
+                          </div>
+
+                          <p className="mt-3 text-xs font-semibold text-gray-500">
+                            Explore journey →
+                          </p>
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
               );
             })}
           </div>

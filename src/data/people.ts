@@ -21,7 +21,7 @@ export const people: Person[] = [
   },
   {
     id: "joseph",
-    name: "Joseph",
+    name: "Joseph - Son of Jacob",
     description:
       "Son of Jacob who was taken to Egypt and later rose to authority there.",
   },
@@ -348,5 +348,47 @@ export const people: Person[] = [
     name: "Nehemiah",
     description:
       "Jewish official in Persian service who returned to Jerusalem and led the rebuilding of the city's walls.",
+  },
+  {
+    id: "esther",
+    name: "Esther",
+    description:
+      "Jewish woman who became queen in the Persian Empire and played a central role in the deliverance of her people.",
+  },
+  {
+    id: "mordecai",
+    name: "Mordecai",
+    description:
+      "Jewish man living in the Persian Empire who raised Esther and later served in a position of honour.",
+  },
+  {
+    id: "haman",
+    name: "Haman",
+    description:
+      "Persian official who plotted against the Jewish people during the reign described in the book of Esther.",
+  },
+  {
+    id: "mary",
+    name: "Mary",
+    description:
+      "Mother of Jesus, who received the angel Gabriel's announcement that she would give birth to the promised Messiah.",
+  },
+  {
+    id: "joseph-husband-of-mary",
+    name: "Joseph - Husband of Mary",
+    description:
+      "Husband of Mary who cared for Jesus during His childhood and raised Him in Nazareth.",
+  },
+  {
+    id: "john-baptist",
+    name: "John the Baptist",
+    description:
+      "Prophet who prepared the way for Jesus and called people to repentance before the beginning of Jesus' public ministry.",
+  },
+  {
+    id: "herod-great",
+    name: "Herod the Great",
+    description:
+      "King of Judea under Roman authority during the period surrounding the birth of Jesus.",
   },
 ];

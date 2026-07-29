@@ -2589,15 +2589,181 @@ export const events: Event[] = [
         ],
     },
     {
-        id: "birth-of-jesus",
-        title: "Birth of Jesus",
+        id: "esther-becomes-queen",
+        title: "Esther becomes queen",
         description:
-            "Jesus is born in Bethlehem during the reign of Herod the Great.",
+            "Esther is chosen as queen in the Persian court while her Jewish identity remains hidden.",
+        placeId: "susa",
+        periodId: "return-restoration",
+        personIds: ["esther", "mordecai"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Esther",
+                chapter: 2,
+                startVerse: 1,
+                endVerse: 18,
+            },
+        ],
+    },
+    {
+        id: "haman-plot",
+        title: "Haman plots against the Jewish people",
+        description:
+            "Haman seeks to destroy the Jewish people after Mordecai refuses to bow before him.",
+        placeId: "susa",
+        periodId: "return-restoration",
+        personIds: ["haman", "mordecai", "esther"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Esther",
+                chapter: 3,
+            },
+        ],
+    },
+    {
+        id: "esther-approaches-king",
+        title: "Esther approaches the king",
+        description:
+            "Esther risks her life by approaching the king without being summoned in order to plead for her people.",
+        placeId: "susa",
+        periodId: "return-restoration",
+        personIds: ["esther", "mordecai", "haman"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Esther",
+                chapter: 4,
+            },
+            {
+                book: "Esther",
+                chapter: 5,
+                startVerse: 1,
+                endVerse: 8,
+            },
+        ],
+    },
+    {
+        id: "haman-defeated",
+        title: "Haman's plot is overturned",
+        description:
+            "Haman's plot is exposed, and the threat against the Jewish people is overturned.",
+        placeId: "susa",
+        periodId: "return-restoration",
+        personIds: ["esther", "mordecai", "haman"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Esther",
+                chapter: 7,
+            },
+            {
+                book: "Esther",
+                chapter: 8,
+            },
+        ],
+    },
+    {
+        id: "purim-established",
+        title: "Purim is established",
+        description:
+            "The Jewish people establish the celebration of Purim in remembrance of their deliverance.",
+        placeId: "susa",
+        periodId: "return-restoration",
+        personIds: ["esther", "mordecai"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Esther",
+                chapter: 9,
+                startVerse: 20,
+                endVerse: 32,
+            },
+        ],
+    },
+    {
+        id: "announcement-birth-jesus",
+        title: "The birth of Jesus is announced to Mary",
+        description:
+            "The angel Gabriel comes to Mary in Nazareth and announces that she will give birth to Jesus.",
+        placeId: "nazareth",
+        periodId: "life-of-jesus",
+        personIds: ["jesus", "mary"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Luke",
+                chapter: 1,
+                startVerse: 26,
+                endVerse: 38,
+            },
+        ],
+    },
+    {
+        id: "jesus-born-bethlehem",
+        title: "Jesus is born in Bethlehem",
+        description:
+            "Mary gives birth to Jesus in Bethlehem during the time of Roman rule over Judea.",
         placeId: "bethlehem",
         periodId: "life-of-jesus",
-        personIds: ["jesus"],
+        personIds: ["jesus", "mary", "joseph-husband-of-mary"],
         approximateDate: "c. 6–4 BC",
         datePrecision: "range",
+        references: [
+            {
+                book: "Luke",
+                chapter: 2,
+                startVerse: 1,
+                endVerse: 7,
+            },
+        ],
+    },
+    {
+        id: "shepherds-visit-jesus",
+        title: "The shepherds visit Jesus",
+        description:
+            "After angels announce Jesus' birth to shepherds nearby, they go to Bethlehem and find Mary, Joseph, and the child.",
+        placeId: "bethlehem",
+        periodId: "life-of-jesus",
+        personIds: ["jesus", "mary", "joseph-husband-of-mary"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Luke",
+                chapter: 2,
+                startVerse: 8,
+                endVerse: 20,
+            },
+        ],
+    },
+    {
+        id: "jesus-presented-temple",
+        title: "Jesus is presented at the Temple",
+        description:
+            "Mary and Joseph bring Jesus to Jerusalem and present Him to the Lord at the Temple.",
+        placeId: "temple-mount",
+        periodId: "life-of-jesus",
+        personIds: ["jesus", "mary", "joseph-husband-of-mary"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Luke",
+                chapter: 2,
+                startVerse: 22,
+                endVerse: 38,
+            },
+        ],
+    },
+    {
+        id: "magi-visit-jesus",
+        title: "The Magi visit Jesus",
+        description:
+            "Magi from the east come seeking the king of the Jews and eventually visit Jesus in Bethlehem.",
+        placeId: "bethlehem",
+        periodId: "life-of-jesus",
+        personIds: ["jesus", "mary", "herod-great"],
+        datePrecision: "approximate",
         references: [
             {
                 book: "Matthew",
@@ -2605,23 +2771,17 @@ export const events: Event[] = [
                 startVerse: 1,
                 endVerse: 12,
             },
-            {
-                book: "Luke",
-                chapter: 2,
-                startVerse: 1,
-                endVerse: 20,
-            },
         ],
     },
     {
-        id: "jesus-grows-up-nazareth",
+        id: "jesus-raised-nazareth",
         title: "Jesus grows up in Nazareth",
         description:
-            "After returning from Egypt, Jesus is raised in Nazareth in Galilee.",
+            "After the family's early travels, Jesus is raised in Nazareth in Galilee.",
         placeId: "nazareth",
         periodId: "life-of-jesus",
-        personIds: ["jesus"],
-        datePrecision: "unknown",
+        personIds: ["jesus", "mary", "joseph-husband-of-mary"],
+        datePrecision: "range",
         references: [
             {
                 book: "Matthew",
@@ -2634,6 +2794,60 @@ export const events: Event[] = [
                 chapter: 2,
                 startVerse: 39,
                 endVerse: 40,
+            },
+        ],
+    },
+    {
+        id: "flight-to-egypt",
+        title: "The family flees to Egypt",
+        description:
+            "After being warned in a dream, Joseph takes Jesus and Mary to Egypt to escape Herod's attempt to kill the child.",
+        placeId: "egypt",
+        periodId: "life-of-jesus",
+        personIds: ["jesus", "mary", "joseph-husband-of-mary", "herod-great"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 2,
+                startVerse: 13,
+                endVerse: 15,
+            },
+        ],
+    },
+    {
+        id: "return-from-egypt",
+        title: "The family returns from Egypt",
+        description:
+            "After Herod's death, Joseph is told to return with Jesus and Mary from Egypt to the land of Israel.",
+        placeId: "egypt",
+        periodId: "life-of-jesus",
+        personIds: ["jesus", "mary", "joseph-husband-of-mary"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 2,
+                startVerse: 19,
+                endVerse: 21,
+            },
+        ],
+    },
+    {
+        id: "family-settles-nazareth",
+        title: "The family settles in Nazareth",
+        description:
+            "Joseph takes the family to Galilee and settles in Nazareth, where Jesus grows up.",
+        placeId: "nazareth",
+        periodId: "life-of-jesus",
+        personIds: ["jesus", "mary", "joseph-husband-of-mary"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Matthew",
+                chapter: 2,
+                startVerse: 22,
+                endVerse: 23,
             },
         ],
     },
