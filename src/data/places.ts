@@ -601,4 +601,30 @@ export const places: Place[] = [
     identificationNote:
       "The biblical site was in Gilead, but its precise modern location is uncertain.",
   },
+  {
+    id: "moab",
+    name: "Moab",
+    modernName: "Central-western Jordan",
+    latitude: 31.35,
+    longitude: 35.75,
+    type: "region",
+    region: "Transjordan",
+    description:
+      "The territory east of the Dead Sea associated with the Moabites and the opening chapters of Ruth.",
+    identificationStatus: "well-established",
+  },
+  {
+    id: "ramah",
+    name: "Ramah",
+    modernName: "Central hill country region",
+    latitude: 31.85,
+    longitude: 35.18,
+    type: "city",
+    region: "Benjamin",
+    description:
+      "A city closely associated with Samuel, including his home and his leadership of Israel.",
+    identificationStatus: "probable",
+    identificationNote:
+      "Several ancient sites named Ramah appear in Scripture. The precise identification of Samuel's Ramah remains debated.",
+  },
 ];

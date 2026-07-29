@@ -103,4 +103,28 @@ export const people: Person[] = [
     description:
       "Judge of Israel from Gilead who led Israel against the Ammonites.",
   },
+  {
+    id: "ruth",
+    name: "Ruth",
+    description:
+      "A Moabite woman who remained faithful to Naomi, settled in Bethlehem, married Boaz, and became an ancestor of King David.",
+  },
+  {
+    id: "naomi",
+    name: "Naomi",
+    description:
+      "Israelite woman from Bethlehem whose family lived in Moab during a famine and who later returned with Ruth.",
+  },
+  {
+    id: "boaz",
+    name: "Boaz",
+    description:
+      "A respected man of Bethlehem who acted as kinsman-redeemer for Ruth and became an ancestor of David.",
+  },
+  {
+    id: "samuel",
+    name: "Samuel",
+    description:
+      "Prophet and judge of Israel who served the Lord from his youth and played a central role in Israel's transition to monarchy.",
+  },
 ];

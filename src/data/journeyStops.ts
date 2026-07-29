@@ -799,4 +799,36 @@ export const journeyStops: JourneyStop[] = [
             },
         ],
     },
+    {
+        id: "ruth-bethlehem-stop-1",
+        journeyId: "ruth-to-bethlehem",
+        placeId: "moab",
+        order: 1,
+        description:
+            "Naomi prepares to return from Moab after hearing that the Lord has provided food for His people.",
+        references: [
+            {
+                book: "Ruth",
+                chapter: 1,
+                startVerse: 6,
+                endVerse: 18,
+            },
+        ],
+    },
+    {
+        id: "ruth-bethlehem-stop-2",
+        journeyId: "ruth-to-bethlehem",
+        placeId: "bethlehem",
+        order: 2,
+        description:
+            "Naomi and Ruth arrive in Bethlehem at the beginning of the barley harvest.",
+        references: [
+            {
+                book: "Ruth",
+                chapter: 1,
+                startVerse: 19,
+                endVerse: 22,
+            },
+        ],
+    },
 ];

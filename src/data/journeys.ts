@@ -88,4 +88,12 @@ export const journeys: Journey[] = [
         periodId: "judges",
         personIds: ["samson"],
     },
+    {
+        id: "ruth-to-bethlehem",
+        name: "Ruth and Naomi Return to Bethlehem",
+        description:
+            "Naomi leaves Moab to return to Bethlehem, and Ruth chooses to go with her and join the people of Israel.",
+        periodId: "judges",
+        personIds: ["ruth", "naomi"],
+    },
 ];

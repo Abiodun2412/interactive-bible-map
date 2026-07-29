@@ -829,6 +829,92 @@ export const events: Event[] = [
         ],
     },
     {
+        id: "naomi-ruth-return-bethlehem",
+        title: "Naomi and Ruth return to Bethlehem",
+        description:
+            "Naomi returns from Moab to Bethlehem after hearing that the Lord has provided food for His people, and Ruth remains faithfully with her.",
+        placeId: "bethlehem",
+        periodId: "judges",
+        personIds: ["ruth", "naomi"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Ruth",
+                chapter: 1,
+                startVerse: 6,
+                endVerse: 22,
+            },
+        ],
+    },
+    {
+        id: "ruth-meets-boaz",
+        title: "Ruth meets Boaz",
+        description:
+            "Ruth goes to glean in the fields and comes to the field belonging to Boaz, who shows her favour and protection.",
+        placeId: "bethlehem",
+        periodId: "judges",
+        personIds: ["ruth", "boaz"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Ruth",
+                chapter: 2,
+            },
+        ],
+    },
+    {
+        id: "boaz-redeems-ruth",
+        title: "Boaz acts as kinsman-redeemer",
+        description:
+            "Boaz fulfils the role of kinsman-redeemer and takes Ruth as his wife.",
+        placeId: "bethlehem",
+        periodId: "judges",
+        personIds: ["ruth", "boaz", "naomi"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Ruth",
+                chapter: 4,
+                startVerse: 1,
+                endVerse: 17,
+            },
+        ],
+    },
+    {
+        id: "samuel-called",
+        title: "God calls Samuel",
+        description:
+            "While Samuel serves before the Lord at Shiloh, God calls him and begins revealing His word through him.",
+        placeId: "shiloh",
+        periodId: "judges",
+        personIds: ["samuel"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Samuel",
+                chapter: 3,
+            },
+        ],
+    },
+    {
+        id: "samuel-judges-israel",
+        title: "Samuel judges Israel",
+        description:
+            "Samuel leads Israel in repentance and serves as judge over the nation.",
+        placeId: "ramah",
+        periodId: "judges",
+        personIds: ["samuel"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "1 Samuel",
+                chapter: 7,
+                startVerse: 15,
+                endVerse: 17,
+            },
+        ],
+    },
+    {
         id: "david-captures-jerusalem",
         title: "David establishes Jerusalem as his capital",
         description:

@@ -24,6 +24,11 @@ import type { Place } from "@/types/place";
 
 import { validateData } from "@/utils/validateData";
 
+import {
+    defaultMarkerIcon,
+    selectedMarkerIcon,
+} from "@/utils/mapIcons";
+
 import "@/utils/leafletIcons";
 import "leaflet/dist/leaflet.css";
 
@@ -484,9 +489,13 @@ export default function BibleMap() {
                         place.latitude,
                         place.longitude,
                     ]}
+                    icon={
+                        selectedPlace?.id === place.id
+                            ? selectedMarkerIcon
+                            : defaultMarkerIcon
+                    }
                     eventHandlers={{
-                        click: () =>
-                            setSelectedPlace(place),
+                        click: () => setSelectedPlace(place),
                     }}
                 />
             ))}
