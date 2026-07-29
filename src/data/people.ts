@@ -235,4 +235,40 @@ export const people: Person[] = [
     description:
       "King of Assyria who invaded Judah and threatened Jerusalem during the reign of Hezekiah.",
   },
+  {
+    id: "josiah",
+    name: "Josiah",
+    description:
+      "King of Judah who led major reforms after the Book of the Law was found in the Temple.",
+  },
+  {
+    id: "huldah",
+    name: "Huldah",
+    description:
+      "Prophetess consulted during Josiah's reign after the Book of the Law was discovered.",
+  },
+  {
+    id: "jehoiakim",
+    name: "Jehoiakim",
+    description:
+      "King of Judah during the growing Babylonian threat before Jerusalem's final fall.",
+  },
+  {
+    id: "nebuchadnezzar",
+    name: "Nebuchadnezzar II",
+    description:
+      "King of Babylon whose campaigns brought Judah under Babylonian domination and eventually led to Jerusalem's destruction and exile.",
+  },
+  {
+    id: "jehoiachin",
+    name: "Jehoiachin",
+    description:
+      "King of Judah who surrendered to Nebuchadnezzar and was taken into exile in Babylon.",
+  },
+  {
+    id: "zedekiah",
+    name: "Zedekiah",
+    description:
+      "The final king of Judah before Jerusalem fell to Babylon and the kingdom came to an end.",
+  },
 ];

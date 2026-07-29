@@ -50,6 +50,14 @@ export const periods: Period[] = [
       "The period after Solomon when the kingdom divided into Israel in the north and Judah in the south, continuing until the fall of the northern kingdom to Assyria.",
   },
   {
+    id: "exile",
+    name: "Exile",
+    startYear: -586,
+    endYear: -539,
+    description:
+      "The period after the fall of Jerusalem when many Judeans lived in Babylonian exile, continuing until the rise of Persia and the decree permitting return.",
+  },
+  {
     id: "life-of-jesus",
     name: "Life of Jesus",
     startYear: -6,

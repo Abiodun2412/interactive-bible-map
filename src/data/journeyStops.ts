@@ -1291,4 +1291,94 @@ export const journeyStops: JourneyStop[] = [
             },
         ],
     },
+    {
+        id: "josiah-reform-stop-1",
+        journeyId: "josiah-reform",
+        placeId: "jerusalem",
+        order: 1,
+        description:
+            "Josiah leads Judah from Jerusalem during the major religious reforms of his reign.",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 22,
+            },
+            {
+                book: "2 Kings",
+                chapter: 23,
+                startVerse: 1,
+                endVerse: 25,
+            },
+        ],
+    },
+    {
+        id: "josiah-reform-stop-2",
+        journeyId: "josiah-reform",
+        placeId: "temple-mount",
+        order: 2,
+        description:
+            "The Book of the Law is found during work on the Temple, and Josiah renews the covenant before the Lord.",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 22,
+                startVerse: 3,
+                endVerse: 13,
+            },
+            {
+                book: "2 Kings",
+                chapter: 23,
+                startVerse: 1,
+                endVerse: 3,
+            },
+        ],
+    },
+    {
+        id: "josiah-reform-stop-3",
+        journeyId: "josiah-reform",
+        placeId: "megiddo",
+        order: 3,
+        description:
+            "Josiah goes to confront Pharaoh Neco at Megiddo and is mortally wounded.",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 23,
+                startVerse: 29,
+                endVerse: 30,
+            },
+        ],
+    },
+    {
+        id: "judah-exile-stop-1",
+        journeyId: "judah-babylonian-exile",
+        placeId: "jerusalem",
+        order: 1,
+        description:
+            "Jerusalem falls after the Babylonian siege, and people from Judah are taken away from their land.",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 25,
+                startVerse: 1,
+                endVerse: 21,
+            },
+        ],
+    },
+    {
+        id: "judah-exile-stop-2",
+        journeyId: "judah-babylonian-exile",
+        placeId: "babylon",
+        order: 2,
+        description:
+            "The exiles are carried into Babylonian territory following the conquest of Judah.",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 25,
+                startVerse: 11,
+                endVerse: 21,
+            },
+        ],
+    },
 ];

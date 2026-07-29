@@ -168,4 +168,20 @@ export const journeys: Journey[] = [
         periodId: "divided-kingdom",
         personIds: ["hezekiah", "sennacherib", "isaiah"],
     },
+    {
+        id: "josiah-reform",
+        name: "Josiah's Reform",
+        description:
+            "Key locations associated with Josiah's covenant renewal, reforms, and final campaign.",
+        periodId: "divided-kingdom",
+        personIds: ["josiah"],
+    },
+    {
+        id: "judah-babylonian-exile",
+        name: "Judah's Exile to Babylon",
+        description:
+            "The forced deportation of people from Judah to Babylon during and after the Babylonian conquest.",
+        periodId: "exile",
+        personIds: ["jehoiachin", "zedekiah", "nebuchadnezzar"],
+    },
 ];

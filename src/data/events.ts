@@ -1915,6 +1915,231 @@ export const events: Event[] = [
         ],
     },
     {
+        id: "book-of-law-found",
+        title: "The Book of the Law is found",
+        description:
+            "During repairs to the Temple, the Book of the Law is found and brought to King Josiah.",
+        placeId: "temple-mount",
+        periodId: "divided-kingdom",
+        personIds: ["josiah"],
+        approximateDate: "c. 622 BC",
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 22,
+                startVerse: 3,
+                endVerse: 13,
+            },
+        ],
+    },
+    {
+        id: "huldah-consulted",
+        title: "Huldah is consulted",
+        description:
+            "Josiah's officials consult the prophetess Huldah concerning the words of the Book of the Law.",
+        placeId: "jerusalem",
+        periodId: "divided-kingdom",
+        personIds: ["josiah", "huldah"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 22,
+                startVerse: 14,
+                endVerse: 20,
+            },
+        ],
+    },
+    {
+        id: "josiah-renews-covenant",
+        title: "Josiah renews the covenant",
+        description:
+            "Josiah gathers the people in Jerusalem, reads the Book of the Covenant, and renews the covenant before the Lord.",
+        placeId: "temple-mount",
+        periodId: "divided-kingdom",
+        personIds: ["josiah"],
+        approximateDate: "c. 622 BC",
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 23,
+                startVerse: 1,
+                endVerse: 3,
+            },
+        ],
+    },
+    {
+        id: "josiah-reforms-judah",
+        title: "Josiah removes idolatry from Judah",
+        description:
+            "Josiah carries out widespread reforms, removing idolatrous practices and restoring worship according to the covenant.",
+        placeId: "jerusalem",
+        periodId: "divided-kingdom",
+        personIds: ["josiah"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 23,
+                startVerse: 4,
+                endVerse: 25,
+            },
+        ],
+    },
+    {
+        id: "josiah-dies-megiddo",
+        title: "Josiah dies after the battle at Megiddo",
+        description:
+            "Josiah confronts Pharaoh Neco at Megiddo and is mortally wounded, bringing his reign to an end.",
+        placeId: "megiddo",
+        periodId: "divided-kingdom",
+        personIds: ["josiah"],
+        approximateDate: "609 BC",
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 23,
+                startVerse: 29,
+                endVerse: 30,
+            },
+        ],
+    },
+    {
+        id: "babylon-dominates-judah",
+        title: "Babylon begins dominating Judah",
+        description:
+            "During Jehoiakim's reign, Nebuchadnezzar of Babylon comes against Judah and the kingdom enters the final period before exile.",
+        placeId: "jerusalem",
+        periodId: "divided-kingdom",
+        personIds: ["jehoiakim", "nebuchadnezzar"],
+        approximateDate: "late 7th century BC",
+        datePrecision: "range",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 24,
+                startVerse: 1,
+                endVerse: 7,
+            },
+        ],
+    },
+    {
+        id: "jehoiachin-exiled",
+        title: "Jehoiachin is taken to Babylon",
+        description:
+            "Jerusalem submits to Nebuchadnezzar, and King Jehoiachin, members of the royal household, officials, craftsmen, and others are carried into exile in Babylon.",
+        placeId: "jerusalem",
+        periodId: "divided-kingdom",
+        personIds: ["jehoiachin", "nebuchadnezzar"],
+        approximateDate: "597 BC",
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 24,
+                startVerse: 8,
+                endVerse: 17,
+            },
+        ],
+    },
+    {
+        id: "zedekiah-rebels",
+        title: "Zedekiah rebels against Babylon",
+        description:
+            "Zedekiah rebels against the king of Babylon during the final years of the kingdom of Judah.",
+        placeId: "jerusalem",
+        periodId: "divided-kingdom",
+        personIds: ["zedekiah", "nebuchadnezzar"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 24,
+                startVerse: 18,
+                endVerse: 20,
+            },
+        ],
+    },
+    {
+        id: "babylon-besieges-jerusalem",
+        title: "Babylon besieges Jerusalem",
+        description:
+            "Nebuchadnezzar and the Babylonian army surround Jerusalem during the reign of Zedekiah, beginning the final siege of the city.",
+        placeId: "jerusalem",
+        periodId: "divided-kingdom",
+        personIds: ["zedekiah", "nebuchadnezzar"],
+        approximateDate: "589–587/586 BC",
+        datePrecision: "range",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 25,
+                startVerse: 1,
+                endVerse: 3,
+            },
+        ],
+    },
+    {
+        id: "jerusalem-falls-babylon",
+        title: "Jerusalem falls to Babylon",
+        description:
+            "The Babylonian siege succeeds, the city is broken through, and Zedekiah flees before being captured.",
+        placeId: "jerusalem",
+        periodId: "exile",
+        personIds: ["zedekiah", "nebuchadnezzar"],
+        approximateDate: "587/586 BC",
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 25,
+                startVerse: 4,
+                endVerse: 7,
+            },
+        ],
+    },
+    {
+        id: "temple-destroyed-babylon",
+        title: "The Temple is destroyed",
+        description:
+            "The Babylonians burn the house of the Lord, the royal palace, and the buildings of Jerusalem, and tear down the city's walls.",
+        placeId: "temple-mount",
+        periodId: "exile",
+        personIds: ["nebuchadnezzar"],
+        approximateDate: "587/586 BC",
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 25,
+                startVerse: 8,
+                endVerse: 10,
+            },
+        ],
+    },
+    {
+        id: "judah-exiled-babylon",
+        title: "Judah is carried into exile",
+        description:
+            "After Jerusalem's fall, many of the remaining people of Judah are carried away to Babylon.",
+        placeId: "babylon",
+        periodId: "exile",
+        personIds: ["nebuchadnezzar"],
+        approximateDate: "587/586 BC",
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 25,
+                startVerse: 11,
+                endVerse: 21,
+            },
+        ],
+    },
+    {
         id: "birth-of-jesus",
         title: "Birth of Jesus",
         description:

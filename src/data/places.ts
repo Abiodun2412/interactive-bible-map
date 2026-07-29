@@ -915,4 +915,28 @@ export const places: Place[] = [
       "A major Assyrian city that later became the imperial capital and appears prominently in the prophetic books.",
     identificationStatus: "well-established",
   },
+  {
+    id: "megiddo",
+    name: "Megiddo",
+    modernName: "Tel Megiddo",
+    latitude: 32.585,
+    longitude: 35.184,
+    type: "city",
+    region: "Jezreel Valley",
+    description:
+      "A strategic ancient city where Josiah was mortally wounded during his confrontation with Pharaoh Neco.",
+    identificationStatus: "well-established",
+  },
+  {
+    id: "babylon",
+    name: "Babylon",
+    modernName: "Hillah region, Iraq",
+    latitude: 32.543,
+    longitude: 44.421,
+    type: "city",
+    region: "Babylonia",
+    description:
+      "The major Mesopotamian city that became the centre of the Babylonian Empire and the destination of many Judean exiles.",
+    identificationStatus: "well-established",
+  },
 ];
