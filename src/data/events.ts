@@ -4652,4 +4652,380 @@ export const events: Event[] = [
             },
         ],
     },
+    {
+        id: "terah-leaves-ur",
+        title: "Terah's family leaves Ur",
+        description:
+            "Terah leaves Ur of the Chaldeans with Abram, Sarai, and Lot, intending to travel toward Canaan before settling at Haran.",
+        placeId: "ur",
+        periodId: "patriarchs",
+        personIds: ["terah", "abraham", "sarah", "lot"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Genesis",
+                chapter: 11,
+                startVerse: 27,
+                endVerse: 32,
+            },
+        ],
+    },
+    {
+        id: "terah-settles-haran",
+        title: "Terah's family settles in Haran",
+        description:
+            "Terah's household settles in Haran, where Terah remains until his death before Abraham continues toward Canaan.",
+        placeId: "haran",
+        periodId: "patriarchs",
+        personIds: ["terah", "abraham", "sarah", "lot"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Genesis",
+                chapter: 11,
+                startVerse: 31,
+                endVerse: 32,
+            },
+        ],
+    },
+    {
+        id: "births-of-jacobs-children",
+        title: "Jacob's family grows",
+        description:
+            "Jacob's household grows through the births of the sons who later become associated with the tribes of Israel, along with his daughter Dinah.",
+        placeId: "haran",
+        periodId: "patriarchs",
+        personIds: [
+            "jacob",
+            "leah",
+            "rachel",
+            "reuben",
+            "simeon",
+            "levi",
+            "judah",
+            "dan",
+            "naphtali",
+            "gad",
+            "asher",
+            "issachar",
+            "zebulun",
+            "joseph",
+            "dinah",
+        ],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Genesis",
+                chapter: 29,
+                startVerse: 31,
+                endVerse: 35,
+            },
+            {
+                book: "Genesis",
+                chapter: 30,
+                startVerse: 1,
+                endVerse: 24,
+            },
+        ],
+    },
+    {
+        id: "birth-of-benjamin",
+        title: "Benjamin is born",
+        description:
+            "Rachel gives birth to Benjamin during Jacob's return to Canaan and dies following the birth.",
+        periodId: "patriarchs",
+        personIds: ["jacob", "rachel", "benjamin"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Genesis",
+                chapter: 35,
+                startVerse: 16,
+                endVerse: 20,
+            },
+        ],
+    },
+    {
+        id: "abraham-lot-separate",
+        title: "Abraham and Lot separate",
+        description:
+            "As their households grow, Abraham and Lot separate to avoid conflict between their herdsmen, with Lot choosing the Jordan plain.",
+        periodId: "patriarchs",
+        personIds: ["abraham", "lot"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Genesis",
+                chapter: 13,
+                startVerse: 1,
+                endVerse: 18,
+            },
+        ],
+    },
+    {
+        id: "hagar-ishmael-wilderness",
+        title: "Hagar and Ishmael in the wilderness",
+        description:
+            "Hagar and Ishmael leave Abraham's household and are preserved in the wilderness, where God promises that Ishmael will become a great nation.",
+        periodId: "patriarchs",
+        personIds: ["hagar", "ishmael", "abraham", "sarah"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Genesis",
+                chapter: 21,
+                startVerse: 8,
+                endVerse: 21,
+            },
+        ],
+    },
+    {
+        id: "binding-of-isaac",
+        title: "The Binding of Isaac",
+        description:
+            "Abraham is tested by being commanded to offer Isaac, but is stopped before sacrificing his son.",
+        periodId: "patriarchs",
+        personIds: ["abraham", "isaac"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Genesis",
+                chapter: 22,
+                startVerse: 1,
+                endVerse: 19,
+            },
+        ],
+    },
+    {
+        id: "jacob-esau-reconcile",
+        title: "Jacob and Esau reconcile",
+        description:
+            "After years of separation, Jacob meets Esau again and the brothers reconcile peacefully.",
+        periodId: "patriarchs",
+        personIds: ["jacob", "esau"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Genesis",
+                chapter: 33,
+                startVerse: 1,
+                endVerse: 17,
+            },
+        ],
+    },
+    {
+        id: "rachel-dies",
+        title: "Rachel dies after Benjamin's birth",
+        description:
+            "Rachel dies after giving birth to Benjamin during Jacob's return through Canaan.",
+        periodId: "patriarchs",
+        personIds: ["rachel", "jacob", "benjamin"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Genesis",
+                chapter: 35,
+                startVerse: 16,
+                endVerse: 20,
+            },
+        ],
+    },
+    {
+        id: "destruction-of-sodom",
+        title: "Destruction of Sodom",
+        description:
+            "Lot is led out of Sodom before the cities of the plain are destroyed in the Genesis narrative.",
+        placeId: "sodom",
+        periodId: "patriarchs",
+        personIds: ["lot", "abraham"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Genesis",
+                chapter: 19,
+                startVerse: 1,
+                endVerse: 29,
+            },
+        ],
+    },
+    {
+        id: "joseph-sold-into-egypt",
+        title: "Joseph is sold into Egypt",
+        description:
+            "Joseph's brothers sell him to travelling merchants, and he is taken into Egypt.",
+        periodId: "patriarchs",
+        personIds: [
+            "joseph",
+            "reuben",
+            "simeon",
+            "levi",
+            "judah",
+            "dan",
+            "naphtali",
+            "gad",
+            "asher",
+            "issachar",
+            "zebulun",
+        ],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Genesis",
+                chapter: 37,
+                startVerse: 12,
+                endVerse: 36,
+            },
+        ],
+    },
+    {
+        id: "joseph-rises-in-egypt",
+        title: "Joseph rises to authority in Egypt",
+        description:
+            "After interpreting Pharaoh's dreams, Joseph is appointed to oversee Egypt's preparations for the coming famine.",
+        periodId: "patriarchs",
+        personIds: ["joseph"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Genesis",
+                chapter: 41,
+                startVerse: 1,
+                endVerse: 57,
+            },
+        ],
+    },
+    {
+        id: "joseph-brothers-first-egypt-visit",
+        title: "Joseph's brothers travel to Egypt for grain",
+        description:
+            "During the famine, Jacob sends Joseph's brothers to Egypt to buy grain, where they encounter Joseph without recognising him.",
+        periodId: "patriarchs",
+        personIds: [
+            "joseph",
+            "jacob",
+            "reuben",
+            "simeon",
+            "levi",
+            "judah",
+            "dan",
+            "naphtali",
+            "gad",
+            "asher",
+            "issachar",
+            "zebulun",
+        ],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Genesis",
+                chapter: 42,
+            },
+        ],
+    },
+    {
+        id: "joseph-reveals-himself",
+        title: "Joseph reveals himself to his brothers",
+        description:
+            "Joseph reveals his identity to his brothers and explains that God has used his presence in Egypt to preserve life during the famine.",
+        periodId: "patriarchs",
+        personIds: [
+            "joseph",
+            "benjamin",
+            "reuben",
+            "simeon",
+            "levi",
+            "judah",
+            "dan",
+            "naphtali",
+            "gad",
+            "asher",
+            "issachar",
+            "zebulun",
+        ],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Genesis",
+                chapter: 45,
+                startVerse: 1,
+                endVerse: 28,
+            },
+        ],
+    },
+    {
+        id: "jacob-household-settles-goshen",
+        title: "Jacob's household settles in Egypt",
+        description:
+            "Jacob and his household move to Egypt during the famine and settle in the region of Goshen.",
+        placeId: "goshen",
+        periodId: "patriarchs",
+        personIds: [
+            "jacob",
+            "joseph",
+            "benjamin",
+            "reuben",
+            "simeon",
+            "levi",
+            "judah",
+            "dan",
+            "naphtali",
+            "gad",
+            "asher",
+            "issachar",
+            "zebulun",
+        ],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Genesis",
+                chapter: 46,
+            },
+            {
+                book: "Genesis",
+                chapter: 47,
+                startVerse: 1,
+                endVerse: 12,
+            },
+        ],
+    },
+    {
+        id: "jacob-dies-in-egypt",
+        title: "Jacob dies in Egypt",
+        description:
+            "After blessing his sons, Jacob dies in Egypt and asks to be buried with his ancestors in Canaan.",
+        periodId: "patriarchs",
+        personIds: ["jacob", "joseph"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Genesis",
+                chapter: 49,
+                startVerse: 28,
+                endVerse: 33,
+            },
+            {
+                book: "Genesis",
+                chapter: 50,
+                startVerse: 1,
+                endVerse: 14,
+            },
+        ],
+    },
+    {
+        id: "joseph-dies",
+        title: "Joseph dies in Egypt",
+        description:
+            "Joseph dies in Egypt after making the Israelites promise to carry his bones from Egypt when God brings them back to the promised land.",
+        periodId: "patriarchs",
+        personIds: ["joseph"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Genesis",
+                chapter: 50,
+                startVerse: 22,
+                endVerse: 26,
+            },
+        ],
+    },
 ];

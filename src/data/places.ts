@@ -1609,4 +1609,18 @@ export const places: Place[] = [
     identificationNote:
       "Babel is generally associated with Babylon, though the Genesis narrative does not identify a surviving structure.",
   },
+  {
+    id: "sodom",
+    name: "Sodom",
+    modernName: "Dead Sea region",
+    latitude: 31.1,
+    longitude: 35.4,
+    type: "city",
+    region: "Jordan Valley",
+    description:
+      "Ancient city associated with Lot and the destruction described in Genesis 19.",
+    identificationStatus: "disputed",
+    identificationNote:
+      "Several sites around the Dead Sea have been proposed, but the identification of biblical Sodom remains disputed.",
+  },
 ];

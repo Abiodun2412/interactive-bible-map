@@ -613,4 +613,142 @@ export const people: Person[] = [
     description:
       "Son of Noah and ancestor of several peoples listed in the Table of Nations.",
   },
+  {
+    id: "terah",
+    name: "Terah",
+    description:
+      "Father of Abram, Nahor, and Haran who left Ur with members of his family and settled at Haran.",
+  },
+  {
+    id: "sarah",
+    name: "Sarah",
+    description:
+      "Wife of Abraham and mother of Isaac, through whom God promised Abraham descendants.",
+  },
+  {
+    id: "lot",
+    name: "Lot",
+    description:
+      "Nephew of Abraham who travelled with him from Mesopotamia and later settled near Sodom.",
+  },
+  {
+    id: "hagar",
+    name: "Hagar",
+    description:
+      "Egyptian servant of Sarah and mother of Abraham's son Ishmael.",
+  },
+  {
+    id: "ishmael",
+    name: "Ishmael",
+    description:
+      "Son of Abraham and Hagar who became the ancestor of a people according to Genesis.",
+  },
+  {
+    id: "rebekah",
+    name: "Rebekah",
+    description:
+      "Wife of Isaac and mother of the twins Esau and Jacob.",
+  },
+  {
+    id: "esau",
+    name: "Esau",
+    description:
+      "Older twin son of Isaac and Rebekah and brother of Jacob.",
+  },
+  {
+    id: "rachel",
+    name: "Rachel",
+    description:
+      "Wife of Jacob and mother of Joseph and Benjamin.",
+  },
+  {
+    id: "leah",
+    name: "Leah",
+    description:
+      "Wife of Jacob and mother of several of the sons who became ancestors of the tribes of Israel.",
+  },
+  {
+    id: "reuben",
+    name: "Reuben",
+    description:
+      "Firstborn son of Jacob and Leah and ancestor of the tribe of Reuben.",
+  },
+  {
+    id: "simeon",
+    name: "Simeon",
+    description:
+      "Son of Jacob and Leah and ancestor of the tribe of Simeon.",
+  },
+  {
+    id: "levi",
+    name: "Levi",
+    description:
+      "Son of Jacob and Leah and ancestor of the Levites.",
+  },
+  {
+    id: "judah",
+    name: "Judah",
+    description:
+      "Son of Jacob and Leah and ancestor of the tribe of Judah.",
+  },
+  {
+    id: "dan",
+    name: "Dan",
+    description:
+      "Son of Jacob through Bilhah and ancestor of the tribe of Dan.",
+  },
+  {
+    id: "naphtali",
+    name: "Naphtali",
+    description:
+      "Son of Jacob through Bilhah and ancestor of the tribe of Naphtali.",
+  },
+  {
+    id: "gad",
+    name: "Gad",
+    description:
+      "Son of Jacob through Zilpah and ancestor of the tribe of Gad.",
+  },
+  {
+    id: "asher",
+    name: "Asher",
+    description:
+      "Son of Jacob through Zilpah and ancestor of the tribe of Asher.",
+  },
+  {
+    id: "issachar",
+    name: "Issachar",
+    description:
+      "Son of Jacob and Leah and ancestor of the tribe of Issachar.",
+  },
+  {
+    id: "zebulun",
+    name: "Zebulun",
+    description:
+      "Son of Jacob and Leah and ancestor of the tribe of Zebulun.",
+  },
+  {
+    id: "benjamin",
+    name: "Benjamin",
+    description:
+      "Youngest son of Jacob and Rachel and ancestor of the tribe of Benjamin.",
+  },
+  {
+    id: "dinah",
+    name: "Dinah",
+    description:
+      "Daughter of Jacob and Leah whose story is recorded in Genesis 34.",
+  },
+  {
+    id: "bilhah",
+    name: "Bilhah",
+    description:
+      "Servant of Rachel who bore Dan and Naphtali to Jacob.",
+  },
+  {
+    id: "zilpah",
+    name: "Zilpah",
+    description:
+      "Servant of Leah who bore Gad and Asher to Jacob.",
+  },
 ];

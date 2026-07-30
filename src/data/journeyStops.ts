@@ -2817,4 +2817,42 @@ export const journeyStops: JourneyStop[] = [
             },
         ],
     },
+    {
+        id: "jacob-egypt-stop-1",
+        journeyId: "jacob-family-to-egypt",
+        placeId: "beersheba",
+        order: 1,
+        description:
+            "Jacob stops at Beersheba, where God reassures him about going down to Egypt.",
+        references: [
+            {
+                book: "Genesis",
+                chapter: 46,
+                startVerse: 1,
+                endVerse: 7,
+            },
+        ],
+    },
+    {
+        id: "jacob-egypt-stop-2",
+        journeyId: "jacob-family-to-egypt",
+        placeId: "goshen",
+        order: 2,
+        description:
+            "Jacob's household arrives in Egypt and settles in Goshen.",
+        references: [
+            {
+                book: "Genesis",
+                chapter: 46,
+                startVerse: 28,
+                endVerse: 34,
+            },
+            {
+                book: "Genesis",
+                chapter: 47,
+                startVerse: 1,
+                endVerse: 12,
+            },
+        ],
+    },
 ];

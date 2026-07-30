@@ -18,6 +18,7 @@ import ActiveContext from "@/components/ActiveContext";
 import MapLegend from "@/components/MapLegend";
 import EventPanel from "@/components/EventPanel";
 import PersonPanel from "@/components/PersonPanel";
+import JourneyPanel from "@/components/JourneyPanel";
 import ScripturePanel from "@/components/ScripturePanel";
 import { people } from "@/data/people";
 import { periods } from "@/data/periods";
@@ -243,6 +244,9 @@ export default function BibleMap() {
     const [selectedPersonPanelId, setSelectedPersonPanelId] =
         useState<string | null>(null);
 
+    const [selectedJourneyPanelId, setSelectedJourneyPanelId] =
+        useState<string | null>(null);
+
     const [selectedReference, setSelectedReference] =
         useState<BibleReference | null>(null);
 
@@ -253,7 +257,8 @@ export default function BibleMap() {
         | { type: "location"; placeId: string }
         | { type: "event"; eventId: string }
         | { type: "person"; personId: string }
-        | { type: "scripture"; reference: BibleReference };
+        | { type: "scripture"; reference: BibleReference }
+        | { type: "journey"; journeyId: string };
 
     const [panelHistory, setPanelHistory] = useState<PanelHistoryEntry[]>([]);
 
@@ -280,6 +285,13 @@ export default function BibleMap() {
             )
             .sort((a, b) => a.order - b.order)
         : [];
+
+    const selectedJourneyPanel =
+        selectedJourneyPanelId
+            ? journeys.find(
+                (journey) => journey.id === selectedJourneyPanelId
+            ) ?? null
+            : null;
 
     const selectedEvent =
         selectedEventId
@@ -690,6 +702,67 @@ export default function BibleMap() {
         setSelectedEventId(eventId);
     };
 
+    const handleMapPlaceSelect = (place: Place) => {
+        if (selectedJourneyPanelId) {
+            pushPanelHistory({
+                type: "journey",
+                journeyId: selectedJourneyPanelId,
+            });
+        }
+
+        setSelectedJourneyPanelId(null);
+        setSelectedEventId(null);
+        setSelectedPersonPanelId(null);
+        setSelectedReference(null);
+
+        setSelectedPlace(place);
+    };
+
+    const handleJourneyPanelPlaceSelect = (placeId: string) => {
+        const place = places.find((place) => place.id === placeId);
+
+        if (!place) {
+            return;
+        }
+
+        if (selectedJourneyPanelId) {
+            pushPanelHistory({
+                type: "journey",
+                journeyId: selectedJourneyPanelId,
+            });
+        }
+
+        setSelectedJourneyPanelId(null);
+        setSelectedPlace(place);
+    };
+
+    const handleJourneyPanelPersonSelect = (personId: string) => {
+        if (selectedJourneyPanelId) {
+            pushPanelHistory({
+                type: "journey",
+                journeyId: selectedJourneyPanelId,
+            });
+        }
+
+        setSelectedJourneyPanelId(null);
+        setSelectedPersonId(personId);
+        setSelectedPersonPanelId(personId);
+    };
+
+    const handleJourneyPanelReferenceSelect = (
+        reference: BibleReference
+    ) => {
+        if (selectedJourneyPanelId) {
+            pushPanelHistory({
+                type: "journey",
+                journeyId: selectedJourneyPanelId,
+            });
+        }
+
+        setSelectedJourneyPanelId(null);
+        setSelectedReference(reference);
+    };
+
     const handlePanelBack = () => {
         if (panelHistory.length === 0) {
             return;
@@ -702,6 +775,7 @@ export default function BibleMap() {
         setSelectedPlace(null);
         setSelectedEventId(null);
         setSelectedPersonPanelId(null);
+        setSelectedJourneyPanelId(null);
         setSelectedReference(null);
 
         if (previousPanel.type === "scripture") {
@@ -727,6 +801,11 @@ export default function BibleMap() {
 
         if (previousPanel.type === "person") {
             setSelectedPersonPanelId(previousPanel.personId);
+        }
+
+        if (previousPanel.type === "journey") {
+            setSelectedJourneyPanelId(previousPanel.journeyId);
+            return;
         }
     };
 
@@ -780,8 +859,14 @@ export default function BibleMap() {
                 onPeriodChange={handlePeriodChange}
                 onJourneyChange={(journeyId) => {
                     setSelectedJourneyId(journeyId);
+                    setSelectedJourneyPanelId(journeyId ?? null);
+
                     setSelectedPersonId(null);
                     setSelectedPlace(null);
+                    setSelectedEventId(null);
+                    setSelectedPersonPanelId(null);
+                    setSelectedReference(null);
+                    setPanelHistory([]);
                 }}
                 onSelectResult={handleSearchResultSelect}
             />
@@ -865,7 +950,7 @@ export default function BibleMap() {
                         ]}
                         icon={icon}
                         eventHandlers={{
-                            click: () => setSelectedPlace(place),
+                            click: () => handleMapPlaceSelect(place),
                         }}
                     />
                 );
@@ -926,6 +1011,24 @@ export default function BibleMap() {
                     onSelectJourney={handlePersonPanelJourneySelect}
                     onSelectPlace={handlePersonPanelPlaceSelect}
                     onSelectPerson={handlePersonPanelPersonSelect}
+                />
+            )}
+
+            {selectedJourneyPanel && (
+                <JourneyPanel
+                    journey={selectedJourneyPanel}
+                    onClose={() => {
+                        setSelectedJourneyPanelId(null);
+                        setPanelHistory([]);
+                    }}
+                    onBack={
+                        panelHistory.length > 0
+                            ? handlePanelBack
+                            : undefined
+                    }
+                    onSelectPlace={handleJourneyPanelPlaceSelect}
+                    onSelectPerson={handleJourneyPanelPersonSelect}
+                    onSelectReference={handleJourneyPanelReferenceSelect}
                 />
             )}
 

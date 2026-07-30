@@ -50,4 +50,32 @@ export const dataCoverage: CoverageItem[] = [
         areas: ["places", "events"],
         status: "complete",
     },
+    {
+        id: "patriarchs-abraham",
+        name: "Abraham, Sarah, Lot, Hagar & Ishmael",
+        periodId: "patriarchs",
+        areas: ["people", "places", "events", "relationships"],
+        status: "complete",
+    },
+    {
+        id: "patriarchs-isaac",
+        name: "Isaac, Rebekah, Jacob & Esau",
+        periodId: "patriarchs",
+        areas: ["people", "events", "relationships"],
+        status: "complete",
+    },
+    {
+        id: "patriarchs-jacob-family",
+        name: "Jacob's Household & Children",
+        periodId: "patriarchs",
+        areas: ["people", "events", "relationships"],
+        status: "complete",
+    },
+    {
+        id: "patriarchs-joseph",
+        name: "Joseph Narrative & Migration into Egypt",
+        periodId: "patriarchs",
+        areas: ["people", "places", "events", "journeys", "relationships"],
+        status: "complete",
+    },
 ];

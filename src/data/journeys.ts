@@ -352,4 +352,26 @@ export const journeys: Journey[] = [
         periodId: "early-church",
         personIds: ["paul"],
     },
+    {
+        id: "jacob-family-to-egypt",
+        name: "Jacob's Household Moves to Egypt",
+        description:
+            "During the famine, Jacob travels with his household from Canaan into Egypt after learning that Joseph is alive, beginning Israel's long residence in Egypt.",
+        periodId: "patriarchs",
+        personIds: [
+            "jacob",
+            "joseph",
+            "benjamin",
+            "reuben",
+            "simeon",
+            "levi",
+            "judah",
+            "dan",
+            "naphtali",
+            "gad",
+            "asher",
+            "issachar",
+            "zebulun",
+        ],
+    },
 ];
