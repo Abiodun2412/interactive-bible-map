@@ -751,4 +751,28 @@ export const people: Person[] = [
     description:
       "Servant of Leah who bore Gad and Asher to Jacob.",
   },
+  {
+    id: "miriam",
+    name: "Miriam",
+    description:
+      "Sister of Moses and Aaron, remembered as a prophetess who helped lead Israel after the Exodus.",
+  },
+  {
+    id: "jethro",
+    name: "Jethro",
+    description:
+      "Priest of Midian, father-in-law of Moses, who advised him during Israel's wilderness journey.",
+  },
+  {
+    id: "zipporah",
+    name: "Zipporah",
+    description:
+      "Wife of Moses and daughter of Jethro of Midian.",
+  },
+  {
+    id: "pharaoh-exodus",
+    name: "Pharaoh of the Exodus",
+    description:
+      "The Egyptian ruler who resisted Moses' demand to release the Israelites from slavery.",
+  },
 ];

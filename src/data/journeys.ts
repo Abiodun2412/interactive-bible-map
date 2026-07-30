@@ -47,7 +47,7 @@ export const journeys: Journey[] = [
         description:
             "After leaving Mount Sinai, Israel journeys through the wilderness, spends significant time around Kadesh-barnea, and eventually reaches the plains of Moab opposite the Promised Land.",
         periodId: "exodus-wilderness",
-        personIds: ["moses", "aaron"],
+        personIds: ["moses", "aaron", "joshua", "caleb"],
     },
     {
         id: "entry-into-canaan",

@@ -135,100 +135,6 @@ export const events: Event[] = [
         ],
     },
     {
-        id: "burning-bush",
-        title: "God calls Moses at the burning bush",
-        description:
-            "God appears to Moses from the burning bush and calls him to return to Egypt and lead the Israelites out of bondage.",
-        placeId: "mount-sinai",
-        periodId: "exodus-wilderness",
-        personIds: ["moses"],
-        datePrecision: "approximate",
-        references: [
-            {
-                book: "Exodus",
-                chapter: 3,
-            },
-            {
-                book: "Exodus",
-                chapter: 4,
-                startVerse: 1,
-                endVerse: 17,
-            },
-        ],
-    },
-    {
-        id: "passover",
-        title: "The first Passover",
-        description:
-            "God instructs Israel to observe the Passover as He prepares to bring them out of Egypt.",
-        placeId: "goshen",
-        periodId: "exodus-wilderness",
-        personIds: ["moses", "aaron"],
-        datePrecision: "approximate",
-        references: [
-            {
-                book: "Exodus",
-                chapter: 12,
-                startVerse: 1,
-                endVerse: 32,
-            },
-        ],
-    },
-    {
-        id: "exodus-from-egypt",
-        title: "Israel leaves Egypt",
-        description:
-            "After generations in Egypt, the Israelites depart under the leadership of Moses as God delivers them from slavery.",
-        placeId: "egypt",
-        periodId: "exodus-wilderness",
-        personIds: ["moses", "aaron"],
-        datePrecision: "approximate",
-        references: [
-            {
-                book: "Exodus",
-                chapter: 12,
-                startVerse: 31,
-                endVerse: 42,
-            },
-        ],
-    },
-    {
-        id: "crossing-of-the-sea",
-        title: "God brings Israel through the sea",
-        description:
-            "God makes a way through the sea for Israel and delivers them from Pharaoh's pursuing army.",
-        placeId: "red-sea-crossing",
-        periodId: "exodus-wilderness",
-        personIds: ["moses"],
-        datePrecision: "approximate",
-        references: [
-            {
-                book: "Exodus",
-                chapter: 14,
-            },
-        ],
-    },
-    {
-        id: "sinai-covenant",
-        title: "God meets with Israel at Mount Sinai",
-        description:
-            "Israel comes to Mount Sinai, where God establishes His covenant with the nation and gives His commands through Moses.",
-        placeId: "mount-sinai",
-        periodId: "exodus-wilderness",
-        personIds: ["moses", "aaron"],
-        datePrecision: "approximate",
-        references: [
-            {
-                book: "Exodus",
-                chapter: 19,
-            },
-            {
-                book: "Exodus",
-                chapter: 20,
-            },
-        ],
-    },
-    {
         id: "twelve-spies",
         title: "The twelve spies explore Canaan",
         description:
@@ -5025,6 +4931,345 @@ export const events: Event[] = [
                 chapter: 50,
                 startVerse: 22,
                 endVerse: 26,
+            },
+        ],
+    },
+    {
+        id: "birth-of-moses",
+        title: "Birth of Moses",
+        description:
+            "Moses is born during a period when Pharaoh has ordered Hebrew male infants to be killed, and he is later taken into Pharaoh's household.",
+        periodId: "exodus-wilderness",
+        personIds: ["moses", "pharaoh-exodus"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Exodus",
+                chapter: 2,
+                startVerse: 1,
+                endVerse: 10,
+            },
+        ],
+    },
+    {
+        id: "moses-flees-to-midian",
+        title: "Moses flees to Midian",
+        description:
+            "After killing an Egyptian, Moses leaves Egypt and settles in Midian, where he joins Jethro's household and marries Zipporah.",
+        periodId: "exodus-wilderness",
+        personIds: ["moses", "jethro", "zipporah"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Exodus",
+                chapter: 2,
+                startVerse: 11,
+                endVerse: 22,
+            },
+        ],
+    },
+    {
+        id: "burning-bush",
+        title: "The Burning Bush",
+        description:
+            "God calls Moses from the burning bush and commissions him to return to Egypt and lead the Israelites out of slavery.",
+        periodId: "exodus-wilderness",
+        personIds: ["moses"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Exodus",
+                chapter: 3,
+            },
+            {
+                book: "Exodus",
+                chapter: 4,
+                startVerse: 1,
+                endVerse: 17,
+            },
+        ],
+    },
+    {
+        id: "moses-aaron-before-pharaoh",
+        title: "Moses and Aaron confront Pharaoh",
+        description:
+            "Moses and Aaron appear before Pharaoh and demand that Israel be allowed to leave Egypt to worship God.",
+        periodId: "exodus-wilderness",
+        personIds: ["moses", "aaron", "pharaoh-exodus"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Exodus",
+                chapter: 5,
+                startVerse: 1,
+                endVerse: 23,
+            },
+            {
+                book: "Exodus",
+                chapter: 7,
+                startVerse: 1,
+                endVerse: 13,
+            },
+        ],
+    },
+    {
+        id: "ten-plagues",
+        title: "The Ten Plagues",
+        description:
+            "A series of plagues strikes Egypt as Pharaoh repeatedly refuses to release the Israelites.",
+        periodId: "exodus-wilderness",
+        personIds: ["moses", "aaron", "pharaoh-exodus"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Exodus",
+                chapter: 7,
+                startVerse: 14,
+                endVerse: 25,
+            },
+            {
+                book: "Exodus",
+                chapter: 8,
+            },
+            {
+                book: "Exodus",
+                chapter: 9,
+            },
+            {
+                book: "Exodus",
+                chapter: 10,
+            },
+            {
+                book: "Exodus",
+                chapter: 11,
+            },
+        ],
+    },
+    {
+        id: "first-passover",
+        title: "The First Passover",
+        description:
+            "Israelite households prepare the Passover meal as the final plague falls on Egypt, marking the beginning of their departure.",
+        periodId: "exodus-wilderness",
+        personIds: ["moses", "aaron", "pharaoh-exodus"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Exodus",
+                chapter: 12,
+                startVerse: 1,
+                endVerse: 36,
+            },
+        ],
+    },
+    {
+        id: "israel-leaves-egypt",
+        title: "Israel leaves Egypt",
+        description:
+            "After the final plague, Pharaoh allows the Israelites to depart, beginning the Exodus from Egypt.",
+        periodId: "exodus-wilderness",
+        personIds: ["moses", "aaron", "miriam", "pharaoh-exodus"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Exodus",
+                chapter: 12,
+                startVerse: 37,
+                endVerse: 51,
+            },
+            {
+                book: "Exodus",
+                chapter: 13,
+                startVerse: 17,
+                endVerse: 22,
+            },
+        ],
+    },
+    {
+        id: "crossing-red-sea",
+        title: "Crossing of the Sea",
+        description:
+            "The Israelites escape Pharaoh's pursuing forces as the sea is divided, allowing them to cross before the waters return.",
+        periodId: "exodus-wilderness",
+        personIds: ["moses", "aaron", "miriam", "pharaoh-exodus"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Exodus",
+                chapter: 14,
+            },
+        ],
+    },
+    {
+        id: "song-after-sea",
+        title: "Song of Moses and Miriam",
+        description:
+            "Moses and the Israelites celebrate their deliverance, and Miriam leads the women in praise after the crossing.",
+        periodId: "exodus-wilderness",
+        personIds: ["moses", "miriam", "aaron"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Exodus",
+                chapter: 15,
+                startVerse: 1,
+                endVerse: 21,
+            },
+        ],
+    },
+    {
+        id: "arrival-at-sinai",
+        title: "Israel arrives at Mount Sinai",
+        description:
+            "After travelling through the wilderness, Israel camps before Mount Sinai.",
+        placeId: "mount-sinai",
+        periodId: "exodus-wilderness",
+        personIds: ["moses", "aaron", "miriam"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Exodus",
+                chapter: 19,
+                startVerse: 1,
+                endVerse: 2,
+            },
+        ],
+    },
+    {
+        id: "ten-commandments",
+        title: "The Ten Commandments",
+        description:
+            "At Sinai, Israel receives the covenant commandments that form a central part of the biblical law.",
+        placeId: "mount-sinai",
+        periodId: "exodus-wilderness",
+        personIds: ["moses", "aaron"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Exodus",
+                chapter: 19,
+                startVerse: 3,
+                endVerse: 25,
+            },
+            {
+                book: "Exodus",
+                chapter: 20,
+                startVerse: 1,
+                endVerse: 21,
+            },
+        ],
+    },
+    {
+        id: "golden-calf",
+        title: "The Golden Calf",
+        description:
+            "While Moses is on the mountain, the Israelites make and worship a golden calf, leading to a major covenant crisis.",
+        placeId: "mount-sinai",
+        periodId: "exodus-wilderness",
+        personIds: ["moses", "aaron"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Exodus",
+                chapter: 32,
+            },
+        ],
+    },
+    {
+        id: "tabernacle-established",
+        title: "The Tabernacle is established",
+        description:
+            "Israel completes and sets up the tabernacle as the central sanctuary of the wilderness community.",
+        placeId: "mount-sinai",
+        periodId: "exodus-wilderness",
+        personIds: ["moses", "aaron"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Exodus",
+                chapter: 40,
+            },
+        ],
+    },
+    {
+        id: "manna-in-wilderness",
+        title: "God provides manna in the wilderness",
+        description:
+            "When Israel lacks food in the wilderness, God provides manna for the people and teaches them to depend on His provision.",
+        periodId: "exodus-wilderness",
+        personIds: ["moses", "aaron"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Exodus",
+                chapter: 16,
+            },
+        ],
+    },
+    {
+        id: "amalek-attacks-israel",
+        title: "Israel fights Amalek",
+        description:
+            "Amalek attacks Israel at Rephidim. Joshua leads the fighting while Moses remains above the battle with Aaron and Hur supporting him.",
+        periodId: "exodus-wilderness",
+        personIds: ["moses", "aaron", "joshua"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Exodus",
+                chapter: 17,
+                startVerse: 8,
+                endVerse: 16,
+            },
+        ],
+    },
+    {
+        id: "korah-rebellion",
+        title: "Korah's rebellion",
+        description:
+            "Korah and others challenge the leadership of Moses and Aaron, leading to judgment and a major crisis within the wilderness community.",
+        periodId: "exodus-wilderness",
+        personIds: ["moses", "aaron"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Numbers",
+                chapter: 16,
+            },
+        ],
+    },
+    {
+        id: "bronze-serpent",
+        title: "The bronze serpent",
+        description:
+            "After the people speak against God and Moses, poisonous snakes come among them. God instructs Moses to make a bronze serpent so that those who look at it may live.",
+        periodId: "exodus-wilderness",
+        personIds: ["moses"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Numbers",
+                chapter: 21,
+                startVerse: 4,
+                endVerse: 9,
+            },
+        ],
+    },
+    {
+        id: "joshua-commissioned",
+        title: "Joshua is commissioned to succeed Moses",
+        description:
+            "Moses publicly commissions Joshua before Israel, preparing him to lead the people into the Promised Land after Moses' death.",
+        placeId: "plains-of-moab",
+        periodId: "exodus-wilderness",
+        personIds: ["moses", "joshua"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Numbers",
+                chapter: 27,
+                startVerse: 12,
+                endVerse: 23,
             },
         ],
     },

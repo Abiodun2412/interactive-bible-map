@@ -78,4 +78,18 @@ export const dataCoverage: CoverageItem[] = [
         areas: ["people", "places", "events", "journeys", "relationships"],
         status: "complete",
     },
+    {
+        id: "exodus-core-people",
+        name: "Moses, Aaron, Miriam & Midian Household",
+        periodId: "exodus-wilderness",
+        areas: ["people", "events", "relationships"],
+        status: "complete",
+    },
+    {
+        id: "exodus-deliverance-sinai",
+        name: "Exodus, Deliverance & Sinai",
+        periodId: "exodus-wilderness",
+        areas: ["people", "places", "events"],
+        status: "complete",
+    },
 ];
