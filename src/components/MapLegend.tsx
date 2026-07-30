@@ -10,7 +10,7 @@ export default function MapLegend() {
             <button
                 type="button"
                 onClick={() => setIsOpen(true)}
-                className="absolute right-4 top-4 z-[1000] rounded-xl bg-white px-4 py-3 text-sm font-semibold text-gray-900 shadow-xl transition hover:bg-gray-50"
+                className="absolute right-3 top-3 z-[1000] rounded-xl bg-white px-3 py-2 text-xs font-semibold text-gray-900 shadow-xl transition hover:bg-gray-50 sm:right-4 sm:top-4 sm:px-4 sm:py-3 sm:text-sm"
                 aria-label="Open map legend"
             >
                 Legend
@@ -19,7 +19,7 @@ export default function MapLegend() {
     }
 
     return (
-        <div className="absolute right-4 top-4 z-[1000] w-56 rounded-xl bg-white p-4 shadow-xl">
+        <div className="absolute right-3 top-3 z-[1000] max-h-[70vh] w-48 overflow-y-auto rounded-xl bg-white p-3 shadow-xl sm:right-4 sm:top-4 sm:w-56 sm:p-4">
             <div className="flex items-center justify-between gap-4">
                 <h2 className="text-sm font-semibold text-gray-900">
                     Map Legend
@@ -35,7 +35,7 @@ export default function MapLegend() {
                 </button>
             </div>
 
-            <div className="mt-4 space-y-3 text-sm text-gray-700">
+            <div className="mt-3 space-y-2.5 text-xs text-gray-700 sm:mt-4 sm:space-y-3 sm:text-sm">
                 <div className="flex items-center gap-3">
                     <span className="h-3 w-3 rounded-full bg-gray-900" />
                     <span>Selected location</span>
@@ -49,7 +49,7 @@ export default function MapLegend() {
                 </div>
 
                 <div className="border-t border-gray-200 pt-3">
-                    <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-gray-400">
+                    <p className="mb-2 text-[11px] font-semibold uppercase tracking-wide text-gray-400 sm:mb-3 sm:text-xs">
                         Journey periods
                     </p>
 

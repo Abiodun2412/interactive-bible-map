@@ -8,6 +8,8 @@ import { periods } from "@/data/periods";
 import { journeys } from "@/data/journeys";
 import { journeyStops } from "@/data/journeyStops";
 
+import ResponsivePanel from "@/components/ResponsivePanel";
+
 import type { BibleReference } from "@/types/bibleReference";
 import type { Event as BibleEvent } from "@/types/event";
 import type { Place } from "@/types/place";
@@ -115,10 +117,7 @@ export default function EventPanel({
     });
 
     return (
-        <aside
-            ref={panelRef}
-            className="absolute right-4 top-4 z-[1300] max-h-[calc(100vh-2rem)] w-96 overflow-y-auto overscroll-contain rounded-xl bg-white p-6 shadow-2xl"
-        >
+        <ResponsivePanel panelRef={panelRef}>
             <div className="flex items-start justify-between gap-4">
                 <div className="flex items-start gap-3">
                     {onBack && (
@@ -253,6 +252,6 @@ export default function EventPanel({
                     ))}
                 </div>
             </section>
-        </aside>
+        </ResponsivePanel>
     );
 }

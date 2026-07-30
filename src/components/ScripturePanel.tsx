@@ -9,6 +9,8 @@ import type { BibleTranslation } from "@/types/bibleTranslation";
 
 import type { BibleReference } from "@/types/bibleReference";
 
+import ResponsivePanel from "@/components/ResponsivePanel";
+
 import { bibleBooks } from "@/data/bible/books";
 
 type ScripturePanelProps = {
@@ -303,9 +305,9 @@ export default function ScripturePanel({
     };
 
     return (
-        <aside
-            ref={panelRef}
-            className="absolute right-4 top-4 z-[1400] max-h-[calc(100vh-2rem)] w-96 overflow-y-auto overscroll-contain rounded-xl bg-white p-6 shadow-2xl"
+        <ResponsivePanel
+            panelRef={panelRef}
+            className="z-[1400]"
         >
             <div className="flex items-start justify-between gap-4">
                 <div className="flex items-start gap-3">
@@ -385,8 +387,8 @@ export default function ScripturePanel({
                                         type="button"
                                         onClick={() => handleBookSelect(book.name)}
                                         className={`w-full rounded-lg px-3 py-2 text-left text-sm transition ${book.name === activeReference.book
-                                                ? "bg-gray-900 text-white"
-                                                : "text-gray-700 hover:bg-gray-100"
+                                            ? "bg-gray-900 text-white"
+                                            : "text-gray-700 hover:bg-gray-100"
                                             }`}
                                     >
                                         {book.name}
@@ -407,8 +409,8 @@ export default function ScripturePanel({
                                             type="button"
                                             onClick={() => handleChapterSelect(chapter)}
                                             className={`rounded-lg px-2 py-2 text-sm transition ${chapter === activeReference.chapter
-                                                    ? "bg-gray-900 text-white"
-                                                    : "text-gray-700 hover:bg-gray-100"
+                                                ? "bg-gray-900 text-white"
+                                                : "text-gray-700 hover:bg-gray-100"
                                                 }`}
                                         >
                                             {chapter}
@@ -600,6 +602,6 @@ export default function ScripturePanel({
                     )}
                 </dl>
             </section>
-        </aside>
+        </ResponsivePanel>
     );
 }

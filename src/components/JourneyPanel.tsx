@@ -7,6 +7,8 @@ import { people } from "@/data/people";
 import { periods } from "@/data/periods";
 import { places } from "@/data/places";
 
+import ResponsivePanel from "@/components/ResponsivePanel";
+
 import type { BibleReference } from "@/types/bibleReference";
 
 type Journey = {
@@ -89,10 +91,7 @@ export default function JourneyPanel({
         .sort((a, b) => a.order - b.order);
 
     return (
-        <aside
-            ref={panelRef}
-            className="absolute right-4 top-4 z-[1300] max-h-[calc(100vh-2rem)] w-96 overflow-y-auto overscroll-contain rounded-xl bg-white p-6 shadow-2xl"
-        >
+        <ResponsivePanel panelRef={panelRef}>
             <div className="flex items-start justify-between gap-4">
                 <div className="flex items-start gap-3">
                     {onBack && (
@@ -225,6 +224,6 @@ export default function JourneyPanel({
                     </div>
                 </section>
             )}
-        </aside>
+        </ResponsivePanel>
     );
 }

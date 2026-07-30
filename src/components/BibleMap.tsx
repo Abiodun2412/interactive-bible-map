@@ -216,7 +216,30 @@ function RefocusButton({
         <button
             type="button"
             onClick={onClick}
-            className="absolute bottom-45 right-3 z-[1000] rounded-lg bg-white px-3 py-2 text-xs font-semibold text-gray-900 shadow-xl transition hover:bg-gray-100 sm:bottom-20 sm:right-4 sm:px-4 sm:text-sm"
+            className="
+                absolute
+                bottom-45
+                right-3
+                z-[1000]
+                rounded-lg
+                bg-white
+                px-3
+                py-2
+                text-xs
+                font-semibold
+                text-gray-900
+                shadow-xl
+                transition
+                hover:bg-gray-100
+
+                md:bottom-57
+                lg:bottom-57
+
+                xl:bottom-30
+                xl:right-4
+                xl:px-4
+                xl:text-sm
+            "
         >
             Refocus map
         </button>
@@ -485,6 +508,7 @@ export default function BibleMap() {
         setSelectedPlace(null);
         setSelectedEventId(null);
         setSelectedPersonPanelId(null);
+        setSelectedJourneyPanelId(null);
         setSelectedReference(null);
 
         setSelectedPeriodId(null);
@@ -879,8 +903,13 @@ export default function BibleMap() {
                     setSelectedPersonId(null);
                     setSelectedJourneyId(null);
                     setSelectedPeriodId(null);
+
                     setSelectedEventId(null);
                     setSelectedPersonPanelId(null);
+                    setSelectedJourneyPanelId(null);
+                    setSelectedReference(null);
+
+                    setPanelHistory([]);
                 }}
             />
 

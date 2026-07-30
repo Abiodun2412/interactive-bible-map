@@ -14,9 +14,9 @@ export default function ActiveContext({
     }
 
     return (
-        <div className="absolute left-1/2 top-4 z-[1100] -translate-x-1/2">
-            <div className="flex items-center gap-3 rounded-full bg-gray-900 px-4 py-2 text-sm text-white shadow-xl">
-                <span>
+        <div className="absolute left-1/2 top-28 z-[1100] w-[calc(100%-1.5rem)] -translate-x-1/2 sm:top-4 sm:w-auto">
+            <div className="flex max-w-full items-center justify-center gap-2 rounded-full bg-gray-900 px-3 py-2 text-xs text-white shadow-xl sm:gap-3 sm:px-4 sm:text-sm">
+                <span className="min-w-0 truncate">
                     {type && (
                         <span className="mr-2 text-gray-400">
                             {type} ·
@@ -29,7 +29,7 @@ export default function ActiveContext({
                 <button
                     type="button"
                     onClick={onClear}
-                    className="text-gray-300 hover:text-white"
+                    className="shrink-0 text-gray-300 hover:text-white"
                     aria-label="Clear current exploration"
                 >
                     ×

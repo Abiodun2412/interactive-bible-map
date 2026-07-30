@@ -10,6 +10,8 @@ import { periods } from "@/data/periods";
 import { places } from "@/data/places";
 import { personRelationships } from "@/data/personRelationships";
 
+import ResponsivePanel from "@/components/ResponsivePanel";
+
 type Person = (typeof people)[number];
 
 type PersonPanelProps = {
@@ -189,10 +191,8 @@ export default function PersonPanel({
     };
 
     return (
-        <aside
-            ref={panelRef}
-            className="absolute right-4 top-4 z-[1300] max-h-[calc(100vh-2rem)] w-96 overflow-y-auto overscroll-contain rounded-xl bg-white p-6 shadow-2xl"
-        >
+        <ResponsivePanel panelRef={panelRef}>
+
             <div className="flex items-start justify-between gap-4">
                 <div className="flex items-start gap-3">
                     {onBack && (
@@ -221,7 +221,7 @@ export default function PersonPanel({
                     type="button"
                     onClick={onClose}
                     className="text-xl text-gray-500 hover:text-gray-900"
-                    aria-label="Close event panel"
+                    aria-label="Close person panel"
                 >
                     ×
                 </button>
@@ -470,6 +470,6 @@ export default function PersonPanel({
                     )}
                 </section>
             )}
-        </aside>
+        </ResponsivePanel>
     );
 }
