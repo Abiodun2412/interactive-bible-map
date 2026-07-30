@@ -126,6 +126,62 @@ export default function ScripturePanel({
         ? getPassage(translation, passageReference)
         : [];
 
+    const chapterVerses = translation
+        ? translation.verses.filter(
+            (verse) =>
+                verse.book === activeReference.book &&
+                verse.chapter === activeReference.chapter
+        )
+        : [];
+
+    const maxVerse =
+        chapterVerses.length > 0
+            ? Math.max(
+                ...chapterVerses.map((verse) => verse.verse)
+            )
+            : null;
+
+    const originalChapterVerses = translation
+        ? translation.verses.filter(
+            (verse) =>
+                verse.book === reference.book &&
+                verse.chapter === reference.chapter
+        )
+        : [];
+
+    const originalMaxVerse =
+        originalChapterVerses.length > 0
+            ? Math.max(
+                ...originalChapterVerses.map((verse) => verse.verse)
+            )
+            : null;
+
+    const originalReferenceIsInvalid =
+        originalMaxVerse !== null &&
+        (
+            (
+                reference.startVerse !== undefined &&
+                reference.startVerse > originalMaxVerse
+            ) ||
+            (
+                reference.endVerse !== undefined &&
+                reference.endVerse > originalMaxVerse
+            )
+        );
+
+    const referenceIsInvalid =
+        maxVerse !== null &&
+        (
+            (
+                activeReference.startVerse !== undefined &&
+                activeReference.startVerse > maxVerse
+            ) ||
+            (
+                activeReference.endVerse !== undefined &&
+                activeReference.endVerse > maxVerse
+            )
+        );
+
     const isVerseInOriginalReference = (
         book: string,
         chapter: number,
@@ -142,18 +198,13 @@ export default function ScripturePanel({
             return true;
         }
 
-        if (verse < reference.startVerse) {
-            return false;
-        }
+        const endVerse =
+            reference.endVerse ?? reference.startVerse;
 
-        if (
-            reference.endVerse !== undefined &&
-            verse > reference.endVerse
-        ) {
-            return false;
-        }
-
-        return true;
+        return (
+            verse >= reference.startVerse &&
+            verse <= endVerse
+        );
     };
 
     const currentBookIndex = bibleBooks.findIndex(
@@ -372,6 +423,7 @@ export default function ScripturePanel({
                 </p>
 
                 {showFullChapter &&
+                    !originalReferenceIsInvalid &&
                     reference.startVerse !== undefined &&
                     activeReference.book === reference.book &&
                     activeReference.chapter === reference.chapter && (
@@ -394,7 +446,14 @@ export default function ScripturePanel({
                 activeReference.startVerse !== undefined && (
                     <button
                         type="button"
-                        onClick={() => setShowFullChapter(true)}
+                        onClick={() => {
+                            setActiveReference({
+                                book: reference.book,
+                                chapter: reference.chapter,
+                            });
+
+                            setShowFullChapter(true);
+                        }}
                         className="mt-3 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50"
                     >
                         Read full chapter
@@ -402,6 +461,7 @@ export default function ScripturePanel({
                 )}
 
             {showFullChapter &&
+                !originalReferenceIsInvalid &&
                 reference.startVerse !== undefined &&
                 activeReference.book === reference.book &&
                 activeReference.chapter === reference.chapter && (
@@ -440,6 +500,19 @@ export default function ScripturePanel({
                     <div className="mt-3 rounded-xl border border-gray-200 bg-gray-50 p-4">
                         <p className="text-sm text-gray-600">
                             {loadError}
+                        </p>
+                    </div>
+                ) : referenceIsInvalid ? (
+                    <div className="mt-3 rounded-xl border border-gray-200 bg-gray-50 p-4">
+                        <p className="text-sm font-semibold text-gray-900">
+                            Invalid verse
+                        </p>
+
+                        <p className="mt-2 text-sm text-gray-600">
+                            {activeReference.book} {activeReference.chapter}
+                            {maxVerse !== null
+                                ? ` contains ${maxVerse} verses.`
+                                : " could not be found."}
                         </p>
                     </div>
                 ) : passage.length === 0 ? (
@@ -495,31 +568,31 @@ export default function ScripturePanel({
                     <div className="flex justify-between gap-4">
                         <dt className="text-gray-500">Book</dt>
                         <dd className="font-medium text-gray-900">
-                            {reference.book}
+                            {activeReference.book}
                         </dd>
                     </div>
 
                     <div className="flex justify-between gap-4">
                         <dt className="text-gray-500">Chapter</dt>
                         <dd className="font-medium text-gray-900">
-                            {reference.chapter}
+                            {activeReference.chapter}
                         </dd>
                     </div>
 
-                    {reference.startVerse !== undefined && (
+                    {activeReference.startVerse !== undefined && (
                         <div className="flex justify-between gap-4">
                             <dt className="text-gray-500">Starting verse</dt>
                             <dd className="font-medium text-gray-900">
-                                {reference.startVerse}
+                                {activeReference.startVerse}
                             </dd>
                         </div>
                     )}
 
-                    {reference.endVerse !== undefined && (
+                    {activeReference.endVerse !== undefined && (
                         <div className="flex justify-between gap-4">
                             <dt className="text-gray-500">Ending verse</dt>
                             <dd className="font-medium text-gray-900">
-                                {reference.endVerse}
+                                {activeReference.endVerse}
                             </dd>
                         </div>
                     )}

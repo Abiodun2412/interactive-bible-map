@@ -18,17 +18,12 @@ export function getPassage(
             return true;
         }
 
-        if (verse.verse < reference.startVerse) {
-            return false;
-        }
+        const endVerse =
+            reference.endVerse ?? reference.startVerse;
 
-        if (
-            reference.endVerse !== undefined &&
-            verse.verse > reference.endVerse
-        ) {
-            return false;
-        }
-
-        return true;
+        return (
+            verse.verse >= reference.startVerse &&
+            verse.verse <= endVerse
+        );
     });
 }

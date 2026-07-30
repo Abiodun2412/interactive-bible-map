@@ -2,48 +2,16 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 
-import { events } from "@/data/events";
-import { journeys } from "@/data/journeys";
-import { people } from "@/data/people";
-import { places } from "@/data/places";
+import { searchBibleMap } from "@/utils/searchBibleMap";
+
+import type { SearchResult } from "@/types/searchResult";
 
 type SearchPanelProps = {
-  onSelectPlace: (placeId: string) => void;
-  onSelectJourney: (journeyId: string) => void;
-  onSelectPerson: (personId: string) => void;
+  onSelectResult: (result: SearchResult) => void;
 };
 
-type SearchResult =
-  | {
-    type: "place";
-    id: string;
-    title: string;
-    subtitle: string;
-  }
-  | {
-    type: "person";
-    id: string;
-    title: string;
-    subtitle: string;
-  }
-  | {
-    type: "journey";
-    id: string;
-    title: string;
-    subtitle: string;
-  }
-  | {
-    type: "event";
-    id: string;
-    title: string;
-    subtitle: string;
-    placeId: string;
-  };
-
 export default function SearchPanel({
-  onSelectPlace,
-  onSelectJourney,
-  onSelectPerson,
+  onSelectResult,
 }: SearchPanelProps) {
   const [query, setQuery] = useState("");
   const panelRef = useRef<HTMLDivElement | null>(null);
@@ -68,107 +36,13 @@ export default function SearchPanel({
     };
   }, []);
 
-  const results = useMemo<SearchResult[]>(() => {
-    const trimmedQuery = query.trim().toLowerCase();
-
-    if (!trimmedQuery) {
-      return [];
-    }
-
-    const placeResults: SearchResult[] = places
-      .filter(
-        (place) =>
-          place.name.toLowerCase().includes(trimmedQuery) ||
-          place.modernName.toLowerCase().includes(trimmedQuery) ||
-          place.region.toLowerCase().includes(trimmedQuery)
-      )
-      .map((place) => ({
-        type: "place",
-        id: place.id,
-        title: place.name,
-        subtitle: `${place.type} · ${place.region}`,
-      }));
-
-    const personResults: SearchResult[] = people
-      .filter(
-        (person) =>
-          person.name.toLowerCase().includes(trimmedQuery) ||
-          person.description.toLowerCase().includes(trimmedQuery)
-      )
-      .map((person) => ({
-        type: "person",
-        id: person.id,
-        title: person.name,
-        subtitle: "Person",
-      }));
-
-    const journeyResults: SearchResult[] = journeys
-      .filter(
-        (journey) =>
-          journey.name.toLowerCase().includes(trimmedQuery) ||
-          journey.description.toLowerCase().includes(trimmedQuery)
-      )
-      .map((journey) => ({
-        type: "journey",
-        id: journey.id,
-        title: journey.name,
-        subtitle: "Journey",
-      }));
-
-    const eventResults: SearchResult[] = events
-      .filter((event) => {
-        const referenceText = event.references
-          .map((reference) => `${reference.book} ${reference.chapter}`)
-          .join(" ")
-          .toLowerCase();
-
-        return (
-          event.title.toLowerCase().includes(trimmedQuery) ||
-          event.description.toLowerCase().includes(trimmedQuery) ||
-          referenceText.includes(trimmedQuery)
-        );
-      })
-      .filter(
-        (event): event is typeof event & { placeId: string } =>
-          event.placeId !== undefined
-      )
-      .map((event) => {
-        const place = places.find((place) => place.id === event.placeId);
-
-        return {
-          type: "event",
-          id: event.id,
-          title: event.title,
-          subtitle: place ? `Event · ${place.name}` : "Event",
-          placeId: event.placeId,
-        };
-      });
-
-    return [
-      ...placeResults,
-      ...personResults,
-      ...journeyResults,
-      ...eventResults,
-    ].slice(0, 10);
-  }, [query]);
+  const results = useMemo<SearchResult[]>(
+    () => searchBibleMap(query),
+    [query]
+  );
 
   const handleResultClick = (result: SearchResult) => {
-    if (result.type === "place") {
-      onSelectPlace(result.id);
-    }
-
-    if (result.type === "person") {
-      onSelectPerson(result.id);
-    }
-
-    if (result.type === "journey") {
-      onSelectJourney(result.id);
-    }
-
-    if (result.type === "event") {
-      onSelectPlace(result.placeId);
-    }
-
+    onSelectResult(result);
     setQuery("");
   };
 

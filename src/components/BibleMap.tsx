@@ -32,6 +32,9 @@ import type { BibleReference } from "@/types/bibleReference";
 
 import { validateData } from "@/utils/validateData";
 import { validateRelationships } from "@/utils/validateRelationships";
+import { parseBibleReference } from "@/utils/parseBibleReference";
+
+import type { SearchResult } from "@/types/searchResult";
 
 import {
     createJourneyStopIcon,
@@ -464,31 +467,59 @@ export default function BibleMap() {
         setPanelHistory((current) => [...current, entry]);
     };
 
-    const handleSearchPlace = (
-        placeId: string
-    ) => {
-        const place = places.find(
-            (place) => place.id === placeId
-        );
+    const handleSearchResultSelect = (result: SearchResult) => {
+        setPanelHistory([]);
 
-        if (!place) {
-            return;
-        }
+        setSelectedPlace(null);
+        setSelectedEventId(null);
+        setSelectedPersonPanelId(null);
+        setSelectedReference(null);
 
         setSelectedPeriodId(null);
         setSelectedJourneyId(null);
         setSelectedPersonId(null);
-        setSelectedPlace(place);
+
+        if (result.type === "place") {
+            const place = places.find(
+                (place) => place.id === result.id
+            );
+
+            if (place) {
+                setSelectedPlace(place);
+            }
+
+            return;
+        }
+
+        if (result.type === "person") {
+            setSelectedPersonId(result.id);
+            setSelectedPersonPanelId(result.id);
+            return;
+        }
+
+        if (result.type === "event") {
+            setSelectedEventId(result.id);
+            return;
+        }
+
+        if (result.type === "journey") {
+            setSelectedJourneyId(result.id);
+            return;
+        }
+
+        if (result.type === "scripture") {
+            const reference = parseBibleReference(result.title);
+
+            if (!reference) {
+                return;
+            }
+
+            setSelectedReference(reference);
+        }
     };
 
-    const handleSearchJourney = (
-        journeyId: string
-    ) => {
-        setSelectedPeriodId(null);
-        setSelectedPersonId(null);
-        setSelectedPlace(null);
-        setSelectedJourneyId(journeyId);
-    };
+
+
 
     const handleLocationJourneySelect = (journeyId: string) => {
         setSelectedPeriodId(null);
@@ -659,16 +690,6 @@ export default function BibleMap() {
         setSelectedEventId(eventId);
     };
 
-    const handleSearchPerson = (personId: string) => {
-        setSelectedPeriodId(null);
-        setSelectedJourneyId(null);
-        setSelectedPlace(null);
-        setSelectedEventId(null);
-
-        setSelectedPersonId(personId);
-        setSelectedPersonPanelId(personId);
-    };
-
     const handlePanelBack = () => {
         if (panelHistory.length === 0) {
             return;
@@ -762,9 +783,7 @@ export default function BibleMap() {
                     setSelectedPersonId(null);
                     setSelectedPlace(null);
                 }}
-                onSelectPlace={handleSearchPlace}
-                onSelectJourney={handleSearchJourney}
-                onSelectPerson={handleSearchPerson}
+                onSelectResult={handleSearchResultSelect}
             />
 
             <ActiveContext
