@@ -5493,7 +5493,7 @@ export const events: Event[] = [
             "The apostles and elders meet in Jerusalem to consider whether Gentile believers must be circumcised and keep the law of Moses. The council affirms that Gentile believers are not required to become Jews in order to belong to the church.",
         placeId: "jerusalem",
         periodId: "early-church",
-        personIds: ["paul", "barnabas", "peter", ],
+        personIds: ["paul", "barnabas", "peter"],
         datePrecision: "approximate",
         references: [
             {
