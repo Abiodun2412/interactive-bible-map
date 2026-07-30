@@ -775,4 +775,52 @@ export const people: Person[] = [
     description:
       "The Egyptian ruler who resisted Moses' demand to release the Israelites from slavery.",
   },
+  {
+    id: "rahab",
+    name: "Rahab",
+    description:
+      "Woman of Jericho who sheltered the Israelite spies and was spared with her household when the city fell.",
+  },
+  {
+    id: "achan",
+    name: "Achan",
+    description:
+      "Israelite whose taking of devoted items after Jericho led to judgment and Israel's initial defeat at Ai.",
+  },
+  {
+    id: "othniel",
+    name: "Othniel",
+    description:
+      "The first judge described in the Book of Judges, raised up by God to deliver Israel from oppression.",
+  },
+  {
+    id: "sisera",
+    name: "Sisera",
+    description:
+      "Commander of Jabin's army who fought Israel during the time of Deborah and Barak.",
+  },
+  {
+    id: "jael",
+    name: "Jael",
+    description:
+      "Woman who killed Sisera after he fled from the battle against Barak's forces.",
+  },
+  {
+    id: "absalom",
+    name: "Absalom",
+    description:
+      "Son of David who rebelled against his father and attempted to take the kingdom of Israel for himself.",
+  },
+  {
+    id: "jehu",
+    name: "Jehu",
+    description:
+      "King of Israel anointed to bring judgment on the house of Ahab, ending the Omride dynasty and destroying Baal worship in Israel.",
+  },
+  {
+    id: "jeremiah",
+    name: "Jeremiah",
+    description:
+      "Prophet who ministered during the final years of Judah, warned of Jerusalem's coming judgment, and continued his ministry through the Babylonian conquest.",
+  },
 ];

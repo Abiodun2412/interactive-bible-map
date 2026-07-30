@@ -1023,4 +1023,18 @@ export const personRelationships: PersonRelationship[] = [
         type: "child",
         description: "Zipporah was the daughter of Jethro.",
     },
+    {
+        id: "david-absalom-parent",
+        personId: "david",
+        relatedPersonId: "absalom",
+        type: "parent",
+        description: "David was the father of Absalom.",
+    },
+    {
+        id: "absalom-david-child",
+        personId: "absalom",
+        relatedPersonId: "david",
+        type: "child",
+        description: "Absalom was a son of David.",
+    },
 ];

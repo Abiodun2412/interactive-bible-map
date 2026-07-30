@@ -260,13 +260,29 @@ export const events: Event[] = [
         ],
     },
     {
+        id: "rahab-shelters-spies",
+        title: "Rahab shelters the spies",
+        description:
+            "Rahab hides the Israelite spies sent into Jericho and asks that her household be spared when Israel comes against the city.",
+        placeId: "jericho",
+        periodId: "conquest",
+        personIds: ["rahab", "joshua"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Joshua",
+                chapter: 2,
+            },
+        ],
+    },
+    {
         id: "fall-of-jericho",
         title: "The fall of Jericho",
         description:
             "Israel marches around Jericho according to God's command, and the walls fall as the people enter the city.",
         placeId: "jericho",
         periodId: "conquest",
-        personIds: ["joshua"],
+        personIds: ["joshua", "rahab"],
         datePrecision: "approximate",
         references: [
             {
@@ -282,7 +298,7 @@ export const events: Event[] = [
             "Israel attacks Ai after Jericho but is defeated because of Achan's sin concerning the devoted things.",
         placeId: "ai",
         periodId: "conquest",
-        personIds: ["joshua"],
+        personIds: ["joshua", "achan"],
         datePrecision: "approximate",
         references: [
             {
@@ -601,7 +617,7 @@ export const events: Event[] = [
             "The Lord throws Sisera's forces into confusion before Barak, and the army is defeated near the Kishon River.",
         placeId: "kishon-river",
         periodId: "judges",
-        personIds: ["deborah", "barak"],
+        personIds: ["deborah", "barak", "sisera"],
         datePrecision: "approximate",
         references: [
             {
@@ -609,6 +625,23 @@ export const events: Event[] = [
                 chapter: 4,
                 startVerse: 12,
                 endVerse: 16,
+            },
+        ],
+    },
+    {
+        id: "jael-kills-sisera",
+        title: "Jael kills Sisera",
+        description:
+            "Sisera flees from the battle and takes refuge in Jael's tent, where Jael kills him, completing the defeat of Jabin's forces.",
+        periodId: "judges",
+        personIds: ["jael", "sisera", "barak"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Judges",
+                chapter: 4,
+                startVerse: 17,
+                endVerse: 22,
             },
         ],
     },
@@ -627,6 +660,23 @@ export const events: Event[] = [
                 chapter: 6,
                 startVerse: 11,
                 endVerse: 24,
+            },
+        ],
+    },
+    {
+        id: "gideon-defeats-midian",
+        title: "Gideon defeats the Midianites",
+        description:
+            "Gideon's three hundred men surround the Midianite camp with trumpets, jars, and torches, and God throws the enemy camp into confusion.",
+        periodId: "judges",
+        personIds: ["gideon"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Judges",
+                chapter: 7,
+                startVerse: 9,
+                endVerse: 25,
             },
         ],
     },
@@ -5270,6 +5320,169 @@ export const events: Event[] = [
                 chapter: 27,
                 startVerse: 12,
                 endVerse: 23,
+            },
+        ],
+    },
+    {
+        id: "othniel-delivers-israel",
+        title: "Othniel delivers Israel",
+        description:
+            "God raises up Othniel as Israel's first judge, and he delivers the people from the king of Aram-naharaim.",
+        periodId: "judges",
+        personIds: ["othniel"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Judges",
+                chapter: 3,
+                startVerse: 7,
+                endVerse: 11,
+            },
+        ],
+    },
+    {
+        id: "david-bathsheba-nathan",
+        title: "Nathan confronts David",
+        description:
+            "After David's sin involving Bathsheba and Uriah, the prophet Nathan confronts David and announces consequences that will affect David's household.",
+        placeId: "jerusalem",
+        periodId: "united-monarchy",
+        personIds: ["david", "bathsheba", "nathan"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Samuel",
+                chapter: 11,
+            },
+            {
+                book: "2 Samuel",
+                chapter: 12,
+                startVerse: 1,
+                endVerse: 15,
+            },
+        ],
+    },
+    {
+        id: "absalom-rebellion",
+        title: "Absalom rebels against David",
+        description:
+            "Absalom builds support among the Israelites and declares himself king, forcing David and his household to flee Jerusalem.",
+        placeId: "jerusalem",
+        periodId: "united-monarchy",
+        personIds: ["david", "absalom"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Samuel",
+                chapter: 15,
+                startVerse: 1,
+                endVerse: 23,
+            },
+        ],
+    },
+    {
+        id: "absalom-defeated",
+        title: "Absalom's rebellion is defeated",
+        description:
+            "David's forces defeat Absalom's army, and Absalom is killed despite David's command that he be treated gently.",
+        periodId: "united-monarchy",
+        personIds: ["david", "absalom"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Samuel",
+                chapter: 18,
+            },
+        ],
+    },
+    {
+        id: "jehu-anointed-king",
+        title: "Jehu is anointed king of Israel",
+        description:
+            "At Elisha's direction, a prophetic messenger anoints Jehu and declares that he will bring judgment on the house of Ahab.",
+        periodId: "divided-kingdom",
+        personIds: ["jehu", "elisha"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 9,
+                startVerse: 1,
+                endVerse: 13,
+            },
+        ],
+    },
+    {
+        id: "jezebel-dies",
+        title: "Jezebel dies at Jezreel",
+        description:
+            "Jehu enters Jezreel during his overthrow of Ahab's dynasty, and Jezebel is killed as judgment against Ahab's house unfolds.",
+        placeId: "jezreel",
+        periodId: "divided-kingdom",
+        personIds: ["jehu", "jezebel"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "2 Kings",
+                chapter: 9,
+                startVerse: 30,
+                endVerse: 37,
+            },
+        ],
+    },
+    {
+        id: "jeremiah-during-siege",
+        title: "Jeremiah warns Jerusalem during the Babylonian crisis",
+        description:
+            "Jeremiah continues to proclaim God's message during Jerusalem's final crisis, warning that the city will fall to Babylon while also speaking of future restoration.",
+        placeId: "jerusalem",
+        periodId: "exile",
+        personIds: ["jeremiah"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Jeremiah",
+                chapter: 37,
+            },
+            {
+                book: "Jeremiah",
+                chapter: 38,
+            },
+        ],
+    },
+    {
+        id: "nebuchadnezzar-humbled",
+        title: "Nebuchadnezzar is humbled",
+        description:
+            "After boasting about Babylon, Nebuchadnezzar is humbled until he acknowledges the sovereignty of God, after which his understanding and kingship are restored.",
+        placeId: "babylon",
+        periodId: "exile",
+        personIds: ["nebuchadnezzar", "daniel"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Daniel",
+                chapter: 4,
+            },
+        ],
+    },
+    {
+        id: "restored-community-renews-covenant",
+        title: "The restored community renews the covenant",
+        description:
+            "After hearing the law, the people confess their sins, remember God's faithfulness throughout Israel's history, and make a written commitment to live according to God's law.",
+        placeId: "jerusalem",
+        periodId: "return-restoration",
+        personIds: ["ezra", "nehemiah"],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Nehemiah",
+                chapter: 9,
+            },
+            {
+                book: "Nehemiah",
+                chapter: 10,
             },
         ],
     },
