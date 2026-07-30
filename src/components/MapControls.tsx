@@ -24,7 +24,7 @@ export default function MapControls({
   onSelectResult,
 }: MapControlsProps) {
   return (
-    <div className="absolute left-4 top-4 z-[1100] flex w-72 flex-col gap-3">
+    <div className="absolute left-3 right-3 top-3 z-[1100] grid grid-cols-2 gap-2 sm:left-4 sm:right-auto sm:top-4 sm:flex sm:w-72 sm:flex-col sm:gap-3">
       <PeriodFilter
         selectedPeriodId={selectedPeriodId}
         onChange={onPeriodChange}
@@ -35,9 +35,11 @@ export default function MapControls({
         onChange={onJourneyChange}
       />
 
-      <SearchPanel
-        onSelectResult={onSelectResult}
-      />
+      <div className="col-span-2 sm:col-auto">
+        <SearchPanel
+          onSelectResult={onSelectResult}
+        />
+      </div>
     </div>
   );
 }

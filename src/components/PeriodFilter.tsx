@@ -71,14 +71,14 @@ export default function PeriodFilter({
         type="button"
         onClick={() => setIsOpen((current) => !current)}
         aria-expanded={isOpen}
-        className="flex w-full items-center justify-between rounded-xl bg-white p-4 text-left shadow-xl"
+        className="flex w-full items-center justify-between rounded-xl bg-white px-3 py-2 text-left shadow-xl sm:p-4"
       >
         <div className="min-w-0">
-          <p className="text-sm font-semibold text-gray-900">
+          <p className="text-xs font-semibold text-gray-900 sm:text-sm">
             Historical Period
           </p>
 
-          <p className="mt-1 truncate text-sm text-gray-500">
+          <p className="mt-0.5 truncate text-xs text-gray-500 sm:mt-1 sm:text-sm">
             {selectedPeriod
               ? selectedPeriod.name
               : "All periods"}
@@ -86,7 +86,7 @@ export default function PeriodFilter({
         </div>
 
         <span
-          className={`ml-4 text-sm text-gray-500 transition-transform ${isOpen ? "rotate-180" : ""
+          className={`ml-2 text-xs text-gray-500 transition-transform sm:ml-4 sm:text-sm ${isOpen ? "rotate-180" : ""
             }`}
         >
           ▼

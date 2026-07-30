@@ -343,79 +343,90 @@ export default function ScripturePanel({
                 </button>
             </div>
 
-            <div className="mt-5 flex items-center justify-between gap-3 rounded-xl border border-gray-200 bg-gray-50 p-2">
-                <button
-                    type="button"
-                    onClick={goToPreviousChapter}
-                    disabled={isFirstChapter}
-                    className="rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition hover:bg-white disabled:cursor-not-allowed disabled:opacity-30"
-                >
-                    ← Previous
-                </button>
-
-                <div className="relative flex items-center gap-1">
+            <div className="mt-5 rounded-xl border border-gray-200 bg-gray-50 p-2">
+                <div className="grid grid-cols-[auto_1fr_auto] items-center gap-2">
                     <button
                         type="button"
-                        onClick={() => {
-                            setIsBookPickerOpen((current) => !current);
-                            setIsChapterPickerOpen(false);
-                        }}
-                        className="rounded-lg px-2 py-2 text-sm font-semibold text-gray-900 transition hover:bg-white"
+                        onClick={goToPreviousChapter}
+                        disabled={isFirstChapter}
+                        className="shrink-0 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition hover:bg-white disabled:cursor-not-allowed disabled:opacity-30"
                     >
-                        {activeReference.book}
+                        ← Previous
                     </button>
 
-                    <button
-                        type="button"
-                        onClick={() => {
-                            setIsChapterPickerOpen((current) => !current);
-                            setIsBookPickerOpen(false);
-                        }}
-                        className="rounded-lg px-2 py-2 text-sm font-semibold text-gray-900 transition hover:bg-white"
-                    >
-                        {activeReference.chapter}
-                    </button>
+                    <div className="relative flex min-w-0 items-center justify-center gap-1">
+                        <button
+                            type="button"
+                            onClick={() => {
+                                setIsBookPickerOpen((current) => !current);
+                                setIsChapterPickerOpen(false);
+                            }}
+                            className="min-w-0 truncate rounded-lg px-2 py-2 text-sm font-semibold text-gray-900 transition hover:bg-white"
+                        >
+                            {activeReference.book}
+                        </button>
 
-                    {isBookPickerOpen && (
-                        <div className="absolute left-1/2 top-full z-20 mt-2 max-h-72 w-64 -translate-x-1/2 overflow-y-auto overscroll-contain rounded-xl border border-gray-200 bg-white p-2 shadow-xl">
-                            {bibleBooks.map((book) => (
-                                <button
-                                    key={book.name}
-                                    type="button"
-                                    onClick={() => handleBookSelect(book.name)}
-                                    className={`w-full rounded-lg px-3 py-2 text-left text-sm transition ${book.name === activeReference.book
-                                        ? "bg-gray-900 text-white"
-                                        : "text-gray-700 hover:bg-gray-100"
-                                        }`}
-                                >
-                                    {book.name}
-                                </button>
-                            ))}
-                        </div>
-                    )}
+                        <button
+                            type="button"
+                            onClick={() => {
+                                setIsChapterPickerOpen((current) => !current);
+                                setIsBookPickerOpen(false);
+                            }}
+                            className="shrink-0 rounded-lg px-2 py-2 text-sm font-semibold text-gray-900 transition hover:bg-white"
+                        >
+                            {activeReference.chapter}
+                        </button>
 
-                    {isChapterPickerOpen && currentBook && (
-                        <div className="absolute left-1/2 top-full z-20 mt-2 max-h-72 w-56 -translate-x-1/2 overflow-y-auto overscroll-contain rounded-xl border border-gray-200 bg-white p-3 shadow-xl">
-                            <div className="grid grid-cols-5 gap-2">
-                                {Array.from(
-                                    { length: currentBook.chapters },
-                                    (_, index) => index + 1
-                                ).map((chapter) => (
+                        {isBookPickerOpen && (
+                            <div className="absolute left-1/2 top-full z-20 mt-2 max-h-72 w-64 -translate-x-1/2 overflow-y-auto overscroll-contain rounded-xl border border-gray-200 bg-white p-2 shadow-xl">
+                                {bibleBooks.map((book) => (
                                     <button
-                                        key={chapter}
+                                        key={book.name}
                                         type="button"
-                                        onClick={() => handleChapterSelect(chapter)}
-                                        className={`rounded-lg px-2 py-2 text-sm transition ${chapter === activeReference.chapter
-                                            ? "bg-gray-900 text-white"
-                                            : "text-gray-700 hover:bg-gray-100"
+                                        onClick={() => handleBookSelect(book.name)}
+                                        className={`w-full rounded-lg px-3 py-2 text-left text-sm transition ${book.name === activeReference.book
+                                                ? "bg-gray-900 text-white"
+                                                : "text-gray-700 hover:bg-gray-100"
                                             }`}
                                     >
-                                        {chapter}
+                                        {book.name}
                                     </button>
                                 ))}
                             </div>
-                        </div>
-                    )}
+                        )}
+
+                        {isChapterPickerOpen && currentBook && (
+                            <div className="absolute left-1/2 top-full z-20 mt-2 max-h-72 w-56 -translate-x-1/2 overflow-y-auto overscroll-contain rounded-xl border border-gray-200 bg-white p-3 shadow-xl">
+                                <div className="grid grid-cols-5 gap-2">
+                                    {Array.from(
+                                        { length: currentBook.chapters },
+                                        (_, index) => index + 1
+                                    ).map((chapter) => (
+                                        <button
+                                            key={chapter}
+                                            type="button"
+                                            onClick={() => handleChapterSelect(chapter)}
+                                            className={`rounded-lg px-2 py-2 text-sm transition ${chapter === activeReference.chapter
+                                                    ? "bg-gray-900 text-white"
+                                                    : "text-gray-700 hover:bg-gray-100"
+                                                }`}
+                                        >
+                                            {chapter}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+                    </div>
+
+                    <button
+                        type="button"
+                        onClick={goToNextChapter}
+                        disabled={isLastChapter}
+                        className="shrink-0 rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition hover:bg-white disabled:cursor-not-allowed disabled:opacity-30"
+                    >
+                        Next →
+                    </button>
                 </div>
 
                 <p className="mt-2 text-center text-xs text-gray-400">
@@ -427,19 +438,10 @@ export default function ScripturePanel({
                     reference.startVerse !== undefined &&
                     activeReference.book === reference.book &&
                     activeReference.chapter === reference.chapter && (
-                        <p className="mt-2 text-center text-xs text-amber-700">
+                        <p className="mt-1 text-center text-xs text-amber-700">
                             Highlighted: {formatReference(reference)}
                         </p>
                     )}
-
-                <button
-                    type="button"
-                    onClick={goToNextChapter}
-                    disabled={isLastChapter}
-                    className="rounded-lg px-3 py-2 text-sm font-medium text-gray-700 transition hover:bg-white disabled:cursor-not-allowed disabled:opacity-30"
-                >
-                    Next →
-                </button>
             </div>
 
             {!showFullChapter &&
@@ -478,7 +480,7 @@ export default function ScripturePanel({
                 )}
 
             <section className="mt-6">
-                <div className="flex items-center justify-between gap-4">
+                <div className="flex flex-wrap items-center justify-between gap-2">
                     <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-500">
                         Passage
                     </h3>

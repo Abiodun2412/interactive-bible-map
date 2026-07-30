@@ -49,11 +49,11 @@ export default function SearchPanel({
   return (
     <div
       ref={panelRef}
-      className="w-full overscroll-contain rounded-xl bg-white p-4 shadow-xl"
+      className="w-full overscroll-contain rounded-xl bg-white p-3 shadow-xl sm:p-4"
     >
       <label
         htmlFor="bible-search"
-        className="mb-2 block text-sm font-semibold text-gray-900"
+        className="mb-1.5 block text-xs font-semibold text-gray-900 sm:mb-2 sm:text-sm"
       >
         Search
       </label>
@@ -64,7 +64,7 @@ export default function SearchPanel({
         value={query}
         onChange={(event) => setQuery(event.target.value)}
         placeholder="Search Jerusalem, Abraham, Genesis..."
-        className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm text-gray-900 outline-none focus:border-gray-500"
+        className="w-full rounded-lg border border-gray-300 px-3 py-1.5 text-xs text-gray-900 outline-none focus:border-gray-500 sm:py-2 sm:text-sm"
       />
 
       {query.trim() && (

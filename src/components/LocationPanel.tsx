@@ -200,8 +200,35 @@ export default function LocationPanel({
   return (
     <aside
       ref={panelRef}
-      className="absolute right-4 top-4 z-[1000] max-h-[calc(100vh-2rem)] w-96 overflow-y-auto overscroll-contain rounded-xl bg-white p-6 shadow-xl"
+      className="
+        absolute
+        z-[1300]
+        overflow-y-auto
+        overscroll-contain
+        bg-white
+        shadow-2xl
+
+        bottom-0
+        left-0
+        right-0
+        max-h-[75vh]
+        rounded-t-2xl
+        p-5
+
+        sm:bottom-auto
+        sm:left-auto
+        sm:right-4
+        sm:top-4
+        sm:max-h-[calc(100vh-2rem)]
+        sm:w-96
+        sm:rounded-xl
+        sm:p-6
+    "
     >
+      <div className="mb-4 flex justify-center sm:hidden">
+        <div className="h-1.5 w-12 rounded-full bg-gray-300" />
+      </div>
+
       <div className="mb-4 flex items-start justify-between gap-4">
         <div className="flex items-start gap-3">
           {onBack && (

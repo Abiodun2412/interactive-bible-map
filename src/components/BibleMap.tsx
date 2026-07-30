@@ -216,7 +216,7 @@ function RefocusButton({
         <button
             type="button"
             onClick={onClick}
-            className="absolute bottom-20 right-4 z-[1000] rounded-lg bg-white px-4 py-2 text-sm font-semibold text-gray-900 shadow-xl transition hover:bg-gray-100"
+            className="absolute bottom-45 right-3 z-[1000] rounded-lg bg-white px-3 py-2 text-xs font-semibold text-gray-900 shadow-xl transition hover:bg-gray-100 sm:bottom-20 sm:right-4 sm:px-4 sm:text-sm"
         >
             Refocus map
         </button>
