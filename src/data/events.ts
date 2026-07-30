@@ -5486,4 +5486,22 @@ export const events: Event[] = [
             },
         ],
     },
+    {
+        id: "jerusalem-council",
+        title: "The Jerusalem Council",
+        description:
+            "The apostles and elders meet in Jerusalem to consider whether Gentile believers must be circumcised and keep the law of Moses. The council affirms that Gentile believers are not required to become Jews in order to belong to the church.",
+        placeId: "jerusalem",
+        periodId: "early-church",
+        personIds: ["paul", "barnabas", "peter", ],
+        datePrecision: "approximate",
+        references: [
+            {
+                book: "Acts",
+                chapter: 15,
+                startVerse: 1,
+                endVerse: 35,
+            },
+        ],
+    },
 ];
