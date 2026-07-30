@@ -1567,4 +1567,46 @@ export const places: Place[] = [
       "Capital of the Roman Empire and the final destination recorded in Acts, where Paul lived under guard and proclaimed the kingdom of God.",
     identificationStatus: "well-established",
   },
+  {
+    id: "eden",
+    name: "Garden of Eden",
+    modernName: "Location unknown",
+    latitude: 33.0,
+    longitude: 44.0,
+    type: "site",
+    region: "Ancient Near East",
+    description:
+      "The garden described in Genesis as the home of Adam and Eve before their expulsion.",
+    identificationStatus: "unknown",
+    identificationNote:
+      "The precise geographical location of Eden is unknown. This marker is illustrative rather than an identification of the biblical site.",
+  },
+  {
+    id: "mountains-of-ararat",
+    name: "Mountains of Ararat",
+    modernName: "Armenian Highlands region",
+    latitude: 39.7,
+    longitude: 44.3,
+    type: "region",
+    region: "Ararat",
+    description:
+      "Mountainous region where Genesis says the ark came to rest after the flood.",
+    identificationStatus: "probable",
+    identificationNote:
+      "Genesis refers to the mountains of Ararat, a wider ancient region, rather than necessarily the modern peak called Mount Ararat.",
+  },
+  {
+    id: "babel",
+    name: "Babel",
+    modernName: "Babylon region, Iraq",
+    latitude: 32.54,
+    longitude: 44.42,
+    type: "city",
+    region: "Shinar",
+    description:
+      "City associated with the tower of Babel and the scattering of peoples in Genesis 11.",
+    identificationStatus: "probable",
+    identificationNote:
+      "Babel is generally associated with Babylon, though the Genesis narrative does not identify a surviving structure.",
+  },
 ];

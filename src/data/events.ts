@@ -4508,4 +4508,148 @@ export const events: Event[] = [
             },
         ],
     },
+    {
+        id: "creation-of-humanity",
+        title: "Creation of humanity",
+        description:
+            "Genesis describes God creating humanity in His image, with Adam and Eve forming the first human pair in the biblical narrative.",
+        placeId: "eden",
+        periodId: "primeval-history",
+        personIds: ["adam", "eve"],
+        datePrecision: "traditional",
+        references: [
+            {
+                book: "Genesis",
+                chapter: 1,
+                startVerse: 26,
+                endVerse: 31,
+            },
+            {
+                book: "Genesis",
+                chapter: 2,
+                startVerse: 7,
+                endVerse: 25,
+            },
+        ],
+    },
+    {
+        id: "fall-of-humanity",
+        title: "The Fall",
+        description:
+            "Adam and Eve disobey God by eating from the forbidden tree and are expelled from the Garden of Eden.",
+        placeId: "eden",
+        periodId: "primeval-history",
+        personIds: ["adam", "eve"],
+        datePrecision: "traditional",
+        references: [
+            {
+                book: "Genesis",
+                chapter: 3,
+            },
+        ],
+    },
+    {
+        id: "cain-kills-abel",
+        title: "Cain kills Abel",
+        description:
+            "Cain becomes angry with his brother Abel and kills him after their offerings are brought before God.",
+        periodId: "primeval-history",
+        personIds: ["cain", "abel"],
+        datePrecision: "traditional",
+        references: [
+            {
+                book: "Genesis",
+                chapter: 4,
+                startVerse: 1,
+                endVerse: 16,
+            },
+        ],
+    },
+    {
+        id: "noah-builds-ark",
+        title: "Noah is instructed to build the ark",
+        description:
+            "God warns Noah of the coming flood and instructs him to construct an ark for his household and living creatures.",
+        periodId: "primeval-history",
+        personIds: ["noah"],
+        datePrecision: "traditional",
+        references: [
+            {
+                book: "Genesis",
+                chapter: 6,
+                startVerse: 9,
+                endVerse: 22,
+            },
+        ],
+    },
+    {
+        id: "great-flood",
+        title: "The Flood",
+        description:
+            "Genesis describes a catastrophic flood in which Noah, his household, and the creatures aboard the ark survive.",
+        periodId: "primeval-history",
+        personIds: ["noah", "shem", "ham", "japheth"],
+        datePrecision: "traditional",
+        references: [
+            {
+                book: "Genesis",
+                chapter: 7,
+            },
+            {
+                book: "Genesis",
+                chapter: 8,
+            },
+        ],
+    },
+    {
+        id: "ark-rests-ararat",
+        title: "The ark rests on the mountains of Ararat",
+        description:
+            "As the floodwaters recede, the ark comes to rest on the mountains of Ararat.",
+        placeId: "mountains-of-ararat",
+        periodId: "primeval-history",
+        personIds: ["noah"],
+        datePrecision: "traditional",
+        references: [
+            {
+                book: "Genesis",
+                chapter: 8,
+                startVerse: 1,
+                endVerse: 5,
+            },
+        ],
+    },
+    {
+        id: "tower-of-babel",
+        title: "The Tower of Babel",
+        description:
+            "People settle in Shinar and build a city and tower before their language is confused and they are scattered.",
+        placeId: "babel",
+        periodId: "primeval-history",
+        personIds: [],
+        datePrecision: "traditional",
+        references: [
+            {
+                book: "Genesis",
+                chapter: 11,
+                startVerse: 1,
+                endVerse: 9,
+            },
+        ],
+    },
+    {
+        id: "table-of-nations",
+        title: "The Table of Nations",
+        description:
+            "Genesis traces the descendants of Noah's sons, Shem, Ham, and Japheth, and describes the spread of peoples after the flood.",
+        periodId: "primeval-history",
+        personIds: ["noah", "shem", "ham", "japheth"],
+        datePrecision: "traditional",
+        references: [
+            {
+                book: "Genesis",
+                chapter: 10,
+            },
+        ],
+    },
 ];

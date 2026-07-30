@@ -2,6 +2,14 @@ import type { Period } from "@/types/period";
 
 export const periods: Period[] = [
   {
+    id: "primeval-history",
+    name: "Primeval History",
+    startYear: -4000,
+    endYear: -2000,
+    description:
+      "The opening biblical narratives of creation, the fall, the flood, and the scattering of nations before the patriarchal period.",
+  },
+  {
     id: "patriarchs",
     name: "Patriarchs",
     startYear: -2000,

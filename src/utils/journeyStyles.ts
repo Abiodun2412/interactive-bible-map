@@ -7,6 +7,13 @@ type JourneyStyle = {
 
 export function getJourneyStyle(periodId: string): JourneyStyle {
     switch (periodId) {
+        case "primeval-history":
+            return {
+                color: "#78716c",
+                weight: 4,
+                opacity: 0.9,
+            };
+
         case "patriarchs":
             return {
                 color: "#92400e",

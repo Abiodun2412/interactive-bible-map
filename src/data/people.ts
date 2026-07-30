@@ -559,4 +559,58 @@ export const people: Person[] = [
     description:
       "Herodian ruler who heard Paul's defence in Caesarea before Paul was sent to Rome.",
   },
+  {
+    id: "adam",
+    name: "Adam",
+    description:
+      "The first man in the Genesis creation narrative and husband of Eve.",
+  },
+  {
+    id: "eve",
+    name: "Eve",
+    description:
+      "The first woman in the Genesis creation narrative and wife of Adam.",
+  },
+  {
+    id: "cain",
+    name: "Cain",
+    description:
+      "Son of Adam and Eve who killed his brother Abel.",
+  },
+  {
+    id: "abel",
+    name: "Abel",
+    description:
+      "Son of Adam and Eve whose offering was regarded favourably by God and who was killed by his brother Cain.",
+  },
+  {
+    id: "noah",
+    name: "Noah",
+    description:
+      "Righteous man instructed by God to build the ark before the flood.",
+  },
+  {
+    id: "seth",
+    name: "Seth",
+    description:
+      "Son of Adam and Eve, born after the death of Abel, through whose line the Genesis genealogy continues to Noah.",
+  },
+  {
+    id: "shem",
+    name: "Shem",
+    description:
+      "Son of Noah whose descendants form the genealogical line that Genesis traces toward Abraham.",
+  },
+  {
+    id: "ham",
+    name: "Ham",
+    description:
+      "Son of Noah and ancestor of several peoples listed in the Table of Nations.",
+  },
+  {
+    id: "japheth",
+    name: "Japheth",
+    description:
+      "Son of Noah and ancestor of several peoples listed in the Table of Nations.",
+  },
 ];
