@@ -31,6 +31,7 @@ import type { Place } from "@/types/place";
 import type { BibleReference } from "@/types/bibleReference";
 
 import { validateData } from "@/utils/validateData";
+import { validateRelationships } from "@/utils/validateRelationships";
 
 import {
     createJourneyStopIcon,
@@ -255,6 +256,7 @@ export default function BibleMap() {
 
     useEffect(() => {
         validateData();
+        validateRelationships();
     }, []);
 
     const personJourneyIds = new Set(
@@ -511,6 +513,23 @@ export default function BibleMap() {
 
         setSelectedPersonId(personId);
         setSelectedPersonPanelId(personId);
+    };
+
+    const handleLocationReferenceSelect = (
+        reference: BibleReference
+    ) => {
+        if (selectedPlace) {
+            pushPanelHistory({
+                type: "location",
+                placeId: selectedPlace.id,
+            });
+        }
+
+        setSelectedPlace(null);
+        setSelectedEventId(null);
+        setSelectedPersonPanelId(null);
+
+        setSelectedReference(reference);
     };
 
     const handleEventPersonSelect = (personId: string) => {
@@ -848,6 +867,7 @@ export default function BibleMap() {
                     onSelectJourney={handleLocationJourneySelect}
                     onSelectEvent={handleLocationEventSelect}
                     onSelectPerson={handleLocationPersonSelect}
+                    onSelectReference={handleLocationReferenceSelect}
                 />
             )}
 

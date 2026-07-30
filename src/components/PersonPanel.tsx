@@ -154,6 +154,26 @@ export default function PersonPanel({
             } => item !== null
         );
 
+    const groupedRelationships = relationships.reduce(
+        (groups, item) => {
+            const type = item.relationship.type;
+
+            if (!groups[type]) {
+                groups[type] = [];
+            }
+
+            groups[type].push(item);
+
+            return groups;
+        },
+        {} as Record<
+            string,
+            typeof relationships
+        >
+    );
+
+    const relationshipTypes = Object.keys(groupedRelationships);
+
     const toggleSection = (section: string) => {
         setOpenSections((current) => {
             const next = new Set(current);
@@ -231,67 +251,82 @@ export default function PersonPanel({
             )}
 
             {relationships.length > 0 && (
-                <section className="mt-6 overflow-hidden rounded-lg border border-gray-200">
-                    <button
-                        type="button"
-                        onClick={() => toggleSection("relationships")}
-                        className="flex w-full items-center justify-between gap-4 bg-gray-50 px-4 py-3 text-left hover:bg-gray-100"
-                    >
-                        <div>
-                            <p className="text-sm font-semibold uppercase tracking-wide text-gray-700">
-                                Relationships
-                            </p>
+                <section className="mt-6">
+                    <div className="mb-3 flex items-center justify-between gap-3">
+                        <h3 className="text-sm font-semibold uppercase tracking-wide text-gray-500">
+                            Relationships
+                        </h3>
 
-                            <p className="mt-1 text-xs text-gray-500">
-                                {relationships.length} relationship
-                                {relationships.length === 1 ? "" : "s"}
-                            </p>
-                        </div>
-
-                        <span
-                            className={`text-sm text-gray-500 transition-transform ${openSections.has("relationships")
-                                    ? "rotate-180"
-                                    : ""
-                                }`}
-                        >
-                            ▼
+                        <span className="text-xs text-gray-400">
+                            {relationships.length}
                         </span>
-                    </button>
+                    </div>
 
-                    {openSections.has("relationships") && (
-                        <div className="space-y-2 p-3">
-                            {relationships.map(
-                                ({ relationship, relatedPerson }) => (
+                    <div className="space-y-2">
+                        {relationshipTypes.map((type) => {
+                            const items = groupedRelationships[type];
+                            const sectionKey = `relationship-${type}`;
+                            const isOpen = openSections.has(sectionKey);
+
+                            return (
+                                <div
+                                    key={type}
+                                    className="overflow-hidden rounded-lg border border-gray-200"
+                                >
                                     <button
-                                        key={relationship.id}
                                         type="button"
-                                        onClick={() =>
-                                            onSelectPerson(relatedPerson.id)
-                                        }
-                                        className="w-full rounded-lg border border-gray-200 p-3 text-left transition hover:border-gray-400 hover:bg-gray-50"
+                                        onClick={() => toggleSection(sectionKey)}
+                                        className="flex w-full items-center justify-between gap-4 bg-gray-50 px-4 py-3 text-left hover:bg-gray-100"
                                     >
-                                        <div className="flex items-start justify-between gap-3">
+                                        <div>
                                             <p className="text-sm font-semibold text-gray-900">
-                                                {relatedPerson.name}
+                                                {formatRelationshipType(type)}
                                             </p>
 
-                                            <span className="rounded-full bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600">
-                                                {formatRelationshipType(
-                                                    relationship.type
-                                                )}
-                                            </span>
+                                            <p className="mt-1 text-xs text-gray-500">
+                                                {items.length} relationship
+                                                {items.length === 1 ? "" : "s"}
+                                            </p>
                                         </div>
 
-                                        {relationship.description && (
-                                            <p className="mt-2 text-xs leading-5 text-gray-500">
-                                                {relationship.description}
-                                            </p>
-                                        )}
+                                        <span
+                                            className={`text-sm text-gray-500 transition-transform ${isOpen ? "rotate-180" : ""
+                                                }`}
+                                        >
+                                            ▼
+                                        </span>
                                     </button>
-                                )
-                            )}
-                        </div>
-                    )}
+
+                                    {isOpen && (
+                                        <div className="space-y-2 p-3">
+                                            {items.map(
+                                                ({ relationship, relatedPerson }) => (
+                                                    <button
+                                                        key={relationship.id}
+                                                        type="button"
+                                                        onClick={() =>
+                                                            onSelectPerson(relatedPerson.id)
+                                                        }
+                                                        className="w-full rounded-lg border border-gray-200 p-3 text-left transition hover:border-gray-400 hover:bg-gray-50"
+                                                    >
+                                                        <p className="text-sm font-semibold text-gray-900">
+                                                            {relatedPerson.name}
+                                                        </p>
+
+                                                        {relationship.description && (
+                                                            <p className="mt-2 text-xs leading-5 text-gray-500">
+                                                                {relationship.description}
+                                                            </p>
+                                                        )}
+                                                    </button>
+                                                )
+                                            )}
+                                        </div>
+                                    )}
+                                </div>
+                            );
+                        })}
+                    </div>
                 </section>
             )}
 

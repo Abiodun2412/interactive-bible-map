@@ -18,6 +18,7 @@ type LocationPanelProps = {
   onSelectJourney: (journeyId: string) => void;
   onSelectEvent: (eventId: string) => void;
   onSelectPerson: (personId: string) => void;
+  onSelectReference: (reference: BibleReference) => void;
 };
 
 function formatReference(reference: BibleReference) {
@@ -78,6 +79,7 @@ export default function LocationPanel({
   onSelectJourney,
   onSelectEvent,
   onSelectPerson,
+  onSelectReference,
 }: LocationPanelProps) {
   const panelRef = useRef<HTMLElement | null>(null);
 
@@ -458,10 +460,8 @@ export default function LocationPanel({
                   {isOpen && (
                     <div className="space-y-3 p-3">
                       {periodJourneys.map(({ stop, journey }) => (
-                        <button
+                        <div
                           key={stop.id}
-                          type="button"
-                          onClick={() => onSelectJourney(journey.id)}
                           className="w-full rounded-lg border border-gray-200 p-4 text-left transition hover:border-gray-400 hover:bg-gray-50"
                         >
                           <div className="flex items-center justify-between gap-3">
@@ -480,19 +480,27 @@ export default function LocationPanel({
 
                           <div className="mt-3 flex flex-wrap gap-2">
                             {stop.references.map((reference, index) => (
-                              <span
+                              <button
                                 key={`${stop.id}-${index}`}
-                                className="rounded bg-gray-100 px-2 py-1 text-xs text-gray-700"
+                                type="button"
+                                onClick={(event) => {
+                                  onSelectReference(reference);
+                                }}
+                                className="rounded bg-gray-100 px-2 py-1 text-xs text-gray-700 transition hover:bg-gray-200"
                               >
                                 {formatReference(reference)}
-                              </span>
+                              </button>
                             ))}
                           </div>
 
-                          <p className="mt-3 text-xs font-semibold text-gray-500">
+                          <button
+                            type="button"
+                            onClick={() => onSelectJourney(journey.id)}
+                            className="mt-3 text-xs font-semibold text-gray-500 transition hover:text-gray-900"
+                          >
                             Explore journey →
-                          </p>
-                        </button>
+                          </button>
+                        </div>
                       ))}
                     </div>
                   )}
