@@ -64,7 +64,21 @@ export function getJourneyStyle(periodId: string): JourneyStyle {
                 weight: 4,
                 opacity: 0.85,
             };
-            
+
+        case "life-of-jesus":
+            return {
+                color: "#dc2626",
+                weight: 4,
+                opacity: 0.9,
+            };
+
+        case "early-church":
+            return {
+                color: "#2563eb",
+                weight: 4,
+                opacity: 0.9,
+            };
+
         default:
             return {
                 color: "#374151",

@@ -18,6 +18,7 @@ import ActiveContext from "@/components/ActiveContext";
 import MapLegend from "@/components/MapLegend";
 import EventPanel from "@/components/EventPanel";
 import PersonPanel from "@/components/PersonPanel";
+import ScripturePanel from "@/components/ScripturePanel";
 import { people } from "@/data/people";
 import { periods } from "@/data/periods";
 
@@ -27,6 +28,7 @@ import { journeyStops } from "@/data/journeyStops";
 import { places } from "@/data/places";
 
 import type { Place } from "@/types/place";
+import type { BibleReference } from "@/types/bibleReference";
 
 import { validateData } from "@/utils/validateData";
 
@@ -236,13 +238,18 @@ export default function BibleMap() {
 
     const [selectedPersonPanelId, setSelectedPersonPanelId] =
         useState<string | null>(null);
+
+    const [selectedReference, setSelectedReference] =
+        useState<BibleReference | null>(null);
+
     const [focusRequest, setFocusRequest] =
         useState(0);
 
     type PanelHistoryEntry =
         | { type: "location"; placeId: string }
         | { type: "event"; eventId: string }
-        | { type: "person"; personId: string };
+        | { type: "person"; personId: string }
+        | { type: "scripture"; reference: BibleReference };
 
     const [panelHistory, setPanelHistory] = useState<PanelHistoryEntry[]>([]);
 
@@ -550,6 +557,21 @@ export default function BibleMap() {
         setSelectedJourneyId(journeyId);
     };
 
+    const handleEventReferenceSelect = (reference: BibleReference) => {
+        if (selectedEventId) {
+            pushPanelHistory({
+                type: "event",
+                eventId: selectedEventId,
+            });
+        }
+
+        setSelectedEventId(null);
+        setSelectedPersonPanelId(null);
+        setSelectedPlace(null);
+
+        setSelectedReference(reference);
+    };
+
     const handlePersonPanelEventSelect = (eventId: string) => {
         if (selectedPersonPanelId) {
             pushPanelHistory({
@@ -560,6 +582,21 @@ export default function BibleMap() {
 
         setSelectedPersonPanelId(null);
         setSelectedEventId(eventId);
+    };
+
+    const handlePersonPanelPersonSelect = (personId: string) => {
+        if (selectedPersonPanelId) {
+            pushPanelHistory({
+                type: "person",
+                personId: selectedPersonPanelId,
+            });
+        }
+
+        setSelectedEventId(null);
+        setSelectedPlace(null);
+
+        setSelectedPersonId(personId);
+        setSelectedPersonPanelId(personId);
     };
 
     const handlePersonPanelJourneySelect = (journeyId: string) => {
@@ -625,7 +662,12 @@ export default function BibleMap() {
         setSelectedPlace(null);
         setSelectedEventId(null);
         setSelectedPersonPanelId(null);
+        setSelectedReference(null);
 
+        if (previousPanel.type === "scripture") {
+            setSelectedReference(previousPanel.reference);
+            return;
+        }
         if (previousPanel.type === "location") {
             const place = places.find(
                 (place) => place.id === previousPanel.placeId
@@ -674,8 +716,8 @@ export default function BibleMap() {
             zoomControl={false}
             worldCopyJump={false}
             maxBounds={[
-                [-60, -180],
-                [85, 180],
+                [5, 5],
+                [50, 60],
             ]}
             maxBoundsViscosity={1}
             style={{
@@ -683,6 +725,7 @@ export default function BibleMap() {
                 width: "100%",
             }}
         >
+
             <TileLayer
                 attribution='&copy; OpenStreetMap contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -824,6 +867,7 @@ export default function BibleMap() {
                     onSelectPerson={handleEventPersonSelect}
                     onSelectPlace={handleEventPlaceSelect}
                     onSelectJourney={handleEventJourneySelect}
+                    onSelectReference={handleEventReferenceSelect}
                 />
             )}
 
@@ -842,9 +886,24 @@ export default function BibleMap() {
                     onSelectEvent={handlePersonPanelEventSelect}
                     onSelectJourney={handlePersonPanelJourneySelect}
                     onSelectPlace={handlePersonPanelPlaceSelect}
+                    onSelectPerson={handlePersonPanelPersonSelect}
                 />
             )}
 
+            {selectedReference && (
+                <ScripturePanel
+                    reference={selectedReference}
+                    onClose={() => {
+                        setSelectedReference(null);
+                        setPanelHistory([]);
+                    }}
+                    onBack={
+                        panelHistory.length > 0
+                            ? handlePanelBack
+                            : undefined
+                    }
+                />
+            )}
         </MapContainer>
     );
 }

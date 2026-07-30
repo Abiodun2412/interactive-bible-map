@@ -8,6 +8,7 @@ import { journeyStops } from "@/data/journeyStops";
 import { people } from "@/data/people";
 import { periods } from "@/data/periods";
 import { places } from "@/data/places";
+import { personRelationships } from "@/data/personRelationships";
 
 type Person = (typeof people)[number];
 
@@ -18,7 +19,37 @@ type PersonPanelProps = {
     onSelectEvent: (eventId: string) => void;
     onSelectJourney: (journeyId: string) => void;
     onSelectPlace: (placeId: string) => void;
+    onSelectPerson: (personId: string) => void;
 };
+
+function formatRelationshipType(type: string) {
+    switch (type) {
+        case "parent":
+            return "Parent";
+        case "child":
+            return "Child";
+        case "spouse":
+            return "Spouse";
+        case "sibling":
+            return "Sibling";
+        case "mentor":
+            return "Mentor";
+        case "disciple":
+            return "Disciple";
+        case "king":
+            return "King";
+        case "prophet":
+            return "Prophet";
+        case "friend":
+            return "Friend";
+        case "opponent":
+            return "Opponent";
+        case "associate":
+            return "Associate";
+        default:
+            return type;
+    }
+}
 
 export default function PersonPanel({
     person,
@@ -27,6 +58,7 @@ export default function PersonPanel({
     onSelectEvent,
     onSelectJourney,
     onSelectPlace,
+    onSelectPerson,
 }: PersonPanelProps) {
     const panelRef = useRef<HTMLElement | null>(null);
 
@@ -95,6 +127,32 @@ export default function PersonPanel({
     const personPeriods = periods.filter((period) =>
         personPeriodIds.has(period.id)
     );
+
+    const relationships = personRelationships
+        .filter((relationship) => relationship.personId === person.id)
+        .map((relationship) => {
+            const relatedPerson = people.find(
+                (candidate) =>
+                    candidate.id === relationship.relatedPersonId
+            );
+
+            if (!relatedPerson) {
+                return null;
+            }
+
+            return {
+                relationship,
+                relatedPerson,
+            };
+        })
+        .filter(
+            (
+                item
+            ): item is {
+                relationship: (typeof personRelationships)[number];
+                relatedPerson: (typeof people)[number];
+            } => item !== null
+        );
 
     const toggleSection = (section: string) => {
         setOpenSections((current) => {
@@ -169,6 +227,71 @@ export default function PersonPanel({
                             </span>
                         ))}
                     </div>
+                </section>
+            )}
+
+            {relationships.length > 0 && (
+                <section className="mt-6 overflow-hidden rounded-lg border border-gray-200">
+                    <button
+                        type="button"
+                        onClick={() => toggleSection("relationships")}
+                        className="flex w-full items-center justify-between gap-4 bg-gray-50 px-4 py-3 text-left hover:bg-gray-100"
+                    >
+                        <div>
+                            <p className="text-sm font-semibold uppercase tracking-wide text-gray-700">
+                                Relationships
+                            </p>
+
+                            <p className="mt-1 text-xs text-gray-500">
+                                {relationships.length} relationship
+                                {relationships.length === 1 ? "" : "s"}
+                            </p>
+                        </div>
+
+                        <span
+                            className={`text-sm text-gray-500 transition-transform ${openSections.has("relationships")
+                                    ? "rotate-180"
+                                    : ""
+                                }`}
+                        >
+                            ▼
+                        </span>
+                    </button>
+
+                    {openSections.has("relationships") && (
+                        <div className="space-y-2 p-3">
+                            {relationships.map(
+                                ({ relationship, relatedPerson }) => (
+                                    <button
+                                        key={relationship.id}
+                                        type="button"
+                                        onClick={() =>
+                                            onSelectPerson(relatedPerson.id)
+                                        }
+                                        className="w-full rounded-lg border border-gray-200 p-3 text-left transition hover:border-gray-400 hover:bg-gray-50"
+                                    >
+                                        <div className="flex items-start justify-between gap-3">
+                                            <p className="text-sm font-semibold text-gray-900">
+                                                {relatedPerson.name}
+                                            </p>
+
+                                            <span className="rounded-full bg-gray-100 px-2 py-1 text-xs font-medium text-gray-600">
+                                                {formatRelationshipType(
+                                                    relationship.type
+                                                )}
+                                            </span>
+                                        </div>
+
+                                        {relationship.description && (
+                                            <p className="mt-2 text-xs leading-5 text-gray-500">
+                                                {relationship.description}
+                                            </p>
+                                        )}
+                                    </button>
+                                )
+                            )}
+                        </div>
+                    )}
                 </section>
             )}
 

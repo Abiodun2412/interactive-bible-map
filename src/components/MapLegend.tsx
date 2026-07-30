@@ -93,6 +93,16 @@ export default function MapLegend() {
                             <span className="h-1 w-8 bg-[#0f766e]" />
                             <span>Return & Restoration</span>
                         </div>
+
+                        <div className="flex items-center gap-3">
+                            <span className="h-1 w-8 bg-[#dc2626]" />
+                            <span>Life of Jesus</span>
+                        </div>
+
+                        <div className="flex items-center gap-3">
+                            <span className="h-1 w-8 bg-[#2563eb]" />
+                            <span>Early Church</span>
+                        </div>
                     </div>
                 </div>
             </div>

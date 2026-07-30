@@ -20,6 +20,7 @@ type EventPanelProps = {
     onSelectPerson: (personId: string) => void;
     onSelectPlace: (placeId: string) => void;
     onSelectJourney: (journeyId: string) => void;
+    onSelectReference: (reference: BibleReference) => void;
 };
 
 function formatReference(reference: BibleReference) {
@@ -66,6 +67,7 @@ export default function EventPanel({
     onSelectPerson,
     onSelectPlace,
     onSelectJourney,
+    onSelectReference,
 }: EventPanelProps) {
 
     const panelRef = useRef<HTMLElement | null>(null);
@@ -240,12 +242,14 @@ export default function EventPanel({
 
                 <div className="mt-3 flex flex-wrap gap-2">
                     {event.references.map((reference, index) => (
-                        <span
+                        <button
                             key={`${event.id}-${index}`}
-                            className="rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-700"
+                            type="button"
+                            onClick={() => onSelectReference(reference)}
+                            className="rounded-lg border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-700 transition hover:border-gray-400 hover:bg-gray-100"
                         >
                             {formatReference(reference)}
-                        </span>
+                        </button>
                     ))}
                 </div>
             </section>
