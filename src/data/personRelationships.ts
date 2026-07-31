@@ -895,7 +895,7 @@ export const personRelationships: PersonRelationship[] = [
         personId: "dinah",
         relatedPersonId: "jacob",
         type: "child",
-        description: "Dinah was a son of Jacob.",
+        description: "Dinah was the daughter of Jacob.",
     },
     {
         id: "bilhah-dan-parent",

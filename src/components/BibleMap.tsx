@@ -837,9 +837,17 @@ export default function BibleMap() {
         periodId: string | null
     ) => {
         setSelectedPeriodId(periodId);
+
         setSelectedJourneyId(null);
+        setSelectedJourneyPanelId(null);
         setSelectedPersonId(null);
+
         setSelectedPlace(null);
+        setSelectedEventId(null);
+        setSelectedPersonPanelId(null);
+        setSelectedReference(null);
+
+        setPanelHistory([]);
     };
 
     const handleRefocus = () => {
@@ -885,11 +893,20 @@ export default function BibleMap() {
                     setSelectedJourneyId(journeyId);
                     setSelectedJourneyPanelId(journeyId ?? null);
 
+                    if (journeyId) {
+                        const journey = journeys.find(
+                            (journey) => journey.id === journeyId
+                        );
+
+                        setSelectedPeriodId(journey?.periodId ?? null);
+                    }
+
                     setSelectedPersonId(null);
                     setSelectedPlace(null);
                     setSelectedEventId(null);
                     setSelectedPersonPanelId(null);
                     setSelectedReference(null);
+
                     setPanelHistory([]);
                 }}
                 onSelectResult={handleSearchResultSelect}
